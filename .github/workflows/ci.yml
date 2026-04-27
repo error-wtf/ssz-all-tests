@@ -1,0 +1,50 @@
+name: SSZ All Tests CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * *'  # Daily at 00:00 UTC
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Run Part I: Foundations (186 tests)
+      run: pytest tests/part_I_foundations/ -v
+    
+    - name: Run Part V: Strong Field (94 tests)
+      run: pytest tests/part_V_strong_field/ -v
+    
+    - name: Run Part VIII: Validation (77 tests)
+      run: pytest tests/part_VIII_validation/ -v
+    
+    - name: Run All Tests
+      run: pytest --tb=short -q
+    
+    - name: Generate coverage report
+      run: pytest --cov=ssz_core --cov-report=xml --cov-report=term
+    
+    - name: Upload coverage
+      uses: codecov/codecov-action@v3
+      with:
+        files: ./coverage.xml
+        fail_ci_if_error: false
