@@ -1506,7 +1506,7 @@ tests/part_IV_frequency/test_ch16_17_frequency.py::TestCh17TimeDilation::test_ss
 [OK] Part IV: Frequency Framework: PASSED
 
 ======================================================================
-[BOOK] Part V: Strong Field (94 tests)
+[SSZ] Part V: Strong Field (94 tests)
 ======================================================================
 ng_field/test_ch18_22_strong_field.py::TestCh18BHMetric::test_dilation_function PASSED [ 21%]
 tests/part_V_strong_field/test_ch18_22_strong_field.py::TestCh18BHMetric::test_metric_line_element PASSED [ 26%]
@@ -1530,7 +1530,7 @@ tests/part_V_strong_field/test_ch18_22_strong_field.py::TestCh22Superradiance::t
 [OK] Part V: Strong Field: PASSED
 
 ======================================================================
-[BOOK] Part VI: Astrophysics (14 tests)
+[SSZ] Part VI: Astrophysics (14 tests)
 ======================================================================
 ythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
 cachedir: .pytest_cache
@@ -1559,7 +1559,7 @@ tests/part_VI_astrophysics/test_ch23_24_astrophysics.py::TestCh24Accretion::test
 [OK] Part VI: Astrophysics: PASSED
 
 ======================================================================
-[BOOK] Part VII: Dynamics (54 tests)
+[SSZ] Part VII: Dynamics (54 tests)
 ======================================================================
 Ch25Perturbations::test_metric_perturbation_h_munu PASSED [ 70%]
 tests/part_VII_dynamics/test_ch25_dynamics.py::TestCh25Perturbations::test_gauge_transformation_harmonic PASSED [ 72%]
@@ -1584,7 +1584,7 @@ tests/part_VII_dynamics/test_ch25_dynamics.py::TestCh25Perturbations::test_ssz_p
 [OK] Part VII: Dynamics: PASSED
 
 ======================================================================
-[BOOK] Part VIII: Validation (77 tests)
+[SSZ] Part VIII: Validation (77 tests)
 ======================================================================
 st_neutron_star_redshift_prediction PASSED [ 16%]
 tests/part_VIII_validation/test_ch26_30_validation.py::TestCh30FalsifiablePredictions::test_neutron_star_instrument_nicer PASSED [ 22%]

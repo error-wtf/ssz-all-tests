@@ -18,7 +18,7 @@ import pytest
 import pandas as pd
 import numpy as np
 
-# Physical constants - MATCH SSZ_BOOK_DE.tex
+# Physical constants - SSZ canonical values
 PHI = (1 + math.sqrt(5)) / 2  # Golden ratio: 1.618033988749895
 XI_MAX = 1 - math.exp(-PHI)   # Ξ_max = 0.80171...
 D_MIN = 1 / (1 + XI_MAX)      # D_min ≈ 0.5557

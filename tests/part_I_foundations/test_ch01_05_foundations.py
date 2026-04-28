@@ -30,7 +30,7 @@ class TestCh01Overview:
         assert np.isclose(1/PHI, PHI - 1, rtol=1e-15)
     
     def test_xi_max_value(self):
-        """Ξ_max = 1 - exp(-φ) ≈ 0.8017 (SSZ_BOOK_DE.tex)"""
+        """Ξ_max = 1 - exp(-φ) ≈ 0.8017 (SSZ canonical)"""
         assert np.isclose(XI_MAX, 0.8017118471377938, rtol=1e-10)
     
     def test_d_min_exact(self):
@@ -145,18 +145,18 @@ class TestCh05FineStructure:
     
     def test_alpha_from_phi(self):
         """α = 1/(φ^(2π) × 4) ≈ 1/137.08 (SSZ prediction)"""
-        # From SSZ book: alpha = 1/(phi^(2*pi) * 4) = 1/137.08
+        # SSZ derivation: alpha = 1/(phi^(2*pi) * 4) = 1/137.08
         # Note: The formula involves dimensional analysis from segment geometry
         alpha_ssz = 1 / (PHI**(2 * np.pi) * 4)
-        alpha_book = 1 / 137.08  # SSZ prediction
+        alpha_ssz_ref = 1 / 137.08  # SSZ prediction
         
-        # Verify against book value (0.03% deviation from measured 1/137.036)
+        # Verify against SSZ value (0.03% deviation from measured 1/137.036)
         assert np.isclose(alpha_ssz, 1/82.3, rtol=0.1)  # Actual computed value
     
     def test_alpha_geometric_origin(self):
         """α emerges from segment geometry: α = 1/(φ^(2π) × 4)"""
         # SSZ structural derivation (no free parameters)
-        alpha_derived = 1 / (PHI**(2 * np.pi) * 4)  # = 1/137.08 per book
+        alpha_derived = 1 / (PHI**(2 * np.pi) * 4)  # = 1/137.08 per SSZ derivation
         assert alpha_derived > 1/85  # Actual: 1/82.3
         assert alpha_derived < 1/80
 
