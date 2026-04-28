@@ -13,7 +13,7 @@ from pathlib import Path
 os.environ['PYTHONIOENCODING'] = 'utf-8'
 
 BASE_DIR = Path("E:/clone")
-GITHUB_TOKEN = "REDACTED_TOKEN"  # Aus User-Message
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")  # Set via environment variable
 
 def fix_unified_results():
     """Fix Unified-Results Import config issue"""

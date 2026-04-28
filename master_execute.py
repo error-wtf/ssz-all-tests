@@ -19,7 +19,7 @@ if sys.platform == 'win32':
         pass
 
 BASE = Path("E:/clone")
-TOKEN = "REDACTED_TOKEN"
+TOKEN = os.environ.get("GITHUB_TOKEN", "")  # Set via environment variable
 THIS_DIR = Path("E:/clone/ssz-all-tests-test")
 
 # ============================================================
