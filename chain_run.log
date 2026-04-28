@@ -1,0 +1,85 @@
+================================================================================
+SSZ CHAIN RUNNER - ALL 10 REPOSITORIES
+================================================================================
+Start: 2026-04-27 19:55:52
+Total Repositories: 10
+================================================================================
+
+================================================================================
+[CHAIN] ssz-qubits
+================================================================================
+[RUNNER] Using run_tests.py
+[RESULT] ssz-qubits: 27/27 passed (23.9s)
+
+================================================================================
+[CHAIN] ssz-metric-pure
+================================================================================
+[PYTEST] Running pytest...
+[RESULT] ssz-metric-pure: 36/36 passed (20.0s)
+
+================================================================================
+[CHAIN] segmented-calculation-suite
+================================================================================
+[PYTEST] Running pytest...
+[RESULT] segmented-calculation-suite: 158/158 passed (9.6s)
+
+================================================================================
+[CHAIN] ssz-schuhman-experiment
+================================================================================
+[PYTEST] Running pytest...
+[RESULT] ssz-schuhman-experiment: FAIL (19.5s)
+
+================================================================================
+[CHAIN] ssz-lensing
+================================================================================
+[PYTEST] Running pytest...
+[RESULT] ssz-lensing: 279/279 passed (12.8s)
+
+================================================================================
+[CHAIN] Unified-Results
+================================================================================
+[SKIP] Unified-Results: Import config - requires PYTHONPATH fix
+[RESULT] Unified-Results: SKIPPED - Import config - requires PYTHONPATH fix
+
+================================================================================
+[CHAIN] ssz-trajectories
+================================================================================
+[PYTEST] Running pytest...
+[RESULT] ssz-trajectories: 63/63 passed (3.0s)
+
+================================================================================
+[CHAIN] segmented-energy
+================================================================================
+[SKIP] segmented-energy: Dataset file missing - path config needed
+[RESULT] segmented-energy: SKIPPED - Dataset file missing - path config needed
+
+================================================================================
+[CHAIN] g79-cygnus-test
+================================================================================
+[RUNNER] Using RUN_ALL_VALIDATED_TESTS.py
+[RESULT] g79-cygnus-test: 5/5 passed (131.2s)
+
+================================================================================
+[CHAIN] ssz-all-tests
+================================================================================
+[RUNNER] Using run_all_tests.py
+[RESULT] ssz-all-tests: 20/20 passed (10.3s)
+
+================================================================================
+CHAIN COMPLETE
+================================================================================
+Total Duration: 230.4s
+Passed: 7/10
+Skipped: 2/10
+Failed: 1/10
+Total Tests: 775
+Tests Passed: 775
+
+[OUTPUT] Full output written to: chain_results\full-output.md
+[JSON] Results saved to: chain_results\chain_results.json
+
+================================================================================
+ALL OUTPUTS GENERATED
+================================================================================
+- chain_results/full-output.md (complete log)
+- chain_results/chain_results.json (structured data)

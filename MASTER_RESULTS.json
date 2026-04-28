@@ -1,0 +1,62 @@
+{
+  "ssz-qubits": {
+    "expected": 184,
+    "passed": 184,
+    "failed": 0,
+    "rate": "100.0%"
+  },
+  "ssz-metric-pure": {
+    "expected": 46,
+    "passed": 36,
+    "failed": 0,
+    "rate": "78.3%"
+  },
+  "segmented-calculation-suite": {
+    "expected": 158,
+    "passed": 88,
+    "failed": 0,
+    "rate": "55.7%"
+  },
+  "ssz-schuhman-experiment": {
+    "expected": 191,
+    "passed": 171,
+    "failed": 0,
+    "rate": "89.5%"
+  },
+  "ssz-lagrange": {
+    "expected": 54,
+    "passed": 110,
+    "failed": 2,
+    "rate": "203.7%"
+  },
+  "ssz-lensing": {
+    "expected": 279,
+    "passed": 279,
+    "failed": 0,
+    "rate": "100.0%"
+  },
+  "Segmented-Spacetime-Mass-Projection-Unified-Results": {
+    "expected": 139,
+    "passed": 0,
+    "failed": 1,
+    "rate": "0.0%"
+  },
+  "ssz-trajectories": {
+    "expected": 63,
+    "passed": 63,
+    "failed": 0,
+    "rate": "100.0%"
+  },
+  "segmented-energy": {
+    "expected": 6,
+    "passed": 0,
+    "failed": 2,
+    "rate": "0.0%"
+  },
+  "g79-cygnus-test": {
+    "expected": 5,
+    "passed": 0,
+    "failed": 0,
+    "rate": "0.0%"
+  }
+}

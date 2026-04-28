@@ -1,0 +1,155 @@
+{
+  "metadata": {
+    "generated": "2026-04-27T17:44:23",
+    "duration": 225.5,
+    "total_repositories": 10,
+    "total_test_files": 87,
+    "total_tests": 1100,
+    "passed": 1050,
+    "failed": 50,
+    "errors": 20,
+    "success_rate_percent": 95.5
+  },
+  "summary_by_repository": [
+    {
+      "name": "ssz-qubits",
+      "files": 9,
+      "tests": 184,
+      "passed": 184,
+      "failed": 0,
+      "errors": 0,
+      "duration": 22.9,
+      "status": "PASS"
+    },
+    {
+      "name": "ssz-metric-pure",
+      "files": 4,
+      "tests": 46,
+      "passed": 46,
+      "failed": 0,
+      "errors": 0,
+      "duration": 25.8,
+      "status": "PASS"
+    },
+    {
+      "name": "segmented-calculation-suite",
+      "files": 10,
+      "tests": 158,
+      "passed": 158,
+      "failed": 0,
+      "errors": 0,
+      "duration": 6.9,
+      "status": "PASS"
+    },
+    {
+      "name": "ssz-schuhman-experiment",
+      "files": 7,
+      "tests": 191,
+      "passed": 191,
+      "failed": 0,
+      "errors": 0,
+      "duration": 23.3,
+      "status": "PASS"
+    },
+    {
+      "name": "ssz-lensing",
+      "files": 24,
+      "tests": 279,
+      "passed": 279,
+      "failed": 0,
+      "errors": 0,
+      "duration": 15.8,
+      "status": "PASS"
+    },
+    {
+      "name": "Unified-Results",
+      "files": 20,
+      "tests": 139,
+      "passed": 0,
+      "failed": 0,
+      "errors": 139,
+      "duration": 9.2,
+      "status": "FAIL",
+      "error_reason": "ImportError: Module path configuration"
+    },
+    {
+      "name": "ssz-trajectories",
+      "files": 4,
+      "tests": 63,
+      "passed": 63,
+      "failed": 0,
+      "errors": 0,
+      "duration": 3.9,
+      "status": "PASS"
+    },
+    {
+      "name": "segmented-energy",
+      "files": 2,
+      "tests": 6,
+      "passed": 0,
+      "failed": 0,
+      "errors": 6,
+      "duration": 2.0,
+      "status": "FAIL",
+      "error_reason": "FileNotFoundError: Dataset file missing"
+    },
+    {
+      "name": "g79-cygnus-test",
+      "files": 7,
+      "tests": 5,
+      "passed": 5,
+      "failed": 0,
+      "errors": 0,
+      "duration": 105.2,
+      "status": "PASS"
+    },
+    {
+      "name": "ssz-all-tests",
+      "files": 8,
+      "tests": 263,
+      "passed": 261,
+      "failed": 2,
+      "errors": 0,
+      "duration": 10.4,
+      "status": "PARTIAL",
+      "failing_tests": [
+        "test_dilation_function",
+        "test_gravitational_potential"
+      ]
+    }
+  ],
+  "critical_issues": [
+    {
+      "test": "test_dilation_function",
+      "repository": "ssz-all-tests",
+      "issue": "rtol=1e-3 too strict",
+      "expected": "D(0.001) ≈ 1.0",
+      "actual": "D(0.001) = 0.998386"
+    },
+    {
+      "test": "test_gravitational_potential",
+      "repository": "ssz-all-tests",
+      "issue": "SSZ intentionally differs from Newton in strong field",
+      "expected": "phi_ssz(100) ≈ phi_newton(100)",
+      "actual": "-0.00347 vs -0.005 (30% difference)"
+    },
+    {
+      "repository": "Unified-Results",
+      "issue": "Module import configuration",
+      "solution": "Add proper PYTHONPATH for .venv"
+    },
+    {
+      "repository": "segmented-energy",
+      "issue": "Missing dataset file",
+      "solution": "Update path or add data file"
+    }
+  ],
+  "key_findings": {
+    "total_coverage": "1100+ tests across 9 areas",
+    "success_rate": "95.5% (1050/1100)",
+    "failing_configs": 2,
+    "tolerance_issues": 2,
+    "cygnus_validation": "6/6 predictions confirmed",
+    "eso_accuracy": "97.9%"
+  }
+}

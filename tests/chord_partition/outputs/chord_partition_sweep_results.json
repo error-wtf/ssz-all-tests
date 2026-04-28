@@ -1,0 +1,37 @@
+{
+  "total_tests": 484,
+  "passed_tests": 484,
+  "failed_tests": 0,
+  "results": [
+    {"R": 0, "p": -8, "k": -8, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": -4, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": -2, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": -1, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 0, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 1, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 2, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 4, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 8, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 1.4142135623730951, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -8, "k": 1.618033988749895, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": -8, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": -4, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": -2, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": -1, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 0, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 1, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 2, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 4, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 8, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 1.4142135623730951, "valid": true, "energy": 0.0, "max_amplitude": 0.0},
+    {"R": 0, "p": -4, "k": 1.618033988749895, "valid": true, "energy": 0.0, "max_amplitude": 0.0}
+  ],
+  "summary": {
+    "R_values_tested": [0, 1, 2, 1.618033988749895],
+    "p_values_tested": [-8, -4, -2, -1, 0, 1, 2, 4, 8, 1.4142135623730951, 1.618033988749895],
+    "k_values_tested": [-8, -4, -2, -1, 0, 1, 2, 4, 8, 1.7320508075688772, 1.618033988749895],
+    "total_combinations": 484,
+    "valid_combinations": 484,
+    "stability_rate": "100%"
+  }
+}

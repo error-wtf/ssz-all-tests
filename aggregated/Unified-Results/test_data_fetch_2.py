@@ -1,0 +1,84 @@
+# -*- coding: utf-8 -*-
+# =============================================================================
+# SOURCE: Unified-Results
+# ORIGINAL PATH: e:\clone\Segmented-Spacetime-Mass-Projection-Unified-Results\scripts\tests\test_data_fetch.py
+# AGGREGATED: 2026-04-27T21:17:57.624084
+# =============================================================================
+# This file was automatically aggregated from the SSZ repository.
+# Do not modify - changes will be lost on next aggregation.
+# =============================================================================
+
+from __future__ import annotations
+from pathlib import Path
+import os, pytest, pandas as pd
+from scripts.tests.data_smoke_fetch import fetch_gaia_quick, fetch_sdss_quick, smoke_paths
+from scripts.tools.logging_utils import get_logger
+
+RUN_ID = "2025-10-17_gaia_ssz_real"
+
+def test_gaia_smoke(tmp_path: Path):
+    log = get_logger("TEST_GAIA", RUN_ID)
+    p = smoke_paths(RUN_ID)["gaia_parquet"]
+    if p.exists():
+        try:
+            df = pd.read_parquet(p)
+        except Exception:
+            p.unlink(missing_ok=True)
+            df = None
+    else:
+        df = None
+
+    if df is None:
+        fetch_gaia_quick(str(p))
+        df = pd.read_parquet(p)
+
+    assert len(df) > 100, "Too few GAIA rows"
+    for col in ("ra","dec","parallax","pmra","pmdec","phot_g_mean_mag"):
+        assert col in df.columns, f"Missing GAIA col {col}"
+    log.info("GAIA smoke rows=%d", len(df))
+
+def test_sdss_smoke(tmp_path: Path):
+    log = get_logger("TEST_SDSS", RUN_ID)
+    p = smoke_paths(RUN_ID)["sdss_csv"]
+    if not p.exists():
+        fetch_sdss_quick(str(p), limit=5000)
+    assert p.exists(), f"SDSS csv not found: {p}"
+    df = pd.read_csv(p)
+    assert len(df) > 100, "Too few SDSS rows"
+    for col in ("ra","dec","u","g","r","i","z"):
+        assert col in df.columns, f"Missing SDSS col {col}"
+    log.info("SDSS smoke rows=%d", len(df))
+
+def test_planck_presence():
+    """Test Planck CMB power spectrum data presence.
+    
+    Planck data (~2 GB) is auto-fetched if missing.
+    File: COM_PowerSpect_CMB-TT-full_R3.01.txt (CMB TT power spectrum)
+    """
+    log = get_logger("TEST_PLANCK", RUN_ID)
+    p = smoke_paths(RUN_ID)["planck_fits"]
+    
+    if not p.exists():
+        log.info("Planck data not found, attempting to fetch (~2 GB)...")
+        # Run fetch script
+        import subprocess
+        try:
+            result = subprocess.run(
+                ["python", "scripts/fetch_planck.py"],
+                capture_output=True,
+                text=True,
+                timeout=1800  # 30 minutes max
+            )
+            if result.returncode != 0:
+                pytest.skip(
+                    f"Could not fetch Planck data (optional, ~2 GB):\n"
+                    f"{result.stderr}\n"
+                    f"Manual download: python scripts/fetch_planck.py"
+                )
+        except Exception as e:
+            pytest.skip(f"Could not fetch Planck data (optional): {e}")
+    
+    if p.exists():
+        log.info("Planck CMB power spectrum present -> %s", p)
+    else:
+        pytest.skip(f"Planck data not available (optional, ~2 GB): {p}")

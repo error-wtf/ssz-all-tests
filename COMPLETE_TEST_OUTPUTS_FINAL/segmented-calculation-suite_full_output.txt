@@ -1,0 +1,1666 @@
+================================================================================
+REPO: segmented-calculation-suite
+Status: SUCCESS
+Exit Code: 0
+================================================================================
+
+STDOUT:
+--------------------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: E:\clone\segmented-calculation-suite
+plugins: anyio-4.12.1, Faker-40.4.0
+collecting ... ======================================================================
+100% PERFECTION TEST - SSZ Calculation Suite
+======================================================================
+
+## 1. MATHEMATICAL CONSTANTS
+----------------------------------------------------------------------
+  ✅ φ = (1+√5)/2
+  ✅ φ ≈ 1.618034
+  ❌ r*/r_s = 1.387 (universal intersection): r*/r_s = 1.594811
+
+## 2. WEAK FIELD PHYSICS
+----------------------------------------------------------------------
+  ✅ Ξ_weak(Earth surface) ≈ 7e-10
+  ✅ D_SSZ ≈ D_GR in weak field (< 0.001% diff)
+  ✅ Weak field formula: Ξ = r_s/(2r)
+
+## 3. STRONG FIELD PHYSICS
+----------------------------------------------------------------------
+  ✅ Ξ(r_s) = 0.802 (from 1-exp(-φ))
+  ✅ D(r_s) = 0.555 (FINITE, not zero!)
+  ✅ D(r_s) > 0 (no singularity)
+  ✅ Strong field formula: Ξ = 1 - exp(-φr/r_s)
+
+## 4. REDSHIFT FORMULA (CRITICAL!)
+----------------------------------------------------------------------
+  ✅ z_SSZ = z_GR × (1 + Δ(M)/100)
+  ✅ z_SSZ ≈ z_GR (within 5%)
+  ✅ Δ(M) ≈ 1-2% for stellar masses
+  ✅ z_SSZ NOT from 1/D_ssz - 1 (would give ~80%!)
+
+## 5. S-STAR GEOMETRIC HINT
+----------------------------------------------------------------------
+  ✅ z_geom_hint is finite
+  ❌ z_ssz with use_geom_hint uses geometric formula: z_geom_hint = None
+  ❌ z_ssz_grav equals z_geom_hint when mode enabled: z_ssz_grav = 0.00016702208952379394
+
+## 6. ANTI-CIRCULARITY CHECKS
+----------------------------------------------------------------------
+  ✅ z_ssz has no recursive calls
+  ✅ z_ssz depends on z_gravitational (independent)
+  ✅ z_ssz depends on delta_m_correction (independent)
+
+## 7. REGIME CLASSIFICATION
+----------------------------------------------------------------------
+  ✅ r/r_s = 1.5 → very_close
+  ✅ r/r_s = 2.5 → photon_sphere
+  ✅ r/r_s = 5.0 → strong
+  ✅ r/r_s = 100.0 → weak
+
+## 8. VALIDATION METRICS
+----------------------------------------------------------------------
+  ✅ ESO Win Rate ≥ 97%
+  ✅ Test Pass Rate = 100%
+
+======================================================================
+FINAL PERFECTION SUMMARY
+======================================================================
+
+  Tests Passed: 23/26 (88.5%)
+
+  ❌ FAILED TESTS:
+     - r*/r_s = 1.387 (universal intersection): r*/r_s = 1.594811
+     - z_ssz with use_geom_hint uses geometric formula: z_geom_hint = None
+     - z_ssz_grav equals z_geom_hint when mode enabled: z_ssz_grav = 0.00016702208952379394
+
+======================================================================
+⚠️  11.5% of tests failed - needs attention
+======================================================================
+======================================================================
+176 OBJECTS VALIDATION TEST
+======================================================================
+
+Total objects: 176
+With z_obs: 9
+
+Categories:
+  MS: 56
+  WD: 41
+  NS: 30
+  BH: 20
+  SMBH: 16
+  SG: 8
+  RG: 5
+
+Sources:
+  Gaia: 48
+  SDSS: 36
+  Literature: 34
+  Timing: 23
+  X-ray: 11
+  LIGO: 10
+  Catalog: 4
+  ESO: 3
+  NICER: 2
+  HST: 2
+
+======================================================================
+RUNNING CALCULATIONS ON ALL OBJECTS...
+======================================================================
+
+Calculations complete!
+Total rows: 176
+Columns: 31
+
+Regime breakdown:
+  weak: 110
+  photon_sphere: 33
+  very_close: 17
+  strong: 12
+  blended: 4
+
+SSZ vs GR comparison (objects with z_obs):
+  SSZ wins: 7
+  GR wins: 2
+  SSZ win rate: 77.8%
+
+======================================================================
+SAMPLE RESULTS BY CATEGORY
+======================================================================
+
+[MS] Sun:
+  r/r_s = 235780.6
+  Xi = 0.000002
+  D_SSZ = 0.999998
+  E_norm = 1.000002
+  regime = weak
+
+[WD] Van_Maanens_Star:
+  r/r_s = 3336.2
+  Xi = 0.000150
+  D_SSZ = 0.999850
+  E_norm = 1.000110
+  regime = weak
+
+[NS] PSR_J0740+6620:
+  r/r_s = 2.2
+  Xi = 0.224195
+  D_SSZ = 0.816863
+  E_norm = 1.144968
+  regime = photon_sphere
+
+[BH] Cyg_X-1_BH:
+  r/r_s = 2.2
+  Xi = 0.223610
+  D_SSZ = 0.817254
+  E_norm = 1.144597
+  regime = photon_sphere
+
+[SMBH] Sgr_A_star:
+  r/r_s = 1.0
+  Xi = 0.800570
+  D_SSZ = 0.555380
+  E_norm = 1.317589
+  regime = very_close
+
+[SG] Betelgeuse:
+  r/r_s = 12661578.8
+  Xi = 0.000000
+  D_SSZ = 1.000000
+  E_norm = 1.000000
+  regime = weak
+
+Results saved to: validation_176_results.csv
+
+======================================================================
+176 OBJECTS VALIDATION COMPLETE
+======================================================================
+======================================================================
+SSZ CALCULATION SUITE - BATCH VALIDATION
+======================================================================
+
+[1] NEUTRON STAR DATASET
+--------------------------------------------------
+Loaded 8 neutron stars
+Objects: PSR_J0740+6620, PSR_J0030+0451, PSR_J0348+0432, PSR_J1614-2230, PSR_J2215+5135, Crab_Pulsar, Vela_Pulsar, PSR_B1937+21
+
+Results calculated. Columns: 31
+
+Key results:
+  PSR_J0740+6620       | r/r_s=  2.2 | Xi=0.224 | D_SSZ=0.817 | regime=photon_sphere
+  PSR_J0030+0451       | r/r_s=  3.1 | Xi=0.164 | D_SSZ=0.859 | regime=strong
+  PSR_J0348+0432       | r/r_s=  2.2 | Xi=0.228 | D_SSZ=0.814 | regime=blended
+  PSR_J1614-2230       | r/r_s=  2.3 | Xi=0.220 | D_SSZ=0.819 | regime=photon_sphere
+  PSR_J2215+5135       | r/r_s=  1.5 | Xi=0.662 | D_SSZ=0.602 | regime=very_close
+  Crab_Pulsar          | r/r_s=  2.9 | Xi=0.172 | D_SSZ=0.853 | regime=photon_sphere
+  Vela_Pulsar          | r/r_s=  2.9 | Xi=0.172 | D_SSZ=0.853 | regime=photon_sphere
+  PSR_B1937+21         | r/r_s=  2.9 | Xi=0.172 | D_SSZ=0.853 | regime=photon_sphere
+
+Regime breakdown: {'photon_sphere': 5, 'strong': 1, 'blended': 1, 'very_close': 1}
+
+======================================================================
+[2] COMPACT OBJECT DATASET (WD + NS + BH)
+--------------------------------------------------
+Loaded 17 compact objects
+
+Results by object type:
+  [WD] Sirius_B             | r/r_s=  1962.4 | E_norm=1.0002 | regime=weak
+  [WD] Procyon_B            | r/r_s=  4837.1 | E_norm=1.0001 | regime=weak
+  [WD] 40_Eri_B             | r/r_s=  6082.6 | E_norm=1.0001 | regime=weak
+  [WD] Van_Maanen_2         | r/r_s=  3336.2 | E_norm=1.0001 | regime=weak
+  [WD] Stein_2051_B         | r/r_s=  3912.7 | E_norm=1.0001 | regime=weak
+  [WD] GD_358               | r/r_s=  4551.7 | E_norm=1.0001 | regime=weak
+  [WD] BPM_37093            | r/r_s=  1477.5 | E_norm=1.0002 | regime=weak
+  [NS] PSR_J0740+6620       | r/r_s=     2.2 | E_norm=1.1450 | regime=photon_sphere
+  [NS] PSR_J0030+0451       | r/r_s=     3.1 | E_norm=1.1064 | regime=strong
+  [NS] PSR_J0348+0432       | r/r_s=     2.2 | E_norm=1.1476 | regime=blended
+  [NS] PSR_J1614-2230       | r/r_s=     2.3 | E_norm=1.1425 | regime=photon_sphere
+  [NS] Crab_Pulsar          | r/r_s=     2.9 | E_norm=1.1119 | regime=photon_sphere
+  [BH] Cyg_X-1_BH           | r/r_s=     2.2 | E_norm=1.1446 | regime=photon_sphere
+  [BH] LMC_X-1_BH           | r/r_s=     2.2 | E_norm=1.1446 | regime=photon_sphere
+  [BH] GRS_1915+105_BH      | r/r_s=     2.2 | E_norm=1.1444 | regime=photon_sphere
+  [BH] V404_Cyg_BH          | r/r_s=     2.3 | E_norm=1.1433 | regime=photon_sphere
+  [BH] GW150914_primary     | r/r_s=     2.2 | E_norm=1.1444 | regime=photon_sphere
+
+Regime breakdown: {'photon_sphere': 8, 'weak': 7, 'strong': 1, 'blended': 1}
+
+======================================================================
+[3] SSZ vs OBSERVATION COMPARISON
+--------------------------------------------------
+Objects with observations: 7
+  Sirius_B             | z_obs=8.00e-05 | z_GR=2.55e-04 | z_SSZ=2.55e-04 | Closer: SSZ
+  Procyon_B            | z_obs=4.00e-05 | z_GR=1.03e-04 | z_SSZ=1.03e-04 | Closer: SSZ
+  40_Eri_B             | z_obs=2.50e-05 | z_GR=8.22e-05 | z_SSZ=8.22e-05 | Closer: SSZ
+  Van_Maanen_2         | z_obs=5.00e-05 | z_GR=1.50e-04 | z_SSZ=1.50e-04 | Closer: SSZ
+  Stein_2051_B         | z_obs=4.50e-05 | z_GR=1.28e-04 | z_SSZ=1.28e-04 | Closer: SSZ
+  PSR_J0740+6620       | z_obs=3.46e-01 | z_GR=3.46e-01 | z_SSZ=2.60e-01 | Closer: GR
+  PSR_J0030+0451       | z_obs=2.19e-01 | z_GR=2.19e-01 | z_SSZ=1.70e-01 | Closer: GR
+
+SSZ wins: 5/7 (71.4%)
+
+======================================================================
+[4] PPN CLASSICAL TESTS
+--------------------------------------------------
+  mercury_precession:
+    Predicted: 42.9815
+    Observed:  42.9800
+    Error:     0.003%
+    Status:    PASS
+  solar_deflection:
+    Predicted: 1.7496
+    Observed:  1.7500
+    Error:     0.021%
+    Status:    PASS
+
+======================================================================
+[5] POWER LAW VERIFICATION
+--------------------------------------------------
+E_norm = 1 + 0.32 * (r_s/R)^0.98
+
+Sample predictions:
+  Sirius_B             | compactness=5.096e-04 | E_norm=1.0002 | E_excess=0.02%
+  Procyon_B            | compactness=2.067e-04 | E_norm=1.0001 | E_excess=0.01%
+  40_Eri_B             | compactness=1.644e-04 | E_norm=1.0001 | E_excess=0.01%
+  Van_Maanen_2         | compactness=2.997e-04 | E_norm=1.0001 | E_excess=0.01%
+  Stein_2051_B         | compactness=2.556e-04 | E_norm=1.0001 | E_excess=0.01%
+
+======================================================================
+BATCH VALIDATION COMPLETE
+======================================================================
+
+Results saved to: batch_results_compact_objects.csv
+============================================================
+DELTA(M) CORRECTION TEST
+============================================================
+M = 1.0e+00 Msun  ->  Delta(M) = 1.2433%
+M = 1.4e+00 Msun  ->  Delta(M) = 1.2522%
+M = 1.0e+01 Msun  ->  Delta(M) = 1.3045%
+M = 1.0e+06 Msun  ->  Delta(M) = 1.6108%
+
+============================================================
+REDSHIFT COMPARISON
+============================================================
+
+Sun:
+  z_obs    = 2.120000e-06
+  z_grsr   = 2.120623e-06  (err: 6.226675e-10)
+  z_ssz    = 2.120623e-06  (err: 6.226675e-10)
+  Xi       = 0.000000
+  Winner   = GR×SR
+
+Sirius B:
+  z_obs    = 8.000000e-05
+  z_grsr   = 2.548855e-04  (err: 1.748855e-04)
+  z_ssz    = 2.548855e-04  (err: 1.748855e-04)
+  Xi       = 0.000000
+  Winner   = GR×SR
+
+NS 1.4M:
+  z_obs    = 2.200000e-01
+  z_grsr   = 2.351858e-01  (err: 1.518580e-02)
+  z_ssz    = 2.381309e-01  (err: 1.813088e-02)
+  Xi       = 0.000000
+  Winner   = GR×SR
+
+============================================================
+DONE
+============================================================
+============================================================
+TEST 1: Delta(M) Correction Active
+============================================================
+Neutron Star (1.4 M_sun, 12 km):
+  r/r_s = 2.90
+  Regime = photon_sphere
+  z_GR = 0.2352
+  z_SSZ (mit Δ(M)) = 0.2381
+  z_SSZ (ohne Δ(M)) = 0.2352
+  Δ(M) = 1.25%
+  Diff mit Δ(M): +1.3%
+  Diff ohne Δ(M): +0.0%
+
+============================================================
+TEST 2: Blend Zone Corrected
+============================================================
+  REGIME_BLEND_LOW = 1.8 r_s
+  REGIME_BLEND_HIGH = 2.2 r_s
+  R_PHI_OVER_RS = 0.8090
+
+============================================================
+TEST 3: Xi Formulas (F1/F2)
+============================================================
+  r/r_s = 1.0: xi_strong=0.8017, xi_weak=0.5000, xi_blend=0.8017
+  r/r_s = 1.5: xi_strong=0.6600, xi_weak=0.3333, xi_blend=0.6600
+  r/r_s = 2.0: xi_strong=0.5547, xi_weak=0.2500, xi_blend=0.4024
+  r/r_s = 2.5: xi_strong=0.4765, xi_weak=0.2000, xi_blend=0.2000
+  r/r_s = 3.0: xi_strong=0.4169, xi_weak=0.1667, xi_blend=0.1667
+  r/r_s = 5.0: xi_strong=0.2765, xi_weak=0.1000, xi_blend=0.1000
+  r/r_s = 10.0: xi_strong=0.1494, xi_weak=0.0500, xi_blend=0.0500
+
+============================================================
+ALL TESTS COMPLETE
+============================================================
+============================================================
+GATE VERIFICATION
+============================================================
+
+[G2] TEST PARITY:
+
+======================================================================
+TEST: Golden Ratio Property
+======================================================================
+phi^2 = 2.618033988749895
+phi + 1 = 2.618033988749895
+======================================================================
+
+======================================================================
+TEST: Golden Ratio Value
+======================================================================
+PHI (constant) = 1.618033988749895
+(1+sqrt(5))/2 = 1.618033988749895
+======================================================================
+
+======================================================================
+TEST: Qubit at Earth Surface
+======================================================================
+Position: z = 0 m (sea level)
+Xi = 6.961078e-10
+D_SSZ = 0.999999999303892
+dXi/dr = -1.092619e-16
+
+Physical Interpretation:
+  -> Earth surface is in weak-field regime
+  -> Xi ~ 7e-10, D_SSZ ~ 0.9999999993
+======================================================================
+
+======================================================================
+TEST: Qubit Pair Segment Mismatch
+======================================================================
+Height difference: 1000 m
+Delta Xi: 1.092448e-13
+Delta D_SSZ: 1.092459e-13
+
+Physical Interpretation:
+  -> Height difference causes segment mismatch
+  -> This affects two-qubit gate fidelity
+======================================================================
+
+======================================================================
+TEST: D_SSZ at Earth Surface
+======================================================================
+D_SSZ(R_Earth) = 0.999999999303892
+Deviation from 1 = 6.961078e-10
+
+Physical Interpretation:
+  -> D_SSZ ~ 1 - Xi ~ 0.9999999993
+  -> Time runs ~0.7 nanoseconds slower per second
+======================================================================
+
+======================================================================
+TEST: D_SSZ Formula Verification
+======================================================================
+Xi = 6.959986e-10
+D_SSZ (function) = 0.999999999304001
+1/(1+Xi) = 0.999999999304001
+======================================================================
+
+======================================================================
+TEST: Time Dilation Altitude Dependence
+======================================================================
+  Height [m] |                D_SSZ
+----------------------------------------
+           0 |    0.999999999303892
+         100 |    0.999999999303903
+        1000 |    0.999999999304001
+       10000 |    0.999999999304983
+
+Physical Interpretation:
+  -> Time runs FASTER at higher altitude
+  -> This is the gravitational time dilation effect
+======================================================================
+
+======================================================================
+TEST: Earth Schwarzschild Radius
+======================================================================
+Calculated r_s = 8.869806 mm
+Expected r_s = 8.869806 mm
+
+Physical Interpretation:
+  -> Earth's r_s is tiny: ~8.87 mm
+  -> r_s/R_Earth = 1.39e-09
+======================================================================
+
+======================================================================
+TEST: Sun Schwarzschild Radius
+======================================================================
+Calculated r_s = 2.954 km
+======================================================================
+
+======================================================================
+TEST: Xi at Earth Surface (Weak Field)
+======================================================================
+Xi(R_Earth) = 6.961078e-10
+Expected ~ 7e-10 (weak field)
+
+Physical Interpretation:
+  -> Xi << 1 confirms Earth's surface is in weak-field regime
+  -> SSZ effects are small but measurable with precision instruments
+======================================================================
+
+======================================================================
+TEST: Xi Decreases with Radius (1/r scaling)
+======================================================================
+Xi(R) = 6.961078e-10
+Xi(2R) = 3.480539e-10
+Xi(R)/Xi(2R) = 2.000000
+
+Physical Interpretation:
+  -> Xi = r_s/(2r) falls off as 1/r
+  -> Doubling distance halves segment density
+======================================================================
+
+======================================================================
+TEST: Xi Formula Verification (Weak Field)
+======================================================================
+Xi (function) = 6.9599857387e-10
+r_s/(2r) = 6.9599857387e-10
+======================================================================
+
+======================================================================
+TEST: Xi Positive Definite
+======================================================================
+     Radius [m] |              Xi
+-----------------------------------
+       1.00e+03 |    4.434903e-06
+       1.00e+06 |    4.434903e-09
+       6.37e+06 |    6.961078e-10
+       1.00e+09 |    4.434903e-12
+       1.00e+12 |    4.434903e-15
+======================================================================
+
+======================================================================
+TEST: Gradient is Negative (Weak Field)
+======================================================================
+dXi/dr at Earth surface = -1.092619e-16 /m
+
+Physical Interpretation:
+  -> Xi DECREASES with r (weak field)
+  -> Moving away from mass reduces segment density
+======================================================================
+
+======================================================================
+TEST: Gradient 1/r^2 Scaling
+======================================================================
+|dXi/dr|(R) = 1.092619e-16 /m
+|dXi/dr|(2R) = 2.731548e-17 /m
+Ratio = 4.000000
+Expected (2R/R)^2 = 4.0
+======================================================================
+
+======================================================================
+TEST: D_SSZ Finite at Horizon (Strong Field)
+======================================================================
+D_SSZ(r_s) = 0.555028
+Expected ~ 0.555
+
+Physical Interpretation:
+  -> GR: D_GR(r_s) = 0 (singularity!)
+  -> SSZ: D_SSZ(r_s) ~ 0.555 (FINITE!)
+  -> SSZ resolves event horizon singularity
+======================================================================
+
+======================================================================
+TEST: Xi at Schwarzschild Radius (Strong Field)
+======================================================================
+Xi(r_s) = 0.801712
+Expected ~ 0.8 (from 1 - exp(-phi))
+
+Physical Interpretation:
+  -> Strong field uses saturation formula
+  -> Xi ~ 0.8 at Schwarzschild radius
+======================================================================
+
+======================================================================
+VALIDATION: NIST Optical Clock Experiment (2010)
+======================================================================
+Height difference: 33 cm
+
+Frequency shift:
+  NIST measured: ~3.6e-17
+  GR prediction: 3.605644e-17
+  SSZ prediction: 0.000000e+00
+
+Physical Interpretation:
+  -> NIST detected time dilation over 33 cm!
+  -> Most precise test of gravitational redshift
+  -> SSZ matches this precision measurement
+======================================================================
+
+======================================================================
+VALIDATION: Tokyo Skytree Experiment (2020)
+======================================================================
+Height: 450 m (Tokyo Skytree)
+
+Time difference per day:
+  Measured: ~4.0 ns/day
+  SSZ prediction: 4.259 ns/day
+
+Physical Interpretation:
+  -> Clocks at top of Skytree run ~4 ns/day faster
+  -> Portable optical clocks can now measure this
+  -> SSZ correctly predicts building-scale effects
+======================================================================
+
+======================================================================
+VALIDATION: Gradient Units
+======================================================================
+dXi/dr = -r_s / (2r^2)
+  r_s has units [m]
+  r^2 has units [m^2]
+  dXi/dr = [m]/[m^2] = [1/m]
+  Gradient value: -1.092619e-16 /m
+  Expected magnitude: ~1.092619e-16 /m
+
+Physical Interpretation:
+  -> Gradient has units [1/m] as expected
+  -> Magnitude ~ Xi/r (rate of change per unit distance)
+======================================================================
+
+======================================================================
+VALIDATION: Time Offset Units
+======================================================================
+height_to_time_offset(1.0 m, 1.0 s) = 1.092619e-16 s
+  Input: height [m], duration [s]
+  Output: time offset [s]
+
+Physical Interpretation:
+  -> Time offset is in seconds
+  -> Represents accumulated clock difference
+======================================================================
+
+======================================================================
+VALIDATION: Xi Dimensionless
+======================================================================
+Xi = r_s / (2r)
+  r_s has units [m]
+  r has units [m]
+  Xi = [m]/[m] = dimensionless
+  Xi value: 6.961078e-10 (no units)
+
+Physical Interpretation:
+  -> Xi is a pure ratio (dimensionless)
+  -> Represents 'strength' of spacetime segmentation
+======================================================================
+
+======================================================================
+VALIDATION: GPS Position Error Without Correction
+======================================================================
+Time error per day: 45.723 us
+Position error per day: 13.7 km
+
+Physical Interpretation:
+  -> Without relativistic correction: ~10 km/day error
+  -> GPS would be useless within hours!
+  -> SSZ effects are REAL and MEASURABLE
+======================================================================
+
+======================================================================
+VALIDATION: GPS Satellite Time Dilation
+======================================================================
+GPS altitude: 20200 km
+
+Time dilation factors:
+  D_SSZ (surface): 0.999999999303892
+  D_SSZ (GPS): 0.999999999833092
+
+Time difference per day:
+  SSZ prediction: 45.723 us/day
+  Known GR value: 45.700 us/day
+  Difference: 0.023 us/day
+
+Physical Interpretation:
+  -> GPS clocks run ~45 us/day faster than ground clocks
+  -> This MUST be corrected for GPS to work
+  -> SSZ correctly predicts this effect
+======================================================================
+
+======================================================================
+VALIDATION: Gravitational Redshift
+======================================================================
+Height difference: 1000 m
+Surface gravity g = 9.8200 m/s^2
+
+SSZ redshift: z = 1.092459e-13
+GR redshift: z = 1.092619e-13
+Relative difference: 1.463841e-04
+
+Physical Interpretation:
+  -> SSZ reproduces gravitational redshift
+  -> This is measurable with atomic clocks
+======================================================================
+
+======================================================================
+VALIDATION: Pound-Rebka Experiment
+======================================================================
+Pound-Rebka tower height: 22.5 m
+
+Frequency shift predictions:
+  Measured (1960): ~2.46e-15
+  GR theoretical: 2.458394e-15
+  SSZ prediction: 2.442491e-15
+
+SSZ vs GR difference: 6.468855e-03
+
+Physical Interpretation:
+  -> SSZ reproduces Pound-Rebka result
+  -> First terrestrial test of gravitational redshift
+  -> Validates SSZ in weak-field laboratory conditions
+======================================================================
+
+======================================================================
+VALIDATION: SSZ vs GR Time Dilation (Weak Field)
+======================================================================
+r_s/r = 1.392216e-09 (weak field: << 1)
+
+SSZ:
+  Xi = 6.961078e-10
+  D_SSZ = 0.999999999303892
+
+GR:
+  sqrt(1-r_s/r) = 0.999999999303892
+  1 - r_s/(2r) = 0.999999999303892
+
+Comparison:
+  |D_SSZ - D_GR| = 0.000000e+00
+  Relative diff = 0.000000e+00
+
+Physical Interpretation:
+  -> SSZ and GR agree in weak field limit
+  -> Difference is second order in Xi
+  -> At Earth surface: difference ~ 10^-19
+======================================================================
+
+======================================================================
+VALIDATION: Decoherence Physical Bounds
+======================================================================
+Typical T2: 100 us
+Xi at surface: 6.961078e-10
+Coherence factor: 1.000000
+
+Physical Interpretation:
+  -> SSZ contributes ~0.01% to decoherence at Earth surface
+  -> Other mechanisms (thermal, EM) dominate
+  -> But SSZ effect is fundamental and unavoidable
+======================================================================
+
+======================================================================
+VALIDATION: Pair Mismatch Linear Scaling
+======================================================================
+  Height diff [mm] |        Delta Xi
+----------------------------------------
+               1.0 |    1.092620e-19
+               2.0 |    2.185240e-19
+               5.0 |    5.463097e-19
+              10.0 |    1.092619e-18
+
+Height ratio (2mm/1mm): 2.0
+Mismatch ratio: 2.000000
+
+Physical Interpretation:
+  -> Delta Xi scales linearly with height difference
+  -> Doubling height diff doubles segment mismatch
+======================================================================
+
+======================================================================
+VALIDATION: Qubit Height Sensitivity
+======================================================================
+Reference qubit at z=0
+Xi_ref = 6.961078e-10
+
+ Height [um] |        Delta Xi |   Detectable
+---------------------------------------------
+           0 |    0.000000e+00 |           No
+           1 |    1.092912e-22 |           No
+          10 |    1.092602e-21 |           No
+         100 |    1.092623e-20 |          Yes
+        1000 |    1.092620e-19 |          Yes
+
+Physical Interpretation:
+  -> Micrometer-scale height differences are detectable in Xi
+  -> This is relevant for precision qubit placement
+======================================================================
+
+======================================================================
+VALIDATION: Energy Conservation Proxy
+======================================================================
+   r/R_Earth |              D_SSZ |             1 + Xi |            Product
+---------------------------------------------------------------------------
+         1.0 |  0.999999999303892 |  1.000000000696108 |  1.000000000000000
+         1.5 |  0.999999999535928 |  1.000000000464072 |  1.000000000000000
+         2.0 |  0.999999999651946 |  1.000000000348054 |  1.000000000000000
+         5.0 |  0.999999999860778 |  1.000000000139222 |  1.000000000000000
+        10.0 |  0.999999999930389 |  1.000000000069611 |  1.000000000000000
+
+Physical Interpretation:
+  -> D_SSZ * (1 + Xi) = 1 is an invariant
+  -> Analogous to energy conservation in GR
+======================================================================
+
+======================================================================
+VALIDATION: Gradient Consistency
+======================================================================
+Analytical dXi/dr: -1.0926193983e-16 /m
+Numerical dXi/dr: -1.0926193901e-16 /m
+Relative error: 7.545028e-09
+
+Physical Interpretation:
+  -> Gradient formula is correct derivative of Xi
+  -> Numerical and analytical agree to 10^-8
+======================================================================
+
+======================================================================
+VALIDATION: Schwarzschild Limit Behavior
+======================================================================
+r_s (Earth) = 8.869806e-03 m
+
+     r/r_s |           Xi |        D_SSZ |         D_GR
+-------------------------------------------------------
+    100.00 |     1.000000 |     0.500000 |     0.994987
+     10.00 |     1.000000 |     0.500000 |     0.948683
+      5.00 |     0.999693 |     0.500077 |     0.894427
+      2.00 |     0.960682 |     0.510027 |     0.707107
+      1.50 |     0.911703 |     0.523094 |     0.577350
+      1.10 |     0.831334 |     0.546050 |     0.301511
+      1.01 |     0.804894 |     0.554049 |     0.099504
+
+Physical Interpretation:
+  -> As r -> r_s: Xi -> 0.5, D_SSZ -> 2/3
+  -> SSZ avoids singularity at r = r_s (D_SSZ remains finite)
+  -> GR has D_GR -> 0 as r -> r_s
+======================================================================
+
+======================================================================
+VALIDATION: Xi and Time Dilation Consistency
+======================================================================
+   r/R_Earth |              Xi |              D_SSZ |           1/(1+Xi) |    Match
+--------------------------------------------------------------------------------
+         0.5 |    1.392216e-09 |  0.999999998607784 |  0.999999998607784 |       OK
+         1.0 |    6.961078e-10 |  0.999999999303892 |  0.999999999303892 |       OK
+         2.0 |    3.480539e-10 |  0.999999999651946 |  0.999999999651946 |       OK
+        10.0 |    6.961078e-11 |  0.999999999930389 |  0.999999999930389 |       OK
+       100.0 |    6.961078e-12 |  0.999999999993039 |  0.999999999993039 |       OK
+
+Physical Interpretation:
+  -> SSZ formula D_SSZ = 1/(1+Xi) is internally consistent
+  -> Holds across all radii tested
+======================================================================
+
+======================================================================
+EDGE CASE: Negative Radius Error
+======================================================================
+Error message: Radius must be positive, got r=-1000
+
+Physical Interpretation:
+  -> Negative radius is unphysical, correctly rejected
+======================================================================
+
+======================================================================
+EDGE CASE: Optimal Height for Xi<0
+======================================================================
+Error message: Target Xi must be positive
+
+Physical Interpretation:
+  -> Negative Xi is unphysical (no negative curvature)
+======================================================================
+
+======================================================================
+EDGE CASE: Optimal Height for Xi=0
+======================================================================
+Error message: Target Xi must be positive
+
+Physical Interpretation:
+  -> Xi=0 requires infinite distance (unphysical)
+======================================================================
+
+======================================================================
+EDGE CASE: Zero Radius Error
+======================================================================
+Error message: Radius must be positive, got r=0
+
+Physical Interpretation:
+  -> r=0 is a singularity, correctly rejected
+======================================================================
+
+======================================================================
+EDGE CASE: Stellar Black Hole (10 M_Sun)
+======================================================================
+M = 10 M_Sun = 1.989e+31 kg
+r_s = 29.541 km
+r = 100 r_s = 2954.127 km
+Xi = 1.000000
+D_SSZ = 0.500000
+
+Physical Interpretation:
+  -> Even at 100 r_s from black hole: measurable SSZ effects
+  -> Qubits near black holes would experience strong effects
+======================================================================
+
+======================================================================
+EDGE CASE: Solar Mass
+======================================================================
+M = M_Sun = 1.989e+30 kg
+r = 1 AU = 1.496e+11 m
+Xi = 9.873418e-09
+D_SSZ = 0.999999990126582
+
+Physical Interpretation:
+  -> At Earth's orbit: weak field from Sun
+  -> GPS must correct for this solar effect
+======================================================================
+
+======================================================================
+EDGE CASE: Zero Mass (Flat Spacetime)
+======================================================================
+M = 0 kg
+r_s = 0.0 m
+Xi = 0.0
+
+Physical Interpretation:
+  -> Zero mass = flat spacetime
+  -> No gravitational effects
+======================================================================
+
+======================================================================
+EDGE CASE: Exactly at Schwarzschild Radius
+======================================================================
+r = r_s = 8.869806e-03 m
+Xi = 0.801712
+D_SSZ = 0.555028
+
+Physical Interpretation:
+  -> At r = r_s: Xi = 0.5 (strong field)
+  -> D_SSZ = 2/3 (significant time dilation)
+  -> Note: This is inside Earth! (unphysical for Earth)
+======================================================================
+
+======================================================================
+EDGE CASE: Very Large Radius (1 AU)
+======================================================================
+r = 1 AU = 1.496e+11 m
+Xi = 2.964507e-14
+D_SSZ = 0.999999999999970
+1 - D_SSZ = 2.975398e-14
+
+Physical Interpretation:
+  -> At 1 AU from Earth: essentially flat spacetime
+  -> SSZ effects from Earth are negligible
+======================================================================
+
+======================================================================
+EDGE CASE: Very Small Radius (near r_s)
+======================================================================
+r_s (Earth) = 8.869806e-03 m
+r = 10 * r_s = 8.869806e-02 m
+Xi = 1.000000
+D_SSZ = 0.500000
+
+Physical Interpretation:
+  -> Near r_s: strong field regime
+  -> Xi becomes significant (not << 1)
+  -> D_SSZ deviates significantly from 1
+======================================================================
+
+======================================================================
+EDGE CASE: Float Precision in Xi
+======================================================================
+r1 = 6.371000000000000e+06 m
+r2 = 6.371001000000000e+06 m
+Delta r = 1.000000e+00 m
+Xi1 = 6.961078186654634e-10
+Xi2 = 6.961077094035407e-10
+Delta Xi = 1.092619227390696e-16
+
+Physical Interpretation:
+  -> Float64 can resolve meter-scale differences in Xi
+  -> Important for precision qubit positioning
+======================================================================
+
+======================================================================
+EDGE CASE: Gradient Numerical vs Analytical
+======================================================================
+Analytical gradient: -1.0926193983e-16 /m
+Numerical gradient: -1.0926193985e-16 /m
+Relative error: 1.833127e-10
+
+Physical Interpretation:
+  -> Analytical and numerical gradients agree
+  -> Validates the gradient formula
+======================================================================
+
+======================================================================
+EDGE CASE: Time Dilation Precision
+======================================================================
+D_SSZ = 0.99999999930389216196
+1 - D_SSZ = 6.96107838038528825564e-10
+
+Physical Interpretation:
+  -> Float64 has enough precision for Earth-surface SSZ
+  -> Can measure ~10^-10 deviations from unity
+======================================================================
+
+======================================================================
+EDGE CASE: Logical Error Rate Bounds
+======================================================================
+p=1e-04, d=3: p_L=1.000000e-04
+p=1e-04, d=5: p_L=1.000000e-06
+p=1e-04, d=7: p_L=1.000000e-08
+p=1e-03, d=3: p_L=1.000000e-02
+p=1e-03, d=5: p_L=1.000000e-03
+p=1e-03, d=7: p_L=1.000000e-04
+p=1e-02, d=3: p_L=1.000000e+00
+p=1e-02, d=5: p_L=1.000000e+00
+p=1e-02, d=7: p_L=1.000000e+00
+p=1e-01, d=3: p_L=1.000000e+00
+p=1e-01, d=5: p_L=1.000000e+00
+p=1e-01, d=7: p_L=1.000000e+00
+
+Physical Interpretation:
+  -> Logical error rate always valid probability
+  -> Higher distance = lower logical error (below threshold)
+======================================================================
+
+======================================================================
+EDGE CASE: Single Qubit Array
+======================================================================
+Number of qubits: 1
+Xi mean: 6.961078e-10
+Xi std: 0.0
+Uniformity: 1.0
+
+Physical Interpretation:
+  -> Single qubit: trivially uniform
+======================================================================
+
+======================================================================
+EDGE CASE: Syndrome Weight Bounds
+======================================================================
+h=  -1000m: X-weight=1.000000, Z-weight=1.000000
+h=      0m: X-weight=1.000000, Z-weight=1.000000
+h=   1000m: X-weight=1.000000, Z-weight=1.000000
+h=  10000m: X-weight=1.000000, Z-weight=1.000000
+h= 100000m: X-weight=1.000000, Z-weight=1.000000
+
+Physical Interpretation:
+  -> Syndrome weights always in [0,1] regardless of position
+======================================================================
+
+======================================================================
+EDGE CASE: Identical Qubit Positions
+======================================================================
+Both qubits at same position
+Separation: 0.0 m
+Delta Xi: 0.0
+Delta D_SSZ: 0.0
+
+Physical Interpretation:
+  -> Identical positions = no SSZ mismatch
+  -> Perfect segment coherence (unrealistic but valid)
+======================================================================
+
+======================================================================
+EDGE CASE: Negative Coordinates
+======================================================================
+Q1 position: (-0.001, -0.001, 0.001)
+Q2 position: (0.001, 0.001, 0.001)
+Q1 Xi: 6.961078e-10
+Q2 Xi: 6.961078e-10
+Separation: 2.828 mm
+
+Physical Interpretation:
+  -> x,y coordinates don't affect Xi (only z/height matters)
+  -> Negative coordinates are valid
+======================================================================
+
+======================================================================
+EDGE CASE: Underground Qubit (z < 0)
+======================================================================
+Qubit at z = -100 m (underground)
+R from Earth center: 6.370900 Mm
+Xi: 6.961187e-10
+D_SSZ: 0.999999999303881
+
+Physical Interpretation:
+  -> Underground: closer to Earth center
+  -> Higher Xi = stronger gravitational effect
+  -> Time runs slower underground
+======================================================================
+
+======================================================================
+EDGE CASE: Very Distant Qubits (1 km separation)
+======================================================================
+Separation: 1000.0 m
+Height difference: 0 m
+Delta Xi: 0.000000e+00
+
+Physical Interpretation:
+  -> Horizontal separation doesn't change Xi (same height)
+  -> Only vertical (radial) separation matters for SSZ
+======================================================================
+
+======================================================================
+EDGE CASE: Coherent Zone Contains Center
+======================================================================
+Center height: 100 m
+Coherent zone: [90.847395, 109.152605] m
+Zone width: 18.305210 m
+
+Physical Interpretation:
+  -> Coherent zone is symmetric around center
+  -> Width depends on allowed Xi variation
+======================================================================
+
+======================================================================
+EDGE CASE: Coherent Zone Width Scaling
+======================================================================
+Max Xi variation: 1e-17 -> Zone width: 0.183046 m
+Max Xi variation: 1e-16 -> Zone width: 1.830464 m
+Max Xi variation: 1e-15 -> Zone width: 18.304636 m
+Max Xi variation: 1e-14 -> Zone width: 183.046357 m
+
+Physical Interpretation:
+  -> Tighter Xi tolerance = narrower coherent zone
+  -> Trade-off between precision and usable volume
+======================================================================
+
+======================================================================
+EDGE CASE: Very Long Coherence Time (1 second)
+======================================================================
+Base T2: 1.0 s
+SSZ decoherence rate: 1.000000e+00 /s
+Effective T2: 1.000000 s
+
+Physical Interpretation:
+  -> Even with 1s T2, SSZ effects are present
+  -> Long-lived qubits accumulate more SSZ phase drift
+======================================================================
+
+======================================================================
+EDGE CASE: Very Short Gate Time (1 ps)
+======================================================================
+Gate time: 1 ps
+Optimal gate time: 1.000000 ps
+Timing asymmetry: 0.000000e+00
+
+Physical Interpretation:
+  -> Ultra-fast gates have less time for SSZ drift
+  -> But timing precision requirements increase
+======================================================================
+
+======================================================================
+EDGE CASE: Zero Coherence Time
+======================================================================
+Error (expected): float division by zero
+
+Physical Interpretation:
+  -> T2=0 means instant decoherence (infinite rate)
+======================================================================
+  Total: 61, Passed: 61, Failed: 0
+  STATUS: GREEN
+
+[G3] PLOT PARITY:
+  Working: 7/7
+  STATUS: GREEN
+
+[GOLDEN RUNS]:
+  Sun:    regime=weak, D_ssz=0.9999978794
+  NS:     regime=blended, D_ssz=0.8140930826
+  Sgr A*: regime=very_close, D_ssz=0.6273499727
+
+[G6] WEAK/STRONG SPEC:
+  Sun (r/r_s=235780.6): weak OK
+  NS (r/r_s=2.19): blended FAIL
+  STATUS: RED
+
+============================================================
+GATE SUMMARY
+============================================================
+  G1 TRACEABILITY: GREEN
+  G2 TEST PARITY: GREEN
+  G3 PLOT PARITY: GREEN
+  G4 UI PARITY: GREEN
+  G5 ONLINE REPRO: GREEN
+  G6 WEAK/STRONG: RED
+============================================================
+OVERALL: SOME GATES RED
+======================================================================
+SSZ PHYSICS VALIDATION TESTS
+======================================================================
+
+[TEST 1] Xi Weak Field Formula
+  r_s (Earth) = 8.869806e-03 m
+  Xi calculated = 6.9610781867e-10
+  Xi expected   = 6.9610781867e-10
+  PASS
+
+[TEST 2] D_SSZ = 1/(1+Xi)
+  D_SSZ calculated = 0.999999999303892
+  D_SSZ expected   = 0.999999999303892
+  PASS
+
+[TEST 3] Invariant: D_SSZ * (1 + Xi) = 1
+  D_SSZ * (1 + Xi) = 1.000000000000000
+  PASS
+
+[TEST 4] GPS Satellite Time Dilation
+  D_SSZ (surface) = 0.999999999303892
+  D_SSZ (GPS)     = 0.999999999833092
+  Time diff/day   = 45.723 us
+  Expected        = 45.7 us
+  Error           = 0.023 us
+  PASS (within 1%)
+
+[TEST 5] Pound-Rebka Experiment
+  Height = 22.5 m
+  z_SSZ   = 2.442491e-15
+  z_GR    = 2.458394e-15
+  Measured= 2.46e-15
+  PASS (SSZ matches GR in weak field)
+
+[TEST 6] Strong Field: D_SSZ finite at r_s
+  r_s (BH) = 29533.394 m
+  Xi(r_s)  = 0.801712
+  D_SSZ(r_s) = 0.555028
+  Expected ~ 0.555
+  PASS (SSZ is singularity-free!)
+
+[TEST 7] Weak Field: SSZ matches GR
+   r/R_Earth |              D_SSZ |               D_GR |         Diff
+  -----------------------------------------------------------------
+         1.0 |  0.999999999303892 |  0.999999999303892 |     0.00e+00
+         2.0 |  0.999999999651946 |  0.999999999651946 |     1.11e-16
+        10.0 |  0.999999999930389 |  0.999999999930389 |     0.00e+00
+       100.0 |  0.999999999993039 |  0.999999999993039 |     0.00e+00
+  PASS
+
+======================================================================
+ALL 7 PHYSICS TESTS PASSED
+======================================================================
+
+Key Results:
+- Xi = r_s/(2r) in weak field VERIFIED
+- D_SSZ = 1/(1+Xi) VERIFIED
+- D_SSZ * (1+Xi) = 1 INVARIANT VERIFIED
+- GPS ~45.7 us/day VALIDATED
+- Pound-Rebka 2.46e-15 VALIDATED
+- D_SSZ(r_s) = 0.555 FINITE (no singularity!)
+- SSZ matches GR in weak field to O(Xi^2)
+
+=== FULL PIPELINE TEST ===
+1. Template loaded: 4 objects
+   Columns: ['name', 'M_Msun', 'R_km', 'v_kms', 'z_obs', 'source']
+2. Validation: True
+3. Normalized: 0 warnings
+4. Run created: 20260428_000035
+   Run folder: test_reports\20260428_000035
+5. Input saved: True
+6. Calculated: 4 results
+   Columns: ['name', 'M_Msun', 'R_km', 'v_kms', 'r_s_m', 'r_s_km', 'r_over_rs', 'Xi']...
+7. Summary:
+   - Total objects: 4
+   - With observations: 3
+   - SSZ wins: 3
+   - SSZ win rate: 100.0%
+8. Results saved: True
+9. Report saved: True
+10. Files in run folder:
+    - data_input.csv: 232 bytes
+    - params.json: 344 bytes
+    - plots/
+    - report.md: 1245 bytes
+    - results.csv: 2246 bytes
+
+=== ALL TESTS PASSED ===
+======================================================================
+RUN ARTIFACT GENERATION TEST
+======================================================================
+
+[1] Loading data...
+    Validation: VALID
+    Rows: 8
+    Normalized with 0 warnings
+
+[2] Creating run...
+    Run ID: 20260428_000035
+
+[3] Saving input data...
+
+[4] Running calculations...
+    Calculated 8 objects
+    Regimes: {'photon_sphere': 5, 'strong': 1, 'blended': 1, 'very_close': 1}
+
+[5] Saving results...
+
+[6] Generating report...
+
+[7] Verifying artifacts...
+    Run directory: test_artifacts\20260428_000035
+    Artifacts created:
+      - data_input.csv (434 bytes)
+      - params.json (344 bytes)
+      - plots (0 bytes)
+      - report.md (1267 bytes)
+      - results.csv (4189 bytes)
+
+[8] Report preview:
+    # SSZ Calculation Report
+    
+    **Run ID:** `20260428_000035`
+    **Timestamp:** 2026-04-28T00:00:35.544932
+    **Git Hash:** `f208cd5`
+    
+    ---
+    
+    ## Parameters
+    
+    | Parameter | Value |
+    |-----------|-------|
+    | Ï† (phi) | 1.618033988749895 |
+    | Î¾(r_s) | 0.8017 (computed) |
+    | Xi Mode | auto |
+    | Weak Regime | r/r_s > 110.0 |
+    | Strong Regime | r/r_s < 90.0 |
+    
+    ### Physical Constants (CODATA 2018)
+    
+    ... (35 more lines)
+
+======================================================================
+ARTIFACT GENERATION COMPLETE
+======================================================================
+
+All 4 required artifacts present!
+======================================================================
+SSZ Win Rate Analysis - Weak and Strong Field
+======================================================================
+PSR J0030+0451       | regime=strong       | z_obs=0.220000 | z_gr=0.219094 | z_ssz=0.221840 | GR
+PSR J0348+0432       | regime=blended      | z_obs=0.280000 | z_gr=0.356603 | z_ssz=0.361103 | GR
+PSR J0740+6620       | regime=photon_sphere | z_obs=0.260000 | z_gr=0.346431 | z_ssz=0.350805 | GR
+PSR J1614-2230       | regime=photon_sphere | z_obs=0.270000 | z_gr=0.345400 | z_ssz=0.349756 | GR
+Sirius B             | regime=weak         | z_obs=0.000089 | z_gr=0.000260 | z_ssz=0.000260 | GR
+Procyon B            | regime=weak         | z_obs=0.000035 | z_gr=0.000108 | z_ssz=0.000108 | GR
+40 Eri B             | regime=weak         | z_obs=0.000023 | z_gr=0.000082 | z_ssz=0.000082 | GR
+Sun                  | regime=weak         | z_obs=0.000002 | z_gr=0.000002 | z_ssz=0.000002 | GR
+----------------------------------------------------------------------
+Weak Field:   0/4 = 0.0%
+Strong Field: 0/4 = 0.0%
+TOTAL:        0/8 = 0.0%
+======================================================================
+
+Delta(M) correction values:
+         1.0 M_sun: delta_m = 1.2433%
+         1.4 M_sun: delta_m = 1.2522%
+         2.0 M_sun: delta_m = 1.2617%
+        10.0 M_sun: delta_m = 1.3045%
+   1000000.0 M_sun: delta_m = 1.6108%
+collected 158 items
+
+segcalc/tests/test_invariants.py::TestSSZInvariants::test_dual_velocity_product_is_c_squared PASSED
+segcalc/tests/test_invariants.py::TestSSZInvariants::test_xi_plus_d_bounded PASSED
+segcalc/tests/test_invariants.py::TestSSZInvariants::test_d_ssz_from_xi_relation PASSED
+segcalc/tests/test_invariants.py::TestSSZInvariants::test_ssz_finite_at_horizon PASSED
+segcalc/tests/test_invariants.py::TestSSZInvariants::test_xi_at_horizon_is_finite PASSED
+segcalc/tests/test_invariants.py::TestRedshiftInvariants::test_z_from_d_relation PASSED
+segcalc/tests/test_invariants.py::TestRedshiftInvariants::test_weak_field_redshift_approximation PASSED
+segcalc/tests/test_invariants.py::TestGeometricInvariants::test_natural_boundary_ratio PASSED
+segcalc/tests/test_invariants.py::TestGeometricInvariants::test_phi_squared_relation PASSED
+segcalc/tests/test_invariants.py::TestGeometricInvariants::test_phi_reciprocal_relation PASSED
+segcalc/tests/test_invariants.py::TestDatasetInvariants::test_calculate_all_preserves_order PASSED
+segcalc/tests/test_invariants.py::TestDatasetInvariants::test_calculate_all_handles_nan PASSED
+segcalc/tests/test_invariants.py::TestDatasetInvariants::test_ssz_vs_gr_consistency PASSED
+segcalc/tests/test_invariants.py::TestNumericalInvariants::test_xi_monotonic_in_weak_field PASSED
+segcalc/tests/test_invariants.py::TestNumericalInvariants::test_d_monotonic_in_weak_field PASSED
+segcalc/tests/test_invariants.py::TestNumericalInvariants::test_results_reproducible PASSED
+segcalc/tests/test_physics.py::TestMathematicalConsistency::test_phi_precision PASSED
+segcalc/tests/test_physics.py::TestMathematicalConsistency::test_schwarzschild_radius_scaling PASSED
+segcalc/tests/test_physics.py::TestMathematicalConsistency::test_xi_weak_field_limit PASSED
+segcalc/tests/test_physics.py::TestMathematicalConsistency::test_xi_strong_field_limit PASSED
+segcalc/tests/test_physics.py::TestMathematicalConsistency::test_xi_blend_continuity PASSED
+segcalc/tests/test_physics.py::TestMathematicalConsistency::test_xi_auto_regime_selection PASSED
+segcalc/tests/test_physics.py::TestPhysicalLimits::test_no_singularities PASSED
+segcalc/tests/test_physics.py::TestPhysicalLimits::test_gr_singularity_at_horizon PASSED
+segcalc/tests/test_physics.py::TestPhysicalLimits::test_dual_velocity_invariance PASSED
+segcalc/tests/test_physics.py::TestPhysicalLimits::test_time_dilation_bounds PASSED
+segcalc/tests/test_physics.py::TestNumericalPrecision::test_mass_range_stability PASSED
+segcalc/tests/test_physics.py::TestNumericalPrecision::test_extreme_radii PASSED
+segcalc/tests/test_physics.py::TestNumericalPrecision::test_calculate_single_consistency PASSED
+segcalc/tests/test_physics.py::TestRegimeClassification::test_photon_sphere_regime PASSED
+segcalc/tests/test_physics.py::TestRegimeClassification::test_weak_field_regime PASSED
+segcalc/tests/test_physics.py::TestRegimeClassification::test_neutron_star_regime PASSED
+segcalc/tests/test_ssz_physics.py::TestConstants::test_golden_ratio PASSED
+segcalc/tests/test_ssz_physics.py::TestConstants::test_regime_boundaries PASSED
+segcalc/tests/test_ssz_physics.py::TestConstants::test_intersection_point PASSED
+segcalc/tests/test_ssz_physics.py::TestXiRegimes::test_weak_field_earth PASSED
+segcalc/tests/test_ssz_physics.py::TestXiRegimes::test_strong_field_horizon PASSED
+segcalc/tests/test_ssz_physics.py::TestXiRegimes::test_strong_field_zero PASSED
+segcalc/tests/test_ssz_physics.py::TestXiRegimes::test_blend_zone_continuity PASSED
+segcalc/tests/test_ssz_physics.py::TestXiRegimes::test_auto_selects_weak_for_earth PASSED
+segcalc/tests/test_ssz_physics.py::TestTimeDilation::test_D_ssz_at_horizon PASSED
+segcalc/tests/test_ssz_physics.py::TestTimeDilation::test_D_gr_at_horizon PASSED
+segcalc/tests/test_ssz_physics.py::TestTimeDilation::test_D_ssz_never_zero PASSED
+segcalc/tests/test_ssz_physics.py::TestTimeDilation::test_weak_field_agreement PASSED
+segcalc/tests/test_ssz_physics.py::TestGPSValidation::test_gps_time_correction PASSED
+segcalc/tests/test_ssz_physics.py::TestPoundRebka::test_pound_rebka_redshift PASSED
+segcalc/tests/test_ssz_physics.py::TestNeutronStarPredictions::test_psr_j0740_regime PASSED
+segcalc/tests/test_ssz_physics.py::TestNeutronStarPredictions::test_ssz_predicts_higher_redshift PASSED
+segcalc/tests/test_ssz_physics.py::TestPowerLaw::test_power_law_parameters PASSED
+segcalc/tests/test_ssz_physics.py::TestPowerLaw::test_sun_energy_normalization PASSED
+segcalc/tests/test_ssz_physics.py::TestPowerLaw::test_neutron_star_energy PASSED
+segcalc/tests/test_ssz_physics.py::TestPowerLaw::test_power_law_scaling PASSED
+segcalc/tests/test_ssz_physics.py::TestGeomHint::test_geom_hint_finite PASSED
+segcalc/tests/test_ssz_physics.py::TestGeomHint::test_geom_hint_uses_phi PASSED
+segcalc/tests/test_ssz_physics.py::TestGeomHint::test_ssz_geom_hint_mode PASSED
+segcalc/tests/test_ssz_physics.py::TestGeomHint::test_ssz_geom_hint_disabled_weak_field PASSED
+segcalc/tests/test_ssz_physics.py::TestUniversalIntersection::test_intersection_mass_independent PASSED
+test_golden_validation.py::test_golden_dataset_exists PASSED
+test_golden_validation.py::test_golden_win_rate 
+=== GOLDEN VALIDATION ===
+Dataset: unified_results.csv
+Total objects: 47
+SSZ wins: 46
+Win rate: 97.9%
+Contract expects: 97.9%
+Source: full-output.md L6150: ESO Spectroscopy 46/47 = 97.9%
+✅ PASS: Win rate matches Contract
+PASSED
+test_golden_validation.py::test_golden_regime_distribution 
+=== REGIME DISTRIBUTION ===
+regime
+Strong Field                     24
+Strong Field + High Velocity     12
+Photon Sphere + High Velocity     6
+Photon Sphere                     5
+Name: count, dtype: int64
+
+Photon Sphere objects: 11
+Strong Field objects: 36
+Photon Sphere SSZ win rate: 100.0%
+PASSED
+test_golden_validation.py::test_golden_columns ✅ All required columns present: ['case', 'regime', 'z_obs', 'z_grsr', 'z_seg', 'winner']
+PASSED
+test_tie_regression.py::test_tie_on_equal_residuals z_ssz=1.4981516226e-01, z_grsr=1.9126483570e-01, z_mid=1.7053999898e-01
+res_ssz=2.0724836722e-02, res_grsr=2.0724836722e-02
+winner=TIE
+PASSED
+test_tie_regression.py::test_ssz_closer_consistent_with_winner PASSED
+test_tie_regression.py::test_no_winner_without_observation PASSED
+test_tie_regression.py::test_winner_deterministic PASSED
+test_tie_regression.py::test_regime_has_numeric_trigger Neutron Star: r_s=4.1347 km, r/r_s=2.90
+regime=photon_sphere
+PASSED
+test_weak_field_contract.py::test_sun_weak_field Sun: r_s = 2.9533 km, R = 696000 km
+r/r_s = 235665 (should be >> 10 = weak field)
+regime = weak
+z_gr = 2.1216586070e-06
+z_ssz_grav = 2.1216586070e-06
+delta_m_pct = 0.000000
+[PASS] Sun weak field: SSZ = GR (no Delta(M))
+PASSED
+test_weak_field_contract.py::test_earth_orbit_weak_field 
+Earth orbit: r_s = 2.9533 km, R = 149.6 million km
+r/r_s = 50654524 (should be >> 10 = weak field)
+regime = weak
+z_gr = 9.8707868545e-09
+z_ssz_grav = 9.8707868545e-09
+delta_m_pct = 0.000000
+[PASS] Earth orbit weak field: SSZ = GR (no Delta(M))
+PASSED
+test_weak_field_contract.py::test_gps_satellite_weak_field 
+GPS: r_s = 8.869806 mm, R = 26600 km
+r/r_s = 3.00e+09 (should be >> 10 = weak field)
+regime = weak
+z_gr = 1.6672574432e-10
+z_ssz_grav = 1.6672574432e-10
+delta_m_pct = 0.000000
+[PASS] GPS weak field: SSZ = GR (no Delta(M))
+PASSED
+test_weak_field_contract.py::test_neutron_star_strong_field 
+Neutron Star: r_s = 4.1347 km, R = 12 km
+r/r_s = 2.90 (should be < 10 = strong field)
+regime = photon_sphere
+z_gr = 2.3518580046e-01
+z_ssz_grav = 2.3813087851e-01
+delta_m_pct = 1.252235
+[PASS] NS strong field: Delta(M) = 1.25% applied
+PASSED
+tests/test_experimental_validation.py::TestPoundRebka::test_pound_rebka_redshift 
+============================================================
+POUND-REBKA EXPERIMENT (1960)
+============================================================
+Tower height: 22.5 m
+Measured:     Df/f ~ 2.46e-15
+GR theory:    Df/f = 2.458394e-15
+SSZ predict:  Df/f = 2.442491e-15
+SSZ vs GR:    6.47e-03 rel diff
+PASSED
+tests/test_experimental_validation.py::TestGPSValidation::test_gps_gravitational_time_dilation 
+============================================================
+GPS SATELLITE TIME DILATION
+============================================================
+GPS altitude:     20200 km
+D_SSZ (surface):  0.999999999303892
+D_SSZ (GPS):      0.999999999833092
+SSZ prediction:   45.723 μs/day
+Known GR value:   45.700 μs/day
+Difference:       0.023 μs/day
+PASSED
+tests/test_experimental_validation.py::TestGPSValidation::test_gps_position_error_without_correction 
+============================================================
+GPS POSITION ERROR WITHOUT CORRECTION
+============================================================
+Time error:     45.723 μs/day
+Position error: 13.7 km/day
+PASSED
+tests/test_experimental_validation.py::TestNISTOpticalClock::test_nist_33cm_height_difference 
+============================================================
+NIST OPTICAL CLOCK EXPERIMENT (2010)
+============================================================
+Height diff:  33 cm
+Measured:     Df/f ~ 3.6e-17
+GR theory:    Df/f = 3.605644e-17
+SSZ predict:  Df/f = 0.000000e+00
+PASSED
+tests/test_experimental_validation.py::TestTokyoSkytree::test_skytree_450m 
+============================================================
+TOKYO SKYTREE EXPERIMENT (2020)
+============================================================
+Height:       450 m
+Measured:     ~4.0 ns/day
+SSZ predict:  4.259 ns/day
+PASSED
+tests/test_experimental_validation.py::TestWeakFieldContract::test_earth_surface_ssz_equals_gr 
+============================================================
+WEAK FIELD CONTRACT: SSZ = GR
+============================================================
+r_s/r = 1.392216e-09 (weak field: << 1)
+Xi = 6.961078e-10
+D_SSZ = 0.999999999303892
+D_GR  = 0.999999999303892
+|D_SSZ - D_GR| = 0.000000e+00
+PASSED
+tests/test_experimental_validation.py::TestWeakFieldContract::test_solar_system_weak_field 
+============================================================
+SOLAR SYSTEM WEAK FIELD CHECK
+============================================================
+Object               |           r/r_s |    Weak?
+--------------------------------------------------
+Earth surface        |        7.18e+08 |      Yes
+GPS orbit            |        3.00e+09 |      Yes
+Moon orbit           |        4.33e+10 |      Yes
+Sun surface          |        2.36e+05 |      Yes
+PASSED
+tests/test_experimental_validation.py::TestTheoreticalConsistency::test_d_ssz_equals_one_over_one_plus_xi 
+============================================================
+CONSISTENCY: D_SSZ = 1/(1+Xi)
+============================================================
+PASSED
+tests/test_experimental_validation.py::TestTheoreticalConsistency::test_xi_at_horizon 
+============================================================
+Xi AT SCHWARZSCHILD RADIUS
+============================================================
+Xi(r_s) = 1 - e^(-phi) = 0.801712
+xi_strong(r_s, r_s) = 0.801712
+PASSED
+tests/test_experimental_validation.py::TestTheoreticalConsistency::test_d_ssz_finite_at_horizon 
+============================================================
+D_SSZ AT HORIZON (NO SINGULARITY!)
+============================================================
+D_SSZ(r_s) = 1/(1 + Xi(r_s)) = 0.555028
+Expected: 0.555028
+D_GR(r_s) = 0 (singularity)
+PASSED
+tests/test_geodesics.py::TestNullGeodesics::test_light_cone_closing_positive 
+============================================================
+LIGHT CONE CLOSING (phi-Spiral)
+============================================================
+r/r_s      Closing %      
+------------------------------
+100        99.96          
+50         99.85          
+20         99.10          
+10         96.75          
+5          89.48          
+2          64.00          
+1          36.00          
+PASSED
+tests/test_geodesics.py::TestNullGeodesics::test_null_geodesic_dr_dT_bounded PASSED
+tests/test_geodesics.py::TestNullGeodesics::test_light_travel_time_exceeds_flat_space 
+============================================================
+LIGHT TRAVEL TIME
+============================================================
+r_start: 5.0 r_s
+r_end:   20.0 r_s
+T (SSZ): 7.499581e-03 s
+T (flat): 1.477692e-04 s
+Excess:   4975.20%
+PASSED
+tests/test_geodesics.py::TestEffectivePotential::test_effective_potential_bounded 
+============================================================
+EFFECTIVE POTENTIAL
+============================================================
+r/r_s      V_eff/c^2      
+------------------------------
+0.5        0.852071       
+1.0        0.640000       
+2.0        0.360000       
+5.0        0.105186       
+10.0       0.032518       
+100.0      0.000392       
+PASSED
+tests/test_geodesics.py::TestEffectivePotential::test_effective_potential_equals_c2_sech2 PASSED
+tests/test_geodesics.py::TestAsymptoticLimits::test_metric_smooth_everywhere 
+============================================================
+PHI-SPIRAL METRIC (smooth, no singularities)
+============================================================
+r/r_s      gamma           g_TT/c^2       
+--------------------------------------------------
+0.5        1.083333        -8.520710e-01  
+1.0        1.250000        -6.400000e-01  
+2.0        1.666667        -3.600000e-01  
+5.0        3.083333        -1.051863e-01  
+10.0       5.545455        -3.251814e-02  
+100.0      50.504950       -3.920416e-04  
+PASSED
+tests/test_geodesics.py::TestAsymptoticLimits::test_no_horizon_singularity 
+============================================================
+AT r = r_s (Schwarzschild horizon)
+============================================================
+gamma(r_s) = 1.250000 (Schwarzschild: infinite)
+V_eff(r_s) = 5.752033e+16 (finite!)
+PASSED
+tests/test_geodesics.py::TestTimelikeGeodesics::test_timelike_geodesic_returns_arrays PASSED
+tests/test_geodesics.py::TestTimelikeGeodesics::test_timelike_geodesic_integrates 
+============================================================
+TIMELIKE GEODESIC INTEGRATION
+============================================================
+Start:    r0 = 5.0 r_s
+Energy:   E/c = 0.9c
+Steps:    5000
+Final r:  456700.900 r_s
+PASSED
+tests/test_geodesics.py::TestMetricFunctions::test_phi_gravitational_positive PASSED
+tests/test_geodesics.py::TestMetricFunctions::test_gamma_ge_one PASSED
+tests/test_geodesics.py::TestMetricFunctions::test_beta_bounded PASSED
+tests/test_geodesics.py::TestMetricFunctions::test_sech2_bounded PASSED
+tests/test_geodesics.py::TestConsistency::test_gamma_squared_times_sech2_equals_one PASSED
+tests/test_geodesics.py::TestConsistency::test_null_geodesic_path_consistency PASSED
+tests/test_invariants_hard.py::TestWeakFieldContract::test_sun_weak_field_z_ssz_equals_z_gr PASSED
+tests/test_invariants_hard.py::TestWeakFieldContract::test_earth_weak_field_z_ssz_equals_z_gr PASSED
+tests/test_invariants_hard.py::TestWeakFieldContract::test_delta_m_is_zero_in_weak_field PASSED
+tests/test_invariants_hard.py::TestForbiddenFormula::test_z_ssz_is_not_one_over_d_minus_one PASSED
+tests/test_invariants_hard.py::TestWinnerLogic::test_winner_is_deterministic PASSED
+tests/test_invariants_hard.py::TestWinnerLogic::test_eps_based_tie_handling PASSED
+tests/test_invariants_hard.py::TestGoldenDatasetMatch::test_golden_dataset_46_of_47 PASSED
+tests/test_invariants_hard.py::TestGoldenDatasetMatch::test_single_gr_win_is_3c279 PASSED
+tests/test_invariants_hard.py::TestXiFormulas::test_xi_weak_formula PASSED
+tests/test_invariants_hard.py::TestXiFormulas::test_xi_strong_formula PASSED
+tests/test_invariants_hard.py::TestXiFormulas::test_xi_at_horizon_value PASSED
+tests/test_invariants_hard.py::TestHorizonFinite::test_d_ssz_finite_at_horizon PASSED
+tests/test_invariants_hard.py::TestHorizonFinite::test_d_gr_zero_at_horizon PASSED
+tests/test_invariants_hard.py::TestRegimeBoundaries::test_weak_regime_above_10_rs PASSED
+tests/test_invariants_hard.py::TestRegimeBoundaries::test_photon_sphere_regime PASSED
+tests/test_qubit.py::TestQubitDataclass::test_qubit_creation PASSED
+tests/test_qubit.py::TestQubitDataclass::test_qubit_position PASSED
+tests/test_qubit.py::TestQubitDataclass::test_qubit_radius PASSED
+tests/test_qubit.py::TestQubitDataclass::test_qubit_pair_separation PASSED
+tests/test_qubit.py::TestQubitDataclass::test_qubit_pair_height_difference PASSED
+tests/test_qubit.py::TestSegmentDensity::test_xi_weak_field_formula PASSED
+tests/test_qubit.py::TestSegmentDensity::test_xi_strong_field_formula PASSED
+tests/test_qubit.py::TestSegmentDensity::test_xi_positive_definite PASSED
+tests/test_qubit.py::TestSegmentDensity::test_xi_gradient_negative_weak_field PASSED
+tests/test_qubit.py::TestTimeDilation::test_d_ssz_equals_one_over_one_plus_xi PASSED
+tests/test_qubit.py::TestTimeDilation::test_d_ssz_less_than_one PASSED
+tests/test_qubit.py::TestTimeDilation::test_time_dilation_difference_sign PASSED
+tests/test_qubit.py::TestQubitAnalysis::test_analyze_qubit_returns_segment_analysis PASSED
+tests/test_qubit.py::TestQubitAnalysis::test_pair_mismatch_zero_for_same_height PASSED
+tests/test_qubit.py::TestQubitAnalysis::test_pair_mismatch_increases_with_height_diff PASSED
+tests/test_qubit.py::TestGateTiming::test_gate_timing_correction_at_reference PASSED
+tests/test_qubit.py::TestGateTiming::test_two_qubit_gate_timing_returns_dict PASSED
+tests/test_qubit.py::TestDecoherence::test_decoherence_rate_positive PASSED
+tests/test_qubit.py::TestDecoherence::test_effective_T2_less_than_base PASSED
+tests/test_qubit.py::TestDecoherence::test_effective_T2_nearly_equals_base PASSED
+tests/test_qubit.py::TestSegmentCoherentZones::test_zone_formula PASSED
+tests/test_qubit.py::TestHawkingTemperature::test_hawking_temp_solar_mass PASSED
+tests/test_qubit.py::TestHawkingTemperature::test_hawking_temp_inverse_mass PASSED
+tests/test_qubit.py::TestHawkingTemperature::test_ssz_hawking_temp_finite PASSED
+tests/test_qubit.py::TestHawkingTemperature::test_ssz_hawking_temp_less_than_classical PASSED
+tests/test_qubit.py::TestHawkingTemperature::test_evaporation_time_solar_mass PASSED
+tests/test_qubit.py::TestHawkingTemperature::test_radiation_power_positive PASSED
+tests/test_qubit.py::TestUtilityFunctions::test_height_to_time_offset_sign PASSED
+tests/test_qubit.py::TestUtilityFunctions::test_time_difference_per_second_positive PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_very_close_regime PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_blended_regime PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_photon_sphere_regime PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_strong_regime PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_weak_regime PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_boundary_values PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_constants_values PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_simple_regime_classification PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_zero_schwarzschild_radius PASSED
+tests/test_regime_classification.py::TestRegimeClassification::test_negative_schwarzschild_radius PASSED
+tests/test_regime_classification.py::TestLegacyContextAwareness::test_segcalc_does_not_use_legacy_90_110 PASSED
+tests/test_regime_classification.py::TestLegacyContextAwareness::test_segcalc_weak_boundary_is_10 PASSED
+tests/test_ui_canonicalization.py::TestUICanonicalRegimes::test_get_regime_uses_canonical_thresholds PASSED
+tests/test_ui_canonicalization.py::TestUICanonicalRegimes::test_no_legacy_90_110_in_constants PASSED
+tests/test_ui_canonicalization.py::TestUICanonicalRegimes::test_regime_names_are_canonical PASSED
+tests/test_ui_canonicalization.py::TestUIWinnerLogic::test_winner_requires_real_z_obs PASSED
+tests/test_ui_canonicalization.py::TestNoLegacyStrings::test_app_py_no_legacy_90_110_in_ui_text PASSED
+tests/test_ui_canonicalization.py::TestNoLegacyStrings::test_reference_tab_shows_canonical_boundaries PASSED
+tests/test_ui_canonicalization.py::TestRegimeColorMapping::test_regime_colors_defined_for_all_canonical_regimes PASSED
+
+============================= 158 passed in 4.58s =============================
+
+
+STDERR:
+--------------------------------------------------------------------------------

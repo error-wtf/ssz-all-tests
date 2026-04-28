@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: E:\clone\ssz-all-tests-test
+configfile: pyproject.toml
+plugins: anyio-4.12.1, Faker-40.4.0
+collecting ... collected 13 items
+
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_derivative_exactness PASSED [  7%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_zero_partition_limit PASSED [ 15%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_radius_scaling PASSED [ 23%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_sign_symmetry_p PASSED [ 30%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_mode_norm_invariance_under_k PASSED [ 38%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_no_nan_no_inf PASSED [ 46%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_integer_mode_periodicity PASSED [ 53%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_non_integer_open_curve_detection PASSED [ 61%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_projection_consistency PASSED [ 69%]
+tests/chord_partition/test_chord_partition_modes.py::TestChordPartitionModes::test_finite_energy_proxy PASSED [ 76%]
+tests/chord_partition/test_chord_partition_modes.py::TestSSZCompatibility::test_no_free_parameters PASSED [ 84%]
+tests/chord_partition/test_chord_partition_modes.py::TestSSZCompatibility::test_phi_compatibility PASSED [ 92%]
+tests/chord_partition/test_chord_partition_modes.py::TestSSZCompatibility::test_dimensionless_consistency PASSED [100%]
+
+============================= 13 passed in 0.58s ==============================

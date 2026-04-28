@@ -22,20 +22,26 @@ class TestCh30FalsifiablePredictions:
     ESO_ACCURACY = 0.979
     
     def test_eso_accuracy_97_9_percent(self):
-        """SSZ wins 46 of 47 ESO cases vs GR"""
+        """SSZ wins 46 of 47 ESO cases vs GR = 97.87% (approx 97.9%)"""
         wins = 46
         total = 47
-        accuracy = wins / total
+        accuracy = wins / total  # = 0.978723...
         
-        assert accuracy == self.ESO_ACCURACY
+        # Approximate match to 97.9% (within 0.001)
+        assert np.isclose(accuracy, 0.979, atol=0.001)
         assert accuracy > 0.97
     
     def test_eso_statistical_significance(self):
-        """p < 0.0001 for 46/47 wins"""
+        """p < 0.0001 for 46/47 wins using binomial test"""
         from scipy import stats
         
         # Binomial test: 46/47 with p=0.5 (null hypothesis)
-        p_value = stats.binom_test(46, 47, p=0.5, alternative='greater')
+        # Note: binom_test is deprecated in newer scipy, use binomtest
+        try:
+            p_value = stats.binomtest(46, 47, p=0.5, alternative='greater').pvalue
+        except AttributeError:
+            # Fallback for older scipy
+            p_value = stats.binom_test(46, 47, p=0.5, alternative='greater')
         
         assert p_value < 0.0001
         assert p_value > 0  # Very significant
@@ -94,7 +100,7 @@ class TestCh30FalsifiablePredictions:
         dilation_ssz = 1.30
         
         excess = dilation_ssz - dilation_gr
-        assert excess == 0.30
+        assert np.isclose(excess, 0.30, rtol=1e-10)  # Use isclose for float
     
     # Falsifiability
     def test_ssz_is_falsifiable(self):

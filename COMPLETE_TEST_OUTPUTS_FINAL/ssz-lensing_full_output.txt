@@ -1,0 +1,1566 @@
+================================================================================
+REPO: ssz-lensing
+Status: SUCCESS
+Exit Code: 0
+================================================================================
+
+STDOUT:
+--------------------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: E:\clone\ssz-lensing
+plugins: anyio-4.12.1, Faker-40.4.0
+collecting ... ======================================================================
+ EXTENDED LENS MODEL - COMPREHENSIVE TEST SUITE
+======================================================================
+
+Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
+NumPy:  2.0.2
+collected 279 items
+
+tests/test_comprehensive_analysis.py::TestScenarioSuite::test_scenario_determined_standard [Scan/Hypothesis Test mode (nonlinear search)]
+
+[Scenario 1: Determined Standard]
+  Path A residual: 0.100000
+  Path B residual: 0.050000
+  theta_E recovered: A=0.9823
+PASSED
+tests/test_comprehensive_analysis.py::TestScenarioSuite::test_scenario_overdetermined [Scan/Hypothesis Test mode (nonlinear search)]
+
+[Scenario 2: Overdetermined]
+  Path A residual: 0.100000 (model check)
+  Path B residual: 0.075000
+  DOF info: DOF: OVERDETERMINED: +9 redundancy, 16C vs 7P
+PASSED
+tests/test_comprehensive_analysis.py::TestScenarioSuite::test_scenario_underdetermined_high_mmax 
+[Scenario 3: Underdetermined (high m_max)]
+  Constraints: 8, Params: 12
+  Regime: underdetermined
+  Nullspace: 4 dimensions
+  Path C notes: Nullspace: 4D, Solutions: 2
+  Non-identifiable: ['theta_E', 'a_3', 'a_4', 'b_2', 'b_3']...
+PASSED
+tests/test_comprehensive_analysis.py::TestScenarioSuite::test_scenario_rescue_with_source 
+[Scenario 4: DOF Rescue]
+  1 source: 8C vs 10P -> underdetermined
+  2 sources: 16C vs 12P -> overdetermined
+  Nullspace: 2 -> 0
+PASSED
+tests/test_comprehensive_analysis.py::TestScenarioSuite::test_scenario_ill_conditioned 
+[Scenario 5: Ill-Conditioned]
+  Condition number: 1.00e+12
+  Regime: ill_conditioned
+  Recommendation: Run sensitivity analysis (perturb data, observe param changes)
+PASSED
+tests/test_comprehensive_analysis.py::TestScenarioSuite::test_scenario_phase_degeneracy [Scan/Hypothesis Test mode (nonlinear search)]
+
+[Scenario 6: Phase Degeneracy]
+  Phase points scanned: 10
+  Min residual: 0.050000
+  Points within 20%: 10
+  Degeneracy hints: 2
+PASSED
+tests/test_comprehensive_analysis.py::TestPathConsistency::test_path_a_b_consistency [Scan/Hypothesis Test mode (nonlinear search)]
+
+[Consistency: Path A vs B]
+  theta_E (A): 0.982322
+  theta_E (B): 1.000000
+  Difference: 0.017678
+PASSED
+tests/test_comprehensive_analysis.py::TestPathConsistency::test_regime_matches_dof 
+[Consistency: Regime vs DOF]
+  8C vs 8P: determined (expected: determined)
+  12C vs 8P: overdetermined (expected: overdetermined)
+  6C vs 10P: underdetermined (expected: underdetermined)
+PASSED
+tests/test_datahub.py::TestSnapshotValidation::test_quad_snapshot_valid PASSED
+tests/test_datahub.py::TestSnapshotValidation::test_ring_snapshot_valid PASSED
+tests/test_datahub.py::TestSnapshotValidation::test_all_snapshots_valid PASSED
+tests/test_datahub.py::TestQuadSnapshot::test_load_quad_positions PASSED
+tests/test_datahub.py::TestQuadSnapshot::test_quad_has_redshifts PASSED
+tests/test_datahub.py::TestQuadSnapshot::test_quad_no_nan PASSED
+tests/test_datahub.py::TestQuadSnapshot::test_quad_no_inf PASSED
+tests/test_datahub.py::TestQuadSnapshot::test_quad_has_theta_E PASSED
+tests/test_datahub.py::TestRingSnapshot::test_load_ring_positions PASSED
+tests/test_datahub.py::TestRingSnapshot::test_ring_has_redshifts PASSED
+tests/test_datahub.py::TestRingSnapshot::test_ring_no_nan PASSED
+tests/test_datahub.py::TestRingSnapshot::test_ring_no_inf PASSED
+tests/test_datahub.py::TestFallbackByMode::test_quad_mode PASSED
+tests/test_datahub.py::TestFallbackByMode::test_ring_mode PASSED
+tests/test_datahub.py::TestFallbackByMode::test_arc_mode PASSED
+tests/test_datahub.py::TestFallbackByMode::test_invalid_mode_raises PASSED
+tests/test_datahub.py::TestDataQuality::test_quad_all_fields_from_source PASSED
+tests/test_datahub.py::TestDataQuality::test_ring_all_fields_from_source PASSED
+tests/test_datahub.py::TestDataQuality::test_available_datasets PASSED
+tests/test_datahub.py::TestNoDefaultsNoNull::test_quad_complete_numeric PASSED
+tests/test_datahub.py::TestNoDefaultsNoNull::test_ring_complete_numeric PASSED
+tests/test_dual_path.py::TestSharedForwardModel::test_reduced_deflection_basic PASSED
+tests/test_dual_path.py::TestSharedForwardModel::test_lens_equation_zero_residual PASSED
+tests/test_dual_path.py::TestPathA_Algebraic::test_algebraic_solver_basic PASSED
+tests/test_dual_path.py::TestPathA_Algebraic::test_phase_is_output_not_input PASSED
+tests/test_dual_path.py::TestPathB_PhaseScan::test_scan_is_labeled PASSED
+tests/test_dual_path.py::TestPathB_PhaseScan::test_scan_finds_candidates [Scan/Hypothesis Test mode (nonlinear search)]
+PASSED
+tests/test_dual_path.py::TestCrossCheck::test_dual_path_runs_both ============================================================
+PATH A: Algebraic Components (No-Fit, CANONICAL)
+============================================================
+  theta_E = 2.020331
+  Derived phi_2 = -0.7854 rad
+  Max residual = 1.78e-15
+  Status: PASS
+
+============================================================
+PATH B: Phase Scan Mode (Hypothesis Test)
+============================================================
+[Scan/Hypothesis Test mode (nonlinear search)]
+WARNING: Scan phase (0.000) differs from algebraic (-0.785) by 0.785 rad
+  Best phi_2 = 0.0000 rad
+  Best residual = 5.54e-02
+  DEGENERACY: 16 scan points within 10% of minimum
+  HINT: 2-fold symmetry detected in residuals
+
+----------------------------------------
+CROSS-CHECK: Scan vs Algebraic
+----------------------------------------
+  Algebraic phi_2: -0.7854 rad
+  Scan phi_2:      0.0000 rad
+  Difference:      0.7854 rad
+  Consistent:      NO
+PASSED
+tests/test_dual_path.py::TestCrossCheck::test_cross_check_reports_consistency ============================================================
+PATH A: Algebraic Components (No-Fit, CANONICAL)
+============================================================
+  theta_E = 2.020331
+  Derived phi_2 = -0.7854 rad
+  Max residual = 1.78e-15
+  Status: PASS
+
+============================================================
+PATH B: Phase Scan Mode (Hypothesis Test)
+============================================================
+[Scan/Hypothesis Test mode (nonlinear search)]
+WARNING: Scan phase (0.000) differs from algebraic (-0.785) by 0.785 rad
+  Best phi_2 = 0.0000 rad
+  Best residual = 5.54e-02
+  DEGENERACY: 32 scan points within 10% of minimum
+  HINT: 2-fold symmetry detected in residuals
+
+----------------------------------------
+CROSS-CHECK: Scan vs Algebraic
+----------------------------------------
+  Algebraic phi_2: -0.7854 rad
+  Scan phi_2:      0.0000 rad
+  Difference:      0.7854 rad
+  Consistent:      NO
+PASSED
+tests/test_extended_model.py::test_profiles 
+======================================================================
+ TEST 1: Radial Profile Functions
+======================================================================
+
+1a. SIS Profile (eta=2)
+  theta=0.5: kappa=1.0000, alpha=1.0000
+  theta=1.0: kappa=0.5000, alpha=1.0000
+  theta=2.0: kappa=0.2500, alpha=1.0000
+
+1b. Power-law Profile (variable eta)
+  eta=1.5: kappa(theta_E)=0.7500, alpha(theta_E)=1.0000
+  eta=2.0: kappa(theta_E)=0.5000, alpha(theta_E)=1.0000
+  eta=2.5: kappa(theta_E)=0.2500, alpha(theta_E)=1.0000
+
+1c. Cored Profile (r_core=0.1)
+  theta=0.01: kappa_singular=inf, kappa_cored=4.9752
+  theta=0.10: kappa_singular=5.00, kappa_cored=3.5355
+  theta=1.00: kappa_singular=0.50, kappa_cored=0.4975
+
+1d. Hermite C² Blending
+  x=0.00: h(x)=0.0000
+  x=0.25: h(x)=0.1035
+  x=0.50: h(x)=0.5000
+  x=0.75: h(x)=0.8965
+  x=1.00: h(x)=1.0000
+
+  [PASS] Profile functions work correctly
+PASSED
+tests/test_extended_model.py::test_external_shear 
+======================================================================
+ TEST 2: External Shear
+======================================================================
+
+  Shear: gamma=0.1, phi_gamma=30 deg
+  (1.0, 0.0) -> alpha_shear = (0.0500, 0.0866)
+  (0.0, 1.0) -> alpha_shear = (0.0866, -0.0500)
+  (1.0, 1.0) -> alpha_shear = (0.1366, 0.0366)
+
+  [PASS] External shear deflection correct
+PASSED
+tests/test_extended_model.py::test_higher_multipoles 
+======================================================================
+ TEST 3: Higher Multipoles (m=3, m=4)
+======================================================================
+
+3a. Octupole (m=3)
+  phi=  0 deg: alpha_3 = (+0.0500, +0.0000)
+  phi= 60 deg: alpha_3 = (-0.0250, -0.0433)
+  phi=120 deg: alpha_3 = (-0.0250, +0.0433)
+  phi=180 deg: alpha_3 = (+0.0500, +0.0000)
+
+3b. Hexadecapole (m=4)
+  phi=  0 deg: alpha_4 = (+0.0300, +0.0000)
+  phi= 45 deg: alpha_4 = (-0.0212, -0.0212)
+  phi= 90 deg: alpha_4 = (-0.0000, +0.0300)
+  phi=135 deg: alpha_4 = (+0.0212, -0.0212)
+
+  [PASS] Higher multipoles work correctly
+PASSED
+tests/test_extended_model.py::test_synthetic_recovery 
+======================================================================
+ TEST 4: Synthetic Data Parameter Recovery
+======================================================================
+
+True parameters:
+  beta = (0.0500, 0.0300)
+  theta_E = 1.0000
+  a_2 = 0.0800, b_2 = 0.1200
+  phi_2 = 25.0 deg
+
+Generated 4 images:
+  Image 1: (-0.707498, +0.436511) r=0.8313, phi=+148.3 deg
+  Image 2: (+0.645968, -0.590471) r=0.8752, phi=-42.4 deg
+  Image 3: (+0.751787, +0.933516) r=1.1986, phi=+51.2 deg
+  Image 4: (-0.616692, -0.899615) r=1.0907, phi=-124.4 deg
+
+Recovered parameters:
+  beta = (0.0500, 0.0300)
+  theta_E = 1.0000
+  a_2 = -0.1147, b_2 = 0.0874
+  phi_2 = 161.8 deg
+
+Residuals:
+  max|res| = 9.46e-14
+  RMS      = 5.91e-14
+
+  [PASS] Exact parameter recovery achieved
+PASSED
+tests/test_extended_model.py::test_model_with_shear 
+======================================================================
+ TEST 5: Model with External Shear
+======================================================================
+
+Model: Extended Model (m_max=2, eta=2.00+shear)
+Unknowns: ['beta_x', 'beta_y', 'theta_E', 'gamma_ext', 'phi_gamma_ext', 'a_2', 'b_2', 'phi_2']
+Nonlinear: ['phi_gamma_ext', 'phi_2']
+Linear: ['beta_x', 'beta_y', 'theta_E', 'gamma_ext', 'a_2', 'b_2']
+
+Total deflection at (0.8, 0.6):
+  alpha = (0.8158, 0.7759)
+
+  [PASS] Shear model structure correct
+PASSED
+tests/test_extended_model.py::test_real_lens_data 
+======================================================================
+ TEST 6: Real Lens Data with Extended Model
+======================================================================
+
+--------------------------------------------------
+  Lens: Q2237+0305
+  Note: Einstein Cross - bar structure (needs m=3)
+--------------------------------------------------
+
+  m_max=2: max|res|=0.0687 arcsec
+
+  m_max=3: max|res|=0.0164 arcsec
+           theta_E=0.913
+
+  m_max=4: No solution found
+
+  m=2+shear: max|res|=0.0498, gamma=0.4458
+
+--------------------------------------------------
+  Lens: HE0435-1223
+  Note: Quad lens - good for m=2
+--------------------------------------------------
+
+  m_max=2: max|res|=0.0669 arcsec
+
+  m_max=3: max|res|=0.0290 arcsec
+           theta_E=1.193
+
+  m_max=4: No solution found
+
+  m=2+shear: max|res|=0.0214, gamma=0.6679
+
+  [PASS] Real lens inversion completed
+PASSED
+tests/test_extended_model.py::test_comparison 
+======================================================================
+ TEST 7: Original vs Extended Model Comparison
+======================================================================
+
+Test images:
+  1: (+0.95, +0.30)
+  2: (-0.35, +0.92)
+  3: (-0.88, -0.45)
+  4: (+0.42, -0.90)
+
+--- Original MultipoleModel (m=2) ---
+  Skipped (import error: attempted relative import beyond top-level package)
+
+--- Extended Model (m=2, no shear) ---
+  max|res| = 0.0028
+  theta_E = 0.9904
+
+--- Extended Model (m=4, with shear) ---
+  No solution
+
+  [PASS] Model comparison completed
+PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_assert_finite_valid PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_assert_finite_nan_raises PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_assert_finite_inf_raises PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_sanitize_no_nan_converts_nan_to_none PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_validate_no_nan_finds_issues PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_safe_divide_zero PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_safe_divide_valid PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_safe_sqrt_negative PASSED
+tests/test_fallback_no_nan.py::TestNoNaNUtilities::test_safe_sqrt_valid PASSED
+tests/test_fallback_no_nan.py::TestFallbackQuad::test_load_quad_images_no_nan PASSED
+tests/test_fallback_no_nan.py::TestFallbackQuad::test_load_quad_has_4_images PASSED
+tests/test_fallback_no_nan.py::TestFallbackQuad::test_quad_has_redshift_info PASSED
+tests/test_fallback_no_nan.py::TestFallbackQuad::test_quad_positions_finite PASSED
+tests/test_fallback_no_nan.py::TestFallbackRing::test_load_ring_no_nan PASSED
+tests/test_fallback_no_nan.py::TestFallbackRing::test_ring_has_multiple_points PASSED
+tests/test_fallback_no_nan.py::TestFallbackRing::test_ring_has_redshift_info PASSED
+tests/test_fallback_no_nan.py::TestFallbackRing::test_ring_positions_finite PASSED
+tests/test_fallback_no_nan.py::TestFallbackByMode::test_load_quad_by_mode PASSED
+tests/test_fallback_no_nan.py::TestFallbackByMode::test_load_ring_by_mode PASSED
+tests/test_fallback_no_nan.py::TestFallbackByMode::test_invalid_mode_raises PASSED
+tests/test_fallback_no_nan.py::TestAllFallbackDatasets::test_all_datasets_no_nan PASSED
+tests/test_fallback_no_nan.py::TestAllFallbackDatasets::test_fallback_text_parseable PASSED
+tests/test_lensing_run.py::TestNoNaNOutputs::test_cross_no_nan PASSED
+tests/test_lensing_run.py::TestNoNaNOutputs::test_ring_no_nan PASSED
+tests/test_lensing_run.py::TestCircleLabeling::test_sky_circle_is_theta_E PASSED
+tests/test_lensing_run.py::TestCircleLabeling::test_lens_circle_is_b_E PASSED
+tests/test_lensing_run.py::TestRotationPreservesRadii::test_rotation_invariant_radii PASSED
+tests/test_lensing_run.py::TestGRSSZShiftConsistency::test_shift_equals_xi PASSED
+tests/test_lensing_run.py::TestGRSSZShiftConsistency::test_xi_is_small_but_nonzero PASSED
+tests/test_lensing_run.py::TestFallbackDatasetsLoad::test_cross_dataset_loads PASSED
+tests/test_lensing_run.py::TestFallbackDatasetsLoad::test_ring_dataset_loads PASSED
+tests/test_lensing_run.py::TestFallbackDatasetsLoad::test_no_fake_zeros PASSED
+tests/test_lensing_run.py::TestPhysicalConsistency::test_distances_positive PASSED
+tests/test_lensing_run.py::TestPhysicalConsistency::test_mass_reasonable PASSED
+tests/test_lensing_run.py::TestPhysicalConsistency::test_schwarzschild_radius_small PASSED
+tests/test_lensing_run.py::TestCarmenPaperIntegrals::test_gauge_no_nan PASSED
+tests/test_lensing_run.py::TestCarmenPaperIntegrals::test_alpha_rsg_vs_ppn PASSED
+tests/test_lensing_run.py::TestCarmenPaperIntegrals::test_delay_monotonic_vs_b PASSED
+tests/test_lensing_run.py::TestCarmenPaperIntegrals::test_xi_to_zero_limit PASSED
+tests/test_lensing_run.py::TestCarmenPaperIntegrals::test_phase_delay_relation PASSED
+tests/test_lensing_run.py::TestCarmenPaperIntegrals::test_gauge_insets_render_data PASSED
+tests/test_linear_model.py::test_dof_analysis ============================================================
+ DOF ANALYSIS - Constraints vs Parameters
+============================================================
+
+Config                 Params Quad (8)                      
+------------------------------------------------------------
+m=2 only                    5 OVERDETERMINED (+3 redundant equations)
+m=2 + shear                 7 OVERDETERMINED (+1 redundant equations)
+m=2 + m=3                   7 OVERDETERMINED (+1 redundant equations)
+m=2 + shear + m=3           9 UNDERDETERMINED (1 more data needed!)
+m=2 + m=3 + m=4             9 UNDERDETERMINED (1 more data needed!)
+
+PASSED
+tests/test_linear_model.py::test_synthetic_recovery ============================================================
+ SYNTHETIC DATA RECOVERY (Linear Model)
+============================================================
+
+Model: Linear Model (m_max=2)
+Parameters: ['beta_x', 'beta_y', 'theta_E', 'c_2', 's_2']
+N_params: 5
+N_constraints: 8
+
+Solution found:
+  theta_E = 0.9846
+  beta = (0.0043, 0.0069)
+  c_2 = 0.0060
+  s_2 = 0.0010
+
+  max|res| = 2.23e-02
+  consistency = 2.23e-02
+  DOF: OVERDETERMINED (+3 redundant equations)
+
+Physical parameters:
+  amplitude_2 = 0.0061
+  phase_2 = 4.7 deg
+
+  [PASS] Inversion successful
+PASSED
+tests/test_linear_model.py::test_real_lens_data ============================================================
+ REAL LENS DATA - Linear Model
+============================================================
+
+Einstein Cross (Q2237+0305):
+
+  m=2         : max|res|=1.5896", theta_E=0.542, OVERDETERMINED (+3 redundant equations)
+  m=2+shear   : max|res|=0.0416", theta_E=1.076, OVERDETERMINED (+1 redundant equations)
+  m=3         : max|res|=0.0343", theta_E=1.104, OVERDETERMINED (+1 redundant equations)
+
+  [PASS] Real lens inversion completed
+PASSED
+tests/test_linear_model.py::test_comparison_with_extended ============================================================
+ COMPARISON: Linear vs Extended Model
+============================================================
+
+Linear Model (direct solve):
+  theta_E = 0.9846
+  max|res| = 2.23e-02
+
+Extended Model (grid search):
+  theta_E = 0.9904
+  max|res| = 2.81e-03
+
+Linear nonlinear_unknowns: []
+Extended nonlinear_unknowns: ['phi_2']
+
+  [PASS] Comparison completed
+PASSED
+tests/test_minimal_exact.py::TestLinearSolver::test_simple_2x2 PASSED
+tests/test_minimal_exact.py::TestLinearSolver::test_identity PASSED
+tests/test_minimal_exact.py::TestLinearSolver::test_singular_matrix PASSED
+tests/test_minimal_exact.py::TestLinearSolver::test_near_singular PASSED
+tests/test_minimal_exact.py::TestRootSolver::test_bisection_linear PASSED
+tests/test_minimal_exact.py::TestRootSolver::test_bisection_quadratic PASSED
+tests/test_minimal_exact.py::TestRootSolver::test_bisection_trig PASSED
+tests/test_minimal_exact.py::TestRootSolver::test_find_all_roots PASSED
+tests/test_minimal_exact.py::TestExactRecovery::test_standard_cross PASSED
+tests/test_minimal_exact.py::TestExactRecovery::test_symmetric_cross PASSED
+tests/test_minimal_exact.py::TestExactRecovery::test_asymmetric_cross PASSED
+tests/test_minimal_exact.py::TestExactRecovery::test_varying_theta_E PASSED
+tests/test_minimal_exact.py::TestMatrixRank::test_full_rank PASSED
+tests/test_minimal_exact.py::TestMatrixRank::test_rank_deficient PASSED
+tests/test_minimal_exact.py::TestMatrixRank::test_rectangular PASSED
+tests/test_model_zoo.py::test_m2_allowed PASSED
+tests/test_model_zoo.py::test_m2_shear_m3_forbidden PASSED
+tests/test_model_zoo.py::test_arc_points_rescue PASSED
+tests/test_model_zoo.py::test_multi_source_rescue PASSED
+tests/test_model_zoo.py::test_shear_recovery PASSED
+tests/test_model_zoo.py::test_m3_recovery PASSED
+tests/test_model_zoo.py::test_zoo_comparison PASSED
+tests/test_multi_source.py::TestDOFGatekeeper::test_overdetermined_allowed PASSED
+tests/test_multi_source.py::TestDOFGatekeeper::test_exactly_determined_allowed PASSED
+tests/test_multi_source.py::TestDOFGatekeeper::test_underdetermined_forbidden PASSED
+tests/test_multi_source.py::TestDOFGatekeeper::test_max_params_single_source PASSED
+tests/test_multi_source.py::TestDOFGatekeeper::test_max_params_two_sources PASSED
+tests/test_multi_source.py::TestMultiSourceParams::test_phase_derived_from_components PASSED
+tests/test_multi_source.py::TestMultiSourceParams::test_shear_phase_derived PASSED
+tests/test_multi_source.py::TestMultiSourceBuilder::test_unknowns_single_source_m2 PASSED
+tests/test_multi_source.py::TestMultiSourceBuilder::test_unknowns_two_sources_with_shear PASSED
+tests/test_multi_source.py::TestMultiSourceBuilder::test_dof_blocks_underdetermined PASSED
+tests/test_multi_source.py::TestMultiSourceRecovery::test_single_source_recovery PASSED
+tests/test_multi_source.py::TestMultiSourceRecovery::test_two_source_shared_lens PASSED
+tests/test_multi_source.py::TestMultiSourceRecovery::test_phase_is_output_not_input PASSED
+tests/test_multi_source.py::TestDOFAnalysis::test_analyze_single_source PASSED
+tests/test_multi_source.py::TestDOFAnalysis::test_analyze_forbidden_config PASSED
+tests/test_multi_source.py::TestDOFAnalysis::test_analyze_multi_source_enables_more PASSED
+tests/test_multipole_consistency.py::TestDoFCounting::test_minimal_model_4_images PASSED
+tests/test_multipole_consistency.py::TestDoFCounting::test_underdetermined PASSED
+tests/test_multipole_consistency.py::TestDoFCounting::test_multipole_m3 PASSED
+tests/test_multipole_consistency.py::TestDoFCounting::test_image_multiplicity_quad PASSED
+tests/test_multipole_consistency.py::TestMultipoleConsistency::test_m2_matches_minimal PASSED
+tests/test_multipole_consistency.py::TestMultipoleConsistency::test_multipole_residuals PASSED
+tests/test_multipole_consistency.py::TestMultipoleConsistency::test_phase_periodicity PASSED
+tests/test_multipole_consistency.py::TestNumericalStability::test_small_quadrupole PASSED
+tests/test_multipole_consistency.py::TestNumericalStability::test_large_offset PASSED
+tests/test_multipole_consistency.py::TestNumericalStability::test_matrix_conditioning PASSED
+tests/test_no_null_contract.py::TestIsNullOrNaN::test_none_is_null PASSED
+tests/test_no_null_contract.py::TestIsNullOrNaN::test_nan_is_null PASSED
+tests/test_no_null_contract.py::TestIsNullOrNaN::test_inf_is_null PASSED
+tests/test_no_null_contract.py::TestIsNullOrNaN::test_empty_string_is_null PASSED
+tests/test_no_null_contract.py::TestIsNullOrNaN::test_valid_number_not_null PASSED
+tests/test_no_null_contract.py::TestIsNullOrNaN::test_valid_string_not_null PASSED
+tests/test_no_null_contract.py::TestDictValidation::test_valid_dict_passes PASSED
+tests/test_no_null_contract.py::TestDictValidation::test_null_detected PASSED
+tests/test_no_null_contract.py::TestDictValidation::test_nested_null_detected PASSED
+tests/test_no_null_contract.py::TestDictValidation::test_list_null_detected PASSED
+tests/test_no_null_contract.py::TestDefaultSigma::test_quad_sigma_positive PASSED
+tests/test_no_null_contract.py::TestDefaultSigma::test_ring_sigma_positive PASSED
+tests/test_no_null_contract.py::TestDefaultSigma::test_single_point_fallback PASSED
+tests/test_no_null_contract.py::TestFillUncertainties::test_all_defaults PASSED
+tests/test_no_null_contract.py::TestFillUncertainties::test_partial_input PASSED
+tests/test_no_null_contract.py::TestFullNumericPoints::test_creates_all_fields PASSED
+tests/test_no_null_contract.py::TestFullNumericPoints::test_to_dict_no_null PASSED
+tests/test_no_null_contract.py::TestNormalizedDistances::test_all_values_present PASSED
+tests/test_no_null_contract.py::TestEstimates::test_center_estimate PASSED
+tests/test_no_null_contract.py::TestEstimates::test_theta_E_estimate PASSED
+tests/test_no_null_contract.py::TestAssertNoNullNoNaN::test_valid_dict_passes PASSED
+tests/test_no_null_contract.py::TestAssertNoNullNoNaN::test_null_raises PASSED
+tests/test_no_null_contract.py::TestAssertNoNullNoNaN::test_nan_raises PASSED
+tests/test_no_null_contract.py::TestProvenanceSummary::test_counts_flags PASSED
+tests/test_no_null_contract.py::TestFallbackDatasetsComplete::test_quad_fallback_complete PASSED
+tests/test_no_null_contract.py::TestFallbackDatasetsComplete::test_ring_fallback_complete PASSED
+tests/test_no_null_contract.py::TestFallbackDatasetsComplete::test_quad_full_numeric_output PASSED
+tests/test_no_null_contract.py::TestFallbackDatasetsComplete::test_ring_full_numeric_output PASSED
+tests/test_no_null_contract.py::TestUserMinimalInput::test_4_points_no_uncertainties PASSED
+tests/test_q2237_diagnostic.py::test_q2237_model_comparison 
+==================================================
+Q2237+0305 EINSTEIN CROSS DIAGNOSTIC
+==================================================
+m=2 only:     residual = 0.0081
+m=2 + shear:  residual = 0.0065
+m=2 + m=3:    residual = 0.0000
+--------------------------------------------------
+Improvement:  100.0%
+PASSED
+tests/test_q2237_diagnostic.py::test_q2237_forbidden_info PASSED
+tests/test_q2237_diagnostic.py::test_q2237_full_report 
+============================================================
+MODEL ZOO COMPARISON
+============================================================
+
+m=2
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8, Params: 5
+  DOF: 3
+  Max Residual: 8.12e-03
+  Condition: 5.63e+00
+
+m=2 + shear
+----------------------------------------
+  Regime: STANDARD
+  Constraints: 8, Params: 7
+  DOF: 1
+  Max Residual: 6.54e-03
+  Condition: 6.96e+00
+
+m=2 + m=3
+----------------------------------------
+  Regime: STANDARD
+  Constraints: 8, Params: 7
+  DOF: 1
+  Max Residual: 5.55e-16
+  Condition: inf
+
+m=2 + shear + m=3
+----------------------------------------
+  Regime: FORBIDDEN
+  Constraints: 8, Params: 9
+  DOF: -1
+  Status: FORBIDDEN (insufficient constraints)
+    -> Add 1 flux ratio(s) (up to 3 available from 4 images)
+    -> Add 1 time delay(s) (up to 3 available)
+    -> Add 1 arc point(s) from extended emission (+2 constraints)
+    -> Add second background source (if 4 images: +8 constraints, -2 params = +6 net)
+
+============================================================
+RANKING BY RESIDUAL
+============================================================
+  1. m=2 + m=3: 5.55e-16
+  2. m=2 + shear: 6.54e-03
+  3. m=2: 8.12e-03
+PASSED
+tests/test_radial_scaling_gauge.py::test_scaling_factor_definition PASSED
+tests/test_radial_scaling_gauge.py::test_scaling_weak_field_limit PASSED
+tests/test_radial_scaling_gauge.py::test_time_dilation_relation PASSED
+tests/test_radial_scaling_gauge.py::test_effective_wavenumber PASSED
+tests/test_radial_scaling_gauge.py::test_local_light_speed_invariant PASSED
+tests/test_radial_scaling_gauge.py::test_shapiro_delay_cassini PASSED
+tests/test_radial_scaling_gauge.py::test_shapiro_delay_solar_grazing PASSED
+tests/test_radial_scaling_gauge.py::test_shapiro_xi_vs_ppn_factor PASSED
+tests/test_radial_scaling_gauge.py::test_solar_limb_deflection PASSED
+tests/test_radial_scaling_gauge.py::test_deflection_xi_vs_ppn_factor PASSED
+tests/test_radial_scaling_gauge.py::test_gaia_deflection_precision PASSED
+tests/test_radial_scaling_gauge.py::test_wkb_phase_scaling PASSED
+tests/test_radial_scaling_gauge.py::test_interferometer_phase_difference PASSED
+tests/test_radial_scaling_gauge.py::test_frame_consistency_loop_closure PASSED
+tests/test_radial_scaling_gauge.py::test_coordinate_independence PASSED
+tests/test_radial_scaling_gauge.py::test_pound_rebka_experiment PASSED
+tests/test_radial_scaling_gauge.py::test_gps_time_drift PASSED
+tests/test_radial_scaling_gauge.py::test_tokyo_skytree_clocks PASSED
+tests/test_real_data.py::test_synthetic_exact 
+======================================================================
+TEST 1: Synthetic Data - Exact Recovery
+======================================================================
+
+True parameters:
+  theta_E  = 1.0
+  a        = 0.05
+  b        = 0.15
+  beta     = 0.08
+  phi_beta = 30.0 deg
+  phi_gamma = 20.0 deg
+
+Generated 4 images:
+  Image 1: (+1.046139, +0.424824)
+  Image 2: (-0.558158, +0.767785)
+  Image 3: (-0.932323, -0.274345)
+  Image 4: (+0.088239, -0.918860)
+
+Recovered parameters:
+  theta_E   = 1.000000000000
+  a         = 0.050000000000
+  b         = -0.150000000000
+  beta      = 0.080000000000
+  phi_gamma = 20.000000000000 deg
+
+  Max |residual| = 1.67e-16
+
+Recovery errors:
+  theta_E: 1.11e-16
+  a: 2.08e-17
+  b: 1.11e-16
+  beta: 5.55e-17
+  phi_gamma: 1.67e-16
+
+>>> TEST 1 STATUS: PASS
+PASSED
+tests/test_real_data.py::test_synthetic_random 
+======================================================================
+TEST 2: Random Parameter Sweep (50 configurations)
+======================================================================
+
+Results:
+  Configurations tested: 50
+  Successful inversions: 47
+  Success rate: 94.0%
+
+  Max |residual| statistics:
+    Mean:   2.35e-03
+    Median: 7.77e-16
+    Max:    6.32e-02
+
+  Max parameter error statistics:
+    Mean:   6.54e-03
+    Max:    1.70e-01
+
+>>> TEST 2 STATUS: PARTIAL
+PASSED
+tests/test_real_data.py::test_real_data 
+======================================================================
+TEST 3: Real Observational Data
+======================================================================
+
+------------------------------------------------------------
+Real Lens: Q2237+0305 (Einstein Cross)
+Source: CASTLES survey, Schneider et al. 1988
+z_lens = 0.0394, z_source = 1.695
+------------------------------------------------------------
+
+Image positions (arcsec):
+  A: (+0.758, +0.964)  r=1.226  theta=+51.8 deg
+  B: (-0.869, +0.541)  r=1.024  theta=+148.1 deg
+  C: (-0.634, -0.797)  r=1.018  theta=-128.5 deg
+  D: (+0.674, -0.618)  r=0.914  theta=-42.5 deg
+
+Recovered parameters:
+  theta_E   = 1.0770 arcsec
+  a         = 0.0454
+  b         = -0.4663
+  beta      = 0.1040 arcsec
+  phi_gamma = 51.7 deg
+
+  Max |residual| = 0.1031 arcsec
+
+  Residuals per image (arcsec):
+    A: x=+0.0000, y=-0.0000  |r|=0.0000
+    B: x=+0.0000, y=+0.0000  |r|=0.0000
+    C: x=+0.0000, y=+0.0000  |r|=0.0000
+    D: x=+0.1031, y=-0.0465  |r|=0.1131
+
+  Model adequacy: POOR (residuals >> measurement error, model may be inadequate)
+  (astrometric error ~ 0.003 arcsec)
+
+------------------------------------------------------------
+Real Lens: B1608+656 (B1608+656)
+Source: CASTLES survey, Fassnacht et al. 1996
+z_lens = 0.6304, z_source = 1.394
+------------------------------------------------------------
+
+Image positions (arcsec):
+  A: (+0.738, +1.961)  r=2.095  theta=+69.4 deg
+  B: (-0.745, +1.354)  r=1.545  theta=+118.8 deg
+  C: (-1.128, -0.599)  r=1.277  theta=-152.0 deg
+  D: (+1.128, -0.213)  r=1.148  theta=-10.7 deg
+
+Recovered parameters:
+  theta_E   = 1.4217 arcsec
+  a         = 0.7120
+  b         = -0.0000
+  beta      = 0.0000 arcsec
+  phi_gamma = 78.8 deg
+
+  Max |residual| = 0.4305 arcsec
+
+  Residuals per image (arcsec):
+    A: x=+0.0000, y=+0.0000  |r|=0.0000
+    B: x=-0.0000, y=+0.0000  |r|=0.0000
+    C: x=+0.0000, y=-0.0000  |r|=0.0000
+    D: x=-0.4305, y=+0.0813  |r|=0.4381
+
+  Model adequacy: POOR (residuals >> measurement error, model may be inadequate)
+  (astrometric error ~ 0.003 arcsec)
+
+------------------------------------------------------------
+Real Lens: HE0435-1223 (HE0435-1223)
+Source: COSMOGRAIL, Wisotzki et al. 2002
+z_lens = 0.4546, z_source = 1.693
+------------------------------------------------------------
+
+Image positions (arcsec):
+  A: (+1.272, +0.306)  r=1.308  theta=+13.5 deg
+  B: (-0.277, +1.148)  r=1.181  theta=+103.6 deg
+  C: (-1.332, -0.152)  r=1.341  theta=-173.5 deg
+  D: (+0.294, -1.306)  r=1.339  theta=-77.3 deg
+
+Recovered parameters:
+  theta_E   = 1.2619 arcsec
+  a         = 0.0642
+  b         = 0.1486
+  beta      = 0.0244 arcsec
+  phi_gamma = 10.2 deg
+
+  Max |residual| = 0.1138 arcsec
+
+  Residuals per image (arcsec):
+    A: x=+0.0000, y=+0.0000  |r|=0.0000
+    B: x=+0.0000, y=-0.0000  |r|=0.0000
+    C: x=+0.0000, y=+0.0000  |r|=0.0000
+    D: x=-0.0563, y=+0.1138  |r|=0.1270
+
+  Model adequacy: POOR (residuals >> measurement error, model may be inadequate)
+  (astrometric error ~ 0.003 arcsec)
+
+------------------------------------------------------------
+Real Lens: PG1115+080 (PG1115+080)
+Source: CASTLES survey, Weymann et al. 1980
+z_lens = 0.311, z_source = 1.722
+------------------------------------------------------------
+
+Image positions (arcsec):
+  A: (+0.948, +0.795)  r=1.237  theta=+40.0 deg
+  B: (+1.071, +0.538)  r=1.199  theta=+26.7 deg
+  C: (-1.093, -0.260)  r=1.123  theta=-166.6 deg
+  D: (-0.213, -1.018)  r=1.040  theta=-101.8 deg
+
+Recovered parameters:
+  theta_E   = 1.0265 arcsec
+  a         = 0.2139
+  b         = -0.0000
+  beta      = 0.0000 arcsec
+  phi_gamma = 44.9 deg
+
+  Max |residual| = 0.0700 arcsec
+
+  Residuals per image (arcsec):
+    A: x=+0.0000, y=+0.0000  |r|=0.0000
+    B: x=+0.0000, y=+0.0000  |r|=0.0000
+    C: x=+0.0000, y=-0.0000  |r|=0.0000
+    D: x=-0.0146, y=-0.0700  |r|=0.0715
+
+  Model adequacy: POOR (residuals >> measurement error, model may be inadequate)
+  (astrometric error ~ 0.003 arcsec)
+
+============================================================
+Real Data Summary: 4/4 systems inverted
+============================================================
+
+>>> TEST 3 STATUS: PASS
+PASSED
+tests/test_real_data.py::test_noise_sensitivity 
+======================================================================
+TEST 4: Noise Sensitivity Analysis
+======================================================================
+
+Noise level (arcsec) | Max |residual| | theta_E error | Status
+-----------------------------------------------------------------
+             0e+00 |        1.67e-16 |      1.11e-16 | EXACT
+             1e-05 |        2.23e-05 |      1.11e-05 | GOOD
+             1e-04 |        3.64e-05 |      3.56e-05 | GOOD
+             1e-03 |        8.75e-04 |      1.07e-04 | GOOD
+             1e-02 |        3.94e-02 |      1.13e-02 | MARGINAL
+             5e-02 |        9.45e-03 |      4.62e-02 | GOOD
+
+>>> TEST 4 STATUS: COMPLETE
+PASSED
+tests/test_real_inversion.py::TestMorphologyClassifier::test_quad_classification QUAD test: 4 points with 4 azimuthal clusters: Einstein Cross configuration
+PASSED
+tests/test_real_inversion.py::TestMorphologyClassifier::test_ring_classification RING test: Extended emission (n=20), low radial scatter (0.012), high coverage (95.0%): Ring
+PASSED
+tests/test_real_inversion.py::TestMorphologyClassifier::test_double_classification DOUBLE test: 2 points: Double-image system (source outside caustic)
+PASSED
+tests/test_real_inversion.py::TestMorphologyClassifier::test_criteria_are_explicit Criteria: {'is_4_points': True, 'is_2_points': False, 'is_many_points': False, 'low_radial_scatter': np.True_, 'high_azimuthal_coverage': np.True_, 'small_max_gap': np.False_, 'has_4_clusters': np.True_, 'has_2_clusters': np.False_}
+PASSED
+tests/test_real_inversion.py::TestSourceConsistency::test_consistent_sources Source scatter: 0.057370
+Max deviation: 0.057370
+PASSED
+tests/test_real_inversion.py::TestQuadInversion::test_synthetic_recovery Generated 2 images, need 4 for quad test
+PASSED
+tests/test_real_inversion.py::TestQuadInversion::test_model_comparison Generated 2 images, skipping
+PASSED
+tests/test_real_inversion.py::TestLinearSystem::test_system_dimensions System shape: A=(8, 5), b=(8,)
+Parameters: ['beta_x', 'beta_y', 'theta_E', 'c2', 's2']
+PASSED
+tests/test_real_inversion.py::TestLinearSystem::test_overdetermined_system Regime: ill_conditioned (expected: overdetermined or determined)
+PASSED
+tests/test_regime_explorer.py::test_regime_determined PASSED
+tests/test_regime_explorer.py::test_regime_overdetermined PASSED
+tests/test_regime_explorer.py::test_regime_underdetermined PASSED
+tests/test_regime_explorer.py::test_regime_ill_conditioned PASSED
+tests/test_regime_explorer.py::test_underdetermined_multiple_solutions PASSED
+tests/test_regime_explorer.py::test_underdetermined_param_ranges PASSED
+tests/test_regime_explorer.py::test_underdetermined_non_identifiable PASSED
+tests/test_regime_explorer.py::test_high_mmax_underdetermined PASSED
+tests/test_regime_explorer.py::test_dof_rescue_multisource PASSED
+tests/test_regime_explorer.py::test_recommendations_change PASSED
+tests/test_ui_state.py::TestDatasetState::test_empty_state PASSED
+tests/test_ui_state.py::TestDatasetState::test_to_dict PASSED
+tests/test_ui_state.py::TestDatasetState::test_from_dict PASSED
+tests/test_ui_state.py::TestParseUserPoints::test_parse_quad PASSED
+tests/test_ui_state.py::TestParseUserPoints::test_parse_ring PASSED
+tests/test_ui_state.py::TestParseUserPoints::test_wrong_count_quad PASSED
+tests/test_ui_state.py::TestParseUserPoints::test_invalid_line PASSED
+tests/test_ui_state.py::TestBuildUserDataset::test_build_quad PASSED
+tests/test_ui_state.py::TestBuildUserDataset::test_build_with_redshifts PASSED
+tests/test_ui_state.py::TestLoadFallbackDataset::test_load_quad PASSED
+tests/test_ui_state.py::TestLoadFallbackDataset::test_load_ring PASSED
+tests/test_ui_state.py::TestValidateDataset::test_valid_quad PASSED
+tests/test_ui_state.py::TestValidateDataset::test_empty_fails PASSED
+tests/test_ui_state.py::TestValidateDataset::test_wrong_mode_count PASSED
+tests/test_ui_state.py::TestValidateDataset::test_nan_fails PASSED
+tests/test_ui_state.py::TestValidationReport::test_valid_report PASSED
+tests/test_ui_state.py::TestValidationReport::test_invalid_report PASSED
+tests/test_ui_state.py::TestDatasetSummary::test_summary_valid PASSED
+tests/test_ui_state.py::TestDatasetSummary::test_summary_invalid PASSED
+tests/test_ui_state.py::TestRunState::test_default PASSED
+tests/test_ui_state.py::TestRunState::test_to_from_dict PASSED
+tests/test_validation_lab.py::test_UT1 PASSED
+tests/test_validation_lab.py::test_UT2 PASSED
+tests/test_validation_lab.py::test_UT3 PASSED
+tests/test_validation_lab.py::test_ST1 PASSED
+tests/test_validation_lab.py::test_ST2 PASSED
+tests/test_validation_lab.py::test_ST3 PASSED
+tests/test_validation_lab.py::test_CM1 [Scan/Hypothesis Test mode (nonlinear search)]
+PASSED
+tests/test_validation_lab.py::test_RB1 PASSED
+tests/test_validation_lab.py::test_RB2 [Scan/Hypothesis Test mode (nonlinear search)]
+PASSED
+tests/test_validation_module.py::test_image_validation ==================================================
+TEST: Image Validation
+==================================================
+VALID: 4 images, 8 constraints
+Valid: True
+Constraints: 8
+[PASS]
+PASSED
+tests/test_validation_module.py::test_dof_analysis 
+==================================================
+TEST: DOF Analysis
+==================================================
+
+DOF Analysis for 4-image system:
+------------------------------------------------------------
+Model             Params   Constr    DOF Status              
+------------------------------------------------------------
+m2_only                5        8      3 OVERDETERMINED      
+m2_shear               7        8      1 OVERDETERMINED      
+m2_m3                  7        8      1 OVERDETERMINED      
+m2_shear_m3            9        8     -1 UNDERDETERMINED     
+m2_m3_m4               9        8     -1 UNDERDETERMINED     
+------------------------------------------------------------
+
+Auto-selected: m2_only
+Status: OVERDETERMINED
+DOF: 3
+[PASS]
+PASSED
+tests/test_validation_module.py::test_result_interpretation 
+==================================================
+TEST: Result Interpretation
+==================================================
+Model: Linear m=2
+DOF: OVERDETERMINED (3)
+max|res|: 0.0200 arcsec
+RMS: 0.0150 arcsec
+Converged: True
+
+Quality: MARGINAL
+Residual/Noise: 6.7x
+Interpretation: Residuals significantly above noise
+Model adequate: True
+[PASS]
+PASSED
+tests/test_validation_module.py::test_model_comparison 
+==================================================
+TEST: Model Comparison
+==================================================
+Model Comparison:
+----------------------------------------
+  m=2 only: max|res|=0.0500"
+  m=2 + shear: max|res|=0.0200" <-- WINNER
+----------------------------------------
+Winner: m=2 + shear
+Reason: Best residual: 0.0200"
+[PASS]
+PASSED
+tests/zoo/test_derivation_chain.py::TestDerivationChain::test_shear_data_shear_wins 
+Shear data: m=2 residual=0.0213, m=2+shear residual=0.0135
+PASSED
+tests/zoo/test_derivation_chain.py::TestDerivationChain::test_m3_data_m3_wins 
+m=3 data: m=2 residual=0.0257, m=2+m=3 residual=0.0000
+PASSED
+tests/zoo/test_derivation_chain.py::TestDerivationChain::test_full_model_forbidden_without_extras 
+Full model: regime=FORBIDDEN
+PASSED
+tests/zoo/test_derivation_chain.py::TestDerivationChain::test_report_shows_derivation 
+============================================================
+DERIVATION CHAIN REPORT
+============================================================
+ObservablesBundle: report_test
+  Sources: 1
+  Total images: 4
+  Total constraints: 8
+
+
+[Step 1] m=2 only
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 5
+  Max Residual: 1.7978e-02
+
+[Step 2] m=2 + shear
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 7
+  Max Residual: 1.5629e-03
+  Improvement: 91.3% vs previous
+
+[Step 3] m=2 + m=3
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 7
+  Max Residual: 8.8818e-16
+  Improvement: 100.0% vs previous
+
+[Step 4] m=2 + shear + m=3
+----------------------------------------
+  Regime: FORBIDDEN
+  Constraints: 8
+  Parameters: 9
+  Status: FORBIDDEN
+    -> Need 1 more constraint(s)
+    -> Options: flux ratios, time delays, arc points, or multi-source
+
+============================================================
+SUMMARY
+============================================================
+Best model: m=2 + m=3
+Best residual: 8.8818e-16
+
+FORBIDDEN models (need more observables):
+  - m=2 + shear + m=3
+      Need 1 more constraint(s)
+      Options: flux ratios, time delays, arc points, or multi-source
+PASSED
+tests/zoo/test_derivation_chain.py::TestForbiddenToAllowed::test_arc_points_rescue_full_model 
+With arc points: regime=OVERDETERMINED, constraints=14
+PASSED
+tests/zoo/test_derivation_chain.py::TestForbiddenToAllowed::test_multi_source_rescue_full_model 
+With 2 sources: constraints=16, params=11
+PASSED
+tests/zoo/test_derivation_chain.py::TestRegression::test_basic_m2_still_works PASSED
+tests/zoo/test_derivation_chain.py::TestRegression::test_bundle_backward_compatible PASSED
+tests/zoo/test_geometry.py::TestTriadScene::test_create_standard_scene PASSED
+tests/zoo/test_geometry.py::TestTriadScene::test_scene_distances PASSED
+tests/zoo/test_geometry.py::TestTriadScene::test_add_multiple_sources PASSED
+tests/zoo/test_geometry.py::TestProjection::test_project_single_source PASSED
+tests/zoo/test_geometry.py::TestProjection::test_projection_tracer PASSED
+tests/zoo/test_geometry.py::TestProjection::test_forward_backward_consistency 
+Original beta: [ 0.1  -0.05]
+Mean recovered beta: [ 0.0494316  -0.02356355]
+Beta spread: [0.02629109 0.04803551]
+PASSED
+tests/zoo/test_geometry.py::TestSerialization::test_to_dict_and_back PASSED
+tests/zoo/test_geometry.py::TestSerialization::test_json_roundtrip PASSED
+tests/zoo/test_geometry.py::TestVisualization::test_visualizer_smoke_test PASSED
+tests/zoo/test_geometry.py::TestVisualization::test_ascii_scene_output 
+==================================================
+SCENE: ascii_test
+==================================================
+
+Observer [O] -----> Lens [L] -----> Source(s) [S]
+         z=0        z=1.00
+
+3D Positions:
+  Observer: (0, 0, 0)
+  Lens:     (0.000, 0.000, 1.000)
+  Source_0: (0.200, -0.100, 2.000)
+
+Projected to Lens Plane:
+  Source 0: beta = (0.1000, -0.0500)
+
+Distances:
+  D_L  = 1.000
+  D_S  = 2.000
+  D_LS = 1.000
+PASSED
+tests/zoo/test_m4_extension.py::TestM4Models::test_derivation_chain_includes_m4 PASSED
+tests/zoo/test_m4_extension.py::TestM4Models::test_m4_data_m4_model_works 
+m4 model: regime=OVERDETERMINED
+PASSED
+tests/zoo/test_m4_extension.py::TestM4Models::test_full_chain_report 
+============================================================
+DERIVATION CHAIN REPORT
+============================================================
+ObservablesBundle: full_chain
+  Sources: 1
+  Total images: 4
+  Total constraints: 8
+
+
+[Step 1] m=2 only
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 5
+  Max Residual: 2.1615e-02
+
+[Step 2] m=2 + shear
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 7
+  M...
+PASSED
+tests/zoo/test_m4_extension.py::TestRealDataPipeline::test_list_available_systems 
+Available systems: ['Q2237+0305']
+PASSED
+tests/zoo/test_m4_extension.py::TestRealDataPipeline::test_load_q2237 PASSED
+tests/zoo/test_m4_extension.py::TestRealDataPipeline::test_q2237_derivation_chain 
+============================================================
+DERIVATION CHAIN REPORT
+============================================================
+ObservablesBundle: Q2237+0305
+  Sources: 1
+  Total images: 4
+  Total constraints: 8
+
+
+[Step 1] m=2 only
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 5
+  Max Residual: 8.1155e-03
+
+[Step 2] m=2 + shear
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 7
+  Max Residual: 6.5393e-03
+  Improvement: 19.4% vs previous
+
+[Step 3] m=2 + m=3
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 7
+  Max Residual: 5.5511e-16
+  Improvement: 100.0% vs previous
+
+[Step 4] m=2 + shear + m=3
+----------------------------------------
+  Regime: FORBIDDEN
+  Constraints: 8
+  Parameters: 9
+  Status: FORBIDDEN
+    -> Need 1 more constraint(s)
+    -> Options: flux ratios, time delays, arc points, or multi-source
+
+[Step 5] m=2 + m=4
+----------------------------------------
+  Regime: OVERDETERMINED
+  Constraints: 8
+  Parameters: 7
+  Max Residual: 5.5511e-16
+
+[Step 6] m=2 + shear + m=4
+----------------------------------------
+  Regime: FORBIDDEN
+  Constraints: 8
+  Parameters: 9
+  Status: FORBIDDEN
+    -> Need 1 more constraint(s)
+    -> Options: flux ratios, time delays, arc points, or multi-source
+
+[Step 7] m=2 + m=3 + m=4
+----------------------------------------
+  Regime: FORBIDDEN
+  Constraints: 8
+  Parameters: 9
+  Status: FORBIDDEN
+    -> Need 1 more constraint(s)
+    -> Options: flux ratios, time delays, arc points, or multi-source
+
+[Step 8] m=2 + shear + m=3 + m=4 (maximal)
+----------------------------------------
+  Regime: FORBIDDEN
+  Constraints: 8
+  Parameters: 11
+  Status: FORBIDDEN
+    -> Need 3 more constraint(s)
+    -> Options: flux ratios, time delays, arc points, or multi-source
+
+============================================================
+SUMMARY
+============================================================
+Best model: m=2 + m=3
+Best residual: 5.5511e-16
+
+FORBIDDEN models (need more observables):
+  - m=2 + shear + m=3
+      Need 1 more constraint(s)
+      Options: flux ratios, time delays, arc points, or multi-source
+  - m=2 + shear + m=4
+      Need 1 more constraint(s)
+      Options: flux ratios, time delays, arc points, or multi-source
+  - m=2 + m=3 + m=4
+      Need 1 more constraint(s)
+      Options: flux ratios, time delays, arc points, or multi-source
+  - m=2 + shear + m=3 + m=4 (maximal)
+      Need 3 more constraint(s)
+      Options: flux ratios, time delays, arc points, or multi-source
+PASSED
+tests/zoo/test_m4_extension.py::TestArtifacts::test_save_artifacts PASSED
+tests/zoo/test_ring_morphology.py::TestMorphologyClassifier::test_perfect_ring_classified_as_ring 
+Perfect Ring Analysis:
+  Morphology: ring
+  Confidence: 0.81
+  Radial scatter: 0.0094
+  Azimuthal coverage: 0.98
+  Recommended: ['isotropic']
+PASSED
+tests/zoo/test_ring_morphology.py::TestMorphologyClassifier::test_shear_ring_detected 
+Shear Ring Analysis:
+  Morphology: unknown
+  m2 amplitude: 0.0563
+  Recommended: ['m2', 'm2+shear']
+PASSED
+tests/zoo/test_ring_morphology.py::TestMorphologyClassifier::test_quad_classified_as_quad 
+Quad Analysis:
+  Morphology: quad
+  Confidence: 0.90
+  Azimuthal coverage: 0.73
+  Recommended: ['m2', 'm2+shear']
+PASSED
+tests/zoo/test_ring_morphology.py::TestMorphologyClassifier::test_ring_to_cross_transition 
+Ring -> Cross Transition:
+  c2=0.00: ring, scatter=0.012, m2=0.001
+  c2=0.05: ring, scatter=0.037, m2=0.025
+  c2=0.10: unknown, scatter=0.068, m2=0.048
+  c2=0.20: unknown, scatter=0.143, m2=0.101
+  c2=0.30: unknown, scatter=0.210, m2=0.148
+PASSED
+tests/zoo/test_ring_morphology.py::TestRingAnalyzer::test_perfect_ring_fit 
+Ring Fit Result:
+  Radius: 1.4984 (expected 1.5)
+  Center: (0.0015, -0.0024)
+  RMS residual: 0.0046
+  Perturbation: isotropic
+PASSED
+tests/zoo/test_ring_morphology.py::TestRingAnalyzer::test_perturbed_ring_detects_m2 
+Perturbed Ring (m=2):
+  m2 amplitude: 0.0992
+  m4 amplitude: 0.0004
+  Perturbation: quadrupole (m=2)
+PASSED
+tests/zoo/test_ring_morphology.py::TestRingAnalyzer::test_m4_perturbation_detected 
+Perturbed Ring (m=4):
+  m2 amplitude: 0.0013
+  m4 amplitude: 0.0794
+  Perturbation: hexadecapole (m=4)
+PASSED
+tests/zoo/test_ring_morphology.py::TestRingAnalyzer::test_off_center_ring 
+Off-Center Ring:
+  True center: (0.2, -0.1)
+  Found center: (0.1998, -0.0997)
+PASSED
+tests/zoo/test_ring_morphology.py::TestCenterEstimation::test_estimate_ring_center 
+Center Estimation:
+  True: (0.1, -0.05)
+  Estimated: (0.0998, -0.0501)
+PASSED
+tests/zoo/test_ring_morphology.py::TestCenterEstimation::test_estimate_ring_radius 
+Radius Estimation:
+  True: 1.2
+  Estimated: 1.2000
+PASSED
+
+============================== warnings summary ===============================
+tests\test_radial_scaling_gauge.py:134
+  E:\clone\ssz-lensing\tests\test_radial_scaling_gauge.py:134: PytestCollectionWarning: cannot collect test class 'TestResult' because it has a __init__ constructor (from: tests/test_radial_scaling_gauge.py)
+    @dataclass
+
+tests\test_regime_explorer.py:32
+  E:\clone\ssz-lensing\tests\test_regime_explorer.py:32: PytestCollectionWarning: cannot collect test class 'TestResult' because it has a __init__ constructor (from: tests/test_regime_explorer.py)
+    @dataclass
+
+tests/test_extended_model.py::test_profiles
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_profiles returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_extended_model.py::test_external_shear
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_external_shear returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_extended_model.py::test_higher_multipoles
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_higher_multipoles returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_extended_model.py::test_synthetic_recovery
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_synthetic_recovery returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_extended_model.py::test_model_with_shear
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_model_with_shear returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_extended_model.py::test_real_lens_data
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_real_lens_data returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_extended_model.py::test_comparison
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_extended_model.py::test_comparison returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_linear_model.py::test_dof_analysis
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_linear_model.py::test_dof_analysis returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_linear_model.py::test_synthetic_recovery
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_linear_model.py::test_synthetic_recovery returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_linear_model.py::test_real_lens_data
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_linear_model.py::test_real_lens_data returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_linear_model.py::test_comparison_with_extended
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_linear_model.py::test_comparison_with_extended returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_scaling_factor_definition
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_scaling_factor_definition returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_scaling_weak_field_limit
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_scaling_weak_field_limit returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_time_dilation_relation
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_time_dilation_relation returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_effective_wavenumber
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_effective_wavenumber returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_local_light_speed_invariant
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_local_light_speed_invariant returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_shapiro_delay_cassini
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_shapiro_delay_cassini returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_shapiro_delay_solar_grazing
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_shapiro_delay_solar_grazing returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_shapiro_xi_vs_ppn_factor
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_shapiro_xi_vs_ppn_factor returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_solar_limb_deflection
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_solar_limb_deflection returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_deflection_xi_vs_ppn_factor
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_deflection_xi_vs_ppn_factor returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_gaia_deflection_precision
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_gaia_deflection_precision returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_wkb_phase_scaling
+tests/test_radial_scaling_gauge.py::test_interferometer_phase_difference
+tests/test_radial_scaling_gauge.py::test_interferometer_phase_difference
+  E:\clone\ssz-lensing\tests\test_radial_scaling_gauge.py:256: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+    return k * np.trapz(s_vals, dx=dr)
+
+tests/test_radial_scaling_gauge.py::test_wkb_phase_scaling
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_wkb_phase_scaling returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_interferometer_phase_difference
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_interferometer_phase_difference returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_frame_consistency_loop_closure
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_frame_consistency_loop_closure returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_coordinate_independence
+  E:\clone\ssz-lensing\tests\test_radial_scaling_gauge.py:783: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+    rho = np.trapz(s_vals, r_vals)
+
+tests/test_radial_scaling_gauge.py::test_coordinate_independence
+  E:\clone\ssz-lensing\tests\test_radial_scaling_gauge.py:789: DeprecationWarning: `trapz` is deprecated. Use `trapezoid` instead, or one of the numerical integration functions in `scipy.integrate`.
+    rho_2 = np.trapz(s_vals_2, r_vals_2)
+
+tests/test_radial_scaling_gauge.py::test_coordinate_independence
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_coordinate_independence returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_pound_rebka_experiment
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_pound_rebka_experiment returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_gps_time_drift
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_gps_time_drift returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_radial_scaling_gauge.py::test_tokyo_skytree_clocks
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_radial_scaling_gauge.py::test_tokyo_skytree_clocks returned <class 'test_radial_scaling_gauge.TestResult'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_real_data.py::test_synthetic_exact
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_real_data.py::test_synthetic_exact returned <class 'tuple'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_real_data.py::test_synthetic_random
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_real_data.py::test_synthetic_random returned <class 'tuple'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_real_data.py::test_real_data
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_real_data.py::test_real_data returned <class 'tuple'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_real_data.py::test_noise_sensitivity
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_real_data.py::test_noise_sensitivity returned <class 'tuple'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_regime_determined
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_regime_determined returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_regime_overdetermined
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_regime_overdetermined returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_regime_underdetermined
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_regime_underdetermined returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_regime_ill_conditioned
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_regime_ill_conditioned returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_underdetermined_multiple_solutions
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_underdetermined_multiple_solutions returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_underdetermined_param_ranges
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_underdetermined_param_ranges returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_underdetermined_non_identifiable
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_underdetermined_non_identifiable returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_high_mmax_underdetermined
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_high_mmax_underdetermined returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_dof_rescue_multisource
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_dof_rescue_multisource returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_regime_explorer.py::test_recommendations_change
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_regime_explorer.py::test_recommendations_change returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_UT1
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_UT1 returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_UT2
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_UT2 returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_UT3
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_UT3 returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_ST1
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_ST1 returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_ST2
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_ST2 returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_ST3
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_ST3 returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_CM1
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_CM1 returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_RB1
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_RB1 returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_lab.py::test_RB2
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_lab.py::test_RB2 returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_module.py::test_image_validation
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_module.py::test_image_validation returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_module.py::test_dof_analysis
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_module.py::test_dof_analysis returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_module.py::test_result_interpretation
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_module.py::test_result_interpretation returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_validation_module.py::test_model_comparison
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but tests/test_validation_module.py::test_model_comparison returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+====================== 279 passed, 63 warnings in 10.77s ======================
+
+
+STDERR:
+--------------------------------------------------------------------------------

@@ -1,0 +1,835 @@
+================================================================================
+REPO: ssz-schuhman-experiment
+Status: FAILED
+Exit Code: 1
+================================================================================
+
+STDOUT:
+--------------------------------------------------------------------------------
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe
+cachedir: .pytest_cache
+rootdir: E:\clone\ssz-schuhman-experiment
+plugins: anyio-4.12.1, Faker-40.4.0
+collecting ... collected 188 items
+
+scripts/test_gamma_seg_transfer.py::test_mathematical_consistency ======================================================================
+TEST 1: Mathematical Consistency of gamma_seg
+======================================================================
+
+
+--- Small alpha (Earth-like): alpha=1e-09, r_c=1.00e+06 m ---
+  gamma(0) = 0.9999999990, expected = 0.9999999990, OK = True
+  gamma(3*r_c) = 1.0000000000, expected ~ 1, OK = True
+  delta_f/f = -0.000000 (-0.0000%)
+  Delta_v/v = 0.000000 (0.0000%)
+  z = 0.000000
+  z ~ alpha check: z=0.0000, alpha=0.0000, ratio=1.00
+
+--- Medium alpha (G79-like): alpha=0.12, r_c=5.86e+16 m ---
+  gamma(0) = 0.8800000000, expected = 0.8800000000, OK = True
+  gamma(3*r_c) = 0.9999851908, expected ~ 1, OK = True
+  delta_f/f = -0.120000 (-12.0000%)
+  Delta_v/v = 0.066004 (6.6004%)
+  z = 0.136364
+  z ~ alpha check: z=0.1364, alpha=0.1200, ratio=1.14
+
+--- Large alpha (NS-like): alpha=0.25, r_c=1.20e+04 m ---
+  gamma(0) = 0.7500000000, expected = 0.7500000000, OK = True
+  gamma(3*r_c) = 0.9999691475, expected ~ 1, OK = True
+  delta_f/f = -0.250000 (-25.0000%)
+  Delta_v/v = 0.154701 (15.4701%)
+  z = 0.333333
+  z ~ alpha check: z=0.3333, alpha=0.2500, ratio=1.33
+
+--- Very large alpha (BH-like): alpha=0.5, r_c=1.00e+05 m ---
+  gamma(0) = 0.5000000000, expected = 0.5000000000, OK = True
+  gamma(3*r_c) = 0.9999382951, expected ~ 1, OK = True
+  delta_f/f = -0.500000 (-50.0000%)
+  Delta_v/v = 0.414214 (41.4214%)
+  z = 1.000000
+
+======================================================================
+TEST 1 RESULT: PASSED
+======================================================================
+PASSED
+scripts/test_gamma_seg_transfer.py::test_g79_predictions 
+======================================================================
+TEST 2: G79 Nebula Predictions
+======================================================================
+
+Parameters: alpha = 0.12, r_c = 1.9 pc
+
+Predictions at center:
+  gamma_seg = 0.8800
+  delta_f/f = -12.0%
+  Delta_v/v = 6.6%
+
+Checks:
+  gamma = 1 - alpha = 0.8800, computed = 0.8800, OK = True
+  delta_f/f = gamma - 1 = -0.1200, computed = -0.1200, OK = True
+
+Temperature shell prediction:
+  r = 0 pc: T = 440 K
+  r = 1 pc: T = 455 K
+  r = 2 pc: T = 480 K
+  r = 3 pc: T = 495 K
+
+Velocity excess prediction:
+  For v0 = 50 km/s: Delta_v = 3.3 km/s
+  Observed: ~5 km/s (consistent!)
+
+======================================================================
+TEST 2 RESULT: PASSED
+======================================================================
+PASSED
+scripts/test_gamma_seg_transfer.py::test_nicer_application 
+======================================================================
+TEST 3: NICER Pulsar Application
+======================================================================
+
+Pulsar: J0740+6620
+Mass: 2.08 M_sun
+Radius: 12.39 km
+
+Compactness:
+  Computed: 0.247955
+  Expected: 0.247955
+  OK: True
+
+GR surface redshift:
+  Computed: 0.408466
+  Expected: 0.408466
+  OK: True
+
+SSZ test:
+  If z_obs = z_GR + 10%:
+    delta_seg = 0.1000 (10.0%)
+    This would indicate SSZ effect!
+
+  Current NICER precision: ~17%
+  -> Can constrain |delta_seg| < 17%
+
+======================================================================
+TEST 3 RESULT: PASSED
+======================================================================
+PASSED
+scripts/test_gamma_seg_transfer.py::test_gw_application 
+======================================================================
+TEST 4: GW Ringdown Application
+======================================================================
+
+Event: GW150914
+Final mass: 63.1 M_sun
+Final spin: 0.69
+
+QNM frequency (GR):
+  f_QNM = 271.7 Hz
+
+Comparison with observation:
+  f_QNM (GR) = 271.7 Hz
+  f_QNM (obs) = 251 +/- 8 Hz
+  delta_seg = -0.0762 (-7.6%)
+  delta_seg_err = 0.0294 (2.9%)
+
+SSZ interpretation:
+  f_SSZ = f_GR * (1 + delta_seg)
+  Same structure as G79: nu' = nu_0 * gamma_seg
+
+  Deviation from GR: 2.6 sigma
+  Consistent with GR (< 3 sigma): True
+
+======================================================================
+TEST 4 RESULT: PASSED (framework works, interpretation ongoing)
+======================================================================
+PASSED
+scripts/test_gamma_seg_transfer.py::test_scaling_relation 
+======================================================================
+TEST 5: Scaling Relation
+======================================================================
+
+Hypothesis: alpha ~ GM/(Rc^2)
+
+Regime               alpha (theory)  delta_f/f (obs) Consistent? 
+--------------------------------------------------------------
+Earth                0.0000          < 0.5%          True
+G79 Nebula           0.1200          DETECTED        True
+Neutron Star         0.2500          < 17.0%         True
+Black Hole           0.5000          < 26.0%         True
+
+Interpretation:
+  - Earth: alpha ~ 10^-9, effect invisible (< 0.5%)
+  - G79: alpha ~ 0.12, effect DETECTED (~12%)
+  - NS/BH: alpha ~ 0.2-0.5, strong effects expected
+
+The scaling is CONSISTENT with SSZ theory!
+
+======================================================================
+TEST 5 RESULT: PASSED
+======================================================================
+PASSED
+scripts/test_ssz_correct_predictions.py::test_44_percent_prediction ======================================================================
+TEST 1: The -44% Prediction at r = 5*r_s
+======================================================================
+
+Parameters:
+  M = 2.0 M_sun
+  r_s = 5.91 km
+  r = 5*r_s = 29.54 km
+  Xi_max = 1.0
+  phi = 1.618034
+
+Results:
+  Xi(5*r_s) = 0.9997
+  D_GR(5*r_s) = 0.8944
+  D_SSZ(5*r_s) = 1/(1+Xi) = 0.5001
+  Delta = -44.1%
+
+Expected: Delta ~ -44%
+Actual: Delta = -44.1%
+
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_correct_predictions.py::test_universal_crossover 
+======================================================================
+TEST 2: Universal Crossover
+======================================================================
+
+Parameters:
+  M = 10.0 M_sun
+  r_s = 29.54 km
+  Xi_max = 1.0
+
+Results:
+  r* / r_s = 1.386562
+  Xi(r*) = 0.893914
+  D_GR(r*) = 0.528007
+  D_SSZ(r*) = 0.528007
+  Expected r*/r_s ~ 1.387
+
+Crossover at r* = 1.3866 * r_s
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_correct_predictions.py::test_horizon_behavior 
+======================================================================
+TEST 3: Horizon Behavior (No Singularity)
+======================================================================
+
+At r = r_s (horizon):
+  Xi(r_s) = 0.8017
+  D_GR(r_s) = 0.0000 (SINGULARITY - time stops!)
+  D_SSZ(r_s) = 1/(1+Xi) = 0.5550 (FINITE - time continues!)
+
+At r = 1.01*r_s (just outside):
+  D_GR = 0.0995
+  D_SSZ = 0.5540
+
+SSZ time dilation is FINITE at horizon: 0.5550
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_correct_predictions.py::test_g79_nebula 
+======================================================================
+TEST 4: G79.29+0.46 Nebula Predictions
+======================================================================
+
+Parameters:
+  alpha = 0.12
+  r_c = 1.9 pc
+  r = 0.5 pc
+
+Results:
+  gamma_seg = 0.8880
+  z_temporal = 0.1120 (expected ~0.12)
+  Xi (coherence) = 1.1261
+  T_local = 213 K (from T_ext = 240 K)
+  Delta_v = 1.3 km/s (expected ~5 km/s)
+
+z_temporal ~ 0.12: 0.1120
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_correct_predictions.py::test_segment_saturation 
+======================================================================
+TEST 5: Segment Saturation
+======================================================================
+
+Xi_max = 1.0
+Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))
+
+Xi(r) at various radii:
+  r = 0.5*r_s: Xi = 0.5547, D_SSZ = 0.6432, D_GR = 0.0000
+  r = 1.0*r_s: Xi = 0.8017, D_SSZ = 0.5550, D_GR = 0.0000
+  r = 2.0*r_s: Xi = 0.9607, D_SSZ = 0.5100, D_GR = 0.7071
+  r = 5.0*r_s: Xi = 0.9997, D_SSZ = 0.5001, D_GR = 0.8944
+  r = 10.0*r_s: Xi = 1.0000, D_SSZ = 0.5000, D_GR = 0.9487
+  r = 100.0*r_s: Xi = 1.0000, D_SSZ = 0.5000, D_GR = 0.9950
+
+Xi(100*r_s) = 1.0000 <= Xi_max = 1.0
+D_SSZ(r_s) = 0.5550 > 0 (no singularity!)
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_correct_predictions.py::test_earth_schumann 
+======================================================================
+TEST 6: Earth/Schumann - NULL TEST
+======================================================================
+
+Earth Parameters:
+  M_earth = 5.972e+24 kg
+  R_earth = 6371.0 km
+  r_s (Earth) = 8.870 mm (!)
+  Compactness GM/(Rc^2) = 6.96e-10
+
+At Earth Surface (WEAK-FIELD LIMIT):
+  r / r_s = 7.18e+08 (very far from horizon!)
+  Xi(R_earth) = alpha * r_s / (2r) = 6.96e-10
+  D_GR = 0.9999999993
+  D_SSZ = 1/(1+Xi) = 0.9999999993
+  Delta = 0.00e+00%
+
+Schumann Resonance Implications:
+  f_Schumann ~ 7.83 Hz
+  SSZ frequency shift: delta_f/f ~ 6.96e-10
+  Absolute shift: delta_f ~ 5.45e-09 Hz
+  This is UNDETECTABLE (< measurement precision)!
+
+Comparison with observations:
+  Observed Schumann variations: ~0.1-0.5 Hz (ionospheric)
+  SSZ prediction: ~5.45e-09 Hz
+  Ratio: SSZ / observed ~ 5.45e-08
+
+NULL TEST: Xi_earth = 6.96e-10 << 1
+SSZ effect is 6.96e-10, which is UNDETECTABLE!
+This is WHY Schumann shows no SSZ signal!
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_correct_predictions.py::test_scaling_comparison 
+======================================================================
+TEST 7: Scaling Comparison Across Regimes
+======================================================================
+
+Regime                    GM/(Rc^2)    Xi           D_SSZ      D_GR       Delta     
+-------------------------------------------------------------------------------------
+Earth (Schumann)          6.96e-10     6.96e-10     1.000000   1.000000   0.00e+00  %
+Sun                       2.12e-06     2.12e-06     0.999998   0.999998   6.76e-10  %
+White Dwarf               2.11e-04     2.11e-04     0.999789   0.999789   6.68e-06  %
+Neutron Star              2.46e-01     9.63e-01     0.509525   0.712506   -2.85e+01 %
+Stellar BH (10 M_sun)     1.00e-01     1.00e+00     0.500077   0.894427   -4.41e+01 %
+SMBH (Sgr A*)             1.00e-01     1.00e+00     0.500077   0.894427   -4.41e+01 %
+
+KEY INSIGHT:
+  - Weak field (Earth, Sun, WD): Xi ~ r_s/r ~ GM/(Rc^2) << 1
+  - Strong field (NS, BH): Xi ~ 1, Delta ~ -44%
+  - SSZ effect scales with gravitational potential!
+
+Earth Xi = 6.96e-10 < 10^-6: True
+BH Delta = -44.1% ~ -44%: True
+TEST RESULT: PASSED
+PASSED
+scripts/test_ssz_expected_regimes.py::test_nicer_regime ======================================================================
+TEST: NICER NEUTRON STAR REGIME
+======================================================================
+
+Testing: z_SSZ = z_GR * (1 + delta_seg)
+Expected: alpha ~ GM/(Rc^2) ~ 0.15-0.25
+
+--- PSR J0030+0451 ---
+  M = 1.440 (+0.15/-0.14) M_sun
+  R = 13.02 (+1.24/-1.06) km
+  Ref: Miller+2019 ApJL 887, L24
+  Compactness: 0.1634 +/- 0.0231
+  z_GR: 0.2187 +/- 0.0417
+  SSZ expected delta_seg: 0.1953 (19.5%)
+  Current precision allows: |delta_seg| < 0.1908 (19.1%)
+  SSZ detectable with current precision? True
+
+--- PSR J0740+6620 ---
+  M = 2.080 (+0.07/-0.07) M_sun
+  R = 12.39 (+1.3/-0.98) km
+  Ref: Riley+2021 ApJL 918, L27
+  Compactness: 0.2480 +/- 0.0273
+  z_GR: 0.4085 +/- 0.0763
+  SSZ expected delta_seg: 0.3297 (33.0%)
+  Current precision allows: |delta_seg| < 0.1869 (18.7%)
+  SSZ detectable with current precision? True
+
+--- PSR J0437-4715 ---
+  M = 1.418 (+0.037/-0.037) M_sun
+  R = 11.36 (+0.95/-0.63) km
+  Ref: Choudhury+2024
+  Compactness: 0.1844 +/- 0.0162
+  z_GR: 0.2586 +/- 0.0322
+  SSZ expected delta_seg: 0.2260 (22.6%)
+  Current precision allows: |delta_seg| < 0.1245 (12.5%)
+  SSZ detectable with current precision? True
+
+SUMMARY:
+--------------------------------------------------
+  PSR J0030+0451: delta_seg ~ 20%, limit < 19% -> DETECTABLE
+  PSR J0740+6620: delta_seg ~ 33%, limit < 19% -> DETECTABLE
+  PSR J0437-4715: delta_seg ~ 23%, limit < 12% -> DETECTABLE
+
+CONCLUSION:
+  Average expected SSZ: 25%
+  Average current limit: 17%
+  -> SSZ SHOULD BE DETECTABLE if alpha ~ compactness!
+PASSED
+scripts/test_ssz_expected_regimes.py::test_gw_regime 
+======================================================================
+TEST: GW RINGDOWN REGIME
+======================================================================
+
+Testing: f_SSZ = f_GR * (1 + delta_seg)
+Expected: alpha ~ 0.5 at horizon
+
+--- GW150914 ---
+  M_final = 62.2 +/- 3.7 M_sun
+  a_final = 0.68 +/- 0.05
+  Ref: Abbott+2016 PRL 116, 061102
+  f_QNM (GR): 273.5 +/- 16.3 Hz
+  f_ring (obs): 251.0 +/- 8.0 Hz
+  delta_seg (inferred): -0.0823 +/- 0.0619 (-8.2% +/- 6.2%)
+  Deviation from GR: 1.3 sigma
+  SSZ expected (alpha=0.5): delta_seg ~ 100%
+
+--- GW170104 ---
+  M_final = 48.9 +/- 4.0 M_sun
+  a_final = 0.66 +/- 0.08
+  Ref: Abbott+2017 PRL 118, 221101
+  f_QNM (GR): 342.7 +/- 28.0 Hz
+  f_ring: Not measured
+
+--- GW170814 ---
+  M_final = 53.4 +/- 3.3 M_sun
+  a_final = 0.72 +/- 0.05
+  Ref: Abbott+2017 PRL 119, 141101
+  f_QNM (GR): 328.9 +/- 20.3 Hz
+  f_ring: Not measured
+
+--- GW190521 ---
+  M_final = 142.0 +/- 16.0 M_sun
+  a_final = 0.72 +/- 0.09
+  Ref: Abbott+2020 PRL 125, 101102
+  f_QNM (GR): 123.7 +/- 13.9 Hz
+  f_ring (obs): 63.0 +/- 5.0 Hz
+  delta_seg (inferred): -0.4907 +/- 0.0702 (-49.1% +/- 7.0%)
+  Deviation from GR: 7.0 sigma
+  SSZ expected (alpha=0.5): delta_seg ~ 100%
+
+SUMMARY:
+--------------------------------------------------
+  GW150914: delta_seg = -8.2% +/- 6.2% (1.3 sigma)
+  GW190521: delta_seg = -49.1% +/- 7.0% (7.0 sigma)
+
+  Combined: delta_seg = -26.1% +/- 4.6%
+
+CONCLUSION:
+  Observed deviation: -26.1%
+  SSZ expected (alpha=0.5): ~100%
+  -> Observed << Expected, suggesting alpha << 0.5 at ringdown
+PASSED
+scripts/test_ssz_expected_regimes.py::test_feka_regime 
+======================================================================
+TEST: Fe-Ka X-RAY LINE REGIME
+======================================================================
+
+Testing: E_obs = E_rest * g_SSZ where g_SSZ = g_GR * (1 + delta_seg)
+Expected: alpha ~ 0.3-0.5 at ISCO
+
+--- MCG-6-30-15 (Seyfert 1) ---
+  M = 2.90e+06 M_sun
+  a = 0.989
+  Ref: Tanaka+1995, Fabian+2002
+  r_ISCO = 1.47 r_g
+  g_ISCO (GR) = 0.642
+  E_line (GR at ISCO) = 4.11 keV
+  E_line (obs peak) = 6.40 +/- 0.10 keV
+  Line width (FWHM) = 1.80 keV
+  Note: Broad line - peak from outer disk, red wing from ISCO
+  Red wing minimum (GR): ~4.1 keV
+  Red wing minimum (obs): ~4.6 keV
+  Rough delta: 12%
+
+--- 1H0707-495 (NLS1) ---
+  M = 2.00e+06 M_sun
+  a = 0.980
+  Ref: Fabian+2009
+  r_ISCO = 1.61 r_g
+  g_ISCO (GR) = 0.684
+  E_line (GR at ISCO) = 4.38 keV
+  E_line (obs peak) = 6.40 +/- 0.20 keV
+  Line width (FWHM) = 2.50 keV
+  Note: Broad line - peak from outer disk, red wing from ISCO
+  Red wing minimum (GR): ~4.4 keV
+  Red wing minimum (obs): ~3.9 keV
+  Rough delta: -11%
+
+--- Cyg X-1 (HMXB) ---
+  M = 2.12e+01 M_sun
+  a = 0.998
+  Ref: Tomsick+2014, Duro+2011
+  r_ISCO = 1.24 r_g
+  g_ISCO (GR) = 0.571
+  E_line (GR at ISCO) = 3.65 keV
+  E_line (obs peak) = 6.40 +/- 0.10 keV
+  Line width (FWHM) = 0.80 keV
+  Note: Broad line - peak from outer disk, red wing from ISCO
+  Red wing minimum (GR): ~3.7 keV
+  Red wing minimum (obs): ~5.6 keV
+  Rough delta: 53%
+
+--- GRS 1915+105 (LMXB) ---
+  M = 1.24e+01 M_sun
+  a = 0.980
+  Ref: Miller+2013
+  r_ISCO = 1.61 r_g
+  g_ISCO (GR) = 0.684
+  E_line (GR at ISCO) = 4.38 keV
+  E_line (obs peak) = 6.40 +/- 0.15 keV
+  Line width (FWHM) = 1.20 keV
+  Note: Broad line - peak from outer disk, red wing from ISCO
+  Red wing minimum (GR): ~4.4 keV
+  Red wing minimum (obs): ~5.2 keV
+  Rough delta: 19%
+
+SUMMARY:
+--------------------------------------------------
+  Fe-Ka lines require FULL spectral modeling (relxill)
+  Simple peak comparison is NOT sufficient for SSZ test
+  The broad line profile encodes information about:
+    - Disk geometry
+    - Emissivity profile
+    - GR effects (redshift, beaming, light bending)
+
+CONCLUSION:
+  Fe-Ka is the MOST COMPLEX regime for SSZ testing
+  Requires: relxill + SSZ modification to g-factor
+  Current data: Consistent with GR Kerr metric
+PASSED
+scripts/test_ssz_expected_regimes.py::test_scaling_across_regimes 
+======================================================================
+TEST: SCALING ACROSS ALL REGIMES
+======================================================================
+
+Hypothesis: delta_seg ~ alpha ~ GM/(Rc^2)
+
+Regime               GM/(Rc^2)    delta_obs    Type           
+------------------------------------------------------------
+Earth (Schumann)     7.00e-10     < 0.5%       upper_bound    
+G79 Nebula           0.120        12.0% +/- 2.0% detection      
+NICER (avg)          0.199        < 17.0%      upper_bound    
+GW Ringdown          0.500        28.7%        measurement    
+
+SCALING ANALYSIS:
+--------------------------------------------------
+  If delta_seg = alpha (linear scaling):
+    Earth (Schumann): expected 7.00e-08%, limit < 0.5%
+    G79 Nebula: expected 12.0%, observed 12.0%, ratio = 1.00
+    NICER (avg): expected 1.99e+01%, limit < 17.0%
+
+CONCLUSION:
+  - G79: delta ~ alpha (SSZ detected!)
+  - Earth: delta << alpha (below detection, as expected)
+  - NS: delta < 17% at alpha ~ 20% (consistent with GR or small SSZ)
+  - BH: delta ~ 20% at alpha ~ 50% (smaller than expected)
+
+  -> SSZ effects appear to be SMALLER than naive alpha ~ GM/(Rc^2)
+  -> Or: SSZ has different functional form in strong fields
+PASSED
+scripts/test_ssz_full_scale.py::test_object ERROR
+tests/data/test_real_loaders.py::TestRealSchumannLoader::test_load_csv_schumann PASSED
+tests/data/test_real_loaders.py::TestRealSchumannLoader::test_validate_schumann_data PASSED
+tests/data/test_real_loaders.py::TestRealSchumannLoader::test_convert_to_standard_format PASSED
+tests/data/test_real_loaders.py::TestRealSchumannLoader::test_missing_file_error PASSED
+tests/data/test_real_loaders.py::TestRealSchumannLoader::test_missing_column_error PASSED
+tests/data/test_real_loaders.py::TestRealSpaceWeatherLoader::test_load_f107 PASSED
+tests/data/test_real_loaders.py::TestRealSpaceWeatherLoader::test_load_kp PASSED
+tests/data/test_real_loaders.py::TestRealSpaceWeatherLoader::test_resample_to_match PASSED
+tests/data/test_real_loaders.py::TestRealSpaceWeatherLoader::test_load_space_weather_from_config PASSED
+tests/data/test_real_loaders.py::TestUnifiedLoader::test_load_synthetic_data PASSED
+tests/data/test_real_loaders.py::TestUnifiedLoader::test_unified_data_get_frequencies PASSED
+tests/data/test_real_loaders.py::TestUnifiedLoader::test_unified_data_summary PASSED
+tests/data/test_real_loaders.py::TestUnifiedLoader::test_config_from_dict PASSED
+tests/data/test_real_loaders.py::TestIntegrationRealPipeline::test_real_pipeline_smoke PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_freq_to_lambda_7mhz PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_freq_to_lambda_14mhz PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_lambda_to_freq_roundtrip PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_freq_mhz_to_lambda PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_freq_khz_to_lambda PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_period_roundtrip PASSED
+tests/hamtools/test_hamtools.py::TestCoreFrequency::test_negative_frequency_raises PASSED
+tests/hamtools/test_hamtools.py::TestCoreDB::test_db_from_ratio_double PASSED
+tests/hamtools/test_hamtools.py::TestCoreDB::test_db_from_ratio_10x PASSED
+tests/hamtools/test_hamtools.py::TestCoreDB::test_ratio_from_db_3db PASSED
+tests/hamtools/test_hamtools.py::TestCoreDB::test_db_roundtrip PASSED
+tests/hamtools/test_hamtools.py::TestCoreDB::test_voltage_db PASSED
+tests/hamtools/test_hamtools.py::TestCoreERP::test_erp_no_gain_no_loss PASSED
+tests/hamtools/test_hamtools.py::TestCoreERP::test_erp_with_gain PASSED
+tests/hamtools/test_hamtools.py::TestCoreERP::test_erp_with_loss PASSED
+tests/hamtools/test_hamtools.py::TestCoreERP::test_dbd_to_dbi PASSED
+tests/hamtools/test_hamtools.py::TestAntennas::test_dipole_40m PASSED
+tests/hamtools/test_hamtools.py::TestAntennas::test_dipole_20m PASSED
+tests/hamtools/test_hamtools.py::TestAntennas::test_vertical_40m PASSED
+tests/hamtools/test_hamtools.py::TestAntennas::test_yagi_gain_positive PASSED
+tests/hamtools/test_hamtools.py::TestAntennas::test_yagi_gain_increases_with_elements PASSED
+tests/hamtools/test_hamtools.py::TestAntennas::test_shortening_factor_effect PASSED
+tests/hamtools/test_hamtools.py::TestFeedline::test_rg58_higher_loss_than_ecoflex PASSED
+tests/hamtools/test_hamtools.py::TestFeedline::test_loss_increases_with_frequency PASSED
+tests/hamtools/test_hamtools.py::TestFeedline::test_total_loss_proportional_to_length PASSED
+tests/hamtools/test_hamtools.py::TestFeedline::test_power_at_antenna PASSED
+tests/hamtools/test_hamtools.py::TestFeedline::test_unknown_cable_raises PASSED
+tests/hamtools/test_hamtools.py::TestPropagation::test_critical_freq_formula PASSED
+tests/hamtools/test_hamtools.py::TestPropagation::test_muf_increases_with_distance PASSED
+tests/hamtools/test_hamtools.py::TestPropagation::test_muf_at_zero_distance PASSED
+tests/hamtools/test_hamtools.py::TestPropagation::test_skip_distance_below_critical PASSED
+tests/hamtools/test_hamtools.py::TestPropagation::test_skip_distance_above_critical PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_d_ssz_from_delta PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_effective_c_reduced PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_ssz_lambda_shorter PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_ssz_effect_proportional PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_ssz_effect_scales PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_zero_delta_no_effect PASSED
+tests/hamtools/test_hamtools.py::TestSSZExtension::test_ssz_skip_distance PASSED
+tests/hamtools/test_hamtools.py::TestIntegration::test_antenna_uses_correct_wavelength PASSED
+tests/hamtools/test_hamtools.py::TestIntegration::test_ssz_antenna_correction PASSED
+tests/test_end_to_end.py::TestSyntheticDataGeneration::test_create_synthetic_schumann PASSED
+tests/test_end_to_end.py::TestSyntheticDataGeneration::test_create_synthetic_space_weather PASSED
+tests/test_end_to_end.py::TestDataMerging::test_merge_all PASSED
+tests/test_end_to_end.py::TestDataMerging::test_compute_derived_variables PASSED
+tests/test_end_to_end.py::TestDeltaComputation::test_compute_all_deltas PASSED
+tests/test_end_to_end.py::TestDeltaComputation::test_delta_recovery PASSED
+tests/test_end_to_end.py::TestModelFitting::test_fit_classical_model PASSED
+tests/test_end_to_end.py::TestModelFitting::test_fit_ssz_model PASSED
+tests/test_end_to_end.py::TestModelFitting::test_compare_models PASSED
+tests/test_end_to_end.py::TestModeConsistency::test_ssz_signature_detection PASSED
+tests/test_end_to_end.py::TestFullPipeline::test_run_analysis_pipeline PASSED
+tests/test_layered_ssz.py::TestLayerConfig::test_layer_config_creation PASSED
+tests/test_layered_ssz.py::TestLayerConfig::test_layer_config_defaults PASSED
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_default_config PASSED
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_layers_property PASSED
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_total_weight PASSED
+tests/test_layered_ssz.py::TestLayeredSSZConfig::test_normalize_weights PASSED
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_no_segmentation PASSED
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_ionosphere_only PASSED
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_all_layers PASSED
+tests/test_layered_ssz.py::TestDSSZCalculations::test_D_SSZ_from_sigmas_function PASSED
+tests/test_layered_ssz.py::TestDSSZCalculations::test_effective_delta_seg PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_mode1 PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_mode2 PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_mode3 PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_classical_invalid_mode PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_ssz_layered_no_correction PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_f_n_ssz_layered_with_correction PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_compute_all_modes PASSED
+tests/test_layered_ssz.py::TestFrequencyCalculations::test_relative_shift_uniform PASSED
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_phi_segment_density_ssz_core PASSED
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_phi_segment_density_linear PASSED
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_sigma_from_phi_ratio_no_difference PASSED
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_sigma_from_phi_ratio_positive PASSED
+tests/test_layered_ssz.py::TestPhiBasedSegmentation::test_create_phi_based_config PASSED
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_sigma_iono_from_proxy_constant PASSED
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_sigma_iono_from_proxy_varying PASSED
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_f_n_ssz_timeseries PASSED
+tests/test_layered_ssz.py::TestTimeVaryingModel::test_f_n_ssz_timeseries_pandas PASSED
+tests/test_layered_ssz.py::TestFrequencyShiftEstimate::test_zero_segmentation PASSED
+tests/test_layered_ssz.py::TestFrequencyShiftEstimate::test_one_percent_segmentation PASSED
+tests/test_layered_ssz.py::TestFrequencyShiftEstimate::test_shift_proportional_to_frequency PASSED
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_positive_segmentation_lowers_frequency PASSED
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_negative_segmentation_raises_frequency PASSED
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_frequency_ratios_preserved PASSED
+tests/test_layered_ssz.py::TestPhysicalConsistency::test_realistic_shift_magnitude PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_Xi_ssz_at_zero PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_Xi_ssz_at_infinity PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_Xi_ssz_at_r_s PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_Xi_ssz_array PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_D_SSZ_from_Xi_at_zero PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_D_SSZ_from_Xi_at_one PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_D_SSZ_from_Xi_range PASSED
+tests/test_layered_ssz.py::TestCoreSSZFormulas::test_D_SSZ_no_singularity PASSED
+tests/test_models.py::TestClassicalSchumann::test_mode_factor PASSED
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_values PASSED
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_eta_1 PASSED
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_scaling PASSED
+tests/test_models.py::TestClassicalSchumann::test_compute_eta0_from_mean_f1 PASSED
+tests/test_models.py::TestClassicalSchumann::test_f_n_classical_timeseries PASSED
+tests/test_models.py::TestSSZCorrection::test_D_SSZ_basic PASSED
+tests/test_models.py::TestSSZCorrection::test_D_SSZ_array PASSED
+tests/test_models.py::TestSSZCorrection::test_f_n_ssz_model PASSED
+tests/test_models.py::TestSSZCorrection::test_delta_seg_from_observed PASSED
+tests/test_models.py::TestSSZCorrection::test_delta_seg_roundtrip PASSED
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_perfect PASSED
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent PASSED
+tests/test_models.py::TestPhysicalConsistency::test_frequency_ratios PASSED
+tests/test_models.py::TestPhysicalConsistency::test_ssz_preserves_ratios PASSED
+tests/test_models.py::TestPhysicalConsistency::test_relative_shift_uniform PASSED
+tests/test_models.py::TestSSZSignatureDetection::test_strong_ssz_detection PASSED
+tests/test_models.py::TestSSZSignatureDetection::test_null_ssz_detection PASSED
+tests/test_models.py::TestSSZSignatureDetection::test_ssz_score_formula PASSED
+tests/test_models.py::TestSSZSignatureDetection::test_interpretation_strings PASSED
+tests/test_physical_ssz.py::TestPlasmaParameters::test_plasma_frequency_typical PASSED
+tests/test_physical_ssz.py::TestPlasmaParameters::test_plasma_frequency_scaling PASSED
+tests/test_physical_ssz.py::TestPlasmaParameters::test_gyro_frequency_typical PASSED
+tests/test_physical_ssz.py::TestPlasmaParameters::test_gyro_frequency_linear PASSED
+tests/test_physical_ssz.py::TestIonosphereState::test_create_state PASSED
+tests/test_physical_ssz.py::TestIonosphereState::test_reference_state PASSED
+tests/test_physical_ssz.py::TestDeltaSegPhysical::test_reference_gives_zero PASSED
+tests/test_physical_ssz.py::TestDeltaSegPhysical::test_increased_density PASSED
+tests/test_physical_ssz.py::TestDeltaSegPhysical::test_increased_b_field PASSED
+tests/test_physical_ssz.py::TestDeltaSegFromProxies::test_typical_quiet_sun PASSED
+tests/test_physical_ssz.py::TestDeltaSegFromProxies::test_active_sun PASSED
+tests/test_physical_ssz.py::TestDeltaSegFromProxies::test_geomagnetic_storm PASSED
+tests/test_physical_ssz.py::TestDeltaSegFromProxies::test_height_variation PASSED
+tests/test_physical_ssz.py::TestSSZFrequency::test_reference_state_matches_classical PASSED
+tests/test_physical_ssz.py::TestSSZFrequency::test_mode_independence PASSED
+tests/test_physical_ssz.py::TestPredictions::test_predict_signature_returns_dict PASSED
+tests/test_physical_ssz.py::TestPredictions::test_grid_shape PASSED
+tests/test_physical_ssz.py::TestPredictions::test_range_is_finite PASSED
+tests/test_physical_ssz.py::TestPhysicalParams::test_default_params PASSED
+tests/test_physical_ssz.py::TestPhysicalParams::test_custom_params PASSED
+tests/test_t1_t4_implementation.py::TestT1ExtendedClassical::test_f_n_classical_extended_default PASSED
+tests/test_t1_t4_implementation.py::TestT1ExtendedClassical::test_f_n_classical_extended_height_effect PASSED
+tests/test_t1_t4_implementation.py::TestT1ExtendedClassical::test_f_n_classical_with_latitude PASSED
+tests/test_t1_t4_implementation.py::TestT1ExtendedClassical::test_f_n_classical_diurnal PASSED
+tests/test_t1_t4_implementation.py::TestT1ExtendedClassical::test_extended_mode_ratios PASSED
+tests/test_t1_t4_implementation.py::TestT1ExtendedClassical::test_invalid_parameters PASSED
+tests/test_t1_t4_implementation.py::TestT2DataLoader::test_load_synthetic_data PASSED
+tests/test_t1_t4_implementation.py::TestT2DataLoader::test_schema_validation PASSED
+tests/test_t1_t4_implementation.py::TestT2DataLoader::test_synthetic_data_has_true_delta_seg PASSED
+tests/test_t1_t4_implementation.py::TestT2DataLoader::test_get_frequency_dict PASSED
+tests/test_t1_t4_implementation.py::TestT2Pipeline::test_pipeline_default_config PASSED
+tests/test_t1_t4_implementation.py::TestT2Pipeline::test_pipeline_result_summary PASSED
+tests/test_t1_t4_implementation.py::TestT2Pipeline::test_quick_analysis PASSED
+tests/test_t1_t4_implementation.py::TestT3RealDataHooks::test_real_data_loader_not_implemented PASSED
+tests/test_t1_t4_implementation.py::TestT3RealDataHooks::test_load_from_csv_path PASSED
+tests/test_t1_t4_implementation.py::TestT4Diagnostics::test_compute_relative_shifts PASSED
+tests/test_t1_t4_implementation.py::TestT4Diagnostics::test_check_mode_independence_ssz PASSED
+tests/test_t1_t4_implementation.py::TestT4Diagnostics::test_check_mode_independence_dispersive PASSED
+tests/test_t1_t4_implementation.py::TestT4Diagnostics::test_delta_seg_with_confidence PASSED
+tests/test_t1_t4_implementation.py::TestT4Diagnostics::test_detect_dispersion_pattern PASSED
+tests/test_t1_t4_implementation.py::TestT4Diagnostics::test_generate_diagnostic_report PASSED
+tests/test_t1_t4_implementation.py::TestIntegration::test_full_workflow PASSED
+
+=================================== ERRORS ====================================
+________________________ ERROR at setup of test_object ________________________
+file e:\clone\ssz-schuhman-experiment\scripts\test_ssz_full_scale.py, line 142
+  def test_object(obj: AstroObject) -> dict:
+E       fixture 'obj' not found
+>       available fixtures: _session_faker, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, capteesys, doctest_namespace, faker, free_tcp_port, free_tcp_port_factory, free_udp_port, free_udp_port_factory, monkeypatch, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, subtests, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory
+>       use 'pytest --fixtures [testpath]' for help on them.
+
+e:\clone\ssz-schuhman-experiment\scripts\test_ssz_full_scale.py:142
+============================== warnings summary ===============================
+scripts/test_gamma_seg_transfer.py::test_mathematical_consistency
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_gamma_seg_transfer.py::test_mathematical_consistency returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_gamma_seg_transfer.py::test_g79_predictions
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_gamma_seg_transfer.py::test_g79_predictions returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_gamma_seg_transfer.py::test_nicer_application
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_gamma_seg_transfer.py::test_nicer_application returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_gamma_seg_transfer.py::test_gw_application
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_gamma_seg_transfer.py::test_gw_application returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_gamma_seg_transfer.py::test_scaling_relation
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_gamma_seg_transfer.py::test_scaling_relation returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_44_percent_prediction
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_44_percent_prediction returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_universal_crossover
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_universal_crossover returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_horizon_behavior
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_horizon_behavior returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_g79_nebula
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_g79_nebula returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_segment_saturation
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_segment_saturation returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_earth_schumann
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_earth_schumann returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_correct_predictions.py::test_scaling_comparison
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_correct_predictions.py::test_scaling_comparison returned <class 'numpy.bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_expected_regimes.py::test_nicer_regime
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_expected_regimes.py::test_nicer_regime returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_expected_regimes.py::test_gw_regime
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_expected_regimes.py::test_gw_regime returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_expected_regimes.py::test_feka_regime
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_expected_regimes.py::test_feka_regime returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+scripts/test_ssz_expected_regimes.py::test_scaling_across_regimes
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but scripts/test_ssz_expected_regimes.py::test_scaling_across_regimes returned <class 'list'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+tests/test_end_to_end.py::TestFullPipeline::test_run_analysis_pipeline
+  E:\clone\ssz-schuhman-experiment\ssz_schumann\analysis\compute_deltas.py:163: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+    "timestamp": datetime.utcnow().isoformat(),
+
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\numpy\lib\_function_base_impl.py:2922: RuntimeWarning: invalid value encountered in divide
+    c /= stddev[:, None]
+
+tests/test_models.py::TestSSZCorrection::test_mode_consistency_inconsistent
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\numpy\lib\_function_base_impl.py:2923: RuntimeWarning: invalid value encountered in divide
+    c /= stddev[None, :]
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR scripts/test_ssz_full_scale.py::test_object
+================= 187 passed, 19 warnings, 1 error in 15.53s ==================
+
+
+STDERR:
+--------------------------------------------------------------------------------

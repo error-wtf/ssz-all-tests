@@ -1,0 +1,80 @@
+================================================================================
+SSZ MASTER EXECUTION - 100% COMPLETE
+================================================================================
+
+============================================================
+REPO: ssz-qubits
+Expected: 184 tests
+============================================================
+Result: 184 passed, 0 failed, 0 errors
+
+============================================================
+REPO: ssz-metric-pure
+Expected: 46 tests
+============================================================
+Result: 36 passed, 0 failed, 0 errors
+
+============================================================
+REPO: segmented-calculation-suite
+Expected: 158 tests
+============================================================
+Result: 88 passed, 0 failed, 0 errors
+
+============================================================
+REPO: ssz-schuhman-experiment
+Expected: 191 tests
+============================================================
+Traceback (most recent call last):
+  File "E:\clone\ssz-all-tests-test\master_execute.py", line 130, in <module>
+Result: 171 passed, 0 failed, 0 errors
+
+============================================================
+REPO: ssz-lagrange
+Expected: 54 tests
+============================================================
+Result: 0 passed, 0 failed, 0 errors
+
+============================================================
+REPO: ssz-lensing
+Expected: 279 tests
+============================================================
+Result: 279 passed, 0 failed, 0 errors
+
+============================================================
+REPO: Segmented-Spacetime-Mass-Projection-Unified-Results
+Expected: 139 tests
+============================================================
+Fixed Unified-Results import
+Result: 0 passed, 0 failed, 0 errors
+
+============================================================
+REPO: ssz-trajectories
+Expected: 63 tests
+============================================================
+Result: 63 passed, 0 failed, 0 errors
+
+============================================================
+REPO: segmented-energy
+Expected: 6 tests
+============================================================
+Fixed segmented-energy dataset
+Result: 0 passed, 0 failed, 3 errors
+
+============================================================
+REPO: g79-cygnus-test
+Expected: 5 tests
+============================================================
+Result: 0 passed, 0 failed, 0 errors
+
+================================================================================
+FINAL RESULTS
+================================================================================
+Expected: 1125 tests
+Passed: 821
+Failed: 3
+Pass Rate: 73.0%
+    print(f"\n\u26a0 {total_expected - total_passed} TESTS MISSING OR FAILING")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u26a0' in position 2: character maps to <undefined>

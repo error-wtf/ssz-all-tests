@@ -1,0 +1,4897 @@
+{
+  "metadata": {
+    "generated": "2026-04-28T00:42:27.767602"
+  },
+  "repos": {
+    "ssz-qubits": {
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration": 3.6,
+      "tests": [
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestExtremeRadii",
+          "name": "test_very_small_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestExtremeRadii",
+          "name": "test_very_large_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestExtremeRadii",
+          "name": "test_radius_at_schwarzschild",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestExtremeMasses",
+          "name": "test_zero_mass",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestExtremeMasses",
+          "name": "test_solar_mass",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestExtremeMasses",
+          "name": "test_black_hole_mass",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQubitConfigurations",
+          "name": "test_identical_qubits",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQubitConfigurations",
+          "name": "test_very_distant_qubits",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQubitConfigurations",
+          "name": "test_negative_coordinates",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQubitConfigurations",
+          "name": "test_underground_qubit",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestNumericalPrecision",
+          "name": "test_float_precision_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestNumericalPrecision",
+          "name": "test_time_dilation_precision",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestNumericalPrecision",
+          "name": "test_gradient_numerical_vs_analytical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestErrorHandling",
+          "name": "test_zero_radius_error",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestErrorHandling",
+          "name": "test_negative_radius_error",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestErrorHandling",
+          "name": "test_optimal_height_zero_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestErrorHandling",
+          "name": "test_optimal_height_negative_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestSpecialQubitProperties",
+          "name": "test_zero_coherence_time",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestSpecialQubitProperties",
+          "name": "test_very_long_coherence_time",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestSpecialQubitProperties",
+          "name": "test_very_short_gate_time",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQECEdgeCases",
+          "name": "test_syndrome_weight_bounds",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQECEdgeCases",
+          "name": "test_logical_error_rate_bounds",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestQECEdgeCases",
+          "name": "test_single_qubit_array",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestSegmentCoherentZone",
+          "name": "test_coherent_zone_contains_center",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestSegmentCoherentZone",
+          "name": "test_coherent_zone_width_scales",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestPhaseDriftBoundary",
+          "name": "test_zero_height_difference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_edge_cases.py",
+          "class": "TestPhaseDriftBoundary",
+          "name": "test_zero_frequency_phase_drift",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestPhaseDrift",
+          "name": "test_phase_drift_1mm",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestPhaseDrift",
+          "name": "test_phase_drift_linear_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestPhaseDrift",
+          "name": "test_signed_delta_D",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestBellStateFidelity",
+          "name": "test_fidelity_zero_phase",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestBellStateFidelity",
+          "name": "test_fidelity_pi_phase",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestBellStateFidelity",
+          "name": "test_fidelity_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestBellStateFidelity",
+          "name": "test_fidelity_paper_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestBellStateFidelity",
+          "name": "test_small_angle_approximation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCHSHParameter",
+          "name": "test_chsh_max",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCHSHParameter",
+          "name": "test_chsh_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCHSHParameter",
+          "name": "test_chsh_classical_bound",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCHSHParameter",
+          "name": "test_chsh_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCharacteristicTime",
+          "name": "test_T_SSZ_1mm",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCharacteristicTime",
+          "name": "test_T_SSZ_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCharacteristicTime",
+          "name": "test_T_SSZ_zero_height",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCorrectionInterval",
+          "name": "test_correction_interval_paper_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCorrectionInterval",
+          "name": "test_correction_interval_zero_drift",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCorrectionGate",
+          "name": "test_correction_higher_A",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCorrectionGate",
+          "name": "test_correction_higher_B",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCoherentZone",
+          "name": "test_same_height_in_zone",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCoherentZone",
+          "name": "test_small_separation_in_zone",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestCoherentZone",
+          "name": "test_large_separation_out_of_zone",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_entanglement.py",
+          "class": "TestFullAnalysis",
+          "name": "test_analysis_1mm",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestGRComparison",
+          "name": "test_ssz_equals_gr_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestGRComparison",
+          "name": "test_weak_field_detection",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestGRComparison",
+          "name": "test_gr_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestFidelityReduction",
+          "name": "test_small_angle_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestFidelityReduction",
+          "name": "test_paper_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestFidelityReduction",
+          "name": "test_approximation_validity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestLinearScaling",
+          "name": "test_is_linear",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestLinearScaling",
+          "name": "test_scaling_constant",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestNumericalStability",
+          "name": "test_closed_form_works",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestNumericalStability",
+          "name": "test_direct_fails",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestNumericalStability",
+          "name": "test_stability_demonstrated",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestCoherentZone",
+          "name": "test_zone_width_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestCoherentZone",
+          "name": "test_zone_width_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestCoherentZone",
+          "name": "test_half_width",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestDecoherenceEnhancement",
+          "name": "test_unity_for_small_delta_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_a_support.py",
+          "class": "TestDecoherenceEnhancement",
+          "name": "test_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction1PhaseDrift",
+          "name": "test_phase_drift_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction1PhaseDrift",
+          "name": "test_phase_drift_above_falsification_threshold",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction2CoherentZone",
+          "name": "test_zone_width_at_1e18",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction2CoherentZone",
+          "name": "test_zone_width_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction3FrequencyScaling",
+          "name": "test_frequency_ratio",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction3FrequencyScaling",
+          "name": "test_ratio_above_falsification_threshold",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction4Compensation",
+          "name": "test_compensation_possible",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction4Compensation",
+          "name": "test_deterministic_compensation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction5CrossZoneDrift",
+          "name": "test_cross_zone_drift_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestPrediction5CrossZoneDrift",
+          "name": "test_drift_above_falsification_threshold",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestScalingAnalysis",
+          "name": "test_height_linearity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestScalingAnalysis",
+          "name": "test_frequency_linearity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestScalingAnalysis",
+          "name": "test_time_linearity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestConfoundDiscrimination",
+          "name": "test_ssz_is_deterministic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestConfoundDiscrimination",
+          "name": "test_ssz_is_monotonic_in_height",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestConfoundDiscrimination",
+          "name": "test_ssz_scales_with_omega",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestMeasurementRequirements",
+          "name": "test_phase_precision_achievable",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestMeasurementRequirements",
+          "name": "test_height_precision_achievable",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_c_support.py",
+          "class": "TestIntegration",
+          "name": "test_paper_c_module_imports",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_schwarzschild_radius_earth",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_xi_formula_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_xi_at_earth_surface",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_xi_dimensionless",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_d_ssz_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_d_ssz_at_earth_surface",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_gr_consistency_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_gr_taylor_expansion",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_delta_d_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_phase_drift_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_phase_drift_units",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_numerical_example_transmon_1mm",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_numerical_example_transmon_1m",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection3Theory",
+          "name": "test_numerical_example_optical_1m",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection4Compensation",
+          "name": "test_compensation_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection4Compensation",
+          "name": "test_compensation_is_deterministic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection5Experiments",
+          "name": "test_chip_tilt_geometry",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection5Experiments",
+          "name": "test_upper_bound_calculation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection6Statistics",
+          "name": "test_power_analysis_optical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection6Statistics",
+          "name": "test_slope_fitting_concept",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection7Feasibility",
+          "name": "test_12_oom_gap",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection7Feasibility",
+          "name": "test_platform_comparison_frequency_ratio",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection7Feasibility",
+          "name": "test_platform_comparison_coherence_ratio",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestSection7Feasibility",
+          "name": "test_platform_comparison_phase_ratio",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestStrongFieldPredictions",
+          "name": "test_strong_field_xi_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestStrongFieldPredictions",
+          "name": "test_strong_field_d_ssz_finite_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestStrongFieldPredictions",
+          "name": "test_gr_diverges_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestHistoricalValidation",
+          "name": "test_gps_time_drift",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestHistoricalValidation",
+          "name": "test_pound_rebka_prediction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestLinearScaling",
+          "name": "test_linear_in_height",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestLinearScaling",
+          "name": "test_linear_in_omega",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_paper_d_validation.py",
+          "class": "TestLinearScaling",
+          "name": "test_linear_in_time",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH1DeterministicPhaseBias",
+          "name": "test_phase_drift_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH1DeterministicPhaseBias",
+          "name": "test_effect_is_deterministic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH1DeterministicPhaseBias",
+          "name": "test_phase_drift_scales_with_height",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH1DeterministicPhaseBias",
+          "name": "test_phase_drift_scales_with_time",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH1DeterministicPhaseBias",
+          "name": "test_compensation_is_possible",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH2CoherentZones",
+          "name": "test_zone_width_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH2CoherentZones",
+          "name": "test_zone_width_scales_with_epsilon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH2CoherentZones",
+          "name": "test_cross_zone_bias",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH3Scaling",
+          "name": "test_accumulated_drift_grows_with_coherence",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH3Scaling",
+          "name": "test_effect_grows_with_height_difference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestH3Scaling",
+          "name": "test_macroscopic_height_measurable",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestWP1Simulation",
+          "name": "test_baseline_has_unity_fidelity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestWP1Simulation",
+          "name": "test_ssz_drift_reduces_fidelity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestWP1Simulation",
+          "name": "test_compensation_recovers_fidelity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestFalsifiability",
+          "name": "test_height_dependence_exists",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestFalsifiability",
+          "name": "test_correct_omega_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestFalsifiability",
+          "name": "test_monotonic_in_height",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_roadmap_validation.py",
+          "class": "TestIntegration",
+          "name": "test_roadmap_validation_runs",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSchwarzschildRadius",
+          "name": "test_earth_schwarzschild_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSchwarzschildRadius",
+          "name": "test_sun_schwarzschild_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSegmentDensityWeakField",
+          "name": "test_xi_at_earth_surface",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSegmentDensityWeakField",
+          "name": "test_xi_decreases_with_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSegmentDensityWeakField",
+          "name": "test_xi_positive_definite",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSegmentDensityWeakField",
+          "name": "test_xi_formula_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSegmentGradientWeakField",
+          "name": "test_gradient_negative",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSegmentGradientWeakField",
+          "name": "test_gradient_scales_as_1_over_r_squared",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSSZTimeDilationWeakField",
+          "name": "test_time_dilation_at_earth_surface",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSSZTimeDilationWeakField",
+          "name": "test_time_dilation_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestSSZTimeDilationWeakField",
+          "name": "test_time_dilation_increases_with_altitude",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestQubitAnalysisWeakField",
+          "name": "test_qubit_at_earth_surface",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestQubitAnalysisWeakField",
+          "name": "test_qubit_pair_mismatch",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestGoldenRatio",
+          "name": "test_phi_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestGoldenRatio",
+          "name": "test_phi_property",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestStrongFieldRegime",
+          "name": "test_strong_field_xi_at_schwarzschild",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_physics.py",
+          "class": "TestStrongFieldRegime",
+          "name": "test_strong_field_d_ssz_finite_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestSegmentedTimeClock",
+          "name": "test_local_segment_time_as_reference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestSegmentedTimeClock",
+          "name": "test_geometric_timing_for_gates",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestSegmentedTimeClock",
+          "name": "test_two_qubit_gate_sync",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestDecoherenceGeometry",
+          "name": "test_segment_mismatch_causes_decoherence",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestDecoherenceGeometry",
+          "name": "test_coherent_segment_zone",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestDecoherenceGeometry",
+          "name": "test_decoherence_rate_from_gradient",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestGravitationalDrift",
+          "name": "test_nanometer_height_difference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestGravitationalDrift",
+          "name": "test_qubit_array_drift_map",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestGravitationalDrift",
+          "name": "test_predict_gate_error_from_position",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestSegmentAwareQEC",
+          "name": "test_segment_aware_syndrome_weights",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestSegmentAwareQEC",
+          "name": "test_segment_boundary_detection",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestQuantumCommunicationSSZ",
+          "name": "test_distributed_qubits_sync",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestQuantumCommunicationSSZ",
+          "name": "test_teleportation_timing_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestQuantumCommunicationSSZ",
+          "name": "test_quantum_repeater_chain",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ssz_qubit_applications.py",
+          "class": "TestFullQubitSystem",
+          "name": "test_complete_ssz_qubit_workflow",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestGRWeakFieldComparison",
+          "name": "test_time_dilation_matches_gr_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestGRWeakFieldComparison",
+          "name": "test_gravitational_redshift_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestGRWeakFieldComparison",
+          "name": "test_pound_rebka_experiment",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestGPSValidation",
+          "name": "test_gps_satellite_time_dilation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestGPSValidation",
+          "name": "test_gps_position_error_without_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestAtomicClockValidation",
+          "name": "test_nist_optical_clock_experiment",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestAtomicClockValidation",
+          "name": "test_tokyo_skytree_experiment",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_xi_and_time_dilation_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_gradient_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_energy_conservation_proxy",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_schwarzschild_limit",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestQubitValidation",
+          "name": "test_qubit_height_sensitivity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestQubitValidation",
+          "name": "test_pair_mismatch_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestQubitValidation",
+          "name": "test_decoherence_physical_bounds",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestDimensionalAnalysis",
+          "name": "test_xi_dimensionless",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestDimensionalAnalysis",
+          "name": "test_gradient_has_correct_units",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_validation.py",
+          "class": "TestDimensionalAnalysis",
+          "name": "test_time_offset_has_correct_units",
+          "result": "PASSED"
+        }
+      ],
+      "test_count": 184,
+      "passed": 184,
+      "failed": 0,
+      "errors": 0
+    },
+    "ssz-metric-pure": {
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration": 21.5,
+      "tests": [],
+      "test_count": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0
+    },
+    "segmented-calculation-suite": {
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration": 7.9,
+      "tests": [
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestSSZInvariants",
+          "name": "test_dual_velocity_product_is_c_squared",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestSSZInvariants",
+          "name": "test_xi_plus_d_bounded",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestSSZInvariants",
+          "name": "test_d_ssz_from_xi_relation",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestSSZInvariants",
+          "name": "test_ssz_finite_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestSSZInvariants",
+          "name": "test_xi_at_horizon_is_finite",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestRedshiftInvariants",
+          "name": "test_z_from_d_relation",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestRedshiftInvariants",
+          "name": "test_weak_field_redshift_approximation",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestGeometricInvariants",
+          "name": "test_natural_boundary_ratio",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestGeometricInvariants",
+          "name": "test_phi_squared_relation",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestGeometricInvariants",
+          "name": "test_phi_reciprocal_relation",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestDatasetInvariants",
+          "name": "test_calculate_all_preserves_order",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestDatasetInvariants",
+          "name": "test_calculate_all_handles_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestDatasetInvariants",
+          "name": "test_ssz_vs_gr_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestNumericalInvariants",
+          "name": "test_xi_monotonic_in_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestNumericalInvariants",
+          "name": "test_d_monotonic_in_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_invariants.py",
+          "class": "TestNumericalInvariants",
+          "name": "test_results_reproducible",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestMathematicalConsistency",
+          "name": "test_phi_precision",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestMathematicalConsistency",
+          "name": "test_schwarzschild_radius_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestMathematicalConsistency",
+          "name": "test_xi_weak_field_limit",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestMathematicalConsistency",
+          "name": "test_xi_strong_field_limit",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestMathematicalConsistency",
+          "name": "test_xi_blend_continuity",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestMathematicalConsistency",
+          "name": "test_xi_auto_regime_selection",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestPhysicalLimits",
+          "name": "test_no_singularities",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestPhysicalLimits",
+          "name": "test_gr_singularity_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestPhysicalLimits",
+          "name": "test_dual_velocity_invariance",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestPhysicalLimits",
+          "name": "test_time_dilation_bounds",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestNumericalPrecision",
+          "name": "test_mass_range_stability",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestNumericalPrecision",
+          "name": "test_extreme_radii",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestNumericalPrecision",
+          "name": "test_calculate_single_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestRegimeClassification",
+          "name": "test_photon_sphere_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestRegimeClassification",
+          "name": "test_weak_field_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_physics.py",
+          "class": "TestRegimeClassification",
+          "name": "test_neutron_star_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestConstants",
+          "name": "test_golden_ratio",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestConstants",
+          "name": "test_regime_boundaries",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestConstants",
+          "name": "test_intersection_point",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestXiRegimes",
+          "name": "test_weak_field_earth",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestXiRegimes",
+          "name": "test_strong_field_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestXiRegimes",
+          "name": "test_strong_field_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestXiRegimes",
+          "name": "test_blend_zone_continuity",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestXiRegimes",
+          "name": "test_auto_selects_weak_for_earth",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestTimeDilation",
+          "name": "test_D_ssz_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestTimeDilation",
+          "name": "test_D_gr_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestTimeDilation",
+          "name": "test_D_ssz_never_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestTimeDilation",
+          "name": "test_weak_field_agreement",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestGPSValidation",
+          "name": "test_gps_time_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestPoundRebka",
+          "name": "test_pound_rebka_redshift",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestNeutronStarPredictions",
+          "name": "test_psr_j0740_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestNeutronStarPredictions",
+          "name": "test_ssz_predicts_higher_redshift",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestPowerLaw",
+          "name": "test_power_law_parameters",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestPowerLaw",
+          "name": "test_sun_energy_normalization",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestPowerLaw",
+          "name": "test_neutron_star_energy",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestPowerLaw",
+          "name": "test_power_law_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestGeomHint",
+          "name": "test_geom_hint_finite",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestGeomHint",
+          "name": "test_geom_hint_uses_phi",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestGeomHint",
+          "name": "test_ssz_geom_hint_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestGeomHint",
+          "name": "test_ssz_geom_hint_disabled_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "segcalc/tests/test_ssz_physics.py",
+          "class": "TestUniversalIntersection",
+          "name": "test_intersection_mass_independent",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestPoundRebka",
+          "name": "test_pound_rebka_redshift",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestGPSValidation",
+          "name": "test_gps_gravitational_time_dilation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestGPSValidation",
+          "name": "test_gps_position_error_without_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestNISTOpticalClock",
+          "name": "test_nist_33cm_height_difference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestTokyoSkytree",
+          "name": "test_skytree_450m",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestWeakFieldContract",
+          "name": "test_earth_surface_ssz_equals_gr",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestWeakFieldContract",
+          "name": "test_solar_system_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_d_ssz_equals_one_over_one_plus_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_xi_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_experimental_validation.py",
+          "class": "TestTheoreticalConsistency",
+          "name": "test_d_ssz_finite_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestNullGeodesics",
+          "name": "test_light_cone_closing_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestNullGeodesics",
+          "name": "test_null_geodesic_dr_dT_bounded",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestNullGeodesics",
+          "name": "test_light_travel_time_exceeds_flat_space",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestEffectivePotential",
+          "name": "test_effective_potential_bounded",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestEffectivePotential",
+          "name": "test_effective_potential_equals_c2_sech2",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestAsymptoticLimits",
+          "name": "test_metric_smooth_everywhere",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestAsymptoticLimits",
+          "name": "test_no_horizon_singularity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestTimelikeGeodesics",
+          "name": "test_timelike_geodesic_returns_arrays",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestTimelikeGeodesics",
+          "name": "test_timelike_geodesic_integrates",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestMetricFunctions",
+          "name": "test_phi_gravitational_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestMetricFunctions",
+          "name": "test_gamma_ge_one",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestMetricFunctions",
+          "name": "test_beta_bounded",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestMetricFunctions",
+          "name": "test_sech2_bounded",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestConsistency",
+          "name": "test_gamma_squared_times_sech2_equals_one",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_geodesics.py",
+          "class": "TestConsistency",
+          "name": "test_null_geodesic_path_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestWeakFieldContract",
+          "name": "test_sun_weak_field_z_ssz_equals_z_gr",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestWeakFieldContract",
+          "name": "test_earth_weak_field_z_ssz_equals_z_gr",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestWeakFieldContract",
+          "name": "test_delta_m_is_zero_in_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestForbiddenFormula",
+          "name": "test_z_ssz_is_not_one_over_d_minus_one",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestWinnerLogic",
+          "name": "test_winner_is_deterministic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestWinnerLogic",
+          "name": "test_eps_based_tie_handling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestGoldenDatasetMatch",
+          "name": "test_golden_dataset_46_of_47",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestGoldenDatasetMatch",
+          "name": "test_single_gr_win_is_3c279",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestXiFormulas",
+          "name": "test_xi_weak_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestXiFormulas",
+          "name": "test_xi_strong_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestXiFormulas",
+          "name": "test_xi_at_horizon_value",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestHorizonFinite",
+          "name": "test_d_ssz_finite_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestHorizonFinite",
+          "name": "test_d_gr_zero_at_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestRegimeBoundaries",
+          "name": "test_weak_regime_above_10_rs",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_invariants_hard.py",
+          "class": "TestRegimeBoundaries",
+          "name": "test_photon_sphere_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitDataclass",
+          "name": "test_qubit_creation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitDataclass",
+          "name": "test_qubit_position",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitDataclass",
+          "name": "test_qubit_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitDataclass",
+          "name": "test_qubit_pair_separation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitDataclass",
+          "name": "test_qubit_pair_height_difference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestSegmentDensity",
+          "name": "test_xi_weak_field_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestSegmentDensity",
+          "name": "test_xi_strong_field_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestSegmentDensity",
+          "name": "test_xi_positive_definite",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestSegmentDensity",
+          "name": "test_xi_gradient_negative_weak_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestTimeDilation",
+          "name": "test_d_ssz_equals_one_over_one_plus_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestTimeDilation",
+          "name": "test_d_ssz_less_than_one",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestTimeDilation",
+          "name": "test_time_dilation_difference_sign",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitAnalysis",
+          "name": "test_analyze_qubit_returns_segment_analysis",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitAnalysis",
+          "name": "test_pair_mismatch_zero_for_same_height",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestQubitAnalysis",
+          "name": "test_pair_mismatch_increases_with_height_diff",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestGateTiming",
+          "name": "test_gate_timing_correction_at_reference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestGateTiming",
+          "name": "test_two_qubit_gate_timing_returns_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestDecoherence",
+          "name": "test_decoherence_rate_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestDecoherence",
+          "name": "test_effective_T2_less_than_base",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestDecoherence",
+          "name": "test_effective_T2_nearly_equals_base",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestSegmentCoherentZones",
+          "name": "test_zone_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestHawkingTemperature",
+          "name": "test_hawking_temp_solar_mass",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestHawkingTemperature",
+          "name": "test_hawking_temp_inverse_mass",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestHawkingTemperature",
+          "name": "test_ssz_hawking_temp_finite",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestHawkingTemperature",
+          "name": "test_ssz_hawking_temp_less_than_classical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestHawkingTemperature",
+          "name": "test_evaporation_time_solar_mass",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestHawkingTemperature",
+          "name": "test_radiation_power_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestUtilityFunctions",
+          "name": "test_height_to_time_offset_sign",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_qubit.py",
+          "class": "TestUtilityFunctions",
+          "name": "test_time_difference_per_second_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_very_close_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_blended_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_photon_sphere_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_strong_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_weak_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_boundary_values",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_constants_values",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_simple_regime_classification",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_zero_schwarzschild_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestRegimeClassification",
+          "name": "test_negative_schwarzschild_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestLegacyContextAwareness",
+          "name": "test_segcalc_does_not_use_legacy_90_110",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_regime_classification.py",
+          "class": "TestLegacyContextAwareness",
+          "name": "test_segcalc_weak_boundary_is_10",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestUICanonicalRegimes",
+          "name": "test_get_regime_uses_canonical_thresholds",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestUICanonicalRegimes",
+          "name": "test_no_legacy_90_110_in_constants",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestUICanonicalRegimes",
+          "name": "test_regime_names_are_canonical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestUIWinnerLogic",
+          "name": "test_winner_requires_real_z_obs",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestNoLegacyStrings",
+          "name": "test_app_py_no_legacy_90_110_in_ui_text",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestNoLegacyStrings",
+          "name": "test_reference_tab_shows_canonical_boundaries",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_canonicalization.py",
+          "class": "TestRegimeColorMapping",
+          "name": "test_regime_colors_defined_for_all_canonical_regimes",
+          "result": "PASSED"
+        }
+      ],
+      "test_count": 145,
+      "passed": 145,
+      "failed": 0,
+      "errors": 0
+    },
+    "ssz-schuhman-experiment": {
+      "status": "FAILED",
+      "exit_code": 1,
+      "duration": 20.7,
+      "tests": [
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSchumannLoader",
+          "name": "test_load_csv_schumann",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSchumannLoader",
+          "name": "test_validate_schumann_data",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSchumannLoader",
+          "name": "test_convert_to_standard_format",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSchumannLoader",
+          "name": "test_missing_file_error",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSchumannLoader",
+          "name": "test_missing_column_error",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSpaceWeatherLoader",
+          "name": "test_load_f107",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSpaceWeatherLoader",
+          "name": "test_load_kp",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSpaceWeatherLoader",
+          "name": "test_resample_to_match",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestRealSpaceWeatherLoader",
+          "name": "test_load_space_weather_from_config",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestUnifiedLoader",
+          "name": "test_load_synthetic_data",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestUnifiedLoader",
+          "name": "test_unified_data_get_frequencies",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestUnifiedLoader",
+          "name": "test_unified_data_summary",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestUnifiedLoader",
+          "name": "test_config_from_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/data/test_real_loaders.py",
+          "class": "TestIntegrationRealPipeline",
+          "name": "test_real_pipeline_smoke",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_freq_to_lambda_7mhz",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_freq_to_lambda_14mhz",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_lambda_to_freq_roundtrip",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_freq_mhz_to_lambda",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_freq_khz_to_lambda",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_period_roundtrip",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreFrequency",
+          "name": "test_negative_frequency_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreDB",
+          "name": "test_db_from_ratio_double",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreDB",
+          "name": "test_db_from_ratio_10x",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreDB",
+          "name": "test_ratio_from_db_3db",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreDB",
+          "name": "test_db_roundtrip",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreDB",
+          "name": "test_voltage_db",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreERP",
+          "name": "test_erp_no_gain_no_loss",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreERP",
+          "name": "test_erp_with_gain",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreERP",
+          "name": "test_erp_with_loss",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestCoreERP",
+          "name": "test_dbd_to_dbi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestAntennas",
+          "name": "test_dipole_40m",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestAntennas",
+          "name": "test_dipole_20m",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestAntennas",
+          "name": "test_vertical_40m",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestAntennas",
+          "name": "test_yagi_gain_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestAntennas",
+          "name": "test_yagi_gain_increases_with_elements",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestAntennas",
+          "name": "test_shortening_factor_effect",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestFeedline",
+          "name": "test_rg58_higher_loss_than_ecoflex",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestFeedline",
+          "name": "test_loss_increases_with_frequency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestFeedline",
+          "name": "test_total_loss_proportional_to_length",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestFeedline",
+          "name": "test_power_at_antenna",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestFeedline",
+          "name": "test_unknown_cable_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestPropagation",
+          "name": "test_critical_freq_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestPropagation",
+          "name": "test_muf_increases_with_distance",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestPropagation",
+          "name": "test_muf_at_zero_distance",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestPropagation",
+          "name": "test_skip_distance_below_critical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestPropagation",
+          "name": "test_skip_distance_above_critical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_d_ssz_from_delta",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_effective_c_reduced",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_ssz_lambda_shorter",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_ssz_effect_proportional",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_ssz_effect_scales",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_zero_delta_no_effect",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestSSZExtension",
+          "name": "test_ssz_skip_distance",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestIntegration",
+          "name": "test_antenna_uses_correct_wavelength",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/hamtools/test_hamtools.py",
+          "class": "TestIntegration",
+          "name": "test_ssz_antenna_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestSyntheticDataGeneration",
+          "name": "test_create_synthetic_schumann",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestSyntheticDataGeneration",
+          "name": "test_create_synthetic_space_weather",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestDataMerging",
+          "name": "test_merge_all",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestDataMerging",
+          "name": "test_compute_derived_variables",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestDeltaComputation",
+          "name": "test_compute_all_deltas",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestDeltaComputation",
+          "name": "test_delta_recovery",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestModelFitting",
+          "name": "test_fit_classical_model",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestModelFitting",
+          "name": "test_fit_ssz_model",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestModelFitting",
+          "name": "test_compare_models",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestModeConsistency",
+          "name": "test_ssz_signature_detection",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_end_to_end.py",
+          "class": "TestFullPipeline",
+          "name": "test_run_analysis_pipeline",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestLayerConfig",
+          "name": "test_layer_config_creation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestLayerConfig",
+          "name": "test_layer_config_defaults",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestLayeredSSZConfig",
+          "name": "test_default_config",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestLayeredSSZConfig",
+          "name": "test_layers_property",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestLayeredSSZConfig",
+          "name": "test_total_weight",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestLayeredSSZConfig",
+          "name": "test_normalize_weights",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestDSSZCalculations",
+          "name": "test_D_SSZ_no_segmentation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestDSSZCalculations",
+          "name": "test_D_SSZ_ionosphere_only",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestDSSZCalculations",
+          "name": "test_D_SSZ_all_layers",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestDSSZCalculations",
+          "name": "test_D_SSZ_from_sigmas_function",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestDSSZCalculations",
+          "name": "test_effective_delta_seg",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_f_n_classical_mode1",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_f_n_classical_mode2",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_f_n_classical_mode3",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_f_n_classical_invalid_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_f_n_ssz_layered_no_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_f_n_ssz_layered_with_correction",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_compute_all_modes",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyCalculations",
+          "name": "test_relative_shift_uniform",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhiBasedSegmentation",
+          "name": "test_phi_segment_density_ssz_core",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhiBasedSegmentation",
+          "name": "test_phi_segment_density_linear",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhiBasedSegmentation",
+          "name": "test_sigma_from_phi_ratio_no_difference",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhiBasedSegmentation",
+          "name": "test_sigma_from_phi_ratio_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhiBasedSegmentation",
+          "name": "test_create_phi_based_config",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestTimeVaryingModel",
+          "name": "test_sigma_iono_from_proxy_constant",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestTimeVaryingModel",
+          "name": "test_sigma_iono_from_proxy_varying",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestTimeVaryingModel",
+          "name": "test_f_n_ssz_timeseries",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestTimeVaryingModel",
+          "name": "test_f_n_ssz_timeseries_pandas",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyShiftEstimate",
+          "name": "test_zero_segmentation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyShiftEstimate",
+          "name": "test_one_percent_segmentation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestFrequencyShiftEstimate",
+          "name": "test_shift_proportional_to_frequency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_positive_segmentation_lowers_frequency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_negative_segmentation_raises_frequency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_frequency_ratios_preserved",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_realistic_shift_magnitude",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_Xi_ssz_at_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_Xi_ssz_at_infinity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_Xi_ssz_at_r_s",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_Xi_ssz_array",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_D_SSZ_from_Xi_at_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_D_SSZ_from_Xi_at_one",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_D_SSZ_from_Xi_range",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_layered_ssz.py",
+          "class": "TestCoreSSZFormulas",
+          "name": "test_D_SSZ_no_singularity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestClassicalSchumann",
+          "name": "test_mode_factor",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestClassicalSchumann",
+          "name": "test_f_n_classical_values",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestClassicalSchumann",
+          "name": "test_f_n_classical_eta_1",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestClassicalSchumann",
+          "name": "test_f_n_classical_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestClassicalSchumann",
+          "name": "test_compute_eta0_from_mean_f1",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestClassicalSchumann",
+          "name": "test_f_n_classical_timeseries",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_D_SSZ_basic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_D_SSZ_array",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_f_n_ssz_model",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_delta_seg_from_observed",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_delta_seg_roundtrip",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_mode_consistency_perfect",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZCorrection",
+          "name": "test_mode_consistency_inconsistent",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_frequency_ratios",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_ssz_preserves_ratios",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_relative_shift_uniform",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZSignatureDetection",
+          "name": "test_strong_ssz_detection",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZSignatureDetection",
+          "name": "test_null_ssz_detection",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZSignatureDetection",
+          "name": "test_ssz_score_formula",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_models.py",
+          "class": "TestSSZSignatureDetection",
+          "name": "test_interpretation_strings",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPlasmaParameters",
+          "name": "test_plasma_frequency_typical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPlasmaParameters",
+          "name": "test_plasma_frequency_scaling",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPlasmaParameters",
+          "name": "test_gyro_frequency_typical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPlasmaParameters",
+          "name": "test_gyro_frequency_linear",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestIonosphereState",
+          "name": "test_create_state",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestIonosphereState",
+          "name": "test_reference_state",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegPhysical",
+          "name": "test_reference_gives_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegPhysical",
+          "name": "test_increased_density",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegPhysical",
+          "name": "test_increased_b_field",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegFromProxies",
+          "name": "test_typical_quiet_sun",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegFromProxies",
+          "name": "test_active_sun",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegFromProxies",
+          "name": "test_geomagnetic_storm",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestDeltaSegFromProxies",
+          "name": "test_height_variation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestSSZFrequency",
+          "name": "test_reference_state_matches_classical",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestSSZFrequency",
+          "name": "test_mode_independence",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPredictions",
+          "name": "test_predict_signature_returns_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPredictions",
+          "name": "test_grid_shape",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPredictions",
+          "name": "test_range_is_finite",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPhysicalParams",
+          "name": "test_default_params",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_physical_ssz.py",
+          "class": "TestPhysicalParams",
+          "name": "test_custom_params",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT1ExtendedClassical",
+          "name": "test_f_n_classical_extended_default",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT1ExtendedClassical",
+          "name": "test_f_n_classical_extended_height_effect",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT1ExtendedClassical",
+          "name": "test_f_n_classical_with_latitude",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT1ExtendedClassical",
+          "name": "test_f_n_classical_diurnal",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT1ExtendedClassical",
+          "name": "test_extended_mode_ratios",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT1ExtendedClassical",
+          "name": "test_invalid_parameters",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2DataLoader",
+          "name": "test_load_synthetic_data",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2DataLoader",
+          "name": "test_schema_validation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2DataLoader",
+          "name": "test_synthetic_data_has_true_delta_seg",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2DataLoader",
+          "name": "test_get_frequency_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2Pipeline",
+          "name": "test_pipeline_default_config",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2Pipeline",
+          "name": "test_pipeline_result_summary",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT2Pipeline",
+          "name": "test_quick_analysis",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT3RealDataHooks",
+          "name": "test_real_data_loader_not_implemented",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT3RealDataHooks",
+          "name": "test_load_from_csv_path",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT4Diagnostics",
+          "name": "test_compute_relative_shifts",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT4Diagnostics",
+          "name": "test_check_mode_independence_ssz",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT4Diagnostics",
+          "name": "test_check_mode_independence_dispersive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT4Diagnostics",
+          "name": "test_delta_seg_with_confidence",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT4Diagnostics",
+          "name": "test_detect_dispersion_pattern",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestT4Diagnostics",
+          "name": "test_generate_diagnostic_report",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_t1_t4_implementation.py",
+          "class": "TestIntegration",
+          "name": "test_full_workflow",
+          "result": "PASSED"
+        }
+      ],
+      "test_count": 171,
+      "passed": 171,
+      "failed": 0,
+      "errors": 0
+    },
+    "ssz-lagrange": {
+      "status": "FAILED",
+      "exit_code": 3,
+      "duration": 12.1,
+      "tests": [],
+      "test_count": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0
+    },
+    "ssz-lensing": {
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration": 10.3,
+      "tests": [
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestScenarioSuite",
+          "name": "test_scenario_determined_standard",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestScenarioSuite",
+          "name": "test_scenario_overdetermined",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestScenarioSuite",
+          "name": "test_scenario_underdetermined_high_mmax",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestScenarioSuite",
+          "name": "test_scenario_rescue_with_source",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestScenarioSuite",
+          "name": "test_scenario_ill_conditioned",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestScenarioSuite",
+          "name": "test_scenario_phase_degeneracy",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestPathConsistency",
+          "name": "test_path_a_b_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_comprehensive_analysis.py",
+          "class": "TestPathConsistency",
+          "name": "test_regime_matches_dof",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestSnapshotValidation",
+          "name": "test_quad_snapshot_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestSnapshotValidation",
+          "name": "test_ring_snapshot_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestSnapshotValidation",
+          "name": "test_all_snapshots_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestQuadSnapshot",
+          "name": "test_load_quad_positions",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestQuadSnapshot",
+          "name": "test_quad_has_redshifts",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestQuadSnapshot",
+          "name": "test_quad_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestQuadSnapshot",
+          "name": "test_quad_no_inf",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestQuadSnapshot",
+          "name": "test_quad_has_theta_E",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestRingSnapshot",
+          "name": "test_load_ring_positions",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestRingSnapshot",
+          "name": "test_ring_has_redshifts",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestRingSnapshot",
+          "name": "test_ring_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestRingSnapshot",
+          "name": "test_ring_no_inf",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestFallbackByMode",
+          "name": "test_quad_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestFallbackByMode",
+          "name": "test_ring_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestFallbackByMode",
+          "name": "test_arc_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestFallbackByMode",
+          "name": "test_invalid_mode_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestDataQuality",
+          "name": "test_quad_all_fields_from_source",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestDataQuality",
+          "name": "test_ring_all_fields_from_source",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestDataQuality",
+          "name": "test_available_datasets",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestNoDefaultsNoNull",
+          "name": "test_quad_complete_numeric",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_datahub.py",
+          "class": "TestNoDefaultsNoNull",
+          "name": "test_ring_complete_numeric",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestSharedForwardModel",
+          "name": "test_reduced_deflection_basic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestSharedForwardModel",
+          "name": "test_lens_equation_zero_residual",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestPathA_Algebraic",
+          "name": "test_algebraic_solver_basic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestPathA_Algebraic",
+          "name": "test_phase_is_output_not_input",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestPathB_PhaseScan",
+          "name": "test_scan_is_labeled",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestPathB_PhaseScan",
+          "name": "test_scan_finds_candidates",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestCrossCheck",
+          "name": "test_dual_path_runs_both",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_dual_path.py",
+          "class": "TestCrossCheck",
+          "name": "test_cross_check_reports_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_assert_finite_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_assert_finite_nan_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_assert_finite_inf_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_sanitize_no_nan_converts_nan_to_none",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_validate_no_nan_finds_issues",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_safe_divide_zero",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_safe_divide_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_safe_sqrt_negative",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestNoNaNUtilities",
+          "name": "test_safe_sqrt_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackQuad",
+          "name": "test_load_quad_images_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackQuad",
+          "name": "test_load_quad_has_4_images",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackQuad",
+          "name": "test_quad_has_redshift_info",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackQuad",
+          "name": "test_quad_positions_finite",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackRing",
+          "name": "test_load_ring_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackRing",
+          "name": "test_ring_has_multiple_points",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackRing",
+          "name": "test_ring_has_redshift_info",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackRing",
+          "name": "test_ring_positions_finite",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackByMode",
+          "name": "test_load_quad_by_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackByMode",
+          "name": "test_load_ring_by_mode",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestFallbackByMode",
+          "name": "test_invalid_mode_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestAllFallbackDatasets",
+          "name": "test_all_datasets_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_fallback_no_nan.py",
+          "class": "TestAllFallbackDatasets",
+          "name": "test_fallback_text_parseable",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestNoNaNOutputs",
+          "name": "test_cross_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestNoNaNOutputs",
+          "name": "test_ring_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCircleLabeling",
+          "name": "test_sky_circle_is_theta_E",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCircleLabeling",
+          "name": "test_lens_circle_is_b_E",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestRotationPreservesRadii",
+          "name": "test_rotation_invariant_radii",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestGRSSZShiftConsistency",
+          "name": "test_shift_equals_xi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestGRSSZShiftConsistency",
+          "name": "test_xi_is_small_but_nonzero",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestFallbackDatasetsLoad",
+          "name": "test_cross_dataset_loads",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestFallbackDatasetsLoad",
+          "name": "test_ring_dataset_loads",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestFallbackDatasetsLoad",
+          "name": "test_no_fake_zeros",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_distances_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_mass_reasonable",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestPhysicalConsistency",
+          "name": "test_schwarzschild_radius_small",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCarmenPaperIntegrals",
+          "name": "test_gauge_no_nan",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCarmenPaperIntegrals",
+          "name": "test_alpha_rsg_vs_ppn",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCarmenPaperIntegrals",
+          "name": "test_delay_monotonic_vs_b",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCarmenPaperIntegrals",
+          "name": "test_xi_to_zero_limit",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCarmenPaperIntegrals",
+          "name": "test_phase_delay_relation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_lensing_run.py",
+          "class": "TestCarmenPaperIntegrals",
+          "name": "test_gauge_insets_render_data",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestLinearSolver",
+          "name": "test_simple_2x2",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestLinearSolver",
+          "name": "test_identity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestLinearSolver",
+          "name": "test_singular_matrix",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestLinearSolver",
+          "name": "test_near_singular",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestRootSolver",
+          "name": "test_bisection_linear",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestRootSolver",
+          "name": "test_bisection_quadratic",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestRootSolver",
+          "name": "test_bisection_trig",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestRootSolver",
+          "name": "test_find_all_roots",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestExactRecovery",
+          "name": "test_standard_cross",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestExactRecovery",
+          "name": "test_symmetric_cross",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestExactRecovery",
+          "name": "test_asymmetric_cross",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestExactRecovery",
+          "name": "test_varying_theta_E",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestMatrixRank",
+          "name": "test_full_rank",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestMatrixRank",
+          "name": "test_rank_deficient",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_minimal_exact.py",
+          "class": "TestMatrixRank",
+          "name": "test_rectangular",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFGatekeeper",
+          "name": "test_overdetermined_allowed",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFGatekeeper",
+          "name": "test_exactly_determined_allowed",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFGatekeeper",
+          "name": "test_underdetermined_forbidden",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFGatekeeper",
+          "name": "test_max_params_single_source",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFGatekeeper",
+          "name": "test_max_params_two_sources",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceParams",
+          "name": "test_phase_derived_from_components",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceParams",
+          "name": "test_shear_phase_derived",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceBuilder",
+          "name": "test_unknowns_single_source_m2",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceBuilder",
+          "name": "test_unknowns_two_sources_with_shear",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceBuilder",
+          "name": "test_dof_blocks_underdetermined",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceRecovery",
+          "name": "test_single_source_recovery",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceRecovery",
+          "name": "test_two_source_shared_lens",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestMultiSourceRecovery",
+          "name": "test_phase_is_output_not_input",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFAnalysis",
+          "name": "test_analyze_single_source",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFAnalysis",
+          "name": "test_analyze_forbidden_config",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multi_source.py",
+          "class": "TestDOFAnalysis",
+          "name": "test_analyze_multi_source_enables_more",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestDoFCounting",
+          "name": "test_minimal_model_4_images",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestDoFCounting",
+          "name": "test_underdetermined",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestDoFCounting",
+          "name": "test_multipole_m3",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestDoFCounting",
+          "name": "test_image_multiplicity_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestMultipoleConsistency",
+          "name": "test_m2_matches_minimal",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestMultipoleConsistency",
+          "name": "test_multipole_residuals",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestMultipoleConsistency",
+          "name": "test_phase_periodicity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestNumericalStability",
+          "name": "test_small_quadrupole",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestNumericalStability",
+          "name": "test_large_offset",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_multipole_consistency.py",
+          "class": "TestNumericalStability",
+          "name": "test_matrix_conditioning",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestIsNullOrNaN",
+          "name": "test_none_is_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestIsNullOrNaN",
+          "name": "test_nan_is_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestIsNullOrNaN",
+          "name": "test_inf_is_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestIsNullOrNaN",
+          "name": "test_empty_string_is_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestIsNullOrNaN",
+          "name": "test_valid_number_not_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestIsNullOrNaN",
+          "name": "test_valid_string_not_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDictValidation",
+          "name": "test_valid_dict_passes",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDictValidation",
+          "name": "test_null_detected",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDictValidation",
+          "name": "test_nested_null_detected",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDictValidation",
+          "name": "test_list_null_detected",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDefaultSigma",
+          "name": "test_quad_sigma_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDefaultSigma",
+          "name": "test_ring_sigma_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestDefaultSigma",
+          "name": "test_single_point_fallback",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFillUncertainties",
+          "name": "test_all_defaults",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFillUncertainties",
+          "name": "test_partial_input",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFullNumericPoints",
+          "name": "test_creates_all_fields",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFullNumericPoints",
+          "name": "test_to_dict_no_null",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestNormalizedDistances",
+          "name": "test_all_values_present",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestEstimates",
+          "name": "test_center_estimate",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestEstimates",
+          "name": "test_theta_E_estimate",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestAssertNoNullNoNaN",
+          "name": "test_valid_dict_passes",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestAssertNoNullNoNaN",
+          "name": "test_null_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestAssertNoNullNoNaN",
+          "name": "test_nan_raises",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestProvenanceSummary",
+          "name": "test_counts_flags",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFallbackDatasetsComplete",
+          "name": "test_quad_fallback_complete",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFallbackDatasetsComplete",
+          "name": "test_ring_fallback_complete",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFallbackDatasetsComplete",
+          "name": "test_quad_full_numeric_output",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestFallbackDatasetsComplete",
+          "name": "test_ring_full_numeric_output",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_no_null_contract.py",
+          "class": "TestUserMinimalInput",
+          "name": "test_4_points_no_uncertainties",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_quad_classification",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_ring_classification",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_double_classification",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_criteria_are_explicit",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestSourceConsistency",
+          "name": "test_consistent_sources",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestQuadInversion",
+          "name": "test_synthetic_recovery",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestQuadInversion",
+          "name": "test_model_comparison",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestLinearSystem",
+          "name": "test_system_dimensions",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_real_inversion.py",
+          "class": "TestLinearSystem",
+          "name": "test_overdetermined_system",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestDatasetState",
+          "name": "test_empty_state",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestDatasetState",
+          "name": "test_to_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestDatasetState",
+          "name": "test_from_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestParseUserPoints",
+          "name": "test_parse_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestParseUserPoints",
+          "name": "test_parse_ring",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestParseUserPoints",
+          "name": "test_wrong_count_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestParseUserPoints",
+          "name": "test_invalid_line",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestBuildUserDataset",
+          "name": "test_build_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestBuildUserDataset",
+          "name": "test_build_with_redshifts",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestLoadFallbackDataset",
+          "name": "test_load_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestLoadFallbackDataset",
+          "name": "test_load_ring",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestValidateDataset",
+          "name": "test_valid_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestValidateDataset",
+          "name": "test_empty_fails",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestValidateDataset",
+          "name": "test_wrong_mode_count",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestValidateDataset",
+          "name": "test_nan_fails",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestValidationReport",
+          "name": "test_valid_report",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestValidationReport",
+          "name": "test_invalid_report",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestDatasetSummary",
+          "name": "test_summary_valid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestDatasetSummary",
+          "name": "test_summary_invalid",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestRunState",
+          "name": "test_default",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_ui_state.py",
+          "class": "TestRunState",
+          "name": "test_to_from_dict",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestDerivationChain",
+          "name": "test_shear_data_shear_wins",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestDerivationChain",
+          "name": "test_m3_data_m3_wins",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestDerivationChain",
+          "name": "test_full_model_forbidden_without_extras",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestDerivationChain",
+          "name": "test_report_shows_derivation",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestForbiddenToAllowed",
+          "name": "test_arc_points_rescue_full_model",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestForbiddenToAllowed",
+          "name": "test_multi_source_rescue_full_model",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestRegression",
+          "name": "test_basic_m2_still_works",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_derivation_chain.py",
+          "class": "TestRegression",
+          "name": "test_bundle_backward_compatible",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestTriadScene",
+          "name": "test_create_standard_scene",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestTriadScene",
+          "name": "test_scene_distances",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestTriadScene",
+          "name": "test_add_multiple_sources",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestProjection",
+          "name": "test_project_single_source",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestProjection",
+          "name": "test_projection_tracer",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestProjection",
+          "name": "test_forward_backward_consistency",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestSerialization",
+          "name": "test_to_dict_and_back",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestSerialization",
+          "name": "test_json_roundtrip",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestVisualization",
+          "name": "test_visualizer_smoke_test",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_geometry.py",
+          "class": "TestVisualization",
+          "name": "test_ascii_scene_output",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestM4Models",
+          "name": "test_derivation_chain_includes_m4",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestM4Models",
+          "name": "test_m4_data_m4_model_works",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestM4Models",
+          "name": "test_full_chain_report",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestRealDataPipeline",
+          "name": "test_list_available_systems",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestRealDataPipeline",
+          "name": "test_load_q2237",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestRealDataPipeline",
+          "name": "test_q2237_derivation_chain",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_m4_extension.py",
+          "class": "TestArtifacts",
+          "name": "test_save_artifacts",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_perfect_ring_classified_as_ring",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_shear_ring_detected",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_quad_classified_as_quad",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestMorphologyClassifier",
+          "name": "test_ring_to_cross_transition",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestRingAnalyzer",
+          "name": "test_perfect_ring_fit",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestRingAnalyzer",
+          "name": "test_perturbed_ring_detects_m2",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestRingAnalyzer",
+          "name": "test_m4_perturbation_detected",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestRingAnalyzer",
+          "name": "test_off_center_ring",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestCenterEstimation",
+          "name": "test_estimate_ring_center",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/zoo/test_ring_morphology.py",
+          "class": "TestCenterEstimation",
+          "name": "test_estimate_ring_radius",
+          "result": "PASSED"
+        }
+      ],
+      "test_count": 213,
+      "passed": 213,
+      "failed": 0,
+      "errors": 0
+    },
+    "Unified-Results": {
+      "status": "FAILED",
+      "exit_code": 1,
+      "duration": 7.4,
+      "tests": [],
+      "test_count": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0
+    },
+    "ssz-trajectories": {
+      "status": "SUCCESS",
+      "exit_code": 0,
+      "duration": 3.7,
+      "tests": [
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestAnalyzeOrbit",
+          "name": "test_small_b_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestAnalyzeOrbit",
+          "name": "test_b50_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestAnalyzeOrbit",
+          "name": "test_b80_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestAnalyzeOrbit",
+          "name": "test_large_b_no_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestAnalyzeOrbit",
+          "name": "test_phi_total_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestAnalyzeOrbit",
+          "name": "test_r_range",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestDeflection",
+          "name": "test_is_dphi_minus_pi",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestDeflection",
+          "name": "test_positive_deep_orbit",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestDeflection",
+          "name": "test_increases_below_barrier",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestBridgeIdentity",
+          "name": "test_exact_at_all_radii",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestBridgeIdentity",
+          "name": "test_components",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestProperLength",
+          "name": "test_finite_to_boundary",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestProperLength",
+          "name": "test_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_analysis.py",
+          "class": "TestTortoise",
+          "name": "test_finite_no_horizon",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestXLocal",
+          "name": "test_at_rs_strong",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestXLocal",
+          "name": "test_far_field_weak",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestXLocal",
+          "name": "test_monotone_decreasing_outward_blend",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestNLevel",
+          "name": "test_N1_at_rs",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestNLevel",
+          "name": "test_N0_far",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestEpsilon",
+          "name": "test_range",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestCountJumps",
+          "name": "test_no_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestCountJumps",
+          "name": "test_one_jump",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestCountJumps",
+          "name": "test_two_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestCountJumps",
+          "name": "test_empty",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_embedding.py",
+          "class": "TestCountJumps",
+          "name": "test_single",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestRK4Scalar",
+          "name": "test_exponential_decay",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestRK4Scalar",
+          "name": "test_linear_growth",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTrapz",
+          "name": "test_constant",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTrapz",
+          "name": "test_linear",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTrapz",
+          "name": "test_reversed_limits",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullRadial",
+          "name": "test_outgoing_monotone",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullRadial",
+          "name": "test_ingoing_monotone",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullRadial",
+          "name": "test_speed_bounded",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTimeLikeInfall",
+          "name": "test_monotone_decrease",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTimeLikeInfall",
+          "name": "test_reaches_boundary",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullGeodesic",
+          "name": "test_small_b_two_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullGeodesic",
+          "name": "test_large_b_no_jumps",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullGeodesic",
+          "name": "test_turning_point",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestNullGeodesic",
+          "name": "test_phi_increases",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTurningPoint",
+          "name": "test_exists_for_small_b",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_integrator.py",
+          "class": "TestTurningPoint",
+          "name": "test_turning_point_condition",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiStrong",
+          "name": "test_zero_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiStrong",
+          "name": "test_negative_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiStrong",
+          "name": "test_at_rs",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiStrong",
+          "name": "test_monotone_increasing",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiStrong",
+          "name": "test_asymptotic_to_one",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiStrong",
+          "name": "test_positive",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiWeak",
+          "name": "test_at_large_r",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiWeak",
+          "name": "test_inversely_proportional",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiWeak",
+          "name": "test_zero_radius",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiHard",
+          "name": "test_strong_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiHard",
+          "name": "test_weak_regime",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiHard",
+          "name": "test_discontinuity_at_100",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiBlend",
+          "name": "test_pure_strong",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiBlend",
+          "name": "test_pure_weak",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiBlend",
+          "name": "test_smooth_in_blend",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiBlend",
+          "name": "test_c2_continuity",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestXiBlend",
+          "name": "test_monotone_decreasing_in_blend",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestMetricD",
+          "name": "test_D_at_rs",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestMetricD",
+          "name": "test_D_range",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestMetricD",
+          "name": "test_s_inverse_of_D",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestDDerivative",
+          "name": "test_positive_in_strong",
+          "result": "PASSED"
+        },
+        {
+          "file": "tests/test_xi.py",
+          "class": "TestDDerivative",
+          "name": "test_finite",
+          "result": "PASSED"
+        }
+      ],
+      "test_count": 63,
+      "passed": 63,
+      "failed": 0,
+      "errors": 0
+    },
+    "segmented-energy": {
+      "status": "FAILED",
+      "exit_code": 2,
+      "duration": 5.7,
+      "tests": [],
+      "test_count": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0
+    },
+    "g79-cygnus-test": {
+      "status": "FAILED",
+      "exit_code": 3,
+      "duration": 11.9,
+      "tests": [],
+      "test_count": 0,
+      "passed": 0,
+      "failed": 0,
+      "errors": 0
+    }
+  },
+  "tests": [],
+  "models": {
+    "XI_MAX": {
+      "physical_meaning": "Maximale Segmentdichte bei r → ∞ (Sättigung)",
+      "formula": "Xi_max = 1 - exp(-PHI)",
+      "value": 0.801711184986333,
+      "behavior": "Asymptotische Annäherung an Sättigung",
+      "stability": "STABLE",
+      "evidence": [
+        "test_xi_max_value: PASS"
+      ],
+      "importance": "FUNDAMENTAL"
+    },
+    "D_MIN": {
+      "physical_meaning": "Minimale Distanz-Funktion bei r = r_s",
+      "formula": "D_min = 1/(1+Xi_max)",
+      "value": 0.555032951154731,
+      "behavior": "Minimaler Wert der D-Funktion",
+      "stability": "STABLE",
+      "evidence": [
+        "test_d_min_exact: PASS"
+      ],
+      "importance": "FUNDAMENTAL"
+    },
+    "PHI": {
+      "physical_meaning": "Goldener Schnitt - fundamentale Strukturkonstante",
+      "formula": "PHI = (1 + sqrt(5))/2",
+      "value": 1.618033988749895,
+      "behavior": "Konstant - erscheint überall in SSZ",
+      "stability": "STABLE",
+      "evidence": [
+        "test_phi_quadratic_solution: PASS"
+      ],
+      "importance": "FUNDAMENTAL"
+    },
+    "QUBIT_T_SSZ": {
+      "physical_meaning": "SSZ-korrigierte Zeit für Qubit-Kohärenz",
+      "formula": "T_corr = h/c * PHI",
+      "value": null,
+      "behavior": "Höhenabhängige Korrektur",
+      "stability": "STABLE",
+      "evidence": [
+        "184 Entanglement-Tests: PASS"
+      ],
+      "importance": "HIGH - Quantenkommunikation"
+    },
+    "PPN_PARAMS": {
+      "physical_meaning": "Post-Newtonian Parameter für Weak-Field",
+      "formula": "β = 1, γ = 1 (GR exakt)",
+      "value": {
+        "beta": 1.0,
+        "gamma": 1.0
+      },
+      "behavior": "Exakte Übereinstimmung mit GR",
+      "stability": "STABLE",
+      "evidence": [
+        "test_ppn_exact: PASS"
+      ],
+      "importance": "CRITICAL - GR-Kompatibilität"
+    },
+    "DUAL_VELOCITY": {
+      "physical_meaning": "Invariante v_esc × v_fall = c²",
+      "formula": "v_esc × v_fall = c²",
+      "value": null,
+      "behavior": "Exakte Invariante",
+      "stability": "STABLE",
+      "evidence": [
+        "test_vfall_duality: PASS"
+      ],
+      "importance": "CRITICAL - SSZ-Fundament"
+    },
+    "CHORD_PARTITION": {
+      "physical_meaning": "Hypothetische Moden-Struktur",
+      "formula": "Mehrere parametrisierte Funktionen",
+      "value": null,
+      "behavior": "Kontinuierliche Familie von Kurven",
+      "stability": "MIXED",
+      "evidence": [
+        "13 Chord-Tests: PASS"
+      ],
+      "importance": "HYPOTHESIS - Mathematisch stabil, physikalisch unverankert"
+    }
+  },
+  "patterns": {
+    "stable_modes": [
+      {
+        "name": "XI_MAX saturation",
+        "condition": "r → ∞",
+        "behavior": "Converges to 0.8017...",
+        "significance": "Defines maximum curvature"
+      },
+      {
+        "name": "D_MIN at horizon",
+        "condition": "r = r_s",
+        "behavior": "Fixed minimum 0.555...",
+        "significance": "Minimum dilation value"
+      },
+      {
+        "name": "PPN exactness",
+        "condition": "Weak field",
+        "behavior": "β = γ = 1 exactly",
+        "significance": "GR compatibility"
+      }
+    ],
+    "unstable_modes": [
+      {
+        "name": "Near-horizon dynamics",
+        "condition": "r < 2r_s",
+        "behavior": "Complex, needs careful treatment",
+        "significance": "Strong field regime"
+      }
+    ],
+    "critical_parameters": [
+      "r/r_s = 1.0 (event horizon)",
+      "r/r_s = 2.0 (photon sphere)",
+      "r/r_s = 5.0 (energy conditions satisfied)"
+    ],
+    "possible_quantization": {
+      "note": "Chord-Partition suggests discrete modes",
+      "evidence": "p, k integer parameters",
+      "status": "HYPOTHESIS - not proven"
+    },
+    "possible_dualities": {
+      "note": "v_esc ↔ v_fall duality",
+      "evidence": "v_esc × v_fall = c² exactly",
+      "status": "PROVEN - fundamental invariant"
+    }
+  },
+  "failures": []
+}

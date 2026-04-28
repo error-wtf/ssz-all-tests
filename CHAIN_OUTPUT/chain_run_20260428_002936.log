@@ -1,0 +1,159 @@
+================================================================================
+SSZ FULL CHAIN EXECUTION
+================================================================================
+Start: 2026-04-28T00:29:36.536421
+Repos in Chain: 10
+================================================================================
+
+================================================================================
+PHASE 1: ORCHESTRATION DETECTION
+================================================================================
+OK ssz-qubits: run_script
+   -> run_tests.py
+OK ssz-metric-pure: script
+   -> __init__.py
+NO segmented-calculation-suite: none_found
+OK ssz-schuhman-experiment: run_script
+   -> run_all_ssz_tests.py
+NO ssz-lensing: none_found
+OK Unified-Results: run_script
+   -> run_all.py
+NO ssz-trajectories: none_found
+NO segmented-energy: none_found
+OK g79-cygnus-test: run_script
+   -> run_all_analysis.py
+OK ssz-all-tests: run_script
+   -> run_all_aggregated.py
+
+================================================================================
+PHASE 2: CHAIN EXECUTION
+================================================================================
+
+================================================================================
+CHAIN STEP: ssz-qubits
+Path: E:\clone\ssz-qubits
+================================================================================
+Runner detected: run_tests.py (run_script)
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe E:\clone\ssz-qubits\run_tests.py
+Working Dir: E:\clone\ssz-qubits
+--------------------------------------------------------------------------------
+OK Completed in 31.8s
+  Exit Code: 0
+  Tests: 161 passed, 0 failed, 15 errors
+
+================================================================================
+CHAIN STEP: ssz-metric-pure
+Path: E:\clone\ssz-metric-pure
+================================================================================
+Runner detected: __init__.py (script)
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe E:\clone\ssz-metric-pure\scripts\__init__.py
+Working Dir: E:\clone\ssz-metric-pure\scripts
+--------------------------------------------------------------------------------
+OK Completed in 0.2s
+  Exit Code: 0
+  Tests: 0 passed, 0 failed, 0 errors
+
+================================================================================
+CHAIN STEP: segmented-calculation-suite
+Path: E:\clone\segmented-calculation-suite
+================================================================================
+No runner found -> using pytest fallback
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m pytest -v -s --tb=long E:\clone\segmented-calculation-suite\tests
+Working Dir: E:\clone\segmented-calculation-suite
+--------------------------------------------------------------------------------
+OK Completed in 5.4s
+  Exit Code: 0
+  Tests: 89 passed, 0 failed, 4 errors
+
+================================================================================
+CHAIN STEP: ssz-schuhman-experiment
+Path: E:\clone\ssz-schuhman-experiment
+================================================================================
+Runner detected: run_all_ssz_tests.py (run_script)
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe E:\clone\ssz-schuhman-experiment\run_all_ssz_tests.py
+Working Dir: E:\clone\ssz-schuhman-experiment
+--------------------------------------------------------------------------------
+OK Completed in 3.7s
+  Exit Code: 0
+  Tests: 25 passed, 0 failed, 0 errors
+
+================================================================================
+CHAIN STEP: ssz-lensing
+Path: E:\clone\ssz-lensing
+================================================================================
+No runner found -> using pytest fallback
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m pytest -v -s --tb=long E:\clone\ssz-lensing\tests
+Working Dir: E:\clone\ssz-lensing
+--------------------------------------------------------------------------------
+OK Completed in 15.4s
+  Exit Code: 0
+  Tests: 280 passed, 0 failed, 12 errors
+
+================================================================================
+CHAIN STEP: Unified-Results
+Path: E:\clone\Segmented-Spacetime-Mass-Projection-Unified-Results
+================================================================================
+Runner detected: run_all.py (run_script)
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe E:\clone\Segmented-Spacetime-Mass-Projection-Unified-Results\run_all.py
+Working Dir: E:\clone\Segmented-Spacetime-Mass-Projection-Unified-Results
+--------------------------------------------------------------------------------
+OK Completed in 2.9s
+  Exit Code: 2
+  Tests: 0 passed, 1 failed, 1 errors
+
+================================================================================
+CHAIN STEP: ssz-trajectories
+Path: E:\clone\ssz-trajectories
+================================================================================
+No runner found -> using pytest fallback
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m pytest -v -s --tb=long E:\clone\ssz-trajectories\tests
+Working Dir: E:\clone\ssz-trajectories
+--------------------------------------------------------------------------------
+OK Completed in 5.0s
+  Exit Code: 0
+  Tests: 64 passed, 0 failed, 0 errors
+
+================================================================================
+CHAIN STEP: segmented-energy
+Path: E:\clone\segmented-energy
+================================================================================
+No runner found -> using pytest fallback
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe -m pytest -v -s --tb=long E:\clone\segmented-energy
+Working Dir: E:\clone\segmented-energy
+--------------------------------------------------------------------------------
+OK Completed in 5.4s
+  Exit Code: 2
+  Tests: 0 passed, 0 failed, 10 errors
+
+================================================================================
+CHAIN STEP: g79-cygnus-test
+Path: E:\clone\g79-cygnus-test
+================================================================================
+Runner detected: run_all_analysis.py (run_script)
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe E:\clone\g79-cygnus-test\run_all_analysis.py
+Working Dir: E:\clone\g79-cygnus-test
+--------------------------------------------------------------------------------
+OK Completed in 11.0s
+  Exit Code: 0
+  Tests: 0 passed, 0 failed, 0 errors
+
+================================================================================
+CHAIN STEP: ssz-all-tests
+Path: E:\clone\ssz-all-tests-test
+================================================================================
+Runner detected: run_all_aggregated.py (run_script)
+Command: C:\Users\linoc\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\python.exe E:\clone\ssz-all-tests-test\run_all_aggregated.py
+Working Dir: E:\clone\ssz-all-tests-test
+--------------------------------------------------------------------------------
+
+================================================================================
+PHASE 3: FULL OUTPUT GENERATION
+================================================================================
+Traceback (most recent call last):
+  File "E:\clone\ssz-all-tests-test\run_chain.py", line 342, in <module>
+    results = main()
+              ^^^^^^
+  File "E:\clone\ssz-all-tests-test\run_chain.py", line 272, in main
+    f.write(f"| {r['repo']} | {r['status']} | {runner_name} | {r['total_tests']} | {r['passed']} | {r['failed']} | {r['duration']:.1f}s |\n")
+                                                               ~^^^^^^^^^^^^^^^
+KeyError: 'total_tests'

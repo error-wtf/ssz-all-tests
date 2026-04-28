@@ -1,0 +1,125 @@
+================================================================================
+SSZ TEST AGGREGATION
+================================================================================
+
+[REPO] ssz-qubits
+  Found: 9 files
+  [OK] test_edge_cases.py
+  [OK] test_entanglement.py
+  [OK] test_paper_a_support.py
+  [OK] test_paper_c_support.py
+  [OK] test_paper_d_validation.py
+  [OK] test_roadmap_validation.py
+  [OK] test_ssz_physics.py
+  [OK] test_ssz_qubit_applications.py
+  [OK] test_validation.py
+
+[REPO] ssz-metric-pure
+  Found: 4 files
+  [OK] test_metric_kerr.py
+  [OK] test_metric_static.py
+  [OK] test_sparse_validators.py
+  [OK] test_validation_ssz_calibrated.py
+
+[REPO] segmented-calculation-suite
+  Found: 10 files
+  [OK] test_experimental_validation.py
+  [OK] test_geodesics.py
+  [OK] test_invariants_hard.py
+  [OK] test_qubit.py
+  [OK] test_regime_classification.py
+  [OK] test_ui_canonicalization.py
+  [OK] test_harness.py
+  [OK] test_invariants.py
+  [OK] test_physics.py
+  [OK] test_ssz_physics.py
+
+[REPO] ssz-schuhman-experiment
+  Found: 7 files
+  [OK] test_end_to_end.py
+  [OK] test_layered_ssz.py
+  [OK] test_models.py
+  [OK] test_physical_ssz.py
+  [OK] test_t1_t4_implementation.py
+  [OK] test_real_loaders.py
+  [OK] test_hamtools.py
+
+[REPO] ssz-lensing
+  Found: 24 files
+  [OK] test_comprehensive_analysis.py
+  [OK] test_datahub.py
+  [OK] test_dual_path.py
+  [OK] test_extended_model.py
+  [OK] test_fallback_no_nan.py
+  [OK] test_lensing_run.py
+  [OK] test_linear_model.py
+  [OK] test_minimal_exact.py
+  [OK] test_model_zoo.py
+  [OK] test_multipole_consistency.py
+  [OK] test_multi_source.py
+  [OK] test_no_null_contract.py
+  [OK] test_q2237_diagnostic.py
+  [OK] test_radial_scaling_gauge.py
+  [OK] test_real_data.py
+  [OK] test_real_inversion.py
+  [OK] test_regime_explorer.py
+  [OK] test_ui_state.py
+  [OK] test_validation_lab.py
+  [OK] test_validation_module.py
+  [OK] test_derivation_chain.py
+  [OK] test_geometry.py
+  [OK] test_m4_extension.py
+  [OK] test_ring_morphology.py
+
+[REPO] Unified-Results
+  Found: 20 files
+  [OK] test_print_all_md.py
+  [OK] test_ring_datasets.py
+  [OK] test_segwave_cli.py
+  [OK] test_segwave_core.py
+  [OK] test_ssz_real_data_comprehensive.py
+  [OK] test_multi_body_sigma.py
+  [OK] test_segwave_core.py
+  [OK] test_multi_body_sigma.py
+  [OK] test_cosmo_fields.py
+  [OK] test_cosmo_multibody.py
+  [OK] test_data_fetch.py
+  [OK] test_data_validation.py
+  [OK] test_gaia_required_columns.py
+  [OK] test_hawking_spectrum_continuum.py
+  [OK] test_horizon_hawking_predictions.py
+  [OK] test_plot_ssz_maps.py
+  [OK] test_segmenter.py
+  [OK] test_ssz_invariants.py
+  [OK] test_ssz_kernel.py
+  [OK] test_utf8_encoding.py
+
+[REPO] ssz-trajectories
+  Found: 4 files
+  [OK] test_analysis.py
+  [OK] test_embedding.py
+  [OK] test_integrator.py
+  [OK] test_xi.py
+
+[REPO] segmented-energy
+  Found: 2 files
+  [OK] test_on_complete_dataset.py
+  [OK] test_ssz_complete_dataset.py
+
+[REPO] g79-cygnus-test
+  Found: 7 files
+  [OK] TEST_PARSEC_CONVERSION.py
+  [OK] TEST_TEMPERATURE_EQUATIONS_COMPLETE.py
+  [OK] TEST_THREE_PHASE_DECOUPLING.py
+  [OK] test_boundary_velocity_boost.py
+  [OK] test_boundary_v_realistic.py
+  [OK] test_irsa_catalogs.py
+  [OK] test_segmented_spacetime_full.py
+
+================================================================================
+AGGREGATION COMPLETE
+================================================================================
+Total found: 87
+Copied: 87
+Output: e:\clone\ssz-all-tests-test\aggregated
+[MANIFEST] e:\clone\ssz-all-tests-test\aggregated\MANIFEST.md

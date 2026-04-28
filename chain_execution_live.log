@@ -1,0 +1,20 @@
+================================================================================
+SSZ FULL CHAIN EXECUTION
+================================================================================
+Start: 2026-04-28T00:05:58.377245
+Repos in Chain: 10
+================================================================================
+
+================================================================================
+PHASE 1: ORCHESTRATION DETECTION
+================================================================================
+Traceback (most recent call last):
+  File "E:\clone\ssz-all-tests-test\run_chain.py", line 342, in <module>
+    results = main()
+              ^^^^^^
+  File "E:\clone\ssz-all-tests-test\run_chain.py", line 218, in main
+    print(f"{status} {repo_name}: {runner_type}")
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 0: character maps to <undefined>

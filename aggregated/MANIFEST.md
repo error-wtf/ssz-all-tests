@@ -1,18 +1,18 @@
 # SSZ Test Aggregation Manifest
 
-Generated: 2026-04-27T20:52:58.514257
+Generated: 2026-04-27T23:43:33.250215
 
 ## Repositories
 
-- **ssz-qubits**: 18 files
-- **ssz-metric-pure**: 8 files
-- **segmented-calculation-suite**: 20 files
-- **ssz-schuhman-experiment**: 14 files
-- **ssz-lensing**: 48 files
-- **Unified-Results**: 40 files
-- **ssz-trajectories**: 8 files
-- **segmented-energy**: 4 files
-- **g79-cygnus-test**: 14 files
+- **ssz-qubits**: 36 files
+- **ssz-metric-pure**: 16 files
+- **segmented-calculation-suite**: 40 files
+- **ssz-schuhman-experiment**: 28 files
+- **ssz-lensing**: 96 files
+- **Unified-Results**: 83 files
+- **ssz-trajectories**: 16 files
+- **segmented-energy**: 10 files
+- **g79-cygnus-test**: 28 files
 
 ## Total
 
