@@ -37,7 +37,7 @@ Generated: 2026-04-27
    - Other repos claim ~1100 tests total
 
 2. **Alpha Value:**
-   - Book claims: 1/137.08
+   - SSZ theory claims: 1/137.08
    - Computed: 1/82.3
    - Test adjusted to accept 1/82.3
    - No documentation of this discrepancy
@@ -75,4 +75,4 @@ Generated: 2026-04-27
 | Calculations | segmented-calculation-suite | 12 | Good |
 | Energy | segmented-energy | 4 | Poor |
 | Validation | g79-cygnus-test | 5 | Good |
-| Book Tests | ssz-all-tests | 8 | Partial |
+| SSZ Tests | ssz-all-tests | 8 | Partial |
