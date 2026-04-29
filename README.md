@@ -2,7 +2,7 @@
 
 **Authors:** Carmen N. Wrede & Lino P. Casu
 **License:** Anti-Capitalist Software License v1.4
-**Status:** ![Tests](https://img.shields.io/badge/tests-1296%2F1296-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-100%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-12-blue)
+**Status:** [![CI](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml) ![Tests](https://img.shields.io/badge/tests-1296%2F1296-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-100%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-12-blue)
 
 ---
 

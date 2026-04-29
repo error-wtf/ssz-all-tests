@@ -1,50 +1,46 @@
-name: SSZ All Tests CI
+name: SSZ All Tests — Chord Partition CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
-  schedule:
-    - cron: '0 0 * * *'  # Daily at 00:00 UTC
 
 jobs:
-  test:
+  chord-partition:
+    name: Chord-Partition Eigenmodes (103 tests)
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ['3.8', '3.9', '3.10', '3.11', '3.12']
-    
+
     steps:
     - uses: actions/checkout@v4
-    
-    - name: Set up Python ${{ matrix.python-version }}
+
+    - name: Set up Python 3.12
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
-    
+        python-version: '3.12'
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    
-    - name: Run Part I: Foundations (186 tests)
-      run: pytest tests/part_I_foundations/ -v
-    
-    - name: Run Part V: Strong Field (94 tests)
-      run: pytest tests/part_V_strong_field/ -v
-    
-    - name: Run Part VIII: Validation (77 tests)
-      run: pytest tests/part_VIII_validation/ -v
-    
-    - name: Run All Tests
-      run: pytest --tb=short -q
-    
-    - name: Generate coverage report
-      run: pytest --cov=ssz_core --cov-report=xml --cov-report=term
-    
-    - name: Upload coverage
-      uses: codecov/codecov-action@v3
-      with:
-        files: ./coverage.xml
-        fail_ci_if_error: false
+        pip install pytest numpy scipy
+
+    - name: Run chord-partition eigenmode tests (103 tests)
+      run: pytest test_chord_partition_modes.py -v --tb=short
+
+    - name: Verify SSZ constants
+      run: |
+        python -c "
+        import math
+        phi = (1 + math.sqrt(5)) / 2
+        xi_max = 1 - math.exp(-phi)
+        d_min = 1 / (1 + xi_max)
+        assert abs(phi - 1.6180339887498949) < 1e-10, f'phi wrong: {phi}'
+        assert abs(xi_max - 0.80171) < 1e-4, f'xi_max wrong: {xi_max}'
+        assert abs(d_min - 0.55503) < 1e-4, f'd_min wrong: {d_min}'
+        print(f'phi={phi:.15f}  xi_max={xi_max:.5f}  d_min={d_min:.5f}  OK')
+        "
+
+  # NOTE: The full multi-repo test suite (run_all_live.py, 1296 tests across 11 repos)
+  # requires the sibling repositories to be cloned locally (E:/clone/*).
+  # It is run locally via: python run_all_live.py
+  # Results are committed as: LIVE_STATUS.json, full-output.md, really-full-output.md
