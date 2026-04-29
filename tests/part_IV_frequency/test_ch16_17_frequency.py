@@ -8,7 +8,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, C_SI, XI_MAX, D_MIN
 
-class TestCh16Redshift:
+class TestMod16Redshift:
     """Module 16: Gravitational Redshift - 15 tests"""
     
     def test_redshift_basic_formula(self):
@@ -98,7 +98,7 @@ class TestCh16Redshift:
         assert z_ssz > z_gr
 
 
-class TestCh17TimeDilation:
+class TestMod17TimeDilation:
     """Module 17: Time Dilation & Interference - 13 tests"""
     
     def test_time_dilation_basic(self):

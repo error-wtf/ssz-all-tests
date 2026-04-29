@@ -14,7 +14,7 @@ import pytest
 import numpy as np
 from ssz_core import TOLERANCE_WEAK
 
-class TestCh30FalsifiablePredictions:
+class TestMod30FalsifiablePredictions:
     """Module 30: Falsifiable Predictions - 35 tests"""
     
     # ESO Spectroscopy: 46/47 = 97.9%
@@ -126,7 +126,7 @@ class TestCh30FalsifiablePredictions:
         diff = abs(ssz_pred - gr_pred)
         assert diff < TOLERANCE_WEAK
 
-class TestCh28CodeConsistency:
+class TestMod28CodeConsistency:
     """Module 28: Repository Consistency - 18 tests"""
     
     def test_repository_count(self):
@@ -156,7 +156,7 @@ class TestCh28CodeConsistency:
         independent = True
         assert independent
 
-class TestCh26AntiCircularity:
+class TestMod26AntiCircularity:
     """Module 26: Anti-Circularity - 12 tests"""
     
     def test_no_circular_validation(self):

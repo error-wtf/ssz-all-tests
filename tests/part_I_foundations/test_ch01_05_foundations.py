@@ -14,7 +14,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, XI_MAX, D_MIN, TOLERANCE_WEAK
 
-class TestCh01Overview:
+class TestMod01Overview:
     """Module 1: SSZ Overview - 35 tests"""
     
     def test_phi_exact_value(self):
@@ -49,14 +49,14 @@ class TestCh01Overview:
         parts = 8
         modules = 30
         assert parts == 8
-        assert chapters == 30
+        assert modules == 30
     
     def test_zero_free_parameters(self):
         """SSZ has zero free parameters - only φ, π, N_0"""
         free_params = 0  # None - all from structure
         assert free_params == 0
 
-class TestCh02Segmentation:
+class TestMod02Segmentation:
     """Module 2: Segmentation Premise - 28 tests"""
     
     def test_segmentation_base_n0(self):
@@ -79,7 +79,7 @@ class TestCh02Segmentation:
         ratios = segments[1:] / segments[:-1]
         assert np.allclose(ratios, PHI, rtol=1e-10)
 
-class TestCh03PhiDerivation:
+class TestMod03PhiDerivation:
     """Module 3: φ from N-Segmentation - 42 tests"""
     
     def test_phi_quadratic_solution(self):
@@ -117,7 +117,7 @@ class TestCh03PhiDerivation:
         r_ratio = PHI  # After 90° rotation
         assert r_ratio == PHI
 
-class TestCh04EulerBridge:
+class TestMod04EulerBridge:
     """Module 4: Euler Bridge - 48 tests"""
     
     def test_euler_relation(self):
@@ -140,7 +140,7 @@ class TestCh04EulerBridge:
         assert D_weak > D_strong
         assert D_strong == D_MIN
 
-class TestCh05FineStructure:
+class TestMod05FineStructure:
     """Module 5: Fine-Structure Constant α - 33 tests"""
     
     def test_alpha_from_phi(self):

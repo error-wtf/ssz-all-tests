@@ -8,7 +8,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, C_SI, G_SI, M_SUN, M_EARTH
 
-class TestCh06Velocity:
+class TestMod06Velocity:
     """Module 6: SSZ Velocity Composition - 12 tests"""
     
     def test_velocity_composition_basic(self):
@@ -91,7 +91,7 @@ class TestCh06Velocity:
         assert v_add > 0.999
 
 
-class TestCh07EscapeFall:
+class TestMod07EscapeFall:
     """Module 7: Escape and Fall Velocities - 15 tests"""
     
     def test_escape_velocity_earth(self):
@@ -189,7 +189,7 @@ class TestCh07EscapeFall:
         assert 4.8e3 < v_esc < 5.2e3
 
 
-class TestCh08Lorentz:
+class TestMod08Lorentz:
     """Module 8: Lorentz-Invariance in SSZ - 12 tests"""
     
     def test_lorentz_transformation_x(self):
@@ -278,7 +278,7 @@ class TestCh08Lorentz:
         assert gamma_ssz < gamma_classical
 
 
-class TestCh09Transitions:
+class TestMod09Transitions:
     """Module 9: Regime Transitions - 8 tests"""
     
     def test_weak_field_regime(self):

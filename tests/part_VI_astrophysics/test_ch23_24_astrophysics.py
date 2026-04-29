@@ -8,7 +8,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, C_SI, G_SI, M_SUN, XI_MAX, D_MIN
 
-class TestCh23CompactObjects:
+class TestMod23CompactObjects:
     """Module 23: Compact Objects - 8 tests"""
     
     def test_schwarzschild_radius(self):
@@ -57,7 +57,7 @@ class TestCh23CompactObjects:
         assert D_min > 0.5
 
 
-class TestCh24Accretion:
+class TestMod24Accretion:
     """Module 24: Accretion Physics - 6 tests"""
     
     def test_accretion_luminosity(self):

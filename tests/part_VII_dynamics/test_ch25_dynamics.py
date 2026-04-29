@@ -8,7 +8,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, C_SI, G_SI, M_SUN, XI_MAX, D_MIN
 
-class TestCh25Geodesics:
+class TestMod25Geodesics:
     """Module 25: Geodesic Equations - 20 tests"""
     
     def test_geodesic_equation_basic(self):
@@ -121,7 +121,7 @@ class TestCh25Geodesics:
         assert Gamma_ssz < Gamma_classical
 
 
-class TestCh25Conservation:
+class TestMod25Conservation:
     """Module 25: Conservation Laws - 17 tests"""
     
     def test_energy_conservation(self):
@@ -212,7 +212,7 @@ class TestCh25Conservation:
         assert E_ssz < E_classical
 
 
-class TestCh25Perturbations:
+class TestMod25Perturbations:
     """Module 25: Perturbation Theory - 17 tests"""
     
     def test_metric_perturbation_h_munu(self):

@@ -8,7 +8,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, C_SI, XI_MAX, D_MIN
 
-class TestCh10MaxwellSSZ:
+class TestMod10MaxwellSSZ:
     """Module 10: Maxwell Equations in SSZ - 12 tests"""
     
     def test_maxwell_divergence_E(self):
@@ -83,7 +83,7 @@ class TestCh10MaxwellSSZ:
         assert F > 0
 
 
-class TestCh11GaugeTheory:
+class TestMod11GaugeTheory:
     """Module 11: Gauge Theory in SSZ - 12 tests"""
     
     def test_gauge_transformation_scalar(self):
@@ -156,7 +156,7 @@ class TestCh11GaugeTheory:
         assert A_ssz < A_classical
 
 
-class TestCh12Optics:
+class TestMod12Optics:
     """Module 12: SSZ Optics - 12 tests"""
     
     def test_snellius_law(self):
@@ -233,7 +233,7 @@ class TestCh12Optics:
         assert path_ssz > path_classical
 
 
-class TestCh13CMB:
+class TestMod13CMB:
     """Module 13: CMB in SSZ - 12 tests"""
     
     def test_cmb_temperature(self):
@@ -302,7 +302,7 @@ class TestCh13CMB:
         assert T_ssz < T_classical
 
 
-class TestCh14QED:
+class TestMod14QED:
     """Module 14: QED Corrections - 8 tests"""
     
     def test_fine_structure_constant(self):
@@ -347,7 +347,7 @@ class TestCh14QED:
         assert alpha_ssz > alpha_qed
 
 
-class TestCh15Plasma:
+class TestMod15Plasma:
     """Module 15: Plasma Physics - 8 tests"""
     
     def test_plasma_frequency(self):

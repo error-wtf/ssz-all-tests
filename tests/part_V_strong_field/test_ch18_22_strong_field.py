@@ -14,7 +14,7 @@ import pytest
 import numpy as np
 from ssz_core import PHI, D_MIN, XI_MAX, R_STAR_OVER_RS, STRONG_FIELD_THRESHOLD
 
-class TestCh18BHMetric:
+class TestMod18BHMetric:
     """Module 18: SSZ Black Hole Metric - 28 tests"""
     
     def test_natural_boundary_ratio(self):
@@ -88,7 +88,7 @@ class TestCh18BHMetric:
         phi_diff = phi_ssz(1) - phi_newton(1)
         assert phi_diff > 0  # Less negative = weaker attraction
 
-class TestCh19SingularityResolution:
+class TestMod19SingularityResolution:
     """Module 19: Singularity Resolution - 22 tests"""
     
     def test_finite_at_center(self):
@@ -118,7 +118,7 @@ class TestCh19SingularityResolution:
         """All curvature invariants finite at r = r_s"""
         assert True
 
-class TestCh20CosmicCensorship:
+class TestMod20CosmicCensorship:
     """Module 20: Cosmic Censorship - 18 tests"""
     
     def test_horizon_exists(self):
@@ -133,7 +133,7 @@ class TestCh20CosmicCensorship:
         """SSZ censorship emerges from D_min"""
         assert D_MIN > 0.5
 
-class TestCh21DarkStars:
+class TestMod21DarkStars:
     """Module 21: Dark Star Thermodynamics - 14 tests"""
     
     def test_dark_star_thermodynamics(self):
@@ -149,7 +149,7 @@ class TestCh21DarkStars:
         assert z_ssz < np.inf  # Finite!
         assert z_ssz > 0.8  # Corrected: ≈ 0.809 for D_min ≈ 0.553
 
-class TestCh22Superradiance:
+class TestMod22Superradiance:
     """Module 22: Superradiance - 12 tests"""
     
     def test_superradiant_regulator(self):
