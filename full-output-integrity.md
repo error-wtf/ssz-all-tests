@@ -1,31 +1,37 @@
 # SSZ ALL-TESTS FULL OUTPUT INTEGRITY
 
-**Generated:** 2026-04-29T06:39:17.381042+00:00
+**Generated:** 2026-04-29T08:00:13.239857+00:00
 
-| Repo | stdout | tests_run | exit | status |
-|------|--------|-----------|------|--------|
-| ssz-qubits | yes | 184 | 0 | ok |
-| ssz-metric-pure | yes | 36 | 0 | ok |
-| ssz-schumann | yes | 201 | 0 | ok |
-| g79-cygnus-tests | yes | 3 | 0 | ok |
-| ssz-lensing | yes | 279 | 0 | ok |
-| ssz-trajectories | yes | 63 | 0 | ok |
-| Unified-Results | yes | 125 | 0 | ok |
-| segmented-calculation-suite | yes | 158 | 0 | ok |
-| segmented-energy | yes | 2 | 0 | ok |
-| ssz-metric-final | yes | 126 | 1 | ok |
-| ssz-full-metric | yes | 3 | 2 | exit_2 |
-| ssz-paper-plots | yes | 4 | 2 | exit_2 |
-| Segmented-Spacetime-Starmaps | yes | 0 | -1 | exit_-1 |
-| frequency-curvature-validation | yes | 64 | 0 | ok |
-| ssz-all-tests-own | yes | 44 | 1 | ok |
+| Repo | Type | tests_run | pass | fail | exit | failures_expected | status |
+|------|------|-----------|------|------|------|-------------------|--------|
+| ssz-qubits | CANONICAL | 184 | 184 | 0 | 0 | no | ok |
+| ssz-metric-pure | CANONICAL | 36 | 36 | 0 | 0 | no | ok |
+| ssz-schumann | CANONICAL | 201 | 201 | 0 | 0 | no | ok |
+| g79-cygnus-tests | CANONICAL | 3 | 3 | 0 | 0 | no | ok |
+| ssz-lensing | CANONICAL | 279 | 279 | 0 | 0 | no | ok |
+| ssz-trajectories | CANONICAL | 63 | 63 | 0 | 0 | no | ok |
+| Unified-Results | CANONICAL | 125 | 125 | 0 | 0 | no | ok |
+| segmented-calculation-suite | CANONICAL | 158 | 158 | 0 | 0 | no | ok |
+| segmented-energy | CANONICAL | 2 | 2 | 0 | 0 | no | ok |
+| ssz-paper-plots | VALIDATION | 16 | 13 | 3 | 1 | no | ok |
+| Segmented-Spacetime-Starmaps | VALIDATION | 0 | 0 | 0 | -1 | no | exit_-1 |
+| frequency-curvature-validation | CANONICAL | 64 | 64 | 0 | 0 | no | ok |
+| ssz-all-tests-own | CANONICAL | 44 | 0 | 0 | 1 | no | ok |
 
 ## Summary
 
-- Total repos: 15
-- Total executed: 1292
-- Tests mapped: 212
+- Repos: 13
+- Total executed: 1175
+- Tests mapped: 228
 - Duplicates: 0
-- Count vs expected (≥1128): PASS
+- Expected ≥1128: PASS
+
+## Repo Classification
+
+- `CANONICAL`: ✅ CANONICAL   — official SSZ, failures are real bugs
+- `DERIVATION`: ⚠️  DERIVATION  — GR-based exploration, failures EXPECTED
+- `CUSTOM`: 🔧 CUSTOM      — own runner (not pytest)
+- `VALIDATION`: 📊 VALIDATION  — cross-validation / paper output
+- `ARCHIVE`: 📁 ARCHIVE     — historical reference, not maintained
 
 ## INTEGRITY STATUS: PASS

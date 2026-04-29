@@ -1,968 +1,1587 @@
 {
-  "generated": "2026-04-29T06:39:17.381042+00:00",
-  "total_repos": 15,
-  "total_detected": 1382,
-  "total_executed": 1292,
-  "total_mapped": 212,
+  "generated": "2026-04-29T08:00:13.239857+00:00",
+  "total_repos": 13,
+  "total_detected": 5592,
+  "total_executed": 1175,
+  "total_mapped": 228,
   "expected_min": 1128,
   "count_ok": true,
+  "repo_classification": {
+    "ssz-qubits": {
+      "type": "CANONICAL",
+      "note": "Core SSZ qubit implementation — primary reference"
+    },
+    "ssz-metric-pure": {
+      "type": "CANONICAL",
+      "note": "Pure SSZ metric — canonical field equations"
+    },
+    "ssz-schumann": {
+      "type": "CANONICAL",
+      "note": "Schumann resonance SSZ coupling"
+    },
+    "g79-cygnus-tests": {
+      "type": "CANONICAL",
+      "note": "G79.29+0.46 Cygnus observational tests"
+    },
+    "ssz-lensing": {
+      "type": "CANONICAL",
+      "note": "Gravitational lensing (PPN null-geodesic)"
+    },
+    "ssz-trajectories": {
+      "type": "CANONICAL",
+      "note": "Geodesic trajectory integration"
+    },
+    "ssz-lagrange": {
+      "type": "CUSTOM",
+      "note": "Uses own custom test runner (not pytest) — executed as script"
+    },
+    "Unified-Results": {
+      "type": "CANONICAL",
+      "note": "Unified validation across all SSZ observables"
+    },
+    "SEGMENTED_SPACETIME": {
+      "type": "ARCHIVE",
+      "note": "Historical segmented spacetime reference data"
+    },
+    "segmented-calculation-suite": {
+      "type": "CANONICAL",
+      "note": "Full calculation suite for SSZ observables"
+    },
+    "segmented-energy": {
+      "type": "CANONICAL",
+      "note": "Energy conditions and thermodynamics in SSZ"
+    },
+    "ssz-complete-documentation": {
+      "type": "ARCHIVE",
+      "note": "Documentation repo — no executable tests"
+    },
+    "ssz-paper-plots": {
+      "type": "VALIDATION",
+      "note": "Paper figure generation and data validation"
+    },
+    "Segmented-Spacetime-Starmaps": {
+      "type": "VALIDATION",
+      "note": "Star map visualizations — matplotlib-heavy, needs MPLBACKEND=Agg"
+    },
+    "emergent-spacetime": {
+      "type": "ARCHIVE",
+      "note": "Emergent spacetime exploration — no executable tests"
+    },
+    "frequency-curvature-validation": {
+      "type": "CANONICAL",
+      "note": "Frequency-curvature coupling validation"
+    },
+    "ssz-all-tests-own": {
+      "type": "CANONICAL",
+      "note": "ssz-all-tests own integration tests"
+    }
+  },
   "repos": {
     "ssz-qubits": {
       "exit_code": 0,
       "passed": 184,
       "failed": 0,
       "total": 184,
-      "duration_s": 9.21
+      "duration_s": 9.06,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "ssz-metric-pure": {
       "exit_code": 0,
       "passed": 36,
       "failed": 0,
       "total": 36,
-      "duration_s": 26.69
+      "duration_s": 20.58,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "ssz-schumann": {
       "exit_code": 0,
       "passed": 201,
       "failed": 0,
       "total": 201,
-      "duration_s": 25.34
+      "duration_s": 19.28,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "g79-cygnus-tests": {
       "exit_code": 0,
       "passed": 3,
       "failed": 0,
       "total": 3,
-      "duration_s": 19.82
+      "duration_s": 15.78,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "ssz-lensing": {
       "exit_code": 0,
       "passed": 279,
       "failed": 0,
       "total": 279,
-      "duration_s": 19.01
+      "duration_s": 13.62,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "ssz-trajectories": {
       "exit_code": 0,
       "passed": 63,
       "failed": 0,
       "total": 63,
-      "duration_s": 8.09
+      "duration_s": 7.23,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "Unified-Results": {
       "exit_code": 0,
       "passed": 125,
       "failed": 0,
       "total": 125,
-      "duration_s": 46.53
+      "duration_s": 35.54,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "segmented-calculation-suite": {
       "exit_code": 0,
       "passed": 158,
       "failed": 0,
       "total": 158,
-      "duration_s": 13.88
+      "duration_s": 10.33,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "segmented-energy": {
       "exit_code": 0,
       "passed": 2,
       "failed": 0,
       "total": 2,
-      "duration_s": 14.01
-    },
-    "ssz-metric-final": {
-      "exit_code": 1,
-      "passed": 113,
-      "failed": 13,
-      "total": 126,
-      "duration_s": 11.27
-    },
-    "ssz-full-metric": {
-      "exit_code": 2,
-      "passed": 0,
-      "failed": 0,
-      "total": 3,
-      "duration_s": 13.94
+      "duration_s": 10.96,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "ssz-paper-plots": {
-      "exit_code": 2,
-      "passed": 0,
-      "failed": 0,
-      "total": 4,
-      "duration_s": 21.25
+      "exit_code": 1,
+      "passed": 13,
+      "failed": 3,
+      "total": 16,
+      "duration_s": 10.98,
+      "type": "VALIDATION",
+      "failures_expected": false
     },
     "Segmented-Spacetime-Starmaps": {
       "exit_code": -1,
       "passed": 0,
       "failed": 0,
       "total": 0,
-      "duration_s": 300.18
+      "duration_s": 600.09,
+      "type": "VALIDATION",
+      "failures_expected": false
     },
     "frequency-curvature-validation": {
       "exit_code": 0,
       "passed": 64,
       "failed": 0,
       "total": 64,
-      "duration_s": 7.77
+      "duration_s": 8.02,
+      "type": "CANONICAL",
+      "failures_expected": false
     },
     "ssz-all-tests-own": {
       "exit_code": 1,
       "passed": 0,
       "failed": 0,
       "total": 44,
-      "duration_s": 19.83
+      "duration_s": 16.85,
+      "type": "CANONICAL",
+      "failures_expected": false
     }
   },
   "test_map": {
     "scripts\\test_gamma_seg_transfer.py::test_mathematical_consistency": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_gamma_seg_transfer.py::test_g79_predictions": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_gamma_seg_transfer.py::test_nicer_application": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_gamma_seg_transfer.py::test_gw_application": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_gamma_seg_transfer.py::test_scaling_relation": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_44_percent_prediction": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_universal_crossover": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_horizon_behavior": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_g79_nebula": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_segment_saturation": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_earth_schumann": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_correct_predictions.py::test_scaling_comparison": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_expected_regimes.py::test_nicer_regime": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_expected_regimes.py::test_gw_regime": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_expected_regimes.py::test_feka_regime": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_expected_regimes.py::test_scaling_across_regimes": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj0]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj1]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj2]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj3]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj4]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj5]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj6]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj7]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj8]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj9]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj10]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj11]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj12]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_ssz_full_scale.py::test_object[obj13]": {
       "repo": "ssz-schumann",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_boundary_v_realistic.py::test_G79_realistic": {
       "repo": "g79-cygnus-tests",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_boundary_velocity_boost.py::test_G79_boundary": {
       "repo": "g79-cygnus-tests",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts\\test_boundary_velocity_boost.py::test_parameter_sensitivity": {
       "repo": "g79-cygnus-tests",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_profiles": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_external_shear": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_higher_multipoles": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_synthetic_recovery": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_model_with_shear": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_real_lens_data": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_extended_model.py::test_comparison": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_linear_model.py::test_dof_analysis": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_linear_model.py::test_synthetic_recovery": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_linear_model.py::test_real_lens_data": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_linear_model.py::test_comparison_with_extended": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_m2_allowed": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_m2_shear_m3_forbidden": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_arc_points_rescue": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_multi_source_rescue": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_shear_recovery": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_m3_recovery": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_model_zoo.py::test_zoo_comparison": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_q2237_diagnostic.py::test_q2237_model_comparison": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_q2237_diagnostic.py::test_q2237_forbidden_info": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_q2237_diagnostic.py::test_q2237_full_report": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_scaling_factor_definition": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_scaling_weak_field_limit": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_time_dilation_relation": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_effective_wavenumber": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_local_light_speed_invariant": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_shapiro_delay_cassini": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_shapiro_delay_solar_grazing": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_shapiro_xi_vs_ppn_factor": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_solar_limb_deflection": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_deflection_xi_vs_ppn_factor": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_gaia_deflection_precision": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_wkb_phase_scaling": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_interferometer_phase_difference": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_frame_consistency_loop_closure": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_coordinate_independence": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_pound_rebka_experiment": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_gps_time_drift": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_radial_scaling_gauge.py::test_tokyo_skytree_clocks": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_real_data.py::test_synthetic_exact": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_real_data.py::test_synthetic_random": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_real_data.py::test_real_data": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_real_data.py::test_noise_sensitivity": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_regime_determined": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_regime_overdetermined": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_regime_underdetermined": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_regime_ill_conditioned": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_underdetermined_multiple_solutions": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_underdetermined_param_ranges": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_underdetermined_non_identifiable": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_high_mmax_underdetermined": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_dof_rescue_multisource": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_regime_explorer.py::test_recommendations_change": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_UT1": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_UT2": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_UT3": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_ST1": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_ST2": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_ST3": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_CM1": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_RB1": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_lab.py::test_RB2": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_module.py::test_image_validation": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_module.py::test_dof_analysis": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_module.py::test_result_interpretation": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_validation_module.py::test_model_comparison": {
       "repo": "ssz-lensing",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_cosmo_fields.py::test_cosmo_fields_added": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_cosmo_multibody.py::test_sigma_additive_mass": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_cosmo_multibody.py::test_tau_monotonic_with_alpha": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_cosmo_multibody.py::test_refractive_index_baseline": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_fetch.py::test_gaia_smoke": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_fetch.py::test_sdss_smoke": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_fetch.py::test_planck_presence": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_phi_debug_data_exists": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_phi_debug_data_structure": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_phi_debug_data_values": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_enhanced_debug_data_exists": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_enhanced_debug_data_structure": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_timeseries_template_valid": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_thermal_spectrum_template_valid": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_data_loader_exists": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_theory_predictions_executable": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_integration_in_pipeline": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_data_validation.py::test_cross_platform_validator_exists": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_gaia_required_columns.py::test_harmonize_columns_preserves_required": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_gaia_required_columns.py::test_harmonize_columns_rejects_missing_errors": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_gaia_required_columns.py::test_harmonize_columns_soft_fills_missing_errors": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_hawking_spectrum_continuum.py::test_hawking_spectrum_continuum": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_finite_horizon_area": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_information_preservation": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_singularity_resolution": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_hawking_radiation_proxy": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_jacobian_reconstruction": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_hawking_spectrum_fit": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_horizon_hawking_predictions.py::test_r_phi_cross_verification": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_plot_ssz_maps.py::test_plot_mollweide_handles_nan": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_plot_ssz_maps.py::test_plot_mollweide_derives_galactic": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_segmenter.py::test_segments_cover_all_points": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_segmenter.py::test_segment_counts_grow": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_invariants.py::test_segment_growth_is_monotonic": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_invariants.py::test_natural_boundary_positive": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_invariants.py::test_manifest_exists": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_invariants.py::test_spiral_index_bounds": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_invariants.py::test_solar_segments_non_empty": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_invariants.py::test_segment_density_positive": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_kernel.py::test_gamma_bounds_and_monotonic": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_kernel.py::test_redshift_mapping": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_kernel.py::test_rotation_modifier": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_ssz_kernel.py::test_lensing_proxy_positive": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_utf8_encoding.py::test_utf8_environment": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_utf8_encoding.py::test_stdout_encoding": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_utf8_encoding.py::test_utf8_file_write_read": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "scripts/tests/test_utf8_encoding.py::test_json_utf8": {
       "repo": "Unified-Results",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_golden_validation.py::test_golden_dataset_exists": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_golden_validation.py::test_golden_win_rate": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_golden_validation.py::test_golden_regime_distribution": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_golden_validation.py::test_golden_columns": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_tie_regression.py::test_tie_on_equal_residuals": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_tie_regression.py::test_ssz_closer_consistent_with_winner": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_tie_regression.py::test_no_winner_without_observation": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_tie_regression.py::test_winner_deterministic": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_tie_regression.py::test_regime_has_numeric_trigger": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_weak_field_contract.py::test_sun_weak_field": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_weak_field_contract.py::test_earth_orbit_weak_field": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_weak_field_contract.py::test_gps_satellite_weak_field": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_weak_field_contract.py::test_neutron_star_strong_field": {
       "repo": "segmented-calculation-suite",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_on_complete_dataset.py::test_complete_dataset": {
       "repo": "segmented-energy",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "test_ssz_complete_dataset.py::test_ssz_dataset": {
       "repo": "segmented-energy",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
+    },
+    "test_standalone.py::test_data_files": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "test_standalone.py::test_dependencies": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "test_standalone.py::test_data_loading": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "test_standalone.py::test_plot_generation": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_data_loading.py::test_find_data_directory": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_data_loading.py::test_load_temperatures": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_data_loading.py::test_load_nh3_data": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_data_loading.py::test_load_gamma_profile": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_data_loading.py::test_load_radio_predictions": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_data_loading.py::test_data_consistency": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_model_comparison.py::test_piecewise_fit": {
+      "repo": "ssz-paper-plots",
+      "result": "FAILED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_model_comparison.py::test_model_compatibility": {
+      "repo": "ssz-paper-plots",
+      "result": "FAILED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_plot_generation.py::test_plot_generation_basic": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_plot_generation.py::test_multiple_plots": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_plot_generation.py::test_plot_dimensions": {
+      "repo": "ssz-paper-plots",
+      "result": "PASSED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
+    },
+    "tests\\test_sharp_break.py::test_sharp_break_location": {
+      "repo": "ssz-paper-plots",
+      "result": "FAILED",
+      "repo_type": "VALIDATION",
+      "failure_expected": false
     },
     "tests\\test_dynamic_loops.py::test_gravity_probe_a_dynamic": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_dynamic_loops.py::test_galileo_eccentric_dynamic": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_dynamic_loops.py::test_iss_gps_ground_dynamic": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_dynamic_loops.py::test_path_integral_independence": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_nsr_ngr_separation.py::test_nsr_removal_by_frame_change": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_nsr_ngr_separation.py::test_ngr_persistence": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_nsr_ngr_separation.py::test_loop_closure_with_separation": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_nsr_ngr_separation.py::test_ngr_equals_xi": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section2_constant_frequency.py::test_constant_proper_frequency": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section2_constant_frequency.py::test_delta_dimensionless": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section2_constant_frequency.py::test_delta_additivity": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section2_constant_frequency.py::test_delta_antisymmetry": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section2_constant_frequency.py::test_delta_self_comparison": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section3_first_order_shifts.py::test_gravity_probe_a": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section3_first_order_shifts.py::test_galileo_eccentric_orbit": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section3_first_order_shifts.py::test_pound_rebka_prediction": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section3_first_order_shifts.py::test_first_order_frame_absorbable": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section3_first_order_shifts.py::test_gps_relativistic_correction": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section4_differences_of_differences.py::test_flat_spacetime_loop_closure": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section4_differences_of_differences.py::test_loop_closure_mathematical_identity": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section4_differences_of_differences.py::test_curved_spacetime_non_closure": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section4_differences_of_differences.py::test_holonomy_analogy": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section5_relation_to_gr.py::test_first_order_time_dilation_gradient": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section5_relation_to_gr.py::test_second_order_curvature_component": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section5_relation_to_gr.py::test_geodesic_deviation_earth": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section5_relation_to_gr.py::test_mercury_perihelion_precession": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section5_relation_to_gr.py::test_light_deflection_sun": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section5_relation_to_gr.py::test_shapiro_delay": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_n_decomposition": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_n_sr_frame_removable": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_n_gr_non_removable": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_optical_clock_cm_resolution": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_ssz_weak_field_limit": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_ssz_strong_field_convergence": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section6_ssz_integration.py::test_aces_mission_sensitivity": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section7_conclusion.py::test_conclusion_1_constant_frequency": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section7_conclusion.py::test_conclusion_2_curvature_higher_order": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section7_conclusion.py::test_conclusion_3_gr_alignment": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section7_conclusion.py::test_conclusion_4_classical_not_quantum": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section7_conclusion.py::test_ssz_framework_compatibility": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_section7_conclusion.py::test_holonomy_classical": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_phi_fundamental": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_xi_boundary_conditions": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_universal_intersection": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_d_ssz_no_singularity": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_weak_field_gr_recovery": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_paper_n_equals_ssz_xi": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_ssz_time_dilation_formula": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_ssz_redshift_prediction": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_frequency_comparison_ssz": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     },
     "tests\\test_ssz_physics.py::test_loop_closure_ssz": {
       "repo": "frequency-curvature-validation",
-      "result": "PASSED"
+      "result": "PASSED",
+      "repo_type": "CANONICAL",
+      "failure_expected": false
     }
   },
-  "failures": [],
+  "real_failures": [
+    {
+      "id": "tests\\test_model_comparison.py::test_piecewise_fit",
+      "repo": "ssz-paper-plots",
+      "repo_type": "VALIDATION"
+    },
+    {
+      "id": "tests\\test_model_comparison.py::test_model_compatibility",
+      "repo": "ssz-paper-plots",
+      "repo_type": "VALIDATION"
+    },
+    {
+      "id": "tests\\test_sharp_break.py::test_sharp_break_location",
+      "repo": "ssz-paper-plots",
+      "repo_type": "VALIDATION"
+    }
+  ],
+  "expected_failures": [],
   "duplicates": []
 }

@@ -1,24 +1,27 @@
 # SSZ ALL-TESTS FULL OUTPUT
 
-**Generated:** 2026-04-29T06:39:17.381042+00:00
+**Generated:** 2026-04-29T08:00:13.239857+00:00
 **System:** Windows 11
 **Python:** 3.12.10
-**Total Repos Run:** 15
-**Total Tests Executed:** 1292
+**Total Repos:** 13
+**Total Tests Executed:** 1175
+
+## Repo Type Legend
+
+- `CANONICAL`: ✅ CANONICAL   — official SSZ, failures are real bugs
+- `DERIVATION`: ⚠️  DERIVATION  — GR-based exploration, failures EXPECTED
+- `CUSTOM`: 🔧 CUSTOM      — own runner (not pytest)
+- `VALIDATION`: 📊 VALIDATION  — cross-validation / paper output
+- `ARCHIVE`: 📁 ARCHIVE     — historical reference, not maintained
 
 ---
 
-## REPO: ssz-qubits
+## REPO: ssz-qubits  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 9.21s
+
+- **duration:** 9.06s
 - **exit_code:** 0
-- **passed:** 184
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 184
-
-### STDOUT
+- **passed:** 184  **failed:** 0  **errors:** 0  **total:** 184
 
 ```
 ============================= test session starts =============================
@@ -209,29 +212,23 @@ tests\test_validation.py::TestDimensionalAnalysis::test_xi_dimensionless PASSED 
 tests\test_validation.py::TestDimensionalAnalysis::test_gradient_has_correct_units PASSED [ 99%]
 tests\test_validation.py::TestDimensionalAnalysis::test_time_offset_has_correct_units PASSED [100%]
 
-============================= 184 passed in 1.60s =============================
+============================= 184 passed in 1.40s =============================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-metric-pure
+## REPO: ssz-metric-pure  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 26.69s
+
+- **duration:** 20.58s
 - **exit_code:** 0
-- **passed:** 36
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 36
-
-### STDOUT
+- **passed:** 36  **failed:** 0  **errors:** 0  **total:** 36
 
 ```
 ============================= test session starts =============================
@@ -432,29 +429,23 @@ Acceptance criterion:
 ================================================================================
 PASSED
 
-============================= 36 passed in 19.43s =============================
+============================= 36 passed in 14.72s =============================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-schumann
+## REPO: ssz-schumann  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 25.34s
+
+- **duration:** 19.28s
 - **exit_code:** 0
-- **passed:** 201
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 201
-
-### STDOUT
+- **passed:** 201  **failed:** 0  **errors:** 0  **total:** 201
 
 ```
 ============================= test session starts =============================
@@ -856,29 +847,23 @@ repos/ssz-schumann/tests/test_models.py::TestSSZCorrection::test_mode_consistenc
     c /= stddev[None, :]
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-====================== 201 passed, 33 warnings in 17.91s ======================
+====================== 201 passed, 33 warnings in 13.24s ======================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: g79-cygnus-tests
+## REPO: g79-cygnus-tests  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 19.82s
+
+- **duration:** 15.78s
 - **exit_code:** 0
-- **passed:** 3
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 3
-
-### STDOUT
+- **passed:** 3  **failed:** 0  **errors:** 0  **total:** 3
 
 ```
 ============================= test session starts =============================
@@ -906,29 +891,23 @@ repos/g79-cygnus-tests/scripts/test_boundary_velocity_boost.py::test_G79_boundar
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================= 3 passed, 3 warnings in 12.35s ========================
+======================== 3 passed, 3 warnings in 9.84s ========================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-lensing
+## REPO: ssz-lensing  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 19.01s
+
+- **duration:** 13.62s
 - **exit_code:** 0
-- **passed:** 279
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 279
-
-### STDOUT
+- **passed:** 279  **failed:** 0  **errors:** 0  **total:** 279
 
 ```
 ============================= test session starts =============================
@@ -1574,29 +1553,23 @@ repos/ssz-lensing/tests/test_validation_module.py::test_model_comparison
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-====================== 279 passed, 63 warnings in 11.62s ======================
+====================== 279 passed, 63 warnings in 7.90s =======================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-trajectories
+## REPO: ssz-trajectories  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 8.09s
+
+- **duration:** 7.23s
 - **exit_code:** 0
-- **passed:** 63
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 63
-
-### STDOUT
+- **passed:** 63  **failed:** 0  **errors:** 0  **total:** 63
 
 ```
 ============================= test session starts =============================
@@ -1666,29 +1639,23 @@ tests/test_xi.py::TestMetricD::test_s_inverse_of_D PASSED                [ 96%]
 tests/test_xi.py::TestDDerivative::test_positive_in_strong PASSED        [ 98%]
 tests/test_xi.py::TestDDerivative::test_finite PASSED                    [100%]
 
-============================= 63 passed in 1.25s ==============================
+============================= 63 passed in 0.90s ==============================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: Unified-Results
+## REPO: Unified-Results  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 46.53s
+
+- **duration:** 35.54s
 - **exit_code:** 0
-- **passed:** 125
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 125
-
-### STDOUT
+- **passed:** 125  **failed:** 0  **errors:** 0  **total:** 125
 
 ```
 ============================= test session starts =============================
@@ -1826,29 +1793,23 @@ scripts/tests/test_hawking_spectrum_continuum.py::test_hawking_spectrum_continuu
     x = (h_planck * nu) / (k_boltzmann * T)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================= 125 passed, 1 warning in 33.78s =======================
+======================= 125 passed, 1 warning in 28.22s =======================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: segmented-calculation-suite
+## REPO: segmented-calculation-suite  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 13.88s
+
+- **duration:** 10.33s
 - **exit_code:** 0
-- **passed:** 158
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 158
-
-### STDOUT
+- **passed:** 158  **failed:** 0  **errors:** 0  **total:** 158
 
 ```
 ============================= test session starts =============================
@@ -2013,29 +1974,23 @@ tests\test_ui_canonicalization.py::TestNoLegacyStrings::test_app_py_no_legacy_90
 tests\test_ui_canonicalization.py::TestNoLegacyStrings::test_reference_tab_shows_canonical_boundaries PASSED [ 99%]
 tests\test_ui_canonicalization.py::TestRegimeColorMapping::test_regime_colors_defined_for_all_canonical_regimes PASSED [100%]
 
-============================= 158 passed in 6.02s =============================
+============================= 158 passed in 4.39s =============================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: segmented-energy
+## REPO: segmented-energy  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 14.01s
+
+- **duration:** 10.96s
 - **exit_code:** 0
-- **passed:** 2
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 2
-
-### STDOUT
+- **passed:** 2  **failed:** 0  **errors:** 0  **total:** 2
 
 ```
 ============================= test session starts =============================
@@ -2067,382 +2022,180 @@ repos/segmented-energy/test_ssz_complete_dataset.py::test_ssz_dataset
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================== 2 passed, 5 warnings in 3.50s ========================
+======================== 2 passed, 5 warnings in 2.71s ========================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-metric-final
+## REPO: ssz-paper-plots  `[VALIDATION]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 11.27s
+
+- **duration:** 10.98s
 - **exit_code:** 1
-- **passed:** 113
-- **failed:** 13
-- **errors:** 0
-- **total_run:** 126
-
-### STDOUT
+- **passed:** 13  **failed:** 3  **errors:** 0  **total:** 16
 
 ```
 ============================= test session starts =============================
-collected 156 items
+collecting ... collected 16 items
 
-tests\test_complete_metric.py .....                                      [  3%]
-tests\test_energy_conditions.py .........F.......                        [ 14%]
-tests\test_geodesics.py sssssssssssssss                                  [ 23%]
-tests\test_geodesics_minimal.py ......                                   [ 27%]
-tests\test_intersection.py sssssssssssssss                               [ 37%]
-tests\test_isco.py .....                                                 [ 40%]
-tests\test_metric_core.py ...F..........                                 [ 49%]
-tests\test_observables_complete.py .....                                 [ 52%]
-tests\test_perihelion.py .....                                           [ 55%]
-tests\test_photon_sphere.py ....                                         [ 58%]
-tests\test_ppn.py FFFF..............F.F..FFFF                            [ 75%]
-tests\test_qnm.py .....                                                  [ 78%]
-tests\test_scalar_action_theory.py ..................                    [ 90%]
-tests\test_shadow_radius.py ..F..                                        [ 93%]
-viz_ssz_metric\tests\test_mirror_metric.py ..........                    [100%]
+test_standalone.py::test_data_files PASSED                               [  6%]
+test_standalone.py::test_dependencies PASSED                             [ 12%]
+test_standalone.py::test_data_loading PASSED                             [ 18%]
+test_standalone.py::test_plot_generation PASSED                          [ 25%]
+tests\test_data_loading.py::test_find_data_directory PASSED              [ 31%]
+tests\test_data_loading.py::test_load_temperatures PASSED                [ 37%]
+tests\test_data_loading.py::test_load_nh3_data PASSED                    [ 43%]
+tests\test_data_loading.py::test_load_gamma_profile PASSED               [ 50%]
+tests\test_data_loading.py::test_load_radio_predictions PASSED           [ 56%]
+tests\test_data_loading.py::test_data_consistency PASSED                 [ 62%]
+tests\test_model_comparison.py::test_piecewise_fit FAILED                [ 68%]
+tests\test_model_comparison.py::test_model_compatibility FAILED          [ 75%]
+tests\test_plot_generation.py::test_plot_generation_basic PASSED         [ 81%]
+tests\test_plot_generation.py::test_multiple_plots PASSED                [ 87%]
+tests\test_plot_generation.py::test_plot_dimensions PASSED               [ 93%]
+tests\test_sharp_break.py::test_sharp_break_location FAILED              [100%]
 
 ================================== FAILURES ===================================
-____________________ TestAnisotropy.test_Delta_non_trivial ____________________
-tests\test_energy_conditions.py:162: in test_Delta_non_trivial
-    assert abs(T['Delta']) > 1e-15, \
-E   AssertionError: Delta = -0.0 is effectively zero (isotropic?)
-E   assert np.float64(0.0) > 1e-15
-E    +  where np.float64(0.0) = abs(np.float64(-0.0))
-_________________ TestFarFieldLimit.test_A_farfield_accuracy __________________
-tests\test_metric_core.py:68: in test_A_farfield_accuracy
-    assert error < 2e-4, \
-E   AssertionError: At r=10.0rs: |A_SSZ - A_GR| = 2.47e-03 ≥ 2e-4
-E   assert np.float64(0.0024700346320345457) < 0.0002
-_____________________ TestPPNParameters.test_gamma_value ______________________
-tests\test_ppn.py:37: in test_gamma_value
-    assert deviation < 1e-6, \
-E   AssertionError: |γ - 1| = 1.99e-02 >= 1e-6
-E   assert np.float64(0.019928804574007142) < 1e-06
-______________________ TestPPNParameters.test_beta_value ______________________
-tests\test_ppn.py:46: in test_beta_value
-    assert deviation < 1e-6, \
-E   AssertionError: |β - 1| = 1.00e-01 >= 1e-6
-E   assert np.float64(0.09999999999999998) < 1e-06
-_________________ TestPPNParameters.test_gamma_beta_together __________________
-tests\test_ppn.py:53: in test_gamma_beta_together
-    assert abs(gamma - 1.0) < 1e-6, f"γ = {gamma}"
-E   AssertionError: γ = 1.0199288045740071
-E   assert np.float64(0.019928804574007142) < 1e-06
-E    +  where np.float64(0.019928804574007142) = abs((np.float64(1.0199288045740071) - 1.0))
-___________________ TestPPNParameters.test_far_field_limit ____________________
-tests\test_ppn.py:66: in test_far_field_limit
-    assert 0.99 < gamma < 1.01, f"γ = {gamma} at {mult}rs"
-E   AssertionError: γ = 1.0203206734208603 at 50rs
-E   assert np.float64(1.0203206734208603) < 1.01
-___________ TestGravitationalRedshift.test_weak_field_approximation ___________
-tests\test_ppn.py:253: in test_weak_field_approximation
-    assert rel_diff < 0.01, \
-E   AssertionError: Weak field: z_ssz = 5.11e-03, z_N = 5.00e-03
-E   assert np.float64(0.02244705123655242) < 0.01
-_____________ TestCoordinateSpeedOfLight.test_speed_approaches_c ______________
-tests\test_ppn.py:277: in test_speed_approaches_c
-    assert rel_diff < 0.001, \
-E   AssertionError: c_coord/c - 1 = 1.02e-03 at 1000 rs
-E   assert np.float64(0.001019100599667051) < 0.001
-_______________ TestSummary.test_acceptance_criteria_in_summary _______________
-tests\test_ppn.py:312: in test_acceptance_criteria_in_summary
-    assert summary['gamma_deviation'] < 1e-6, \
-E   AssertionError: |γ-1| = 1.99e-02 >= 1e-6
-E   assert np.float64(0.019928804574007142) < 1e-06
-_____________ TestMassScaling.test_gamma_beta_mass_independent[1] _____________
-tests\test_ppn.py:329: in test_gamma_beta_mass_independent
-    assert abs(gamma - 1.0) < 1e-6
-E   assert np.float64(0.019928804574007142) < 1e-06
-E    +  where np.float64(0.019928804574007142) = abs((np.float64(1.0199288045740071) - 1.0))
-____________ TestMassScaling.test_gamma_beta_mass_independent[10] _____________
-tests\test_ppn.py:329: in test_gamma_beta_mass_independent
-    assert abs(gamma - 1.0) < 1e-6
-E   assert np.float64(0.01992880457400692) < 1e-06
-E    +  where np.float64(0.01992880457400692) = abs((np.float64(1.019928804574007) - 1.0))
-____________ TestMassScaling.test_gamma_beta_mass_independent[100] ____________
-tests\test_ppn.py:329: in test_gamma_beta_mass_independent
-    assert abs(gamma - 1.0) < 1e-6
-E   assert np.float64(0.019928804574007142) < 1e-06
-E    +  where np.float64(0.019928804574007142) = abs((np.float64(1.0199288045740071) - 1.0))
-___________________________ test_shadow_sgr_a_star ____________________________
-tests\test_shadow_radius.py:69: in test_shadow_sgr_a_star
-    assert comparison['passes'], "Shadow nicht innerhalb 15% von EHT!"
-E   AssertionError: Shadow nicht innerhalb 15% von EHT!
-E   assert np.False_
----------------------------- Captured stdout call -----------------------------
+_____________________________ test_piecewise_fit ______________________________
+tests\test_model_comparison.py:13: in test_piecewise_fit
+    data = load_real_data(find_data_directory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: load_real_data() takes 0 positional arguments but 1 was given
+__________________________ test_model_compatibility ___________________________
+tests\test_model_comparison.py:23: in test_model_compatibility
+    data = load_real_data(find_data_directory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: load_real_data() takes 0 positional arguments but 1 was given
+__________________________ test_sharp_break_location __________________________
+tests\test_sharp_break.py:13: in test_sharp_break_location
+    data = load_real_data(find_data_directory())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   TypeError: load_real_data() takes 0 positional arguments but 1 was given
+============================== warnings summary ===============================
+repos/ssz-paper-plots/test_standalone.py::test_data_files
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/test_standalone.py::test_data_files returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
 
-[OK] Sgr A* Shadow Comparison:
-  Predicted: 22.9 μas
-  Observed:  51.8 μas
-  Residual:  -55.8%
+repos/ssz-paper-plots/test_standalone.py::test_dependencies
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/test_standalone.py::test_dependencies returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/test_standalone.py::test_data_loading
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/test_standalone.py::test_data_loading returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/test_standalone.py::test_plot_generation
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/test_standalone.py::test_plot_generation returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_data_loading.py::test_find_data_directory
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_data_loading.py::test_find_data_directory returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_data_loading.py::test_load_temperatures
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_data_loading.py::test_load_temperatures returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_data_loading.py::test_load_nh3_data
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_data_loading.py::test_load_nh3_data returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_data_loading.py::test_load_gamma_profile
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_data_loading.py::test_load_gamma_profile returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_data_loading.py::test_load_radio_predictions
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_data_loading.py::test_load_radio_predictions returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_data_loading.py::test_data_consistency
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_data_loading.py::test_data_consistency returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_plot_generation.py::test_plot_generation_basic
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_plot_generation.py::test_plot_generation_basic returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_plot_generation.py::test_multiple_plots
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_plot_generation.py::test_multiple_plots returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+repos/ssz-paper-plots/tests/test_plot_generation.py::test_plot_dimensions
+  C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:161: PytestReturnNotNoneWarning: Test functions should return None, but repos/ssz-paper-plots/tests/test_plot_generation.py::test_plot_dimensions returned <class 'bool'>.
+  Did you mean to use `assert` instead of `return`?
+  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 =========================== short test summary info ===========================
-SKIPPED [12] tests\test_geodesics.py: Geodesics API changed - uses geodesics_minimal now
-SKIPPED [3] tests\test_geodesics.py:247: Geodesics API changed - uses geodesics_minimal now
-SKIPPED [9] tests\test_intersection.py: Intersection functions integrated into UnifiedSSZMetric
-SKIPPED [6] tests\test_intersection.py:97: Intersection functions integrated into UnifiedSSZMetric
-FAILED tests/test_energy_conditions.py::TestAnisotropy::test_Delta_non_trivial
-FAILED tests/test_metric_core.py::TestFarFieldLimit::test_A_farfield_accuracy
-FAILED tests/test_ppn.py::TestPPNParameters::test_gamma_value - AssertionErro...
-FAILED tests/test_ppn.py::TestPPNParameters::test_beta_value - AssertionError...
-FAILED tests/test_ppn.py::TestPPNParameters::test_gamma_beta_together - Asser...
-FAILED tests/test_ppn.py::TestPPNParameters::test_far_field_limit - Assertion...
-FAILED tests/test_ppn.py::TestGravitationalRedshift::test_weak_field_approximation
-FAILED tests/test_ppn.py::TestCoordinateSpeedOfLight::test_speed_approaches_c
-FAILED tests/test_ppn.py::TestSummary::test_acceptance_criteria_in_summary - ...
-FAILED tests/test_ppn.py::TestMassScaling::test_gamma_beta_mass_independent[1]
-FAILED tests/test_ppn.py::TestMassScaling::test_gamma_beta_mass_independent[10]
-FAILED tests/test_ppn.py::TestMassScaling::test_gamma_beta_mass_independent[100]
-FAILED tests/test_shadow_radius.py::test_shadow_sgr_a_star - AssertionError: ...
-================= 13 failed, 113 passed, 30 skipped in 2.93s ==================
+FAILED tests\test_model_comparison.py::test_piecewise_fit - TypeError: load_r...
+FAILED tests\test_model_comparison.py::test_model_compatibility - TypeError: ...
+FAILED tests\test_sharp_break.py::test_sharp_break_location - TypeError: load...
+================== 3 failed, 13 passed, 13 warnings in 5.32s ==================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-full-metric
+## REPO: Segmented-Spacetime-Starmaps  `[VALIDATION]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 13.94s
-- **exit_code:** 2
-- **passed:** 0
-- **failed:** 0
-- **errors:** 3
-- **total_run:** 3
 
-### STDOUT
-
-```
-============================= test session starts =============================
-collecting ... collected 35 items / 3 errors
-
-=================================== ERRORS ====================================
-___ ERROR collecting repos/ssz-full-metric/tests/test_energy_conditions.py ____
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:498: in importtestmodule
-    mod = import_path(
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\pathlib.py:587: in import_path
-    importlib.import_module(module_name)
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<frozen importlib._bootstrap>:1387: in _gcd_import
-    ???
-<frozen importlib._bootstrap>:1360: in _find_and_load
-    ???
-<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
-    ???
-<frozen importlib._bootstrap>:935: in _load_unlocked
-    ???
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\assertion\rewrite.py:177: in exec_module
-    source_stat, co = _rewrite_test(fn, self.config)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\assertion\rewrite.py:357: in _rewrite_test
-    tree = ast.parse(source, filename=strfn)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\ast.py:52: in parse
-    return compile(source, filename, mode, flags,
-E     File "E:\clone\ssz-all-tests\repos\ssz-full-metric\tests\test_energy_conditions.py", line 1
-E       """\nTest energy conditions (WEC, NEC, DEC, SEC).\n\nAcceptance criteria from prompt:\n- No NaN/Inf\n- WEC + NEC hold for r \u2265 5 rs\n- Test on grid points\n"""\nimport pytest\nimport numpy as np\nfrom viz_ssz_metric.unified_metric import UnifiedSSZMetric\n\nM_SUN = 1.98847e30\n\n@pytest.fixture\ndef metric():\n    """Standard metric with solar mass"""\n    return UnifiedSSZMetric(mass=M_SUN)\n\n@pytest.fixture\ndef r_s(metric):\n    """Schwarzschild radius"""\n    return metric.r_s\n\nclass TestEnergyConditionsBasic:\n    """Test basic energy condition evaluation"""\n    \n    def test_WEC_safe_region(self, metric, r_s):\n        """Test Weak Energy Condition for r \u2265 5 rs"""\n        r_values = np.linspace(5 * r_s, 50 * r_s, 50)\n        \n        for r in r_values:\n            ec = metric.energy_conditions(r, theta=np.pi/2)\n            \n            assert ec['WEC'], \\\n                f"WEC violated at r={r/r_s:.2f}rs"\n    \n    def test_NEC_safe_region(self, metric, r_
-E                                                                                                                                                                           ^
-E   SyntaxError: unexpected character after line continuation character
-______ ERROR collecting repos/ssz-full-metric/tests/test_metric_core.py _______
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:498: in importtestmodule
-    mod = import_path(
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\pathlib.py:587: in import_path
-    importlib.import_module(module_name)
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<frozen importlib._bootstrap>:1387: in _gcd_import
-    ???
-<frozen importlib._bootstrap>:1360: in _find_and_load
-    ???
-<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
-    ???
-<frozen importlib._bootstrap>:935: in _load_unlocked
-    ???
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\assertion\rewrite.py:177: in exec_module
-    source_stat, co = _rewrite_test(fn, self.config)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\assertion\rewrite.py:357: in _rewrite_test
-    tree = ast.parse(source, filename=strfn)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\ast.py:52: in parse
-    return compile(source, filename, mode, flags,
-E     File "E:\clone\ssz-all-tests\repos\ssz-full-metric\tests\test_metric_core.py", line 1
-E       """\nTest core metric functions A(r), B(r).\n\nAcceptance criteria from prompt:\n- A(r) > 0 for r \u2265 1.05 rs\n- |A(r) - (1-rs/r)| < 2e-4 for r \u2208 [10, 100] rs (far field)\n- B(r) = 1/A(r)\n"""\nimport pytest\nimport numpy as np\nfrom viz_ssz_metric.unified_metric import UnifiedSSZMetric\n\n# Solar mass constant\nM_SUN = 1.98847e30\n\n@pytest.fixture\ndef metric():\n    """Standard metric with solar mass"""\n    return UnifiedSSZMetric(mass=M_SUN)\n\n@pytest.fixture\ndef r_s(metric):\n    """Schwarzschild radius"""\n    return metric.r_s\n\nclass TestMetricPositivity:\n    """Test that A(r) is always positive"""\n    \n    def test_A_positive_near_horizon(self, metric, r_s):\n        """Test A(r) > 0 for r \u2265 1.05 rs"""\n        r_values = np.linspace(1.05 * r_s, 5 * r_s, 50)\n        \n        for r in r_values:\n            A = metric.metric_function_A(r)\n            assert A > 0, f"A({r/r_s:.3f} rs) = {A} is not positive"\n    \n    def test_A_positive_far_field(self, m
-E                                                                                                                                                                                                                ^
-E   SyntaxError: unexpected character after line continuation character
-__________ ERROR collecting repos/ssz-full-metric/tests/test_ppn.py ___________
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\python.py:498: in importtestmodule
-    mod = import_path(
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\pathlib.py:587: in import_path
-    importlib.import_module(module_name)
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<frozen importlib._bootstrap>:1387: in _gcd_import
-    ???
-<frozen importlib._bootstrap>:1360: in _find_and_load
-    ???
-<frozen importlib._bootstrap>:1331: in _find_and_load_unlocked
-    ???
-<frozen importlib._bootstrap>:935: in _load_unlocked
-    ???
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\assertion\rewrite.py:177: in exec_module
-    source_stat, co = _rewrite_test(fn, self.config)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Users\linoc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\_pytest\assertion\rewrite.py:357: in _rewrite_test
-    tree = ast.parse(source, filename=strfn)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\ast.py:52: in parse
-    return compile(source, filename, mode, flags,
-E     File "E:\clone\ssz-all-tests\repos\ssz-full-metric\tests\test_ppn.py", line 1
-E       """\nTest Post-Newtonian parameters from PPNAnalysis.\n\nAcceptance criteria from prompt:\n- |\u03b3 - 1| < 1e-6\n- |\u03b2 - 1| < 1e-6\n\nThese tests verify that the SSZ metric reduces to GR in the weak-field limit\nwith correct PPN parameters.\n"""\nimport pytest\nimport numpy as np\nfrom viz_ssz_metric.unified_metric import UnifiedSSZMetric\nfrom viz_ssz_metric.ppn import PPNAnalysis\n\nM_SUN = 1.98847e30\n\n@pytest.fixture\ndef metric():\n    """Standard metric with solar mass"""\n    return UnifiedSSZMetric(mass=M_SUN)\n\n@pytest.fixture\ndef ppn(metric):\n    """PPN analysis instance"""\n    return PPNAnalysis(metric)\n\nclass TestPPNParameters:\n    """Test PPN parameter extraction"""\n    \n    def test_gamma_value(self, ppn):\n        """Test that |\u03b3 - 1| < 1e-6"""\n        gamma, _ = ppn.extract_gamma_beta()\n        \n        deviation = abs(gamma - 1.0)\n        \n        assert deviation < 1e-6, \\\n            f"|\u03b3 - 1| = {deviation:.2e} >= 1e-6"\n    \n    def
-E                                                                                                                                                                                                                                                                  ^
-E   SyntaxError: unexpected character after line continuation character
-=========================== short test summary info ===========================
-ERROR tests\test_energy_conditions.py
-ERROR tests\test_metric_core.py
-ERROR tests\test_ppn.py
-!!!!!!!!!!!!!!!!!!! Interrupted: 3 errors during collection !!!!!!!!!!!!!!!!!!!
-============================== 3 errors in 5.17s ==============================
-
-```
-
-### STDERR
-
-```
-(empty)
-```
-
----
-
-## REPO: ssz-paper-plots
-
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 21.25s
-- **exit_code:** 2
-- **passed:** 0
-- **failed:** 0
-- **errors:** 4
-- **total_run:** 4
-
-### STDOUT
-
-```
-============================= test session starts =============================
-collecting ... collected 4 items / 4 errors
-
-=================================== ERRORS ====================================
-______ ERROR collecting repos/ssz-paper-plots/tests/test_data_loading.py ______
-ImportError while importing test module 'E:\clone\ssz-all-tests\repos\ssz-paper-plots\tests\test_data_loading.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-tests\test_data_loading.py:34: in <module>
-    from generate_all_real_data_plots_master import find_data_directory, load_real_data
-E   ImportError: cannot import name 'find_data_directory' from 'generate_all_real_data_plots_master' (E:\clone\ssz-all-tests\repos\ssz-paper-plots\generate_all_real_data_plots_master.py)
-____ ERROR collecting repos/ssz-paper-plots/tests/test_model_comparison.py ____
-ImportError while importing test module 'E:\clone\ssz-all-tests\repos\ssz-paper-plots\tests\test_model_comparison.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-tests\test_model_comparison.py:9: in <module>
-    from generate_all_real_data_plots_master import load_real_data, find_data_directory
-E   ImportError: cannot import name 'find_data_directory' from 'generate_all_real_data_plots_master' (E:\clone\ssz-all-tests\repos\ssz-paper-plots\generate_all_real_data_plots_master.py)
-____ ERROR collecting repos/ssz-paper-plots/tests/test_plot_generation.py _____
-ImportError while importing test module 'E:\clone\ssz-all-tests\repos\ssz-paper-plots\tests\test_plot_generation.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-tests\test_plot_generation.py:34: in <module>
-    from generate_all_real_data_plots_master import load_real_data, find_data_directory
-E   ImportError: cannot import name 'find_data_directory' from 'generate_all_real_data_plots_master' (E:\clone\ssz-all-tests\repos\ssz-paper-plots\generate_all_real_data_plots_master.py)
-______ ERROR collecting repos/ssz-paper-plots/tests/test_sharp_break.py _______
-ImportError while importing test module 'E:\clone\ssz-all-tests\repos\ssz-paper-plots\tests\test_sharp_break.py'.
-Hint: make sure your test modules/packages have valid Python names.
-Traceback:
-C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\importlib\__init__.py:90: in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-tests\test_sharp_break.py:9: in <module>
-    from generate_all_real_data_plots_master import load_real_data, find_data_directory
-E   ImportError: cannot import name 'find_data_directory' from 'generate_all_real_data_plots_master' (E:\clone\ssz-all-tests\repos\ssz-paper-plots\generate_all_real_data_plots_master.py)
-=========================== short test summary info ===========================
-ERROR tests\test_data_loading.py
-ERROR tests\test_model_comparison.py
-ERROR tests\test_plot_generation.py
-ERROR tests\test_sharp_break.py
-!!!!!!!!!!!!!!!!!!! Interrupted: 4 errors during collection !!!!!!!!!!!!!!!!!!!
-============================= 4 errors in 13.14s ==============================
-
-```
-
-### STDERR
-
-```
-(empty)
-```
-
----
-
-## REPO: Segmented-Spacetime-Starmaps
-
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 300.18s
+- **duration:** 600.09s
 - **exit_code:** -1
-- **passed:** 0
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 0
-
-### STDOUT
+- **passed:** 0  **failed:** 0  **errors:** 0  **total:** 0
 
 ```
-TIMEOUT after 300s
+TIMEOUT after 600s
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: frequency-curvature-validation
+## REPO: frequency-curvature-validation  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 7.77s
+
+- **duration:** 8.02s
 - **exit_code:** 0
-- **passed:** 64
-- **failed:** 0
-- **errors:** 0
-- **total_run:** 64
-
-### STDOUT
+- **passed:** 64  **failed:** 0  **errors:** 0  **total:** 64
 
 ```
 ============================= test session starts =============================
@@ -2849,40 +2602,33 @@ repos/frequency-curvature-validation/tests/test_ssz_physics.py::test_loop_closur
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================= 64 passed, 58 warnings in 0.93s =======================
+======================= 64 passed, 58 warnings in 0.92s =======================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 (empty)
 ```
 
 ---
 
-## REPO: ssz-all-tests-own
+## REPO: ssz-all-tests-own  `[CANONICAL]`
 
-- **start_time:** 2026-04-29T06:39:17.381042+00:00
-- **duration:** 19.83s
+
+- **duration:** 16.85s
 - **exit_code:** 1
-- **passed:** 0
-- **failed:** 0
-- **errors:** 44
-- **total_run:** 44
-
-### STDOUT
+- **passed:** 0  **failed:** 0  **errors:** 44  **total:** 44
 
 ```
 ============================= test session starts =============================
 collecting ... collected 232 items / 44 errors
 
-======================= 48 warnings, 44 errors in 7.84s =======================
+====================== 48 warnings, 44 errors in 10.47s =======================
 
 ```
 
-### STDERR
-
+**STDERR:**
 ```
 Traceback (most recent call last):
   File "<frozen runpy>", line 198, in _run_module_as_main

@@ -1,8 +1,9 @@
 {
   "ssz-qubits": {
-    "repo_name": "ssz-qubits",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-qubits",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Core SSZ qubit implementation — primary reference",
     "test_files": [
       {
         "file": "test_corrections.py",
@@ -49,13 +50,13 @@
         "tests": 17
       }
     ],
-    "total_tests_detected": 184,
-    "runner_type": "pytest"
+    "total_tests_detected": 184
   },
   "ssz-metric-pure": {
-    "repo_name": "ssz-metric-pure",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-metric-pure",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Pure SSZ metric — canonical field equations",
     "test_files": [
       {
         "file": "test_diagonal_form.py",
@@ -86,13 +87,13 @@
         "tests": 5
       }
     ],
-    "total_tests_detected": 34,
-    "runner_type": "pytest"
+    "total_tests_detected": 34
   },
   "ssz-schumann": {
-    "repo_name": "ssz-schumann",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-schumann",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Schumann resonance SSZ coupling",
     "test_files": [
       {
         "file": "scripts\\test_gamma_seg_transfer.py",
@@ -143,13 +144,13 @@
         "tests": 41
       }
     ],
-    "total_tests_detected": 188,
-    "runner_type": "pytest"
+    "total_tests_detected": 188
   },
   "g79-cygnus-tests": {
-    "repo_name": "g79-cygnus-tests",
     "path": "E:\\clone\\ssz-all-tests\\repos\\g79-cygnus-tests",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "G79.29+0.46 Cygnus observational tests",
     "test_files": [
       {
         "file": "scripts\\test_boundary_velocity_boost.py",
@@ -168,13 +169,13 @@
         "tests": 0
       }
     ],
-    "total_tests_detected": 3,
-    "runner_type": "pytest"
+    "total_tests_detected": 3
   },
   "ssz-lensing": {
-    "repo_name": "ssz-lensing",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-lensing",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Gravitational lensing (PPN null-geodesic)",
     "test_files": [
       {
         "file": "tests\\test_comprehensive_analysis.py",
@@ -273,13 +274,13 @@
         "tests": 10
       }
     ],
-    "total_tests_detected": 279,
-    "runner_type": "pytest"
+    "total_tests_detected": 279
   },
   "ssz-trajectories": {
-    "repo_name": "ssz-trajectories",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-trajectories",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Geodesic trajectory integration",
     "test_files": [
       {
         "file": "tests\\test_analysis.py",
@@ -298,26 +299,26 @@
         "tests": 22
       }
     ],
-    "total_tests_detected": 63,
-    "runner_type": "pytest"
+    "total_tests_detected": 63
   },
   "ssz-lagrange": {
-    "repo_name": "ssz-lagrange",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-lagrange",
     "status": "ok",
+    "type": "CUSTOM",
+    "note": "Uses own custom test runner (not pytest) — executed as script",
     "test_files": [
       {
         "file": "test_lagrange_ssz.py",
         "tests": 0
       }
     ],
-    "total_tests_detected": 0,
-    "runner_type": "pytest"
+    "total_tests_detected": 0
   },
   "Unified-Results": {
-    "repo_name": "Unified-Results",
     "path": "E:\\clone\\ssz-all-tests\\repos\\Unified-Results",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Unified validation across all SSZ observables",
     "test_files": [
       {
         "file": "test_c1_segments.py",
@@ -468,21 +469,21 @@
         "tests": 20
       }
     ],
-    "total_tests_detected": 126,
-    "runner_type": "pytest"
+    "total_tests_detected": 126
   },
   "SEGMENTED_SPACETIME": {
-    "repo_name": "SEGMENTED_SPACETIME",
     "path": "E:\\clone\\ssz-all-tests\\repos\\SEGMENTED_SPACETIME",
     "status": "ok",
+    "type": "ARCHIVE",
+    "note": "Historical segmented spacetime reference data",
     "test_files": [],
-    "total_tests_detected": 0,
-    "runner_type": "pytest"
+    "total_tests_detected": 0
   },
   "segmented-calculation-suite": {
-    "repo_name": "segmented-calculation-suite",
     "path": "E:\\clone\\ssz-all-tests\\repos\\segmented-calculation-suite",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Full calculation suite for SSZ observables",
     "test_files": [
       {
         "file": "test_100_percent_perfection.py",
@@ -581,13 +582,13 @@
         "tests": 7
       }
     ],
-    "total_tests_detected": 158,
-    "runner_type": "pytest"
+    "total_tests_detected": 158
   },
   "segmented-energy": {
-    "repo_name": "segmented-energy",
     "path": "E:\\clone\\ssz-all-tests\\repos\\segmented-energy",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Energy conditions and thermodynamics in SSZ",
     "test_files": [
       {
         "file": "test_on_complete_dataset.py",
@@ -602,131 +603,21 @@
         "tests": 0
       }
     ],
-    "total_tests_detected": 2,
-    "runner_type": "pytest"
+    "total_tests_detected": 2
   },
   "ssz-complete-documentation": {
-    "repo_name": "ssz-complete-documentation",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-complete-documentation",
     "status": "ok",
+    "type": "ARCHIVE",
+    "note": "Documentation repo — no executable tests",
     "test_files": [],
-    "total_tests_detected": 0,
-    "runner_type": "pytest"
-  },
-  "ssz-metric-final": {
-    "repo_name": "ssz-metric-final",
-    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-metric-final",
-    "status": "ok",
-    "test_files": [
-      {
-        "file": "tests\\test_complete_metric.py",
-        "tests": 5
-      },
-      {
-        "file": "tests\\test_energy_conditions.py",
-        "tests": 14
-      },
-      {
-        "file": "tests\\test_geodesics.py",
-        "tests": 13
-      },
-      {
-        "file": "tests\\test_geodesics_minimal.py",
-        "tests": 6
-      },
-      {
-        "file": "tests\\test_intersection.py",
-        "tests": 10
-      },
-      {
-        "file": "tests\\test_isco.py",
-        "tests": 5
-      },
-      {
-        "file": "tests\\test_metric_core.py",
-        "tests": 14
-      },
-      {
-        "file": "tests\\test_observables_complete.py",
-        "tests": 5
-      },
-      {
-        "file": "tests\\test_perihelion.py",
-        "tests": 5
-      },
-      {
-        "file": "tests\\test_photon_sphere.py",
-        "tests": 4
-      },
-      {
-        "file": "tests\\test_ppn.py",
-        "tests": 25
-      },
-      {
-        "file": "tests\\test_qnm.py",
-        "tests": 5
-      },
-      {
-        "file": "tests\\test_scalar_action_theory.py",
-        "tests": 14
-      },
-      {
-        "file": "tests\\test_shadow_radius.py",
-        "tests": 5
-      },
-      {
-        "file": "viz_ssz_metric\\tests\\test_mirror_metric.py",
-        "tests": 10
-      }
-    ],
-    "total_tests_detected": 140,
-    "runner_type": "pytest"
-  },
-  "ssz-full-metric": {
-    "repo_name": "ssz-full-metric",
-    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-full-metric",
-    "status": "ok",
-    "test_files": [
-      {
-        "file": "test_phi_series_integration.py",
-        "tests": 0
-      },
-      {
-        "file": "tests\\test_energy_conditions.py",
-        "tests": 0
-      },
-      {
-        "file": "tests\\test_intersection.py",
-        "tests": 1
-      },
-      {
-        "file": "tests\\test_metric_core.py",
-        "tests": 0
-      },
-      {
-        "file": "tests\\test_metric_properties.py",
-        "tests": 6
-      },
-      {
-        "file": "tests\\test_ppn.py",
-        "tests": 0
-      },
-      {
-        "file": "tests\\test_scalar_action_theory.py",
-        "tests": 14
-      },
-      {
-        "file": "viz_ssz_metric\\tests\\test_mirror_metric.py",
-        "tests": 10
-      }
-    ],
-    "total_tests_detected": 31,
-    "runner_type": "pytest"
+    "total_tests_detected": 0
   },
   "ssz-paper-plots": {
-    "repo_name": "ssz-paper-plots",
     "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-paper-plots",
     "status": "ok",
+    "type": "VALIDATION",
+    "note": "Paper figure generation and data validation",
     "test_files": [
       {
         "file": "test_chi_squared_split.py",
@@ -753,13 +644,13 @@
         "tests": 1
       }
     ],
-    "total_tests_detected": 16,
-    "runner_type": "pytest"
+    "total_tests_detected": 16
   },
   "Segmented-Spacetime-Starmaps": {
-    "repo_name": "Segmented-Spacetime-Starmaps",
     "path": "E:\\clone\\ssz-all-tests\\repos\\Segmented-Spacetime-Starmaps",
     "status": "ok",
+    "type": "VALIDATION",
+    "note": "Star map visualizations — matplotlib-heavy, needs MPLBACKEND=Agg",
     "test_files": [
       {
         "file": "test_click.py",
@@ -934,21 +825,21 @@
         "tests": 16
       }
     ],
-    "total_tests_detected": 94,
-    "runner_type": "pytest"
+    "total_tests_detected": 94
   },
   "emergent-spacetime": {
-    "repo_name": "emergent-spacetime",
     "path": "E:\\clone\\ssz-all-tests\\repos\\emergent-spacetime",
     "status": "ok",
+    "type": "ARCHIVE",
+    "note": "Emergent spacetime exploration — no executable tests",
     "test_files": [],
-    "total_tests_detected": 0,
-    "runner_type": "pytest"
+    "total_tests_detected": 0
   },
   "frequency-curvature-validation": {
-    "repo_name": "frequency-curvature-validation",
     "path": "E:\\clone\\ssz-all-tests\\repos\\frequency-curvature-validation",
     "status": "ok",
+    "type": "CANONICAL",
+    "note": "Frequency-curvature coupling validation",
     "test_files": [
       {
         "file": "tests\\test_dynamic_loops.py",
@@ -995,7 +886,1471 @@
         "tests": 10
       }
     ],
-    "total_tests_detected": 64,
-    "runner_type": "pytest"
+    "total_tests_detected": 64
+  },
+  "ssz-all-tests-own": {
+    "path": "E:\\clone\\ssz-all-tests",
+    "status": "ok",
+    "type": "CANONICAL",
+    "note": "ssz-all-tests own integration tests",
+    "test_files": [
+      {
+        "file": "test_chord_partition_modes.py",
+        "tests": 32
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_velocity_boost.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_velocity_boost_1.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_velocity_boost_2.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_velocity_boost_3.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_v_realistic.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_v_realistic_1.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_v_realistic_2.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_boundary_v_realistic_3.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_irsa_catalogs.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_irsa_catalogs_1.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_irsa_catalogs_2.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_irsa_catalogs_3.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_PARSEC_CONVERSION.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_PARSEC_CONVERSION_1.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_PARSEC_CONVERSION_2.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_PARSEC_CONVERSION_3.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_segmented_spacetime_full.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_segmented_spacetime_full_1.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_segmented_spacetime_full_2.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\test_segmented_spacetime_full_3.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_TEMPERATURE_EQUATIONS_COMPLETE.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_TEMPERATURE_EQUATIONS_COMPLETE_1.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_TEMPERATURE_EQUATIONS_COMPLETE_2.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_TEMPERATURE_EQUATIONS_COMPLETE_3.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_THREE_PHASE_DECOUPLING.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_THREE_PHASE_DECOUPLING_1.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_THREE_PHASE_DECOUPLING_2.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\g79-cygnus-test\\TEST_THREE_PHASE_DECOUPLING_3.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_experimental_validation.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_experimental_validation_1.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_experimental_validation_2.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_experimental_validation_3.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_geodesics.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_geodesics_1.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_geodesics_2.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_geodesics_3.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_harness.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_harness_1.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_harness_2.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_harness_3.py",
+        "tests": 0
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_1.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_2.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_3.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_hard.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_hard_1.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_hard_2.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_invariants_hard_3.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_physics.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_physics_1.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_physics_2.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_physics_3.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_qubit.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_qubit_1.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_qubit_2.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_qubit_3.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_regime_classification.py",
+        "tests": 12
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_regime_classification_1.py",
+        "tests": 12
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_regime_classification_2.py",
+        "tests": 12
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_regime_classification_3.py",
+        "tests": 12
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ssz_physics.py",
+        "tests": 25
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ssz_physics_1.py",
+        "tests": 25
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ssz_physics_2.py",
+        "tests": 25
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ssz_physics_3.py",
+        "tests": 25
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ui_canonicalization.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ui_canonicalization_1.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ui_canonicalization_2.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\segmented-calculation-suite\\test_ui_canonicalization_3.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_on_complete_dataset.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_on_complete_dataset_1.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_on_complete_dataset_2.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_on_complete_dataset_3.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_segmented_energy.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_ssz_complete_dataset.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_ssz_complete_dataset_1.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_ssz_complete_dataset_2.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\segmented-energy\\test_ssz_complete_dataset_3.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\ssz-lagrange\\test_lagrange_ssz_aggregated.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_comprehensive_analysis.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_comprehensive_analysis_1.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_comprehensive_analysis_2.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_comprehensive_analysis_3.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_datahub.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_datahub_1.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_datahub_2.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_datahub_3.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_derivation_chain.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_derivation_chain_1.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_derivation_chain_2.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_derivation_chain_3.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_dual_path.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_dual_path_1.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_dual_path_2.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_dual_path_3.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_extended_model.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_extended_model_1.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_extended_model_2.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_extended_model_3.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_fallback_no_nan.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_fallback_no_nan_1.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_fallback_no_nan_2.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_fallback_no_nan_3.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_geometry.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_geometry_1.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_geometry_2.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_geometry_3.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_lensing_run.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_lensing_run_1.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_lensing_run_2.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_lensing_run_3.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_linear_model.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_linear_model_1.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_linear_model_2.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_linear_model_3.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_m4_extension.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_m4_extension_1.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_m4_extension_2.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_m4_extension_3.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_minimal_exact.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_minimal_exact_1.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_minimal_exact_2.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_minimal_exact_3.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_model_zoo.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_model_zoo_1.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_model_zoo_2.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_model_zoo_3.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multipole_consistency.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multipole_consistency_1.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multipole_consistency_2.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multipole_consistency_3.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multi_source.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multi_source_1.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multi_source_2.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_multi_source_3.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_no_null_contract.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_no_null_contract_1.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_no_null_contract_2.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_no_null_contract_3.py",
+        "tests": 29
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_q2237_diagnostic.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_q2237_diagnostic_1.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_q2237_diagnostic_2.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_q2237_diagnostic_3.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_radial_scaling_gauge.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_radial_scaling_gauge_1.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_radial_scaling_gauge_2.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_radial_scaling_gauge_3.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_data.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_data_1.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_data_2.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_data_3.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_inversion.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_inversion_1.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_inversion_2.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_real_inversion_3.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_regime_explorer.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_regime_explorer_1.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_regime_explorer_2.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_regime_explorer_3.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ring_morphology.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ring_morphology_1.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ring_morphology_2.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ring_morphology_3.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ui_state.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ui_state_1.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ui_state_2.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_ui_state_3.py",
+        "tests": 21
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_lab.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_lab_1.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_lab_2.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_lab_3.py",
+        "tests": 9
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_module.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_module_1.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_module_2.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-lensing\\test_validation_module_3.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_kerr.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_kerr_1.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_kerr_2.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_kerr_3.py",
+        "tests": 10
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_static.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_static_1.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_static_2.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_metric_static_3.py",
+        "tests": 8
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_sparse_validators.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_sparse_validators_1.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_sparse_validators_2.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_sparse_validators_3.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_validation_ssz_calibrated.py",
+        "tests": 5
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_validation_ssz_calibrated_1.py",
+        "tests": 5
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_validation_ssz_calibrated_2.py",
+        "tests": 5
+      },
+      {
+        "file": "aggregated\\ssz-metric-pure\\test_validation_ssz_calibrated_3.py",
+        "tests": 5
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_edge_cases.py",
+        "tests": 27
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_edge_cases_1.py",
+        "tests": 27
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_edge_cases_2.py",
+        "tests": 27
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_edge_cases_3.py",
+        "tests": 27
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_edge_cases_example.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_entanglement.py",
+        "tests": 23
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_entanglement_1.py",
+        "tests": 23
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_entanglement_2.py",
+        "tests": 23
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_entanglement_3.py",
+        "tests": 23
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_a_support.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_a_support_1.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_a_support_2.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_a_support_3.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_c_support.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_c_support_1.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_c_support_2.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_c_support_3.py",
+        "tests": 19
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_d_validation.py",
+        "tests": 32
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_d_validation_1.py",
+        "tests": 32
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_d_validation_2.py",
+        "tests": 32
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_paper_d_validation_3.py",
+        "tests": 32
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_roadmap_validation.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_roadmap_validation_1.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_roadmap_validation_2.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_roadmap_validation_3.py",
+        "tests": 18
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_physics.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_physics_1.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_physics_2.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_physics_3.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_qubit_applications.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_qubit_applications_1.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_qubit_applications_2.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_ssz_qubit_applications_3.py",
+        "tests": 15
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_validation.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_validation_1.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_validation_2.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-qubits\\test_validation_3.py",
+        "tests": 17
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_end_to_end.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_end_to_end_1.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_end_to_end_2.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_end_to_end_3.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_hamtools.py",
+        "tests": 41
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_hamtools_1.py",
+        "tests": 41
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_hamtools_2.py",
+        "tests": 41
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_hamtools_3.py",
+        "tests": 41
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_layered_ssz.py",
+        "tests": 43
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_layered_ssz_1.py",
+        "tests": 43
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_layered_ssz_2.py",
+        "tests": 43
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_layered_ssz_3.py",
+        "tests": 43
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_models.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_models_1.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_models_2.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_models_3.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_physical_ssz.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_physical_ssz_1.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_physical_ssz_2.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_physical_ssz_3.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_real_loaders.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_real_loaders_1.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_real_loaders_2.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_real_loaders_3.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_t1_t4_implementation.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_t1_t4_implementation_1.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_t1_t4_implementation_2.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-schuhman-experiment\\test_t1_t4_implementation_3.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_analysis.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_analysis_1.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_analysis_2.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_analysis_3.py",
+        "tests": 14
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_embedding.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_embedding_1.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_embedding_2.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_embedding_3.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_integrator.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_integrator_1.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_integrator_2.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_integrator_3.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_xi.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_xi_1.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_xi_2.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\ssz-trajectories\\test_xi_3.py",
+        "tests": 22
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_fields.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_fields_1.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_fields_2.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_fields_3.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_multibody.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_multibody_1.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_multibody_2.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_cosmo_multibody_3.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_fetch.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_fetch_1.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_fetch_2.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_fetch_3.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_validation.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_validation_1.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_validation_2.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_data_validation_3.py",
+        "tests": 11
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_gaia_required_columns.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_gaia_required_columns_1.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_gaia_required_columns_2.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_gaia_required_columns_3.py",
+        "tests": 3
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_hawking_spectrum_continuum.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_hawking_spectrum_continuum_1.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_hawking_spectrum_continuum_2.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_hawking_spectrum_continuum_3.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_horizon_hawking_predictions.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_horizon_hawking_predictions_1.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_horizon_hawking_predictions_2.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_horizon_hawking_predictions_3.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_1.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_2.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_3.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_4.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_5.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_6.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_multi_body_sigma_7.py",
+        "tests": 1
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_plot_ssz_maps.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_plot_ssz_maps_1.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_plot_ssz_maps_2.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_plot_ssz_maps_3.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_print_all_md.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_print_all_md_1.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_print_all_md_2.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_print_all_md_3.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ring_datasets.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ring_datasets_1.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ring_datasets_2.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ring_datasets_3.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segmenter.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segmenter_1.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segmenter_2.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segmenter_3.py",
+        "tests": 2
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_cli.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_cli_1.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_cli_2.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_cli_3.py",
+        "tests": 16
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_1.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_2.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_3.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_4.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_5.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_6.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_segwave_core_7.py",
+        "tests": 20
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_invariants.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_invariants_1.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_invariants_2.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_invariants_3.py",
+        "tests": 6
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_kernel.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_kernel_1.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_kernel_2.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_kernel_3.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_real_data_comprehensive.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_real_data_comprehensive_1.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_real_data_comprehensive_2.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_ssz_real_data_comprehensive_3.py",
+        "tests": 7
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_unified_results_real_data.py",
+        "tests": 12
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_unified_results_segwave_core.py",
+        "tests": 13
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_utf8_encoding.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_utf8_encoding_1.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_utf8_encoding_2.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\Unified-Results\\test_utf8_encoding_3.py",
+        "tests": 4
+      },
+      {
+        "file": "aggregated\\segmented-energy\\data\\test_dataset.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\chord_partition\\test_chord_partition_modes.py",
+        "tests": 13
+      },
+      {
+        "file": "tests\\part_III_electromagnetism\\test_ch10_15_electromagnetism.py",
+        "tests": 64
+      },
+      {
+        "file": "tests\\part_II_kinematics\\test_ch06_09_kinematics.py",
+        "tests": 47
+      },
+      {
+        "file": "tests\\part_IV_frequency\\test_ch16_17_frequency.py",
+        "tests": 28
+      },
+      {
+        "file": "tests\\part_I_foundations\\test_ch01_05_foundations.py",
+        "tests": 20
+      },
+      {
+        "file": "tests\\part_VIII_validation\\test_ch26_30_validation.py",
+        "tests": 18
+      },
+      {
+        "file": "tests\\part_VII_dynamics\\test_ch25_dynamics.py",
+        "tests": 54
+      },
+      {
+        "file": "tests\\part_VI_astrophysics\\test_ch23_24_astrophysics.py",
+        "tests": 14
+      },
+      {
+        "file": "tests\\part_V_strong_field\\test_ch18_22_strong_field.py",
+        "tests": 17
+      }
+    ],
+    "total_tests_detected": 4381
   }
 }
