@@ -181,6 +181,14 @@ SOURCE_REPOS = [
 
      "Frequency-curvature coupling validation"),
 
+    ("ssz-full-metric", "ssz-full-metric", "CANONICAL",
+
+     "Full SSZ metric implementation with geodesics and PPN"),
+
+    ("ssz-metric-final", "ssz-metric-final", "CANONICAL",
+
+     "Final SSZ metric — complete observable suite"),
+
 ]
 
 

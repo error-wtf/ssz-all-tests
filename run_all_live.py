@@ -18,7 +18,17 @@ os.environ['PYTHONIOENCODING'] = 'utf-8'
 os.environ['PYTHONUTF8'] = '1'
 
 BASE = Path('E:/clone')
+REPOS_BASE = Path('E:/clone/ssz-all-tests/repos')
 OUT = Path('E:/clone/ssz-all-tests-test')
+
+# Repos that live only inside repos/ subdir (not junctions into E:/clone)
+REPOS_SUBDIR = {
+    'frequency-curvature-validation',
+    'ssz-full-metric',
+    'ssz-metric-final',
+    'ssz-paper-plots',
+    'Segmented-Spacetime-Starmaps',
+}
 
 REPOS = [
     ('ssz-qubits',                                          184, 'pytest'),
@@ -32,6 +42,10 @@ REPOS = [
     ('segmented-energy',                                      6, 'pytest'),
     ('g79-cygnus-test',                                       5, 'script'),
     ('ssz-lagrange',                                         54, 'script'),
+    ('frequency-curvature-validation',                        0, 'pytest'),
+    ('ssz-full-metric',                                       0, 'pytest'),
+    ('ssz-metric-final',                                      0, 'pytest'),
+    ('ssz-paper-plots',                                       0, 'pytest'),
 ]
 
 # Mapping: folder name under BASE -> display/key name in LIVE_STATUS.json
@@ -180,7 +194,7 @@ print('SSZ ALL-TESTS MASTER RUNNER')
 print('=' * 65)
 
 for name, expected, mode in REPOS:
-    path = BASE / name
+    path = REPOS_BASE / name if name in REPOS_SUBDIR else BASE / name
     display_name = REPO_DISPLAY_NAMES.get(name, name)
     print(f'\n[{display_name}] expected={expected} mode={mode}')
 
