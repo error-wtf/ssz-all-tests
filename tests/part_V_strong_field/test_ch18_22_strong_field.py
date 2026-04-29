@@ -1,13 +1,13 @@
 """
-Part V: Strong Field (Chapters 18-22)
+Part V: Strong Field (Modules 18-22)
 Tests black hole metric, singularity resolution, cosmic censorship
 
 94 tests covering:
-- Chapter 18: SSZ black hole metric
-- Chapter 19: Singularity resolution via saturation
-- Chapter 20: Cosmic censorship parameters
-- Chapter 21: Dark star thermodynamics
-- Chapter 22: Superradiance modifications
+- Module 18: SSZ black hole metric
+- Module 19: Singularity resolution via saturation
+- Module 20: Cosmic censorship parameters
+- Module 21: Dark star thermodynamics
+- Module 22: Superradiance modifications
 """
 
 import pytest
@@ -15,7 +15,7 @@ import numpy as np
 from ssz_core import PHI, D_MIN, XI_MAX, R_STAR_OVER_RS, STRONG_FIELD_THRESHOLD
 
 class TestCh18BHMetric:
-    """Chapter 18: SSZ Black Hole Metric - 28 tests"""
+    """Module 18: SSZ Black Hole Metric - 28 tests"""
     
     def test_natural_boundary_ratio(self):
         """r*/r_s = 1.387 from φ-structure"""
@@ -89,7 +89,7 @@ class TestCh18BHMetric:
         assert phi_diff > 0  # Less negative = weaker attraction
 
 class TestCh19SingularityResolution:
-    """Chapter 19: Singularity Resolution - 22 tests"""
+    """Module 19: Singularity Resolution - 22 tests"""
     
     def test_finite_at_center(self):
         """D(0) finite, not 0"""
@@ -119,7 +119,7 @@ class TestCh19SingularityResolution:
         assert True
 
 class TestCh20CosmicCensorship:
-    """Chapter 20: Cosmic Censorship - 18 tests"""
+    """Module 20: Cosmic Censorship - 18 tests"""
     
     def test_horizon_exists(self):
         """Outer horizon exists for a > 0"""
@@ -134,7 +134,7 @@ class TestCh20CosmicCensorship:
         assert D_MIN > 0.5
 
 class TestCh21DarkStars:
-    """Chapter 21: Dark Star Thermodynamics - 14 tests"""
+    """Module 21: Dark Star Thermodynamics - 14 tests"""
     
     def test_dark_star_thermodynamics(self):
         """Surface temperature from D_min"""
@@ -150,7 +150,7 @@ class TestCh21DarkStars:
         assert z_ssz > 0.8  # Corrected: ≈ 0.809 for D_min ≈ 0.553
 
 class TestCh22Superradiance:
-    """Chapter 22: Superradiance - 12 tests"""
+    """Module 22: Superradiance - 12 tests"""
     
     def test_superradiant_regulator(self):
         """Ω_reg = c³/(2GM·D_min)"""

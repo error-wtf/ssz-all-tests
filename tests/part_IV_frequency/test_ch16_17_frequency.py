@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Part IV: Frequency Framework (Chapters 16-17) - 28 Tests
+Part IV: Frequency Framework (Modules 16-17) - 28 Tests
 Redshift, Time Dilation, Interference
 """
 
@@ -9,7 +9,7 @@ import numpy as np
 from ssz_core import PHI, C_SI, XI_MAX, D_MIN
 
 class TestCh16Redshift:
-    """Chapter 16: Gravitational Redshift - 15 tests"""
+    """Module 16: Gravitational Redshift - 15 tests"""
     
     def test_redshift_basic_formula(self):
         """z = (f_emit - f_obs)/f_obs"""
@@ -99,7 +99,7 @@ class TestCh16Redshift:
 
 
 class TestCh17TimeDilation:
-    """Chapter 17: Time Dilation & Interference - 13 tests"""
+    """Module 17: Time Dilation & Interference - 13 tests"""
     
     def test_time_dilation_basic(self):
         """Δt' = γΔt"""

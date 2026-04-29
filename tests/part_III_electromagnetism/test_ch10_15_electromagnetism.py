@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Part III: Electromagnetism (Chapters 10-15) - 64 Tests
+Part III: Electromagnetism (Modules 10-15) - 64 Tests
 Maxwell-SSZ, Gauge Theory, Optics, CMB
 """
 
@@ -9,7 +9,7 @@ import numpy as np
 from ssz_core import PHI, C_SI, XI_MAX, D_MIN
 
 class TestCh10MaxwellSSZ:
-    """Chapter 10: Maxwell Equations in SSZ - 12 tests"""
+    """Module 10: Maxwell Equations in SSZ - 12 tests"""
     
     def test_maxwell_divergence_E(self):
         """∇·E = ρ/ε₀ (Gauss's law)"""
@@ -84,7 +84,7 @@ class TestCh10MaxwellSSZ:
 
 
 class TestCh11GaugeTheory:
-    """Chapter 11: Gauge Theory in SSZ - 12 tests"""
+    """Module 11: Gauge Theory in SSZ - 12 tests"""
     
     def test_gauge_transformation_scalar(self):
         """φ' = φ - ∂λ/∂t"""
@@ -157,7 +157,7 @@ class TestCh11GaugeTheory:
 
 
 class TestCh12Optics:
-    """Chapter 12: SSZ Optics - 12 tests"""
+    """Module 12: SSZ Optics - 12 tests"""
     
     def test_snellius_law(self):
         """n₁sin(θ₁) = n₂sin(θ₂)"""
@@ -234,7 +234,7 @@ class TestCh12Optics:
 
 
 class TestCh13CMB:
-    """Chapter 13: CMB in SSZ - 12 tests"""
+    """Module 13: CMB in SSZ - 12 tests"""
     
     def test_cmb_temperature(self):
         """T_CMB = 2.725 K"""
@@ -303,7 +303,7 @@ class TestCh13CMB:
 
 
 class TestCh14QED:
-    """Chapter 14: QED Corrections - 8 tests"""
+    """Module 14: QED Corrections - 8 tests"""
     
     def test_fine_structure_constant(self):
         """α ≈ 1/137"""
@@ -348,7 +348,7 @@ class TestCh14QED:
 
 
 class TestCh15Plasma:
-    """Chapter 15: Plasma Physics - 8 tests"""
+    """Module 15: Plasma Physics - 8 tests"""
     
     def test_plasma_frequency(self):
         """ω_p = √(ne²/(m_eε₀))"""

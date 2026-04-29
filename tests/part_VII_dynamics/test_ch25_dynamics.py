@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Part VII: Dynamics (Chapter 25) - 54 Tests
+Part VII: Dynamics (Module 25) - 54 Tests
 Geodesics, Conservation Laws, Perturbations
 """
 
@@ -9,7 +9,7 @@ import numpy as np
 from ssz_core import PHI, C_SI, G_SI, M_SUN, XI_MAX, D_MIN
 
 class TestCh25Geodesics:
-    """Chapter 25: Geodesic Equations - 20 tests"""
+    """Module 25: Geodesic Equations - 20 tests"""
     
     def test_geodesic_equation_basic(self):
         """d²x^μ/dτ² + Γ^μ_αβ(dx^α/dτ)(dx^β/dτ) = 0"""
@@ -122,7 +122,7 @@ class TestCh25Geodesics:
 
 
 class TestCh25Conservation:
-    """Chapter 25: Conservation Laws - 17 tests"""
+    """Module 25: Conservation Laws - 17 tests"""
     
     def test_energy_conservation(self):
         """dE/dt = 0 (no non-gravitational forces)"""
@@ -213,7 +213,7 @@ class TestCh25Conservation:
 
 
 class TestCh25Perturbations:
-    """Chapter 25: Perturbation Theory - 17 tests"""
+    """Module 25: Perturbation Theory - 17 tests"""
     
     def test_metric_perturbation_h_munu(self):
         """g_munu = η_munu + h_munu"""

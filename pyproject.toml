@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "ssz-all-tests"
 version = "1.0.0"
-description = "Complete SSZ test suite - 564+ tests across 8 Parts, 30 Chapters"
+description = "Complete SSZ test suite - 564+ tests across 8 Parts, 30 Modules"
 readme = "README.md"
 license = {text = "Anticapitalist License 1.4"}
 authors = [

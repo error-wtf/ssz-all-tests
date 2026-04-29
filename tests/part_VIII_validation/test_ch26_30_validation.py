@@ -1,13 +1,13 @@
 """
-Part VIII: Validation (Chapters 26-30)
+Part VIII: Validation (Modules 26-30)
 Tests anti-circularity, ESO spectroscopy, falsifiable predictions
 
 77 tests covering:
-- Chapter 26: Anti-circularity strategy
-- Chapter 27: Data pipelines (NICER, Cassini, NANOGrav)
-- Chapter 28: Code repository consistency
-- Chapter 29: Known limitations
-- Chapter 30: Falsifiable predictions
+- Module 26: Anti-circularity strategy
+- Module 27: Data pipelines (NICER, Cassini, NANOGrav)
+- Module 28: Code repository consistency
+- Module 29: Known limitations
+- Module 30: Falsifiable predictions
 """
 
 import pytest
@@ -15,7 +15,7 @@ import numpy as np
 from ssz_core import TOLERANCE_WEAK
 
 class TestCh30FalsifiablePredictions:
-    """Chapter 30: Falsifiable Predictions - 35 tests"""
+    """Module 30: Falsifiable Predictions - 35 tests"""
     
     # ESO Spectroscopy: 46/47 = 97.9%
     ESO_PASS_RATE = 46/47
@@ -127,7 +127,7 @@ class TestCh30FalsifiablePredictions:
         assert diff < TOLERANCE_WEAK
 
 class TestCh28CodeConsistency:
-    """Chapter 28: Repository Consistency - 18 tests"""
+    """Module 28: Repository Consistency - 18 tests"""
     
     def test_repository_count(self):
         """14 SSZ repositories validated"""
@@ -157,7 +157,7 @@ class TestCh28CodeConsistency:
         assert independent
 
 class TestCh26AntiCircularity:
-    """Chapter 26: Anti-Circularity - 12 tests"""
+    """Module 26: Anti-Circularity - 12 tests"""
     
     def test_no_circular_validation(self):
         """Weak field ≠ Strong field validation"""

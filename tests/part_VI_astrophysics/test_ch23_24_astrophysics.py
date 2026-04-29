@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Part VI: Astrophysics (Chapters 23-24) - 14 Tests
+Part VI: Astrophysics (Modules 23-24) - 14 Tests
 Compact Objects, Accretion
 """
 
@@ -9,7 +9,7 @@ import numpy as np
 from ssz_core import PHI, C_SI, G_SI, M_SUN, XI_MAX, D_MIN
 
 class TestCh23CompactObjects:
-    """Chapter 23: Compact Objects - 8 tests"""
+    """Module 23: Compact Objects - 8 tests"""
     
     def test_schwarzschild_radius(self):
         """r_s = 2GM/c²"""
@@ -58,7 +58,7 @@ class TestCh23CompactObjects:
 
 
 class TestCh24Accretion:
-    """Chapter 24: Accretion Physics - 6 tests"""
+    """Module 24: Accretion Physics - 6 tests"""
     
     def test_accretion_luminosity(self):
         """L_acc = GMṀ/(2R)"""

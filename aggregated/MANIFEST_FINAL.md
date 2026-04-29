@@ -53,15 +53,15 @@ E:\clone\ssz-all-tests-test\aggregated\
 
 | Domäne | Tests | SSZ-Modul |
 |--------|-------|-------------|
-| Grundlagen | 186+ | Ch. 1-5 |
-| Kinematik | 47 | Ch. 6-9 |
-| Elektromagnetismus | 64 | Ch. 10-15 |
-| Frequenz-Rahmenwerk | 28 | Ch. 16-17 |
-| Starkfeld | 94 | Ch. 18-22 |
-| Astrophysik | 14 | Ch. 23-24 |
-| Dynamik | 54 | Ch. 25 |
-| Validierung | 77 | Ch. 26-30 |
-| Lagrange-Formalismus | 54 | Ch. 31 |
+| Grundlagen | 186+ | Mod. 1-5 |
+| Kinematik | 47 | Mod. 6-9 |
+| Elektromagnetismus | 64 | Mod. 10-15 |
+| Frequenz-Rahmenwerk | 28 | Mod. 16-17 |
+| Starkfeld | 94 | Mod. 18-22 |
+| Astrophysik | 14 | Mod. 23-24 |
+| Dynamik | 54 | Mod. 25 |
+| Validierung | 77 | Mod. 26-30 |
+| Lagrange-Formalismus | 54 | Mod. 31 |
 | Cross-Repo | 139+ | — |
 | Energie-Framework | 6+ | — |
 | Chord-Partition | 103 | — |

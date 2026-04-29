@@ -1,13 +1,13 @@
 """
-Part I: Foundations (Chapters 1-5)
+Part I: Foundations (Modules 1-5)
 Tests core postulates, φ derivation, Euler bridge, fine-structure α
 
 186 tests covering:
-- Chapter 1: Overview and commitments
-- Chapter 2: Segmentation premise  
-- Chapter 3: φ from N-segmentation
-- Chapter 4: Euler bridge (Minkowski to normal space)
-- Chapter 5: Fine-structure constant α
+- Module 1: Overview and commitments
+- Module 2: Segmentation premise  
+- Module 3: φ from N-segmentation
+- Module 4: Euler bridge (Minkowski to normal space)
+- Module 5: Fine-structure constant α
 """
 
 import pytest
@@ -15,7 +15,7 @@ import numpy as np
 from ssz_core import PHI, XI_MAX, D_MIN, TOLERANCE_WEAK
 
 class TestCh01Overview:
-    """Chapter 1: SSZ Overview - 35 tests"""
+    """Module 1: SSZ Overview - 35 tests"""
     
     def test_phi_exact_value(self):
         """φ = (1+√5)/2 to machine precision"""
@@ -45,9 +45,9 @@ class TestCh01Overview:
         assert D_MIN < 1.0
     
     def test_framework_completeness(self):
-        """8 Parts, 30 Chapters structure"""
+        """8 Parts, 30 Modules structure"""
         parts = 8
-        chapters = 30
+        modules = 30
         assert parts == 8
         assert chapters == 30
     
@@ -57,7 +57,7 @@ class TestCh01Overview:
         assert free_params == 0
 
 class TestCh02Segmentation:
-    """Chapter 2: Segmentation Premise - 28 tests"""
+    """Module 2: Segmentation Premise - 28 tests"""
     
     def test_segmentation_base_n0(self):
         """N_0 = 10 as base segmentation number"""
@@ -80,7 +80,7 @@ class TestCh02Segmentation:
         assert np.allclose(ratios, PHI, rtol=1e-10)
 
 class TestCh03PhiDerivation:
-    """Chapter 3: φ from N-Segmentation - 42 tests"""
+    """Module 3: φ from N-Segmentation - 42 tests"""
     
     def test_phi_quadratic_solution(self):
         """φ is positive root of x² - x - 1 = 0"""
@@ -118,7 +118,7 @@ class TestCh03PhiDerivation:
         assert r_ratio == PHI
 
 class TestCh04EulerBridge:
-    """Chapter 4: Euler Bridge - 48 tests"""
+    """Module 4: Euler Bridge - 48 tests"""
     
     def test_euler_relation(self):
         """e^(iπ) + 1 = 0"""
@@ -141,7 +141,7 @@ class TestCh04EulerBridge:
         assert D_strong == D_MIN
 
 class TestCh05FineStructure:
-    """Chapter 5: Fine-Structure Constant α - 33 tests"""
+    """Module 5: Fine-Structure Constant α - 33 tests"""
     
     def test_alpha_from_phi(self):
         """α = 1/(φ^(2π) × 4) ≈ 1/137.08 (SSZ prediction)"""

@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Part II: Kinematics (Chapters 6-9) - 47 Tests
+Part II: Kinematics (Modules 6-9) - 47 Tests
 Velocity, Escape, Fall, Lorentz-Invariance
 """
 
@@ -9,7 +9,7 @@ import numpy as np
 from ssz_core import PHI, C_SI, G_SI, M_SUN, M_EARTH
 
 class TestCh06Velocity:
-    """Chapter 6: SSZ Velocity Composition - 12 tests"""
+    """Module 6: SSZ Velocity Composition - 12 tests"""
     
     def test_velocity_composition_basic(self):
         """v_add = (v1 + v2) / (1 + v1*v2/c²)"""
@@ -92,7 +92,7 @@ class TestCh06Velocity:
 
 
 class TestCh07EscapeFall:
-    """Chapter 7: Escape and Fall Velocities - 15 tests"""
+    """Module 7: Escape and Fall Velocities - 15 tests"""
     
     def test_escape_velocity_earth(self):
         """Earth escape velocity: ~11.2 km/s"""
@@ -190,7 +190,7 @@ class TestCh07EscapeFall:
 
 
 class TestCh08Lorentz:
-    """Chapter 8: Lorentz-Invariance in SSZ - 12 tests"""
+    """Module 8: Lorentz-Invariance in SSZ - 12 tests"""
     
     def test_lorentz_transformation_x(self):
         """x' = gamma(x - vt)"""
@@ -279,7 +279,7 @@ class TestCh08Lorentz:
 
 
 class TestCh09Transitions:
-    """Chapter 9: Regime Transitions - 8 tests"""
+    """Module 9: Regime Transitions - 8 tests"""
     
     def test_weak_field_regime(self):
         """R >> r_s: GR = SSZ"""
