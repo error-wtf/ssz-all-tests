@@ -469,7 +469,7 @@
       }
     ],
     "total_tests_detected": 126,
-    "runner_type": "custom+pytest"
+    "runner_type": "pytest"
   },
   "SEGMENTED_SPACETIME": {
     "repo_name": "SEGMENTED_SPACETIME",
