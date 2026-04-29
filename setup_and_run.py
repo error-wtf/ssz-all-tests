@@ -197,9 +197,22 @@ CUSTOM_RUNNER_REPOS = {"ssz-lagrange"}
 
 
 
-# Files that call sys.exit() at module level — must be excluded from pytest
+# Repos that run a custom validation SCRIPT first, then pytest on top.
+# Format: {local_name: script_filename}
 
-EXCLUDE_FILES = ["test_irsa_catalogs.py"]
+HYBRID_RUNNER_REPOS = {
+    "Unified-Results": "run_ssz_unified_validation.py",
+}
+
+
+
+# Files that call sys.exit() at module level or require external network/data
+# — must be excluded from pytest
+
+EXCLUDE_FILES = [
+    "test_irsa_catalogs.py",
+    "test_data_fetch.py",
+]
 
 
 
@@ -671,6 +684,67 @@ for repo_path, repo_name, rtype in repos_to_run:
 
 
 
+    # ── HYBRID RUNNER repos (custom script + pytest) ──────────────────────────
+
+    if repo_name in HYBRID_RUNNER_REPOS:
+
+        script_name = HYBRID_RUNNER_REPOS[repo_name]
+
+        script_path = rp / script_name
+
+        if script_path.exists():
+
+            print(f"  [HYBRID-script] {repo_name} ({script_name})...", end="", flush=True)
+
+            start_h = time.time()
+
+            try:
+
+                rc_h, out_h, err_h = safe_run(
+
+                    [sys.executable, str(script_path)],
+
+                    cwd=rp, timeout=300, extra_env=extra)
+
+            except subprocess.TimeoutExpired:
+
+                rc_h, out_h, err_h = -1, "TIMEOUT", ""
+
+            except Exception as exc:
+
+                rc_h, out_h, err_h = -2, "", str(exc)
+
+            elapsed_h = round(time.time() - start_h, 2)
+
+            # Count validated steps: ✅ markers + [PASS] + PASS tokens
+
+            step_pass = (out_h.count("\u2705") + out_h.count("[PASS]")
+                         + out_h.count("VALIDATION COMPLETE"))
+
+            script_status = "OK" if rc_h == 0 else f"exit={rc_h}"
+
+            print(f" {script_status} | {step_pass} steps | {elapsed_h}s")
+
+            # Prepend script output to pytest output (collected below)
+
+            hybrid_prefix = (
+
+                f"=== HYBRID SCRIPT: {script_name} (exit={rc_h}) ===\n"
+
+                + out_h + err_h
+
+                + "\n=== HYBRID SCRIPT END ===\n\n"
+
+            )
+
+        else:
+
+            hybrid_prefix = f"[WARN] {script_name} not found — skipping script\n\n"
+
+            step_pass = 0
+
+
+
     ignores = get_ignores(rp)
 
     deriv_note = " [DERIVATION—failures expected]" if rtype == "DERIVATION" else ""
@@ -715,23 +789,35 @@ for repo_path, repo_name, rtype in repos_to_run:
 
 
 
+    # hybrid_prefix / step_pass set above if repo_name in HYBRID_RUNNER_REPOS
+
+    if repo_name not in HYBRID_RUNNER_REPOS:
+
+        hybrid_prefix = ""
+
+        step_pass = 0
+
+
+
     RUN_RESULTS[repo_name] = {
 
         "repo": repo_name, "path": str(rp), "start_time": TIMESTAMP,
 
         "duration_s": elapsed_a, "exit_code": rc_a, "type": rtype,
 
-        "passed": passed, "failed": failed, "error": errors, "skipped": skipped,
+        "passed": passed + step_pass,
 
-        "total_run": passed + failed + errors,
+        "failed": failed, "error": errors, "skipped": skipped,
 
-        "stdout": out_a, "stderr": err_a,
+        "total_run": passed + failed + errors + step_pass,
+
+        "stdout": hybrid_prefix + out_a, "stderr": err_a,
 
         "failures_expected": rtype == "DERIVATION",
 
     }
 
-    total_executed += passed + failed + errors
+    total_executed += passed + failed + errors + step_pass
 
 
 
@@ -773,7 +859,7 @@ for repo_path, repo_name, rtype in repos_to_run:
 
     RUN_VERBOSE[repo_name] = {
 
-        "stdout": out_b, "stderr": err_b,
+        "stdout": hybrid_prefix + out_b, "stderr": err_b,
 
         "exit_code": rc_b, "duration_s": elapsed_b,
 

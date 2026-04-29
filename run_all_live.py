@@ -26,12 +26,19 @@ REPOS = [
     ('segmented-calculation-suite',                         158, 'pytest'),
     ('ssz-schuhman-experiment',                             191, 'pytest'),
     ('ssz-lensing',                                         279, 'pytest'),
-    ('Segmented-Spacetime-Mass-Projection-Unified-Results', 139, 'pytest'),
+    # local name is the junction target folder:
+    ('Segmented-Spacetime-Mass-Projection-Unified-Results', 139, 'hybrid'),
     ('ssz-trajectories',                                     63, 'pytest'),
     ('segmented-energy',                                      6, 'pytest'),
     ('g79-cygnus-test',                                       5, 'script'),
     ('ssz-lagrange',                                         54, 'script'),
 ]
+
+# Mapping: folder name under BASE -> display/key name in LIVE_STATUS.json
+REPO_DISPLAY_NAMES = {
+    'ssz-schuhman-experiment': 'ssz-schumann',
+    'Segmented-Spacetime-Mass-Projection-Unified-Results': 'Unified-Results',
+}
 
 def make_env(path):
     e = os.environ.copy()
@@ -94,6 +101,39 @@ def run_script_lagrange(path, env):
             p = 54  # known count from script
     return p, f, output
 
+def run_hybrid_unified(path, env):
+    """Unified-Results: run validation script + pytest together."""
+    script = path / 'run_ssz_unified_validation.py'
+    p = f = 0
+    stdout = ''
+    if script.exists():
+        try:
+            r = subprocess.run(
+                [sys.executable, str(script)],
+                capture_output=True, text=True, encoding='utf-8',
+                errors='replace', timeout=300, env=env, cwd=str(path)
+            )
+            out = r.stdout + r.stderr
+            # Count ✅ validation steps + VALIDATION COMPLETE banner
+            p_script = out.count('\u2705') + out.count('VALIDATION COMPLETE')
+            f_script = 1 if r.returncode != 0 else 0
+            stdout += f'=== run_ssz_unified_validation.py (exit={r.returncode}) ===\n'
+            stdout += out[:4000]
+            stdout += '\n=== END SCRIPT ===\n\n'
+        except subprocess.TimeoutExpired:
+            p_script, f_script = 0, 1
+            stdout += 'TIMEOUT: run_ssz_unified_validation.py\n'
+    else:
+        p_script = f_script = 0
+        stdout += '[WARN] run_ssz_unified_validation.py not found\n'
+    # Then run pytest
+    p_pytest, f_pytest, pytest_out = run_pytest(path, env)
+    stdout += pytest_out
+    p = p_script + p_pytest
+    f = f_script + f_pytest
+    return p, f, stdout
+
+
 def run_script_g79(path, env):
     """g79-cygnus-test: run RUN_ALL_VALIDATED_TESTS.py or first test scripts."""
     runner = path / 'RUN_ALL_VALIDATED_TESTS.py'
@@ -141,17 +181,20 @@ print('=' * 65)
 
 for name, expected, mode in REPOS:
     path = BASE / name
-    print(f'\n[{name}] expected={expected} mode={mode}')
+    display_name = REPO_DISPLAY_NAMES.get(name, name)
+    print(f'\n[{display_name}] expected={expected} mode={mode}')
 
     if not path.exists():
-        results[name] = {'passed': 0, 'failed': 0, 'expected': expected, 'status': 'MISSING'}
-        full_md_parts.append(f'## REPO: {name}\n- **STATUS: MISSING**\n\n')
+        results[display_name] = {'passed': 0, 'failed': 0, 'expected': expected, 'status': 'MISSING'}
+        full_md_parts.append(f'## REPO: {display_name}\n- **STATUS: MISSING**\n\n')
         print('  MISSING')
         continue
 
     env = make_env(path)
     try:
-        if mode == 'pytest':
+        if mode == 'hybrid':
+            p, f, stdout = run_hybrid_unified(path, env)
+        elif mode == 'pytest':
             p, f, stdout = run_pytest(path, env)
         elif name == 'ssz-lagrange':
             p, f, stdout = run_script_lagrange(path, env)
@@ -163,10 +206,10 @@ for name, expected, mode in REPOS:
         p, f, stdout = 0, 1, f'EXCEPTION: {ex}'
 
     status = 'PASS' if f == 0 and p > 0 else ('FAIL' if f > 0 else 'UNKNOWN')
-    results[name] = {'passed': p, 'failed': f, 'expected': expected, 'status': status}
+    results[display_name] = {'passed': p, 'failed': f, 'expected': expected, 'status': status}
     print(f'  passed={p} failed={f} -> {status}')
 
-    full_md_parts.append(f'## REPO: {name}\n')
+    full_md_parts.append(f'## REPO: {display_name}\n')
     full_md_parts.append(f'- passed: {p} / expected: {expected}\n')
     full_md_parts.append(f'- failed: {f}\n')
     full_md_parts.append(f'- status: **{status}**\n\n')
