@@ -104,6 +104,10 @@ EXPECTED_FAILURE_REPOS = {"ssz-full-metric"}
 # Repos using custom runners instead of pytest
 CUSTOM_RUNNER_REPOS = {"ssz-lagrange"}
 
+# Repos that have BOTH pytest tests (in tests/) AND standalone scripts in root
+# Root test_*.py files are run as scripts in addition to pytest on tests/
+MIXED_RUNNER_REPOS = {"ssz-metric-pure"}
+
 # Files that call sys.exit() at module level — must be excluded from pytest
 EXCLUDE_FILES = ["test_irsa_catalogs.py"]
 
@@ -309,6 +313,63 @@ for repo_path, repo_name, rtype in repos_to_run:
         "PYTHONPATH": str(rp) + os.pathsep + os.environ.get("PYTHONPATH", ""),
         "MPLBACKEND": "Agg",
     }
+
+    # ── MIXED RUNNER repos (pytest on tests/ + standalone root scripts) ─────
+    if repo_name in MIXED_RUNNER_REPOS:
+        print(f"  [MIXED] {repo_name}...", end="", flush=True)
+        start = time.time()
+        # Pass A: pytest only on tests/ subdir
+        tests_dir = rp / "tests"
+        cmd_a = ([sys.executable, "-m", "pytest", str(tests_dir), "-v",
+                  "--tb=short", "--no-header", "--color=no",
+                  "-p", "no:cacheprovider"])
+        try:
+            rc_a, out_a, err_a = safe_run(cmd_a, cwd=rp, timeout=300, extra_env=extra)
+        except subprocess.TimeoutExpired:
+            out_a, err_a, rc_a = "TIMEOUT", "", -1
+        passed, failed, errors, skipped = parse_counts(out_a)
+        # Run standalone root-level test_*.py scripts
+        standalone_out = []
+        for py_file in sorted(rp.glob("test_*.py")):
+            if count_test_funcs(py_file) == 0:  # only standalone scripts
+                try:
+                    rc2, o2, e2 = safe_run([sys.executable, str(py_file)],
+                                           cwd=rp, timeout=120, extra_env=extra)
+                    standalone_out.append(
+                        f"--- {py_file.name} (exit={rc2}) ---\n{o2}{e2}")
+                except subprocess.TimeoutExpired:
+                    standalone_out.append(f"--- {py_file.name} TIMEOUT ---")
+        standalone_combined = "\n".join(standalone_out)
+        full_out = out_a + "\n\n--- STANDALONE SCRIPTS ---\n" + standalone_combined
+        elapsed = round(time.time() - start, 2)
+        status = "PASS" if rc_a == 0 else f"exit={rc_a}"
+        RUN_RESULTS[repo_name] = {
+            "repo": repo_name, "path": str(rp), "start_time": TIMESTAMP,
+            "duration_s": elapsed, "exit_code": rc_a, "type": rtype,
+            "passed": passed, "failed": failed, "error": errors,
+            "skipped": skipped, "total_run": passed + failed + errors,
+            "stdout": full_out, "stderr": err_a,
+            "failures_expected": False,
+        }
+        total_executed += passed + failed + errors
+        print(f" {status} | {passed+failed+errors} pytest + standalone scripts | {elapsed}s")
+        # Pass B verbose
+        print(f"  [B] {repo_name} (full capture)...", end="", flush=True)
+        start_b = time.time()
+        cmd_b = ([sys.executable, "-m", "pytest", str(tests_dir), "-v",
+                  "--tb=long", "--show-capture=all", "-s",
+                  "--no-header", "--color=no", "-p", "no:cacheprovider"])
+        try:
+            rc_b, out_b, err_b = safe_run(cmd_b, cwd=rp, timeout=600, extra_env=extra)
+        except subprocess.TimeoutExpired:
+            out_b, err_b, rc_b = "TIMEOUT after 600s", "", -1
+        elapsed_b = round(time.time() - start_b, 2)
+        RUN_VERBOSE[repo_name] = {
+            "stdout": out_b + "\n\n--- STANDALONE SCRIPTS ---\n" + standalone_combined,
+            "stderr": err_b, "exit_code": rc_b, "duration_s": elapsed_b,
+        }
+        print(f" done ({elapsed_b}s)")
+        continue
 
     # ── CUSTOM RUNNER repos ──────────────────────────────────────────────────
     if repo_name in CUSTOM_RUNNER_REPOS:
