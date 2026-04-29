@@ -1014,6 +1014,70 @@ rfo.write_text("\n".join(rfo_lines), encoding="utf-8")
 
 print(f"Written: really-full-output.md ({rfo.stat().st_size // 1024} KB)")
 
+# ── really-full-output-stream.md  (Referenz-Stil: ein einziger Stream) ──────
+# Wie E:\clone\Segmented-Spacetime-Mass-Projection-Unified-Results\reports\full-output.md
+# Alles in einem einzigen ```-Block, nahtlos hintereinander, kein Repo-Split.
+
+total_pass_stream = sum(r.get("passed", 0) for r in RUN_VERBOSE.values())
+total_fail_stream = sum(r.get("failed", 0) for r in RUN_VERBOSE.values())
+n_repos_stream = len(RUN_VERBOSE)
+
+stream_header = [
+    "# SSZ ALL-TESTS — Complete Full Output Log",
+    "",
+    f"**Generated:** {TIMESTAMP}",
+    f"**System:** {platform.system()} {platform.release()}",
+    f"**Python:** {platform.python_version()}",
+    f"**pytest flags:** `-v -s --tb=long --show-capture=all`",
+    "",
+    "This file contains the COMPLETE unfiltered output from all test repos.",
+    "All stdout and stderr output is captured here.",
+    "",
+    "## Summary",
+    "",
+    f"- **Repos:** {n_repos_stream}",
+    f"- **Passed:** {total_pass_stream}",
+    f"- **Failed:** {total_fail_stream}",
+    "",
+    "---",
+    "",
+    "## Complete Test Output",
+    "",
+    "Below is the COMPLETE, UNFILTERED output from all repos.",
+    "This includes all print statements, test results, and error messages.",
+    "",
+    "```",
+    "",
+]
+
+stream_body = []
+for repo_name, vres in RUN_VERBOSE.items():
+    rtype = RUN_RESULTS.get(repo_name, {}).get("type", "?")
+    sep = "=" * 100
+    stream_body.append(sep)
+    stream_body.append(f"REPO: {repo_name}  [{rtype}]  "
+                       f"exit={vres['exit_code']}  {vres['duration_s']}s")
+    stream_body.append(sep)
+    stream_body.append("")
+    out = vres.get("stdout", "") or "(no output)"
+    stream_body.append(out)
+    err = vres.get("stderr", "")
+    if err and err.strip():
+        stream_body.append("")
+        stream_body.append("--- STDERR ---")
+        stream_body.append(err)
+    stream_body.append("")
+
+stream_footer = ["```", ""]
+
+rfo_stream = REPO_ROOT / "really-full-output-stream.md"
+rfo_stream.write_text(
+    "\n".join(stream_header + stream_body + stream_footer),
+    encoding="utf-8"
+)
+print(f"Written: really-full-output-stream.md "
+      f"({rfo_stream.stat().st_size // 1024} KB)")
+
 
 
 # ── full-output-integrity.md ────────────────────────────────────────────────
