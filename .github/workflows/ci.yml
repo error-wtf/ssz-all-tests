@@ -1,4 +1,4 @@
-name: SSZ All Tests — Chord Partition CI
+name: SSZ All Tests — CI
 
 on:
   push:
@@ -12,7 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout chord-partition repo
+      uses: actions/checkout@v4
+      with:
+        repository: error-wtf/chord-partition
+        path: chord-partition
 
     - name: Set up Python 3.12
       uses: actions/setup-python@v5
@@ -25,22 +29,23 @@ jobs:
         pip install pytest numpy scipy
 
     - name: Run chord-partition eigenmode tests (103 tests)
+      working-directory: chord-partition
       run: pytest test_chord_partition_modes.py -v --tb=short
 
     - name: Verify SSZ constants
       run: |
         python -c "
-        import math
-        phi = (1 + math.sqrt(5)) / 2
-        xi_max = 1 - math.exp(-phi)
-        d_min = 1 / (1 + xi_max)
-        assert abs(phi - 1.6180339887498949) < 1e-10, f'phi wrong: {phi}'
-        assert abs(xi_max - 0.80171) < 1e-4, f'xi_max wrong: {xi_max}'
-        assert abs(d_min - 0.55503) < 1e-4, f'd_min wrong: {d_min}'
-        print(f'phi={phi:.15f}  xi_max={xi_max:.5f}  d_min={d_min:.5f}  OK')
-        "
+import math
+phi = (1 + math.sqrt(5)) / 2
+xi_max = 1 - math.exp(-phi)
+d_min = 1 / (1 + xi_max)
+assert abs(phi - 1.6180339887498949) < 1e-10
+assert abs(xi_max - 0.80171) < 1e-4
+assert abs(d_min - 0.55503) < 1e-4
+print(f'phi={phi:.15f}  xi_max={xi_max:.5f}  d_min={d_min:.5f}  OK')
+"
 
-  # NOTE: The full multi-repo test suite (run_all_live.py, 1296 tests across 11 repos)
+  # NOTE: The full multi-repo test suite (run_all_live.py, 1296 tests across 12 repos)
   # requires the sibling repositories to be cloned locally (E:/clone/*).
   # It is run locally via: python run_all_live.py
   # Results are committed as: LIVE_STATUS.json, full-output.md, really-full-output.md

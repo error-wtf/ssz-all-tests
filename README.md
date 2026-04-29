@@ -1,8 +1,8 @@
 # SSZ All-Tests — Complete Validation Suite
 
-**Authors:** Carmen N. Wrede & Lino P. Casu
-**License:** Anti-Capitalist Software License v1.4
-**Status:** [![CI](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml) ![Tests](https://img.shields.io/badge/tests-1296%2F1296-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-100%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-12-blue)
+**Authors:** Carmen N. Wrede & Lino P. Casu  
+**License:** Anti-Capitalist Software License v1.4  
+**Status:** [![CI](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml) ![Tests](https://img.shields.io/badge/tests-1296%2F1296-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-100%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-13-blue)
 
 ---
 
@@ -26,8 +26,9 @@ python run_all_live.py
 # Generate complete verbose output with all test details
 python gen_really_full_output.py
 
-# Run chord-partition tests only (local, no deps)
-python -m pytest test_chord_partition_modes.py -v
+# Run chord-partition tests only (from standalone repo)
+git clone https://github.com/error-wtf/chord-partition.git
+python -m pytest chord-partition/test_chord_partition_modes.py -v
 ```
 
 **Generated output files:**
@@ -74,7 +75,7 @@ Results from `run_all_live.py` — native runners per repo (Python 3.12, Windows
 | [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | CANONICAL | 54 | 54 | 0 | ✅ 100% | Lagrange/Hamilton SSZ, Kerr analog |
 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | CANONICAL | 7 | 7 | 0 | ✅ 100% | Stellar energy, 129 astronomical objects |
 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | CANONICAL | 82 | 82 | 0 | ✅ 100% | PPN, Shapiro, Cassini, dynamic loops |
-| chord-partition *(this repo)* | LOCAL | 103 | 103 | 0 | ✅ 100% | Eigenmodes, golden ratio φ resonance |
+| [chord-partition](https://github.com/error-wtf/chord-partition) | CANONICAL | 103 | 103 | 0 | ✅ 100% | Eigenmodes, golden ratio φ resonance |
 | **TOTAL** | | **1296** | **1296** | **0** | **✅ 100%** | |
 
 **Archive repos (no executable tests):** `ssz-complete-documentation`, `SEGMENTED_SPACETIME`, `emergent-spacetime`, `Segmented-Spacetime-Starmaps`
@@ -86,7 +87,6 @@ Results from `run_all_live.py` — native runners per repo (Python 3.12, Windows
 | Type | Meaning | Failures |
 |------|---------|---------|
 | **CANONICAL** | Official SSZ implementation — single source of truth | Real bugs |
-| **LOCAL** | Tests living inside this repo (`ssz-all-tests`) | Real bugs |
 | **ARCHIVE** | Historical reference — not actively maintained | Ignored |
 
 ---
@@ -148,9 +148,11 @@ Results from `run_all_live.py` — native runners per repo (Python 3.12, Windows
 
 ---
 
-## Chord-Partition Eigenmodes (103 tests)
+## Chord-Partition Eigenmodes
 
-Parametric chord-partition curves with φ-scaling — 103 local tests in `test_chord_partition_modes.py`:
+Standalone repo: **[error-wtf/chord-partition](https://github.com/error-wtf/chord-partition)** — 103 tests, 100% pass.
+
+Parametric chord-partition curves with φ-scaling:
 
 ```
 C(t; p, k, R) = (R·cos(p·t), R·sin(k·t))
@@ -163,15 +165,15 @@ C(t; p, k, R) = (R·cos(p·t), R·sin(k·t))
 | Eigenmode index | n = lcm(p,k)/gcd(p,k) |
 | φ-resonance | Fibonacci pairs (5,8), (8,13), (13,21) → φ |
 
-SSZ constants verified in chord-partition tests:
+SSZ constants verified:
 - Ξ_max = 1 − e^−φ = 0.80171 ✅
 - D_min = 1/(1+Ξ_max) = 0.55503 ✅
 - φ² = φ+1 ✅
-- N₀ = 4 ✅
 
 Run independently:
 ```bash
-python -m pytest test_chord_partition_modes.py -v
+git clone https://github.com/error-wtf/chord-partition.git
+python -m pytest chord-partition/test_chord_partition_modes.py -v
 ```
 
 ---
@@ -182,7 +184,6 @@ python -m pytest test_chord_partition_modes.py -v
 ssz-all-tests/
 ├── run_all_live.py               # CANONICAL RUNNER — native runners per repo
 ├── gen_really_full_output.py     # Verbose full output generator
-├── test_chord_partition_modes.py # 103 chord-partition eigenmode tests (local)
 │
 ├── LIVE_STATUS.json              # Per-repo pass/fail snapshot (auto-generated)
 ├── full-output.md                # Per-repo summary report (auto-generated)
@@ -192,8 +193,10 @@ ssz-all-tests/
 ├── tests/                        # Additional SSZ physics tests
 ├── aggregated/                   # Aggregated test copies (reference snapshots)
 ├── requirements.txt              # Python dependencies
-└── .gitignore                    # __pycache__/, *.pyc excluded
+└── .gitignore
 ```
+
+Note: `test_chord_partition_modes.py` now lives in [error-wtf/chord-partition](https://github.com/error-wtf/chord-partition).
 
 ---
 
@@ -221,6 +224,10 @@ Install: `pip install -r requirements.txt`
 Repos are expected at `E:/clone/<repo-name>` (configurable in `run_all_live.py` via `BASE`):
 
 ```bash
+# chord-partition (103 tests — standalone repo)
+git clone https://github.com/error-wtf/chord-partition.git E:/clone/chord-partition
+python -m pytest E:/clone/chord-partition/test_chord_partition_modes.py -v
+
 # ssz-qubits (184 tests)
 python -m pytest E:/clone/ssz-qubits/tests/ -v
 
@@ -242,16 +249,13 @@ python E:/clone/ssz-lagrange/test_lagrange_ssz.py
 
 # g79-cygnus-tests (5 checks — custom runner)
 python E:/clone/g79-cygnus-test/RUN_ALL_VALIDATED_TESTS.py
-
-# chord-partition (103 tests — local, no deps)
-python -m pytest test_chord_partition_modes.py -v
 ```
 
 ---
 
 ## License
 
-Anti-Capitalist Software License v1.4
+Anti-Capitalist Software License v1.4  
 Copyright © 2025–2026 Carmen N. Wrede & Lino P. Casu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software,
@@ -259,4 +263,4 @@ to use, copy, modify, and distribute it for non-commercial purposes.
 
 ---
 
-*Last updated: 2026-06-01 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0%*
+*Last updated: 2026-04-29 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0%*
