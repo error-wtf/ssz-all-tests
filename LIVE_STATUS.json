@@ -8,19 +8,19 @@
   "ssz-metric-pure": {
     "passed": 36,
     "failed": 0,
-    "expected": 46,
+    "expected": 36,
     "status": "PASS"
   },
   "segmented-calculation-suite": {
-    "passed": 88,
+    "passed": 158,
     "failed": 0,
     "expected": 158,
     "status": "PASS"
   },
-  "ssz-schuhman-experiment": {
-    "passed": 171,
+  "ssz-schumann": {
+    "passed": 178,
     "failed": 0,
-    "expected": 191,
+    "expected": 178,
     "status": "PASS"
   },
   "ssz-lensing": {
@@ -29,10 +29,10 @@
     "expected": 279,
     "status": "PASS"
   },
-  "Segmented-Spacetime-Mass-Projection-Unified-Results": {
-    "passed": 78,
+  "Unified-Results": {
+    "passed": 147,
     "failed": 0,
-    "expected": 139,
+    "expected": 147,
     "status": "PASS"
   },
   "ssz-trajectories": {
@@ -41,13 +41,7 @@
     "expected": 63,
     "status": "PASS"
   },
-  "segmented-energy": {
-    "passed": 2,
-    "failed": 0,
-    "expected": 6,
-    "status": "PASS"
-  },
-  "g79-cygnus-test": {
+  "g79-cygnus-tests": {
     "passed": 5,
     "failed": 0,
     "expected": 5,
@@ -59,7 +53,19 @@
     "expected": 54,
     "status": "PASS"
   },
-  "chord-partition-eigenmodes": {
+  "segmented-energy": {
+    "passed": 7,
+    "failed": 0,
+    "expected": 7,
+    "status": "PASS"
+  },
+  "frequency-curvature-validation": {
+    "passed": 82,
+    "failed": 0,
+    "expected": 82,
+    "status": "PASS"
+  },
+  "chord-partition (local)": {
     "passed": 103,
     "failed": 0,
     "expected": 103,

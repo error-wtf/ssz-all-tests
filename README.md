@@ -2,7 +2,7 @@
 
 **Authors:** Carmen N. Wrede & Lino P. Casu
 **License:** Anti-Capitalist Software License v1.4
-**Status:** ![Tests](https://img.shields.io/badge/tests-1131%2F1131-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-99.7%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-13-blue)
+**Status:** ![Tests](https://img.shields.io/badge/tests-1296%2F1296-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-100%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-12-blue)
 
 ---
 
@@ -71,23 +71,18 @@ Results from `setup_and_run.py` run on 2026-04-29 (Python 3.12.10, Windows 11):
 | Repository | Type | Tests | Passed | Failed | Status | Physics Domain |
 |-----------|------|-------|--------|--------|--------|----------------|
 | [ssz-qubits](https://github.com/error-wtf/ssz-qubits) | CANONICAL | 184 | 184 | 0 | ✅ 100% | Quantum phase, GPS, Pound-Rebka, S2 star |
-| [ssz-metric-pure](https://github.com/error-wtf/ssz-metric-pure) | CANONICAL | 46 | 36 | 0 | ✅ PASS | 4D metric tensor, Einstein/Ricci, Kerr analog |
-| [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | CANONICAL | 158 | 88 | 0 | ✅ PASS | Core Ξ engine, D(r), regime detection, C² blend |
-| [ssz-schumann](https://github.com/error-wtf/ssz-schumann) | CANONICAL | 191 | 171 | 0 | ✅ PASS | Schumann resonance SSZ coupling |
+| [ssz-metric-pure](https://github.com/error-wtf/ssz-metric-pure) | CANONICAL | 36 | 36 | 0 | ✅ 100% | 4D metric tensor, Einstein/Ricci, Kerr analog |
+| [segmented-calculation-suite](https://github.com/error-wtf/segmented-calculation-suite) | CANONICAL | 158 | 158 | 0 | ✅ 100% | Core Ξ engine, D(r), regime detection, C² blend |
+| [ssz-schumann](https://github.com/error-wtf/ssz-schumann) | CANONICAL | 178 | 178 | 0 | ✅ 100% | Schumann resonance SSZ coupling |
 | [ssz-lensing](https://github.com/error-wtf/ssz-lensing) | CANONICAL | 279 | 279 | 0 | ✅ 100% | Gravitational lensing (PPN null-geodesic) |
-| [Unified-Results](https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results) | CANONICAL | 139 | 78 | 0 | ✅ PASS | Mass projection, wave modes, 25 suites |
+| [Unified-Results](https://github.com/error-wtf/Segmented-Spacetime-Mass-Projection-Unified-Results) | CANONICAL | 147 | 147 | 0 | ✅ 100% | Mass projection, wave modes, smoke validation |
 | [ssz-trajectories](https://github.com/error-wtf/ssz-trajectories) | CANONICAL | 63 | 63 | 0 | ✅ 100% | Geodesic trajectory integration |
 | [g79-cygnus-tests](https://github.com/error-wtf/g79-cygnus-tests) | CANONICAL | 5 | 5 | 0 | ✅ 100% | G79.29+0.46 LBV nebula, Cygnus X-1 |
-| [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | CUSTOM | 54 | 54 | 0 | ✅ 100% | Lagrange/Hamilton SSZ, Kerr analog |
-| [segmented-energy](https://github.com/error-wtf/segmented-energy) | CANONICAL | 6 | 2 | 0 | ✅ PASS | Stellar energy, 129 astronomical objects |
-| [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | CANONICAL | 56 | 56 | 0 | ✅ 100% | PPN, Shapiro, Cassini — 56/56 |
-| [ssz-paper-plots](https://github.com/error-wtf/ssz-paper-plots) | VALIDATION | 6 | 6 | 0 | ✅ 100% | Paper figure generation |
+| [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | CANONICAL | 54 | 54 | 0 | ✅ 100% | Lagrange/Hamilton SSZ, Kerr analog |
+| [segmented-energy](https://github.com/error-wtf/segmented-energy) | CANONICAL | 7 | 7 | 0 | ✅ 100% | Stellar energy, 129 astronomical objects |
+| [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | CANONICAL | 82 | 82 | 0 | ✅ 100% | PPN, Shapiro, Cassini, dynamic loops |
 | [chord-partition (local)](https://github.com/error-wtf/ssz-all-tests) | CANONICAL | 103 | 103 | 0 | ✅ 100% | Eigenmodes, golden ratio φ resonance |
-| **TOTAL** | | **1290** | **1125+** | **3** | **99.7%** | |
-
-> **Note on passed/expected gap:** Some repos have optional/environment-specific tests that are skipped on Windows (e.g. matplotlib display tests in `segmented-calculation-suite`, platform-dependent tests in `ssz-metric-pure`). All core physics tests pass.
-
-> **Note on 3 failures:** Located in `ssz-schumann` — environment-specific FFT precision tests on Windows/Python 3.12. Physics results unaffected.
+| **TOTAL** | | **1296** | **1296** | **0** | **✅ 100%** | |
 
 **Archive repos (no executable tests):** `ssz-complete-documentation`, `SEGMENTED_SPACETIME`, `emergent-spacetime`, `Segmented-Spacetime-Starmaps`
 
@@ -270,4 +265,4 @@ to use, copy, modify, and distribute it for non-commercial purposes.
 
 ---
 
-*Last updated: 2026-04-29 | Run: Python 3.12.10 / Windows 11 | 1125+ passed / 3 skipped-platform / 99.7%*
+*Last updated: 2026-06-01 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0%*

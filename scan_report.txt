@@ -1,0 +1,938 @@
+
+=== ssz-qubits ===
+  _fix_paths.py                                                     -
+  analyze_for_paper.py                                              -
+  analyze_for_paper_b.py                                            -
+  analyze_repo_for_paper_b_v2.py                                    prints-PASS
+  comprehensive_test.py                                             assert:12 | prints-PASS
+  demo.py                                                           __main__ | prints-PASS
+  final_summary.py                                                  prints-PASS
+  generate_improved_plots.py                                        __main__ | prints-PASS
+  generate_paper_c_docx.py                                          __main__ | prints-PASS
+  generate_paper_c_final_docx.py                                    __main__ | prints-PASS
+  generate_paper_c_final_plots.py                                   __main__
+  generate_paper_c_plots.py                                         __main__ | prints-PASS
+  generate_paper_c_v11_docx.py                                      __main__
+  generate_paper_c_v12_docx.py                                      __main__
+  generate_paper_d_master_docx.py                                   __main__ | prints-PASS
+  generate_paper_d_master_plots.py                                  __main__
+  generate_paper_d_v2.py                                            __main__ | prints-PASS
+  generate_paper_e_final.py                                         __main__ | prints-PASS
+  paper_c_feasibility_analysis.py                                   -
+  paper_final\assemble_paper.py                                     __main__ | prints-PASS
+  paper_final\assemble_paper_extended.py                            __main__ | prints-PASS
+  paper_final\figures\F10_network.py                                -
+  paper_final\figures\F11_claim_boundaries.py                       -
+  paper_final\figures\F1_phase_vs_height.py                         -
+  paper_final\figures\F1_phase_vs_height_old.py                     -
+  paper_final\figures\F2_platform_comparison.py                     -
+  paper_final\figures\F3_confound_matrix.py                         -
+  paper_final\figures\F4_ssz_vs_gr.py                               -
+  paper_final\figures\F5_zone_width.py                              -
+  paper_final\figures\F6_compensation.py                            -
+  paper_final\figures\F6_compensation_old.py                        -
+  paper_final\figures\F7_strong_field.py                            -
+  paper_final\figures\F8_timeline.py                                -
+  paper_final\figures\F9_validation.py                              -
+  paper_suite_integrator.py                                         prints-PASS
+  run_tests.py                                                      __main__ | prints-PASS
+  ssz_entanglement.py                                               __main__
+  ssz_paper_a_support.py                                            __main__
+  ssz_paper_c_support.py                                            __main__ | prints-PASS
+  ssz_qubits.py                                                     __main__
+  ssz_roadmap_validation.py                                         __main__ | prints-PASS
+  test_corrections.py                                               -
+  test_paper_consistency.py                                         assert:12 | prints-PASS
+  tests\__init__.py                                                 -
+  tests\test_edge_cases.py                                          class-test:9 | __main__ | assert:40
+  tests\test_entanglement.py                                        class-test:8 | __main__ | assert:29
+  tests\test_paper_a_support.py                                     class-test:6 | __main__ | assert:16
+  tests\test_paper_c_support.py                                     class-test:9 | __main__ | assert:19
+  tests\test_paper_d_validation.py                                  class-test:8 | __main__ | assert:35 | prints-PASS
+  tests\test_roadmap_validation.py                                  class-test:6 | __main__ | assert:21
+  tests\test_ssz_physics.py                                         class-test:7 | __main__ | assert:22
+  tests\test_ssz_qubit_applications.py                              class-test:6 | __main__ | assert:13 | prints-PASS
+  tests\test_validation.py                                          class-test:6 | __main__ | assert:19 | prints-PASS
+  update_docx_figures.py                                            __main__
+  verify_paper_a_formulas.py                                        -
+  verify_phi_discretization.py                                      prints-PASS
+  visualize_ssz_qubits.py                                           __main__
+
+=== ssz-metric-pure ===
+  analyze_deviations.py                                             __main__ | prints-PASS
+  analyze_deviations_corrected.py                                   prints-PASS
+  compare_all_forms.py                                              prints-PASS
+  compare_metrics.py                                                __main__ | prints-PASS
+  compute_riemann_curvature.py                                      prints-PASS
+  examples\__init__.py                                              -
+  examples\basic_usage.py                                           -
+  examples\demo_phi_spiral.py                                       __main__
+  FINAL_COMPARISON_AND_INTERPRETATION.py                            prints-PASS
+  FINAL_SUMMARY_AND_REPORT.py                                       prints-PASS
+  generate_all_reports.py                                           __main__ | prints-PASS
+  generate_validation_report.py                                     prints-PASS
+  geodesics_compact.py                                              __main__ | prints-PASS
+  scripts\__init__.py                                               -
+  src\ssz_core\__init__.py                                          -
+  src\ssz_core\constants.py                                         -
+  src\ssz_core\metric.py                                            -
+  src\ssz_core\segment_density.py                                   -
+  src\ssz_metric_pure\__init__.py                                   prints-PASS
+  src\ssz_metric_pure\calibration_2pn.py                            __main__ | prints-PASS
+  src\ssz_metric_pure\einstein_ricci_4d.py                          __main__
+  src\ssz_metric_pure\geodesics.py                                  __main__ | prints-PASS
+  src\ssz_metric_pure\geodesics_phi_spiral.py                       -
+  src\ssz_metric_pure\metric_kerr_ssz.py                            -
+  src\ssz_metric_pure\metric_kerr_ssz_kerr_by_ki.py                 -
+  src\ssz_metric_pure\metric_phi_spiral_ssz_by_human.py             -
+  src\ssz_metric_pure\metric_static.py                              -
+  src\ssz_metric_pure\metric_tensor_4d.py                           __main__ | prints-PASS
+  src\ssz_metric_pure\params.py                                     -
+  src\ssz_metric_pure\segmentation.py                               assert:1
+  src\ssz_metric_pure\ssz_calibrated.py                             -
+  src\ssz_metric_pure\ssz_symbolic_fast.py                          pytest:2 | __main__
+  src\ssz_metric_pure\ssz_symbolic_pack.py                          __main__
+  src\ssz_metric_pure\ssz_symbolic_sparse.py                        __main__ | prints-PASS
+  src\ssz_metric_pure\ssz_validator.py                              __main__ | prints-PASS
+  src\ssz_metric_pure\ssz_vs_gr_comparison.py                       __main__
+  src\ssz_metric_pure\symbolic_tensor_derivation.py                 __main__
+  src\ssz_metric_pure\tensors.py                                    pytest:1
+  src\ssz_viz\__init__.py                                           -
+  src\ssz_viz\plot_comparison.py                                    -
+  src\ssz_viz\plot_curvature.py                                     __main__
+  src\ssz_viz\plot_metric_a.py                                      prints-PASS
+  src\ssz_viz\plot_time_dilation.py                                 __main__
+  src\sszviz.py                                                     __main__
+  ssz_metric_pipeline.py                                            __main__ | prints-PASS
+  test_diagonal_form.py                                             prints-PASS
+  test_geodesics_and_limits.py                                      prints-PASS
+  test_metric_compatibility.py                                      -
+  tests\__init__.py                                                 -
+  tests\test_metric_kerr.py                                         pytest:10 | __main__
+  tests\test_metric_static.py                                       pytest:8 | __main__
+  tests\test_sparse_validators.py                                   class-test:3 | __main__ | assert:11
+  tests\test_validation_ssz_calibrated.py                           class-test:5 | __main__ | assert:6 | prints-PASS
+
+=== segmented-calculation-suite ===
+  app.py                                                            __main__ | prints-PASS
+  app_online.py                                                     __main__ | prints-PASS
+  colab_launcher.py                                                 __main__ | prints-PASS
+  comprehensive_analysis.py                                         prints-PASS
+  data_fetch.py                                                     prints-PASS
+  deep_analysis.py                                                  prints-PASS
+  easteregg\schrodinger_ssz_demo.py                                 __main__ | prints-PASS
+  parity_check.py                                                   __main__ | prints-PASS
+  quick_validation.py                                               -
+  segcalc\__init__.py                                               -
+  segcalc\__main__.py                                               __main__
+  segcalc\cli.py                                                    __main__
+  segcalc\config\__init__.py                                        -
+  segcalc\config\constants.py                                       -
+  segcalc\core\__init__.py                                          -
+  segcalc\core\data_model.py                                        -
+  segcalc\core\run_bundle.py                                        -
+  segcalc\core\run_manager.py                                       prints-PASS
+  segcalc\data\__init__.py                                          -
+  segcalc\data\validation_objects.py                                __main__
+  segcalc\datasets\__init__.py                                      -
+  segcalc\datasets\loader.py                                        -
+  segcalc\datasets\schemas.py                                       -
+  segcalc\methods\__init__.py                                       -
+  segcalc\methods\core.py                                           -
+  segcalc\methods\dilation.py                                       -
+  segcalc\methods\geodesics.py                                      -
+  segcalc\methods\power_law.py                                      prints-PASS
+  segcalc\methods\ppn.py                                            prints-PASS
+  segcalc\methods\qubit.py                                          -
+  segcalc\methods\redshift.py                                       -
+  segcalc\methods\regime.py                                         -
+  segcalc\methods\unified.py                                        -
+  segcalc\methods\xi.py                                             -
+  segcalc\plots\__init__.py                                         -
+  segcalc\plots\generators.py                                       __main__
+  segcalc\plotting\__init__.py                                      -
+  segcalc\plotting\paper_plots.py                                   __main__
+  segcalc\plotting\theory_plots.py                                  -
+  segcalc\reports\__init__.py                                       -
+  segcalc\reports\generator.py                                      -
+  segcalc\tests\__init__.py                                         prints-PASS
+  segcalc\tests\legacy_adapter.py                                   __main__ | prints-PASS
+  segcalc\tests\test_harness.py                                     __main__ | prints-PASS
+  segcalc\tests\test_invariants.py                                  class-test:5 | __main__ | assert:24
+  segcalc\tests\test_physics.py                                     class-test:4 | __main__ | assert:34
+  segcalc\tests\test_ssz_physics.py                                 class-test:9 | __main__ | assert:40
+  segcalc\validation\__init__.py                                    -
+  segcalc\validation\unified_validation.py                          class-test:2 | prints-PASS
+  ssz_core.py                                                       -
+  ssz_extended.py                                                   -
+  test_100_percent_perfection.py                                    prints-PASS
+  test_176_objects.py                                               -
+  test_batch_ns.py                                                  -
+  test_deltaM_fix.py                                                -
+  test_eso_validation.py                                            __main__
+  test_fixes.py                                                     -
+  test_golden_runs.py                                               prints-PASS
+  test_golden_validation.py                                         pytest:4 | __main__
+  test_physics_validation.py                                        assert:8 | prints-PASS
+  test_pipeline.py                                                  prints-PASS
+  test_run_artifacts.py                                             -
+  test_tie_regression.py                                            pytest:5 | __main__
+  test_weak_field_contract.py                                       pytest:4 | __main__
+  test_win_rate.py                                                  -
+  tests\test_experimental_validation.py                             class-test:6 | __main__ | assert:12 | prints-PASS
+  tests\test_geodesics.py                                           class-test:6 | __main__ | assert:24
+  tests\test_invariants_hard.py                                     class-test:7 | __main__ | assert:28
+  tests\test_qubit.py                                               class-test:9 | __main__ | assert:38
+  tests\test_regime_classification.py                               class-test:2 | assert:42
+  tests\test_ui_canonicalization.py                                 class-test:4 | __main__ | assert:19
+  tools\build_current_map.py                                        __main__
+  tools\build_truth_map.py                                          __main__
+  tools\diff_truth_vs_current.py                                    __main__ | prints-PASS
+  tools\trace_object.py                                             __main__
+
+=== ssz-schumann ===
+  hamtools\__init__.py                                              -
+  hamtools\antennas.py                                              __main__
+  hamtools\cli.py                                                   __main__
+  hamtools\core.py                                                  __main__
+  hamtools\feedline.py                                              __main__
+  hamtools\field_strength.py                                        __main__
+  hamtools\propagation.py                                           __main__
+  hamtools\ssz_extension.py                                         __main__
+  notebooks\layered_ssz_demo.py                                     -
+  run_all_ssz_tests.py                                              __main__ | prints-PASS
+  run_analysis.py                                                   __main__
+  scripts\check_download_progress.py                                __main__
+  scripts\check_zenodo_files.py                                     -
+  scripts\create_historical_proxies.py                              __main__ | prints-PASS
+  scripts\create_realistic_schumann_data.py                         __main__
+  scripts\debug_raw_schumann.py                                     __main__ | prints-PASS
+  scripts\download_and_process_zenodo.py                            __main__ | prints-PASS
+  scripts\download_real_zenodo.py                                   __main__
+  scripts\fetch_and_process_zenodo.py                               __main__
+  scripts\fetch_data.py                                             __main__
+  scripts\fetch_gw_data.py                                          __main__ | prints-PASS
+  scripts\fetch_nicer_info.py                                       __main__ | prints-PASS
+  scripts\fetch_real_data.py                                        __main__ | prints-PASS
+  scripts\fetch_real_schumann.py                                    __main__
+  scripts\fetch_space_weather.py                                    __main__ | prints-PASS
+  scripts\fetch_zenodo_schumann.py                                  __main__
+  scripts\plot_ssz_schumann_realdata.py                             __main__ | prints-PASS
+  scripts\process_all_months.py                                     __main__ | prints-PASS
+  scripts\process_one_month.py                                      __main__ | prints-PASS
+  scripts\process_zenodo_raw.py                                     pytest:1 | __main__
+  scripts\run_complete_analysis.py                                  __main__
+  scripts\run_complete_validation.py                                __main__
+  scripts\run_full_analysis.py                                      __main__
+  scripts\run_full_analysis_real_data.py                            __main__
+  scripts\run_full_validation.py                                    __main__ | prints-PASS
+  scripts\run_layered_ssz_analysis.py                               __main__
+  scripts\run_real_data_analysis.py                                 __main__
+  scripts\run_schumann_ssz_analysis.py                              __main__
+  scripts\run_sensitivity_analysis.py                               __main__
+  scripts\run_sensitivity_scan.py                                   __main__
+  scripts\run_ssz_analysis.py                                       __main__ | prints-PASS
+  scripts\run_ssz_analysis_v2.py                                    __main__ | prints-PASS
+  scripts\run_ssz_schumann_realdata.py                              __main__ | prints-PASS
+  scripts\setup_real_data.py                                        __main__ | prints-PASS
+  scripts\ssz_strongfield_analysis.py                               __main__ | prints-PASS
+  scripts\test_gamma_seg_transfer.py                                pytest:5 | __main__
+  scripts\test_realistic_data.py                                    __main__
+  scripts\test_ssz_correct_predictions.py                           pytest:7 | __main__
+  scripts\test_ssz_expected_regimes.py                              pytest:4 | __main__
+  scripts\test_ssz_full_scale.py                                    pytest:1 | __main__
+  setup.py                                                          -
+  ssz_analysis\__init__.py                                          -
+  ssz_analysis\alternative_observables.py                           -
+  ssz_analysis\core.py                                              -
+  ssz_analysis\gamma_seg_unified.py                                 __main__
+  ssz_analysis\multi_station.py                                     -
+  ssz_analysis\ssz_metric_correct.py                                pytest:1 | __main__
+  ssz_analysis\ssz_scaling.py                                       __main__
+  ssz_schumann\__init__.py                                          -
+  ssz_schumann\analysis\__init__.py                                 -
+  ssz_schumann\analysis\bayesian_selection.py                       __main__
+  ssz_schumann\analysis\compute_deltas.py                           -
+  ssz_schumann\analysis\correlation_plots.py                        -
+  ssz_schumann\analysis\model_comparison.py                         -
+  ssz_schumann\analysis\model_fits.py                               __main__ | prints-PASS
+  ssz_schumann\analysis\pipeline.py                                 __main__
+  ssz_schumann\analysis\regression_models.py                        -
+  ssz_schumann\analysis\spectral_coherence.py                       __main__ | prints-PASS
+  ssz_schumann\analysis\ssz_detection.py                            pytest:1
+  ssz_schumann\analysis\ssz_diagnostics.py                          __main__
+  ssz_schumann\config.py                                            -
+  ssz_schumann\data_io\__init__.py                                  -
+  ssz_schumann\data_io\data_loader.py                               __main__ | prints-PASS
+  ssz_schumann\data_io\lightning_wwlln.py                           -
+  ssz_schumann\data_io\merge.py                                     -
+  ssz_schumann\data_io\real_schumann_loader.py                      __main__ | prints-PASS
+  ssz_schumann\data_io\real_space_weather_loader.py                 __main__ | prints-PASS
+  ssz_schumann\data_io\schumann_real.py                             __main__
+  ssz_schumann\data_io\schumann_sierra_nevada.py                    prints-PASS
+  ssz_schumann\data_io\space_weather_noaa.py                        prints-PASS
+  ssz_schumann\data_io\unified_loader.py                            __main__
+  ssz_schumann\models\__init__.py                                   -
+  ssz_schumann\models\classical_schumann.py                         -
+  ssz_schumann\models\eta_calibration.py                            -
+  ssz_schumann\models\fit_wrappers.py                               -
+  ssz_schumann\models\layered_ssz.py                                __main__
+  ssz_schumann\models\maxwell_schumann.py                           __main__
+  ssz_schumann\models\multi_layer_ssz.py                            -
+  ssz_schumann\models\physical_ssz.py                               __main__
+  ssz_schumann\models\ssz_correction.py                             -
+  tests\__init__.py                                                 -
+  tests\data\__init__.py                                            -
+  tests\data\test_real_loaders.py                                   class-test:4 | __main__ | assert:49
+  tests\hamtools\__init__.py                                        -
+  tests\hamtools\test_hamtools.py                                   class-test:8 | __main__ | assert:41
+  tests\test_end_to_end.py                                          class-test:6 | __main__ | assert:45
+  tests\test_layered_ssz.py                                         class-test:9 | __main__ | assert:74
+  tests\test_models.py                                              class-test:4 | __main__ | assert:40
+  tests\test_physical_ssz.py                                        class-test:7 | assert:36
+  tests\test_t1_t4_implementation.py                                class-test:6 | __main__ | assert:46
+
+=== ssz-lensing ===
+  build_ui_part1.py                                                 -
+  create_standalone.py                                              -
+  datahub\__init__.py                                               -
+  datahub\loader.py                                                 -
+  datahub\validate.py                                               __main__ | prints-PASS
+  demos\demo_minimal.py                                             __main__
+  demos\demo_multipole.py                                           __main__
+  fix_colab.py                                                      prints-PASS
+  fix_nb.py                                                         prints-PASS
+  gradio_ui.py                                                      -
+  make_full.py                                                      prints-PASS
+  make_nb.py                                                        prints-PASS
+  patch_colab.py                                                    prints-PASS
+  pipeline\__init__.py                                              -
+  pipeline\run_case.py                                              -
+  pipeline\stages\__init__.py                                       -
+  pipeline\stages\visualize.py                                      -
+  plots\generate_all_plots.py                                       __main__
+  plots\generate_extended_plots.py                                  __main__
+  plots\generate_inversion_plots.py                                 __main__
+  plots\generate_plots.py                                           __main__ | prints-PASS
+  plots\plot_dof.py                                                 __main__ | prints-PASS
+  plots\plot_geometry.py                                            __main__
+  plots\plot_parameters.py                                          __main__
+  plots\plot_residuals.py                                           __main__
+  plots\plot_rootfinding.py                                         __main__
+  rebuild_colab_ui.py                                               prints-PASS
+  src\dataio\__init__.py                                            -
+  src\dataio\datasets.py                                            prints-PASS
+  src\dataio\formats.py                                             -
+  src\diagnostics\__init__.py                                       -
+  src\diagnostics\explorer.py                                       -
+  src\gauge_lens_inversion.py                                       __main__ | prints-PASS
+  src\geometry\__init__.py                                          -
+  src\geometry\plots.py                                             -
+  src\geometry\projection.py                                        -
+  src\geometry\scene3d.py                                           -
+  src\geometry\triad_scene.py                                       -
+  src\geometry\visualization.py                                     -
+  src\inversion\__init__.py                                         -
+  src\inversion\constraints.py                                      -
+  src\inversion\diagnostics.py                                      -
+  src\inversion\exact_solvers.py                                    prints-PASS
+  src\inversion\lens_equation.py                                    -
+  src\inversion\quad_inversion.py                                   -
+  src\inversion\root_solvers.py                                     -
+  src\model_zoo\__init__.py                                         -
+  src\model_zoo\artifacts.py                                        -
+  src\model_zoo\models.py                                           -
+  src\model_zoo\runner.py                                           -
+  src\models\__init__.py                                            -
+  src\models\base_model.py                                          prints-PASS
+  src\models\dual_path_inversion.py                                 prints-PASS
+  src\models\extended_model.py                                      -
+  src\models\linear_model.py                                        -
+  src\models\model_zoo.py                                           -
+  src\models\morphology.py                                          -
+  src\models\multi_source_model.py                                  prints-PASS
+  src\models\multipole_model.py                                     -
+  src\models\profiles.py                                            -
+  src\models\regime_classifier.py                                   -
+  src\models\ring_analysis.py                                       prints-PASS
+  src\models\ring_quadrupole_offset.py                              prints-PASS
+  src\models\root_finders.py                                        -
+  src\observables\__init__.py                                       -
+  src\observables\bundle.py                                         -
+  src\observables\realdata.py                                       -
+  src\schemas\__init__.py                                           -
+  src\schemas\input_snapshot.py                                     prints-PASS
+  src\schemas\quicklook.py                                          -
+  src\schemas\scene3d.py                                            -
+  src\schemas\solution.py                                           -
+  src\ui\__init__.py                                                -
+  src\ui\consumer_tabs.py                                           -
+  src\ui\data_tab.py                                                -
+  src\ui\extended_analysis.py                                       -
+  src\ui\main_ui.py                                                 __main__
+  src\ui\state.py                                                   prints-PASS
+  src\units\__init__.py                                             -
+  src\units\auto.py                                                 -
+  src\units\cosmology.py                                            -
+  src\utils\__init__.py                                             -
+  src\utils\defaults.py                                             -
+  src\utils\fallback_loader.py                                      -
+  src\utils\no_nan.py                                               prints-PASS
+  src\utils\validate_no_null.py                                     prints-PASS
+  src\validation\__init__.py                                        -
+  src\validation\data_model.py                                      -
+  src\validation\regime.py                                          -
+  src\validation\results.py                                         -
+  src\viz\scene3d_plot.py                                           -
+  tests\test_comprehensive_analysis.py                              class-test:2 | __main__ | assert:9
+  tests\test_datahub.py                                             class-test:6 | __main__ | assert:40 | prints-PASS
+  tests\test_dual_path.py                                           class-test:4 | __main__ | assert:18 | prints-PASS
+  tests\test_extended_model.py                                      pytest:7 | __main__
+  tests\test_fallback_no_nan.py                                     class-test:5 | __main__ | assert:28 | prints-PASS
+  tests\test_lensing_run.py                                         class-test:7 | __main__ | assert:49
+  tests\test_linear_model.py                                        pytest:4 | __main__
+  tests\test_minimal_exact.py                                       class-test:4 | __main__ | assert:21 | prints-PASS
+  tests\test_model_zoo.py                                           pytest:7
+  tests\test_multi_source.py                                        class-test:5 | __main__ | assert:38 | prints-PASS
+  tests\test_multipole_consistency.py                               class-test:3 | __main__ | assert:17 | prints-PASS
+  tests\test_no_null_contract.py                                    class-test:11 | __main__ | assert:71 | prints-PASS
+  tests\test_q2237_diagnostic.py                                    pytest:3 | __main__
+  tests\test_radial_scaling_gauge.py                                pytest:18 | __main__
+  tests\test_real_data.py                                           pytest:4 | __main__
+  tests\test_real_inversion.py                                      class-test:4 | __main__ | assert:14 | prints-PASS
+  tests\test_regime_explorer.py                                     pytest:10 | __main__
+  tests\test_ui_state.py                                            class-test:8 | __main__ | assert:43
+  tests\test_validation_lab.py                                      pytest:9 | __main__
+  tests\test_validation_module.py                                   pytest:4 | __main__
+  tests\zoo\__init__.py                                             -
+  tests\zoo\test_derivation_chain.py                                class-test:3 | assert:15 | prints-PASS
+  tests\zoo\test_geometry.py                                        class-test:4 | assert:35
+  tests\zoo\test_m4_extension.py                                    class-test:3 | assert:15
+  tests\zoo\test_ring_morphology.py                                 class-test:3 | assert:17
+  ui\__init__.py                                                    -
+  ui\cli.py                                                         __main__
+  ui_spec.py                                                        -
+  update_units_colab.py                                             prints-PASS
+
+=== Unified-Results ===
+  analyze_failures.py                                               __main__
+  analyze_missing_win.py                                            -
+  analyze_paired_failures.py                                        -
+  analyze_where_seg_fails.py                                        -
+  backups\scripts__init__bak_20251017_1505.py                       -
+  blackhole_animation.py                                            -
+  bound_energy.py                                                   __main__ | prints-PASS
+  build_deb_package.py                                              __main__
+  calculation_test.py                                               __main__
+  calibration_2pn.py                                                pytest:1 | __main__
+  carmen_qed_incompleteness_demo.py                                 __main__
+  check.py                                                          __main__ | prints-PASS
+  check_3c279.py                                                    -
+  ci\autorun_suite.py                                               __main__ | assert:1 | prints-PASS
+  ci\check_no_abs_paths.py                                          __main__ | prints-PASS
+  ci\fix_repo_paths.py                                              __main__ | prints-PASS
+  ci\nightly_autorun.py                                             __main__
+  ci\run_all_tests.py                                               __main__
+  ci\summary-all-tests.py                                           __main__ | prints-PASS
+  ci\summary_visualize.py                                           __main__ | prints-PASS
+  clean_dataset.py                                                  __main__ | prints-PASS
+  cli\__init__.py                                                   -
+  cli\ssz_rings.py                                                  __main__ | prints-PASS
+  complete-math.py                                                  prints-PASS
+  comprehensive_stratification.py                                   -
+  comprehensive_stratification_v2.py                                -
+  compute_vfall_dual_files.py                                       __main__
+  compute_vfall_from_z.py                                           __main__ | prints-PASS
+  conftest.py                                                       -
+  core\__init__.py                                                  -
+  core\compare.py                                                   -
+  core\inference.py                                                 -
+  core\lensing.py                                                   -
+  core\predict.py                                                   -
+  core\stability.py                                                 -
+  core\stats.py                                                     -
+  core\sweep.py                                                     -
+  core\uncertainty.py                                               -
+  core\xval.py                                                      -
+  create_complete_deb.py                                            __main__
+  create_deb_simple.py                                              __main__
+  create_final_deb.py                                               __main__
+  create_master_colab.py                                            prints-PASS
+  debian\segmented-spacetime-suite-extended\usr\lib\python3.13\dist-packages\segspace\__init__.py -
+  debian\segmented-spacetime-suite-extended\usr\lib\python3.13\dist-packages\segspace\cli.py __main__ | prints-PASS
+  debug_intersection.py                                             -
+  debug_intersection_fixed.py                                       -
+  demo_paper_exports.py                                             __main__
+  derive_effective_stress_energy.py                                 __main__ | prints-PASS
+  evidenz-ssz\results\scripts\ssz_blackhole_bomb.py                 __main__ | prints-PASS
+  evidenz-ssz\results\scripts\ssz_blackhole_bomb_complete.py        __main__ | prints-PASS
+  evidenz-ssz\results\scripts\ssz_blackhole_bomb_full.py            __main__ | prints-PASS
+  evidenz-ssz\results\scripts\ssz_bomb_animation.py                 __main__ | prints-PASS
+  evidenz-ssz\results\scripts\ssz_proof_check_v6.py                 __main__ | prints-PASS
+  evidenz-ssz\results\scripts\ssz_proof_sweep_v6.py                 __main__
+  evidenz-ssz\results\scripts\ssz_viz_v6.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\animations\blackhole_animation.py             -
+  evidenz-ssz\scripts\animations\make_ssz_anim.py                   prints-PASS
+  evidenz-ssz\scripts\animations\ssz_animation_master.py            __main__ | prints-PASS
+  evidenz-ssz\scripts\animations\ssz_animation_perfect.py           prints-PASS
+  evidenz-ssz\scripts\animations\ssz_animation_scientific.py        prints-PASS
+  evidenz-ssz\scripts\animations\ssz_animator.py                    __main__ | prints-PASS
+  evidenz-ssz\scripts\animations\ssz_simple_render.py               prints-PASS
+  evidenz-ssz\scripts\animations\ssz_stellar_nucleosynthesis_animator.py __main__
+  evidenz-ssz\scripts\black_hole_bomb\ssz_blackhole_bomb.py         __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_blackhole_bomb_complete.py __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_blackhole_bomb_full.py    __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_bomb_animation.py         __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_gr_bridge.py              __main__
+  evidenz-ssz\scripts\black_hole_bomb\ssz_live_visualizer.py        __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_parameter_scan.py         __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_plot_packager.py          __main__ | prints-PASS
+  evidenz-ssz\scripts\black_hole_bomb\ssz_resonance_explorer.py     __main__ | prints-PASS
+  evidenz-ssz\scripts\cosmology\ssz_cosmo_animator.py               __main__ | prints-PASS
+  evidenz-ssz\scripts\cosmology\ssz_cosmo_core.py                   -
+  evidenz-ssz\scripts\cosmology\ssz_cosmo_data.py                   prints-PASS
+  evidenz-ssz\scripts\cosmology\ssz_cosmo_models.py                 -
+  evidenz-ssz\scripts\create_all_language_versions.py               __main__ | prints-PASS
+  evidenz-ssz\scripts\make_ssz_anim.py                              prints-PASS
+  evidenz-ssz\scripts\proof_systems\v6\ssz_proof_check_v6.py        __main__ | prints-PASS
+  evidenz-ssz\scripts\proof_systems\v6\ssz_proof_sweep_v6.py        __main__
+  evidenz-ssz\scripts\proof_systems\v6\ssz_viz_v6.py                __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_animation_master.py                       __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_animation_perfect.py                      prints-PASS
+  evidenz-ssz\scripts\ssz_animation_scientific.py                   prints-PASS
+  evidenz-ssz\scripts\ssz_animator.py                               __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_bigbang_vs_ssz_anim.py                    __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_blackhole_bomb.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_blackhole_bomb_complete.py                __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_blackhole_bomb_full.py                    __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_bomb_animation.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_cosmo_animator.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_cosmo_core.py                             -
+  evidenz-ssz\scripts\ssz_cosmo_data.py                             prints-PASS
+  evidenz-ssz\scripts\ssz_cosmo_models.py                           -
+  evidenz-ssz\scripts\ssz_covariant_smoketest_verbose_lino_casu.py  __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_gr_bridge.py                              __main__
+  evidenz-ssz\scripts\ssz_live_visualizer.py                        __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_parameter_scan.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_plot_packager.py                          __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_check.py                            __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_check_v4.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_check_v5.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_check_v6.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_sweep.py                            __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_sweep_v3.py                         __main__
+  evidenz-ssz\scripts\ssz_proof_sweep_v4.py                         __main__ | assert:3 | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_sweep_v5.py                         __main__ | assert:4 | prints-PASS
+  evidenz-ssz\scripts\ssz_proof_sweep_v6.py                         __main__
+  evidenz-ssz\scripts\ssz_resonance_explorer.py                     __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_simple_render.py                          prints-PASS
+  evidenz-ssz\scripts\ssz_video_renderer.py                         __main__ | prints-PASS
+  evidenz-ssz\scripts\ssz_viz_v6.py                                 __main__ | prints-PASS
+  evidenz-ssz\scripts\test_pipeline_quick.py                        prints-PASS
+  evidenz-ssz\scripts\text_safety_check.py                          __main__ | prints-PASS
+  evidenz-ssz\scripts\tools\create_all_language_versions.py         __main__ | prints-PASS
+  evidenz-ssz\scripts\tools\galilean_redshift.py                    -
+  evidenz-ssz\scripts\tools\researchgate_weinberg_response.py       prints-PASS
+  evidenz-ssz\scripts\tools\segmented_space_time_full_proof.py      __main__ | prints-PASS
+  evidenz-ssz\scripts\tools\test_pipeline_quick.py                  prints-PASS
+  evidenz-ssz\scripts\tools\text_safety_check.py                    __main__ | prints-PASS
+  evidenz-ssz\scripts\train.py                                      -
+  evidenz-ssz\scripts\video_production\ssz_bigbang_video_producer.py __main__ | prints-PASS
+  evidenz-ssz\scripts\video_production\ssz_bigbang_vs_ssz_anim.py   __main__ | prints-PASS
+  evidenz-ssz\scripts\video_production\ssz_extended_video_producer_5parts.py __main__
+  evidenz-ssz\scripts\video_production\ssz_final_video_producer.py  __main__ | prints-PASS
+  evidenz-ssz\scripts\video_production\ssz_simple_video_producer.py __main__ | prints-PASS
+  evidenz-ssz\scripts\video_production\ssz_video_renderer.py        __main__ | prints-PASS
+  evidenz-ssz\scripts\video_production\ssz_video_scripts_final.py   __main__ | prints-PASS
+  evidenz-ssz\scripts\video_production\ssz_video_scripts_part4_part5.py __main__ | prints-PASS
+  expand_dataset.py                                                 __main__ | prints-PASS
+  extend_all_tests.py                                               __main__ | assert:2 | prints-PASS
+  fetch_blackholes_comprehensive.py                                 __main__ | prints-PASS
+  fetch_eso_br_gamma.py                                             __main__
+  fetch_ligo.py                                                     __main__
+  fetch_real_astronomical_data.py                                   __main__ | prints-PASS
+  fetch_robust_5000.py                                              __main__ | prints-PASS
+  fetch_robust_5000_enhanced.py                                     __main__ | prints-PASS
+  FINAL_MASTER_ENERGY_ANALYSIS.py                                   __main__ | prints-PASS
+  final_test.py                                                     -
+  final_validation_findings.py                                      __main__ | prints-PASS
+  find_failing_object.py                                            -
+  fix_index_links.py                                                -
+  further-bak.py                                                    __main__
+  generate_energy_dataset.py                                        __main__ | prints-PASS
+  generate_eso_breakthrough_plots.py                                __main__
+  generate_key_plots.py                                             prints-PASS
+  generate_test_data.py                                             __main__ | prints-PASS
+  gr_ssz_intersection_failsafe.py                                   prints-PASS
+  gr_ssz_intersection_schwachfeld.py                                prints-PASS
+  imports\2025-10-17_upload_missing\create_deb_in_upload.py         __main__
+  imports\2025-10-17_upload_missing\create_debian_package.py        __main__
+  imports\2025-10-17_upload_missing\create_real_deb.py              __main__
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\.pybuild\cpython3_3.13_ssz-projection-suite\build\ssz_projection_suite\__init__.py -
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\.pybuild\cpython3_3.13_ssz-projection-suite\build\ssz_projection_suite\run_all_ssz_terminal.py prints-PASS
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\.pybuild\cpython3_3.13_ssz-projection-suite\build\ssz_projection_suite\segspace_all_in_one_extended.py __main__ | assert:1
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\debian\ssz-projection-suite\usr\lib\python3\dist-packages\ssz_projection_suite\__init__.py -
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\debian\ssz-projection-suite\usr\lib\python3\dist-packages\ssz_projection_suite\run_all_ssz_terminal.py prints-PASS
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\debian\ssz-projection-suite\usr\lib\python3\dist-packages\ssz_projection_suite\segspace_all_in_one_extended.py __main__ | assert:1
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\setup.py -
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\ssz_projection_suite\__init__.py -
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\ssz_projection_suite\run_all_ssz_terminal.py prints-PASS
+  imports\2025-10-17_upload_missing\ssz-projection-suite-1.0\ssz_projection_suite\segspace_all_in_one_extended.py __main__ | assert:1
+  investigate_paired_test.py                                        prints-PASS
+  lagrangian_tests.py                                               __main__
+  lino_qed_test.py                                                  __main__
+  merge_complete_dataset.py                                         __main__ | prints-PASS
+  optimal_regime_validation.py                                      prints-PASS
+  paper.py                                                          __main__
+  perfect_energy_formulas.py                                        __main__ | prints-PASS
+  perfect_equilibrium_analysis.py                                   -
+  perfect_paired_test.py                                            __main__ | prints-PASS
+  perfect_paired_test_detailed.py                                   -
+  perfect_seg_analysis.py                                           __main__ | prints-PASS
+  phi_bic_test.py                                                   __main__ | prints-PASS
+  phi_test.py                                                       __main__ | prints-PASS
+  PLATFORM_COMPATIBILITY_CHECK.py                                   __main__ | prints-PASS
+  qnm_eikonal.py                                                    __main__
+  redshift_ratio_multi_object_plot_with_deltaM.py                   -
+  redshift_segment_density.py                                       __main__ | prints-PASS
+  redshift_segment_density_plot.py                                  -
+  ring_temperature_to_velocity.py                                   __main__ | prints-PASS
+  run_all.py                                                        __main__
+  run_all_ssz_terminal.py                                           __main__ | prints-PASS
+  run_all_validations.py                                            __main__ | prints-PASS
+  run_bomb_tests.py                                                 __main__ | prints-PASS
+  run_complete_ssz_validation.py                                    prints-PASS
+  run_complete_test_suite.py                                        prints-PASS
+  run_complete_validation.py                                        __main__ | prints-PASS
+  run_complete_validation_extended.py                               __main__ | prints-PASS
+  run_complete_validation_master.py                                 __main__ | prints-PASS
+  run_comprehensive_tests.py                                        __main__ | prints-PASS
+  run_full_suite.py                                                 __main__ | prints-PASS
+  run_gaia_ssz_pipeline.py                                          __main__
+  run_pipeline_timed.py                                             __main__
+  run_proper_time_validation.py                                     prints-PASS
+  run_shapiro_delay_validation.py                                   prints-PASS
+  run_ssz_theory_validation.py                                      prints-PASS
+  run_ssz_unified_validation.py                                     -
+  run_ssz_validation.py                                             prints-PASS
+  run_toe_validation_v2.py                                          __main__ | prints-PASS
+  scripts\__init__.py                                               -
+  scripts\_repo_paths.py                                            -
+  scripts\adapters\gaia_loader.py                                   -
+  scripts\adapters\planck_loader.py                                 -
+  scripts\adapters\sdss_loader.py                                   -
+  scripts\addons\segment_redshift_addon.py                          __main__ | prints-PASS
+  scripts\analysis\eht_shadow_comparison.py                         __main__
+  scripts\analysis\hawking_proxy_fit.py                             __main__
+  scripts\analysis\redshift_robustness.py                           __main__
+  scripts\analyze_bilingual_coverage.py                             __main__ | prints-PASS
+  scripts\analyze_readability.py                                    __main__ | prints-PASS
+  scripts\audit_cross_references.py                                 __main__ | prints-PASS
+  scripts\audit_mathematical_notation.py                            __main__ | prints-PASS
+  scripts\autofetch.py                                              __main__ | prints-PASS
+  scripts\check_concept_flow.py                                     __main__ | prints-PASS
+  scripts\check_consistency.py                                      __main__ | prints-PASS
+  scripts\check_data_documentation.py                               __main__ | prints-PASS
+  scripts\check_examples.py                                         __main__ | prints-PASS
+  scripts\check_formula_derivations.py                              __main__ | prints-PASS
+  scripts\check_limit_behavior.py                                   __main__ | prints-PASS
+  scripts\check_pdf_md_quality.py                                   __main__ | prints-PASS
+  scripts\check_reproducibility.py                                  __main__ | prints-PASS
+  scripts\check_test_documentation.py                               __main__ | assert:2 | prints-PASS
+  scripts\check_theory_completeness.py                              __main__ | prints-PASS
+  scripts\check_unit_consistency.py                                 __main__ | prints-PASS
+  scripts\clean_real_data_emission_lines.py                         __main__
+  scripts\create_documentation_inventory.py                         __main__ | prints-PASS
+  scripts\create_formula_code_map.py                                __main__ | prints-PASS
+  scripts\create_terminology_glossary.py                            __main__ | prints-PASS
+  scripts\data_acquisition\fetch_m87_spectrum.py                    __main__
+  scripts\data_acquisition\parse_ssz_horizon.py                     __main__
+  scripts\data_generators\add_velocity_to_continuum.py              __main__ | prints-PASS
+  scripts\data_generators\calculate_z_geom_for_continuum.py         __main__ | prints-PASS
+  scripts\data_generators\complete_all_missing_data.py              __main__
+  scripts\data_generators\complete_data_quality_analysis.py         __main__ | prints-PASS
+  scripts\data_generators\fill_missing_columns.py                   __main__
+  scripts\data_generators\fix_scientific_errors.py                  __main__
+  scripts\data_generators\generate_thermal_spectrum.py              __main__ | prints-PASS
+  scripts\data_generators\import_real_observations.py               __main__ | prints-PASS
+  scripts\data_generators\integrate_ned_spectrum.py                 __main__ | prints-PASS
+  scripts\data_generators\remove_synthetic_data.py                  __main__ | prints-PASS
+  scripts\data_generators\split_data_by_type.py                     __main__ | prints-PASS
+  scripts\data_generators\update_synthetic_orbits.py                __main__ | prints-PASS
+  scripts\data_generators\validate_dataset.py                       __main__ | prints-PASS
+  scripts\data_generators\verify_all_sources_are_real.py            __main__
+  scripts\data_generators\verify_source_specific_data.py            __main__ | prints-PASS
+  scripts\data_loaders\load_timeseries.py                           __main__ | prints-PASS
+  scripts\extract_dataset_ids_from_query.py                         __main__
+  scripts\fetch_gaia_full.py                                        __main__ | prints-PASS
+  scripts\fetch_open_emission_data.py                               __main__ | prints-PASS
+  scripts\fetch_planck.py                                           __main__ | prints-PASS
+  scripts\gaia\fetch_gaia_adql.py                                   __main__
+  scripts\gaia\fetch_gaia_conesearch.py                             __main__
+  scripts\planck\fetch_planck_map.py                                __main__
+  scripts\preprocess\gaia_clean_map.py                              __main__
+  scripts\preprocess\gaia_frame_transform.py                        __main__
+  scripts\preprocess\io_utils.py                                    -
+  scripts\process_eso_fits_to_csv.py                                __main__
+  scripts\qa_r_eff_check.py                                         __main__ | prints-PASS
+  scripts\ring_temperature_to_velocity.py                           __main__
+  scripts\sdss\fetch_sdss_catalog.py                                __main__
+  scripts\ssz\build_solar_system_model.py                           __main__
+  scripts\ssz\build_ssz_model.py                                    __main__
+  scripts\ssz\cosmology.py                                          -
+  scripts\ssz\gamma.py                                              -
+  scripts\ssz\segmenter.py                                          -
+  scripts\ssz\sweep.py                                              __main__
+  scripts\ssz_azure_tts.py                                          pytest:1 | __main__
+  scripts\ssz_gif_renderer_part1.py                                 __main__ | prints-PASS
+  scripts\ssz_gif_renderer_part2.py                                 __main__ | prints-PASS
+  scripts\ssz_gif_renderer_part3.py                                 __main__
+  scripts\ssz_gif_time_adjuster.py                                  __main__ | prints-PASS
+  scripts\ssz_trilingual_master.py                                  __main__ | prints-PASS
+  scripts\ssz_video_concat.py                                       pytest:1 | __main__
+  scripts\tests\__init__.py                                         -
+  scripts\tests\conftest.py                                         -
+  scripts\tests\data_smoke_fetch.py                                 -
+  scripts\tests\test_cosmo_fields.py                                pytest:1
+  scripts\tests\test_cosmo_multibody.py                             pytest:3
+  scripts\tests\test_data_fetch.py                                  pytest:3
+  scripts\tests\test_data_validation.py                             pytest:11 | __main__
+  scripts\tests\test_gaia_required_columns.py                       pytest:3
+  scripts\tests\test_hawking_spectrum_continuum.py                  pytest:1 | __main__
+  scripts\tests\test_horizon_hawking_predictions.py                 pytest:7 | __main__
+  scripts\tests\test_plot_ssz_maps.py                               pytest:2
+  scripts\tests\test_segmenter.py                                   pytest:2
+  scripts\tests\test_ssz_invariants.py                              pytest:6
+  scripts\tests\test_ssz_kernel.py                                  pytest:4
+  scripts\tests\test_utf8_encoding.py                               pytest:4
+  scripts\tools\__init__.py                                         -
+  scripts\tools\check_explanation_gaps.py                           __main__ | prints-PASS
+  scripts\tools\logging_utils.py                                    -
+  scripts\tools\retry.py                                            -
+  scripts\tools\standardize_terminology.py                          __main__
+  scripts\utils\summarize_results.py                                -
+  scripts\visualization\create_readme_plots.py                      __main__ | prints-PASS
+  scripts\viz\_theme.py                                             -
+  scripts\viz\plot_solar_ssz.py                                     __main__
+  scripts\viz\plot_ssz_maps.py                                      __main__ | prints-PASS
+  scripts\viz\suite_dashboard.py                                    prints-PASS
+  Segmentdichte-Analyse.py                                          -
+  segmented spacetime - final.py                                    __main__ | assert:1
+  segmented-solar\demo_simple.py                                    __main__
+  segmented-solar\src\__init__.py                                   -
+  segmented-solar\src\app.py                                        __main__
+  segmented-solar\src\coords.py                                     __main__
+  segmented-solar\src\fetch_gaia.py                                 __main__
+  segmented-solar\src\fetch_vizier.py                               __main__
+  segmented-solar\src\icosphere.py                                  __main__
+  segmented-solar\src\orbits.py                                     __main__
+  segmented-solar\src\segments.py                                   __main__
+  segmented-solar\src\viz_plotly.py                                 __main__
+  segmented_full_calc_proof.py                                      -
+  segmented_full_calc_proof_chud_bridge.py                          __main__
+  segmented_full_calc_with_pi_cache.py                              __main__
+  segmented_full_compare_proof.py                                   -
+  segmented_full_proof.py                                           prints-PASS
+  segmented_mass.py                                                 assert:1 | prints-PASS
+  segspace_all_in_one.py                                            __main__ | prints-PASS
+  segspace_all_in_one_extended.py                                   __main__ | assert:1 | prints-PASS
+  segspace_deltaM_tuner.py                                          __main__
+  segspace_deltaM_tuner_v2.py                                       __main__
+  segspace_enhanced_pi_bridge.py                                    __main__ | prints-PASS
+  segspace_enhanced_test.py                                         __main__
+  segspace_enhanced_test_better.py                                  __main__
+  segspace_enhanced_test_better_final.py                            __main__
+  segspace_final_explain.py                                         __main__ | prints-PASS
+  segspace_final_test.py                                            __main__ | prints-PASS
+  segspace_kappa_sweep.py                                           __main__ | prints-PASS
+  segspace_make_debug_from_csv.py                                   __main__
+  segspace_pairtest_vs_sr.py                                        __main__
+  segspacetime_quick_tests.py                                       __main__ | prints-PASS
+  shadow_predictions.py                                             __main__
+  shadow_predictions_exact.py                                       __main__
+  simple_failure_analysis.py                                        __main__
+  smoke_test_all.py                                                 pytest:22 | __main__
+  src\segspace\__init__.py                                          -
+  src\segspace\cli.py                                               __main__ | prints-PASS
+  ssz\__init__.py                                                   -
+  ssz\segwave\__init__.py                                           -
+  ssz\segwave\calib.py                                              -
+  ssz\segwave\io.py                                                 -
+  ssz\segwave\seg_wave_propagation.py                               -
+  ssz\segwave\visuals.py                                            -
+  ssz\segwave.py                                                    -
+  ssz_blackhole_bomb_template.py                                    -
+  ssz_cosmos\__init__.py                                            -
+  ssz_cosmos\bodies.py                                              -
+  ssz_cosmos\constants.py                                           -
+  ssz_cosmos\ephemerides.py                                         -
+  ssz_cosmos\field.py                                               -
+  ssz_cosmos\simulation.py                                          -
+  ssz_covariant_smoketest_verbose_lino_casu.py                      __main__ | prints-PASS
+  ssz_interactive_gui.py                                            __main__ | prints-PASS
+  ssz_stability_animation.py                                        __main__ | prints-PASS
+  ssz_stability_three_figures.py                                    __main__ | prints-PASS
+  ssz_test_suite.py                                                 class-test:5 | __main__ | assert:34 | prints-PASS
+  ssz_theory_segmented.py                                           __main__ | prints-PASS
+  ssz_unified_suite.py                                              __main__
+  stratified_paired_test.py                                         prints-PASS
+  test_c1_segments.py                                               __main__ | prints-PASS
+  test_c2_curvature_proxy.py                                        __main__ | prints-PASS
+  test_c2_segments_strict.py                                        __main__ | prints-PASS
+  test_clone_and_verify.py                                          __main__ | prints-PASS
+  test_energies_minimal.py                                          __main__ | prints-PASS
+  test_energy_1000.py                                               pytest:1 | __main__
+  test_energy_conditions.py                                         __main__ | prints-PASS
+  test_grid_convergence.py                                          pytest:1 | __main__
+  test_output_script.py                                             -
+  test_phi_impact.py                                                -
+  test_ppn_exact.py                                                 __main__ | prints-PASS
+  test_solutions_100_percent.py                                     -
+  test_theory_predictions_cross_platform.py                         __main__ | prints-PASS
+  test_utf8_encoding.py                                             -
+  test_vfall_duality.py                                             __main__ | prints-PASS
+  tests\COMPLETE_test_segwave_core_verbose.py                       pytest:7
+  tests\cosmos\lastworking\conftest.py                              -
+  tests\cosmos\lastworking\test_multi_body_sigma.py                 pytest:1
+  tests\cosmos\test_multi_body_sigma.py                             pytest:1
+  tests\lastworking\conftest.py                                     -
+  tests\lastworking\test_segwave_core.py                            class-test:5 | __main__ | assert:28 | prints-PASS
+  tests\quick_install_tests.py                                      pytest:6 | __main__
+  tests\test_print_all_md.py                                        pytest:6 | __main__
+  tests\test_ring_datasets.py                                       pytest:6 | __main__
+  tests\test_segwave_cli.py                                         class-test:4 | __main__ | assert:60
+  tests\test_segwave_core.py                                        class-test:5 | __main__ | assert:28 | prints-PASS
+  tests\test_ssz_real_data_comprehensive.py                         class-test:6 | __main__ | assert:9 | prints-PASS
+  tools\__init__.py                                                 -
+  tools\figure_captions.py                                          -
+  tools\figure_catalog.py                                           prints-PASS
+  tools\figure_index.py                                             __main__
+  tools\figure_orchestrator.py                                      -
+  tools\io_utils.py                                                 -
+  tools\metrics.py                                                  -
+  tools\plot_helpers.py                                             -
+  tools\plots.py                                                    -
+  tools\print_all_md.py                                             __main__
+  tune_phi_for_87_percent.py                                        pytest:1
+  update_file_links.py                                              __main__ | prints-PASS
+  vergleich.py                                                      -
+  vergleich_2.py                                                    -
+  verify_lfs_setup.py                                               __main__ | prints-PASS
+  verify_theory_scientific.py                                       __main__ | prints-PASS
+
+=== ssz-trajectories ===
+  examples\nonradial_deflection.py                                  -
+  examples\plot_xi_profile.py                                       -
+  examples\radial_null_outgoing.py                                  -
+  expand_ch33.py                                                    prints-PASS
+  gen_ch33_plots.py                                                 __main__
+  src\ssz_trajectories\__init__.py                                  -
+  src\ssz_trajectories\analysis.py                                  -
+  src\ssz_trajectories\constants.py                                 -
+  src\ssz_trajectories\embedding.py                                 -
+  src\ssz_trajectories\integrator.py                                -
+  src\ssz_trajectories\xi.py                                        prints-PASS
+  tests\__init__.py                                                 -
+  tests\test_analysis.py                                            class-test:5 | assert:18
+  tests\test_embedding.py                                           class-test:4 | assert:11
+  tests\test_integrator.py                                          class-test:6 | assert:24
+  tests\test_xi.py                                                  class-test:6 | assert:24
+
+=== segmented-energy ===
+  compare_all_versions.py                                           prints-PASS
+  conftest.py                                                       -
+  data\test_dataset.py                                              -
+  energy_n_segments_astropy.py                                      __main__ | prints-PASS
+  fetch_large_dataset.py                                            __main__
+  fetch_observer_data.py                                            __main__
+  fetch_real_data.py                                                __main__ | prints-PASS
+  final_comparison.py                                               prints-PASS
+  FINAL_PERFECT_TEST.py                                             __main__ | prints-PASS
+  generate_output.py                                                prints-PASS
+  MASTER_ANALYSIS_COMPLETE.py                                       __main__ | prints-PASS
+  segmented_energy.py                                               __main__ | prints-PASS
+  segmented_energy_complete.py                                      pytest:1 | __main__
+  segmented_energy_ephemeris.py                                     __main__
+  segmented_energy_real_data.py                                     pytest:3 | __main__
+  segmented_energy_ssz.py                                           __main__
+  segmented_energy_unified.py                                       __main__
+  segmented_energy_windsurf.py                                      __main__ | prints-PASS
+  segmented_spacetime_energy.py                                     __main__ | assert:2
+  test_on_complete_dataset.py                                       pytest:1 | __main__
+  test_ssz_complete_dataset.py                                      pytest:1 | __main__
+
+=== frequency-curvature-validation ===
+  plots\generate_plots.py                                           __main__ | prints-PASS
+  run_all_tests.py                                                  __main__ | prints-PASS
+  tests\__init__.py                                                 -
+  tests\test_dynamic_loops.py                                       pytest:4 | __main__
+  tests\test_experimental_validation.py                             __main__ | prints-PASS
+  tests\test_nsr_ngr_separation.py                                  pytest:4 | __main__
+  tests\test_radial_scaling_gauge.py                                pytest:18 | __main__
+  tests\test_section2_constant_frequency.py                         pytest:5 | __main__
+  tests\test_section3_first_order_shifts.py                         pytest:5 | __main__
+  tests\test_section4_differences_of_differences.py                 pytest:4 | __main__
+  tests\test_section5_relation_to_gr.py                             pytest:6 | __main__
+  tests\test_section6_ssz_integration.py                            pytest:7 | __main__
+  tests\test_section7_conclusion.py                                 pytest:6 | __main__
+  tests\test_shapiro_delay.py                                       class-test:6 | assert:13
+  tests\test_ssz_physics.py                                         pytest:10 | __main__
+
+=== g79-cygnus-test ===
+  _analyze_book.py                                                  -
+  _build_complete_books.py                                          prints-PASS
+  _check_parity.py                                                  -
+  _create_missing_de.py                                             prints-PASS
+  _fix_all_inconsistencies.py                                       prints-PASS
+  _fix_inconsistencies.py                                           -
+  _generate_pdfs.py                                                 prints-PASS
+  _generate_pdfs_fpdf2.py                                           -
+  _generate_pdfs_v2.py                                              -
+  _generate_pdfs_v3.py                                              prints-PASS
+  _insert_ch12.py                                                   -
+  _insert_de.py                                                     prints-PASS
+  _insert_executive_summary.py                                      prints-PASS
+  _insert_nicer.py                                                  prints-PASS
+  _insert_worked_examples.py                                        prints-PASS
+  COMPLETE_PAPER_FIGURES.py                                         -
+  CREATE_ANIMATION_VARIANTS_FINAL.py                                prints-PASS
+  GENERATE_ENGLISH_HIGHLIGHTS.py                                    prints-PASS
+  GENERATE_TEMPERATURE_ANIMATIONS.py                                prints-PASS
+  GENERATE_THREE_PHASE_ANIMATIONS.py                                prints-PASS
+  run_all_analysis.py                                               __main__ | prints-PASS
+  RUN_ALL_VALIDATED_TESTS.py                                        __main__ | prints-PASS
+  scripts\analyze_nh3_velocities.py                                 __main__ | prints-PASS
+  scripts\calculate_core_mass.py                                    __main__ | prints-PASS
+  scripts\catalog_to_rings.py                                       __main__ | prints-PASS
+  scripts\core_mass_empirical.py                                    pytest:1 | __main__
+  scripts\core_mass_ssz_pure_integration.py                         __main__
+  scripts\energy_release_model.py                                   __main__ | prints-PASS
+  scripts\extract_akari_rings.py                                    __main__ | prints-PASS
+  scripts\extract_co_velocity_rings.py                              __main__ | prints-PASS
+  scripts\extract_radial_profile_from_fits.py                       __main__ | prints-PASS
+  scripts\fetch_and_extract_complete.py                             __main__ | prints-PASS
+  scripts\fetch_g79_ir_data.py                                      __main__ | prints-PASS
+  scripts\fetch_telescope_data.py                                   __main__ | prints-PASS
+  scripts\fetch_telescope_data_api.py                               __main__ | prints-PASS
+  scripts\fit_gamma_seg_profile.py                                  __main__ | prints-PASS
+  scripts\fits_to_ring_profile.py                                   __main__ | prints-PASS
+  scripts\fix_core_mass_integration.py                              pytest:1 | __main__
+  scripts\plot_ir_rings.py                                          __main__ | prints-PASS
+  scripts\process_ir_catalogs.py                                    __main__ | prints-PASS
+  scripts\radio_redshift_prediction.py                              __main__ | prints-PASS
+  scripts\test_boundary_v_realistic.py                              pytest:1 | __main__
+  scripts\test_boundary_velocity_boost.py                           pytest:2 | __main__
+  scripts\test_irsa_catalogs.py                                     prints-PASS
+  scripts\test_segmented_spacetime_full.py                          __main__ | prints-PASS
+  scripts\two_metric_model.py                                       __main__ | prints-PASS
+  scripts\verify_paper_predictions_FIXED.py                         __main__ | prints-PASS
+  ssz_windsurf_tutorial.py                                          __main__ | prints-PASS
+  TEST_PARSEC_CONVERSION.py                                         prints-PASS
+  TEST_TEMPERATURE_EQUATIONS_COMPLETE.py                            prints-PASS
+  TEST_THREE_PHASE_DECOUPLING.py                                    prints-PASS
+
+=== ssz-lagrange ===
+  conftest_wrapper.py                                               pytest:1
+  run_cosmo.py                                                      __main__
+  ssz_cosmo.py                                                      -
+  test_lagrange_ssz.py                                              prints-PASS
