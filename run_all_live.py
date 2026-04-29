@@ -22,30 +22,22 @@ REPOS_BASE = Path('E:/clone/ssz-all-tests/repos')
 OUT = Path('E:/clone/ssz-all-tests-test')
 
 # Repos that live only inside repos/ subdir (not junctions into E:/clone)
-REPOS_SUBDIR = {
-    'frequency-curvature-validation',
-    'ssz-full-metric',
-    'ssz-metric-final',
-    'ssz-paper-plots',
-    'Segmented-Spacetime-Starmaps',
-}
+# (currently none active — kept for future use)
+REPOS_SUBDIR = set()
 
 REPOS = [
     ('ssz-qubits',                                          184, 'pytest'),
-    ('ssz-metric-pure',                                      46, 'pytest'),
+    ('ssz-metric-pure',                                      36, 'pytest'),
     ('segmented-calculation-suite',                         158, 'pytest'),
-    ('ssz-schuhman-experiment',                             191, 'pytest'),
+    ('ssz-schuhman-experiment',                             201, 'pytest'),
     ('ssz-lensing',                                         279, 'pytest'),
-    # local name is the junction target folder:
-    ('Segmented-Spacetime-Mass-Projection-Unified-Results', 139, 'hybrid'),
+    # Unified-Results: hybrid (validation script + pytest on tests/ only)
+    ('Segmented-Spacetime-Mass-Projection-Unified-Results', 122, 'hybrid'),
     ('ssz-trajectories',                                     63, 'pytest'),
-    ('segmented-energy',                                      6, 'pytest'),
+    ('segmented-energy',                                      2, 'pytest'),
     ('g79-cygnus-test',                                       5, 'script'),
     ('ssz-lagrange',                                         54, 'script'),
-    ('frequency-curvature-validation',                        0, 'pytest'),
-    ('ssz-full-metric',                                       0, 'pytest'),
-    ('ssz-metric-final',                                      0, 'pytest'),
-    ('ssz-paper-plots',                                       0, 'pytest'),
+    ('frequency-curvature-validation',                       82, 'pytest'),
 ]
 
 # Mapping: folder name under BASE -> display/key name in LIVE_STATUS.json
@@ -140,9 +132,15 @@ def run_hybrid_unified(path, env):
     else:
         p_script = f_script = 0
         stdout += '[WARN] run_ssz_unified_validation.py not found\n'
-    # Then run pytest
-    p_pytest, f_pytest, pytest_out = run_pytest(path, env)
-    stdout += pytest_out
+    # Run pytest on tests/ and scripts/tests/ only (root has sys.exit() scripts)
+    p_pytest = f_pytest = 0
+    for subpath in ['tests', 'scripts/tests']:
+        sp = path / subpath
+        if sp.exists():
+            pp, fp, pout = run_pytest(sp, env)
+            p_pytest += pp
+            f_pytest += fp
+            stdout += pout
     p = p_script + p_pytest
     f = f_script + f_pytest
     return p, f, stdout

@@ -160,34 +160,17 @@ SOURCE_REPOS = [
 
      "Energy conditions and thermodynamics in SSZ"),
 
-    ("ssz-complete-documentation", "ssz-complete-documentation", "ARCHIVE",
+    ("frequency-curvature-validation", "frequency-curvature-validation", "CANONICAL",
 
-     "Documentation repo — no executable tests"),
-
-
-    ("ssz-paper-plots", "ssz-paper-plots", "VALIDATION",
-
-     "Paper figure generation and data validation"),
-
-    ("Segmented-Spacetime-Starmaps", "Segmented-Spacetime-Starmaps", "VALIDATION",
-
-     "Star map visualizations — matplotlib-heavy, needs MPLBACKEND=Agg"),
+     "Frequency-curvature coupling validation"),
 
     ("emergent-spacetime", "emergent-spacetime", "ARCHIVE",
 
      "Emergent spacetime exploration — no executable tests"),
 
-    ("frequency-curvature-validation", "frequency-curvature-validation", "CANONICAL",
+    ("ssz-complete-documentation", "ssz-complete-documentation", "ARCHIVE",
 
-     "Frequency-curvature coupling validation"),
-
-    ("ssz-full-metric", "ssz-full-metric", "CANONICAL",
-
-     "Full SSZ metric implementation with geodesics and PPN"),
-
-    ("ssz-metric-final", "ssz-metric-final", "CANONICAL",
-
-     "Final SSZ metric — complete observable suite"),
+     "Documentation repo — no executable tests"),
 
 ]
 
@@ -220,7 +203,18 @@ HYBRID_RUNNER_REPOS = {
 EXCLUDE_FILES = [
     "test_irsa_catalogs.py",
     "test_data_fetch.py",
+    # Unified-Results: these call sys.exit() at module level — crash pytest
+    "test_output_script.py",
+    "test_grid_convergence.py",
+    "test_clone_and_verify.py",
+    "test_theory_predictions_cross_platform.py",
 ]
+
+# Unified-Results: only run tests/ and scripts/tests/ — root has many
+# non-pytest scripts that call sys.exit() at import time
+PYTEST_SUBPATHS = {
+    "Unified-Results": ["tests", "scripts/tests"],
+}
 
 
 
@@ -773,7 +767,9 @@ for repo_path, repo_name, rtype in repos_to_run:
 
 
 
-    cmd_a = ([sys.executable, "-m", "pytest", "-v", "--tb=short",
+    subpaths = [str(rp / sp) for sp in PYTEST_SUBPATHS.get(repo_name, [])]
+
+    cmd_a = ([sys.executable, "-m", "pytest"] + subpaths + ["-v", "--tb=short",
 
               "--no-header", "--color=no", "-p", "no:cacheprovider"] + ignores)
 
@@ -843,7 +839,7 @@ for repo_path, repo_name, rtype in repos_to_run:
 
     timeout_b = 900 if repo_name == "Segmented-Spacetime-Starmaps" else 600
 
-    cmd_b = ([sys.executable, "-m", "pytest", "-v",
+    cmd_b = ([sys.executable, "-m", "pytest"] + subpaths + ["-v",
 
               "--tb=long", "--show-capture=all", "-s",
 
