@@ -51,7 +51,7 @@ E:\clone\ssz-all-tests-test\aggregated\
 
 ## Tests by Physics Domain
 
-| Domäne | Tests | SSZ-Kapitel |
+| Domäne | Tests | SSZ-Modul |
 |--------|-------|-------------|
 | Grundlagen | 186+ | Ch. 1-5 |
 | Kinematik | 47 | Ch. 6-9 |
