@@ -1,0 +1,133 @@
+{
+  "generated": "2026-04-29T06:30:59.107020+00:00",
+  "total_repos": 15,
+  "total_detected": 1382,
+  "total_executed": 0,
+  "expected_min": 1128,
+  "count_ok": false,
+  "repos": {
+    "ssz-qubits": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-qubits",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.85
+    },
+    "ssz-metric-pure": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-metric-pure",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.34
+    },
+    "ssz-schumann": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-schumann",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.93
+    },
+    "g79-cygnus-tests": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\g79-cygnus-tests",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.88
+    },
+    "ssz-lensing": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-lensing",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.71
+    },
+    "ssz-trajectories": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-trajectories",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.62
+    },
+    "Unified-Results": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\Unified-Results",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 11.62
+    },
+    "segmented-calculation-suite": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\segmented-calculation-suite",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 6.51
+    },
+    "segmented-energy": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\segmented-energy",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 8.68
+    },
+    "ssz-metric-final": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-metric-final",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 7.21
+    },
+    "ssz-full-metric": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-full-metric",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 7.06
+    },
+    "ssz-paper-plots": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-paper-plots",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 6.08
+    },
+    "Segmented-Spacetime-Starmaps": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\Segmented-Spacetime-Starmaps",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.29
+    },
+    "frequency-curvature-validation": {
+      "path": "E:\\clone\\ssz-all-tests\\repos\\frequency-curvature-validation",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 5.43
+    },
+    "ssz-all-tests-own": {
+      "path": "E:\\clone\\ssz-all-tests",
+      "exit_code": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "duration_s": 10.65
+    }
+  },
+  "test_map": {},
+  "failures": [],
+  "duplicates": []
+}

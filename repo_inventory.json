@@ -1,0 +1,1001 @@
+{
+  "ssz-qubits": {
+    "repo_name": "ssz-qubits",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-qubits",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_corrections.py",
+        "tests": 0
+      },
+      {
+        "file": "test_paper_consistency.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_edge_cases.py",
+        "tests": 27
+      },
+      {
+        "file": "tests\\test_entanglement.py",
+        "tests": 23
+      },
+      {
+        "file": "tests\\test_paper_a_support.py",
+        "tests": 16
+      },
+      {
+        "file": "tests\\test_paper_c_support.py",
+        "tests": 19
+      },
+      {
+        "file": "tests\\test_paper_d_validation.py",
+        "tests": 32
+      },
+      {
+        "file": "tests\\test_roadmap_validation.py",
+        "tests": 18
+      },
+      {
+        "file": "tests\\test_ssz_physics.py",
+        "tests": 17
+      },
+      {
+        "file": "tests\\test_ssz_qubit_applications.py",
+        "tests": 15
+      },
+      {
+        "file": "tests\\test_validation.py",
+        "tests": 17
+      }
+    ],
+    "total_tests_detected": 184,
+    "runner_type": "pytest"
+  },
+  "ssz-metric-pure": {
+    "repo_name": "ssz-metric-pure",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-metric-pure",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_diagonal_form.py",
+        "tests": 0
+      },
+      {
+        "file": "test_geodesics_and_limits.py",
+        "tests": 0
+      },
+      {
+        "file": "test_metric_compatibility.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_metric_kerr.py",
+        "tests": 10
+      },
+      {
+        "file": "tests\\test_metric_static.py",
+        "tests": 8
+      },
+      {
+        "file": "tests\\test_sparse_validators.py",
+        "tests": 11
+      },
+      {
+        "file": "tests\\test_validation_ssz_calibrated.py",
+        "tests": 5
+      }
+    ],
+    "total_tests_detected": 34,
+    "runner_type": "pytest"
+  },
+  "ssz-schumann": {
+    "repo_name": "ssz-schumann",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-schumann",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "scripts\\test_gamma_seg_transfer.py",
+        "tests": 5
+      },
+      {
+        "file": "scripts\\test_realistic_data.py",
+        "tests": 0
+      },
+      {
+        "file": "scripts\\test_ssz_correct_predictions.py",
+        "tests": 7
+      },
+      {
+        "file": "scripts\\test_ssz_expected_regimes.py",
+        "tests": 4
+      },
+      {
+        "file": "scripts\\test_ssz_full_scale.py",
+        "tests": 1
+      },
+      {
+        "file": "tests\\test_end_to_end.py",
+        "tests": 11
+      },
+      {
+        "file": "tests\\test_layered_ssz.py",
+        "tests": 43
+      },
+      {
+        "file": "tests\\test_models.py",
+        "tests": 20
+      },
+      {
+        "file": "tests\\test_physical_ssz.py",
+        "tests": 20
+      },
+      {
+        "file": "tests\\test_t1_t4_implementation.py",
+        "tests": 22
+      },
+      {
+        "file": "tests\\data\\test_real_loaders.py",
+        "tests": 14
+      },
+      {
+        "file": "tests\\hamtools\\test_hamtools.py",
+        "tests": 41
+      }
+    ],
+    "total_tests_detected": 188,
+    "runner_type": "pytest"
+  },
+  "g79-cygnus-tests": {
+    "repo_name": "g79-cygnus-tests",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\g79-cygnus-tests",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "scripts\\test_boundary_velocity_boost.py",
+        "tests": 2
+      },
+      {
+        "file": "scripts\\test_boundary_v_realistic.py",
+        "tests": 1
+      },
+      {
+        "file": "scripts\\test_irsa_catalogs.py",
+        "tests": 0
+      },
+      {
+        "file": "scripts\\test_segmented_spacetime_full.py",
+        "tests": 0
+      }
+    ],
+    "total_tests_detected": 3,
+    "runner_type": "pytest"
+  },
+  "ssz-lensing": {
+    "repo_name": "ssz-lensing",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-lensing",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "tests\\test_comprehensive_analysis.py",
+        "tests": 8
+      },
+      {
+        "file": "tests\\test_datahub.py",
+        "tests": 21
+      },
+      {
+        "file": "tests\\test_dual_path.py",
+        "tests": 8
+      },
+      {
+        "file": "tests\\test_extended_model.py",
+        "tests": 7
+      },
+      {
+        "file": "tests\\test_fallback_no_nan.py",
+        "tests": 22
+      },
+      {
+        "file": "tests\\test_lensing_run.py",
+        "tests": 19
+      },
+      {
+        "file": "tests\\test_linear_model.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_minimal_exact.py",
+        "tests": 15
+      },
+      {
+        "file": "tests\\test_model_zoo.py",
+        "tests": 7
+      },
+      {
+        "file": "tests\\test_multipole_consistency.py",
+        "tests": 10
+      },
+      {
+        "file": "tests\\test_multi_source.py",
+        "tests": 16
+      },
+      {
+        "file": "tests\\test_no_null_contract.py",
+        "tests": 29
+      },
+      {
+        "file": "tests\\test_q2237_diagnostic.py",
+        "tests": 3
+      },
+      {
+        "file": "tests\\test_radial_scaling_gauge.py",
+        "tests": 18
+      },
+      {
+        "file": "tests\\test_real_data.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_real_inversion.py",
+        "tests": 9
+      },
+      {
+        "file": "tests\\test_regime_explorer.py",
+        "tests": 10
+      },
+      {
+        "file": "tests\\test_ui_state.py",
+        "tests": 21
+      },
+      {
+        "file": "tests\\test_validation_lab.py",
+        "tests": 9
+      },
+      {
+        "file": "tests\\test_validation_module.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\zoo\\test_derivation_chain.py",
+        "tests": 8
+      },
+      {
+        "file": "tests\\zoo\\test_geometry.py",
+        "tests": 10
+      },
+      {
+        "file": "tests\\zoo\\test_m4_extension.py",
+        "tests": 7
+      },
+      {
+        "file": "tests\\zoo\\test_ring_morphology.py",
+        "tests": 10
+      }
+    ],
+    "total_tests_detected": 279,
+    "runner_type": "pytest"
+  },
+  "ssz-trajectories": {
+    "repo_name": "ssz-trajectories",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-trajectories",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "tests\\test_analysis.py",
+        "tests": 14
+      },
+      {
+        "file": "tests\\test_embedding.py",
+        "tests": 11
+      },
+      {
+        "file": "tests\\test_integrator.py",
+        "tests": 16
+      },
+      {
+        "file": "tests\\test_xi.py",
+        "tests": 22
+      }
+    ],
+    "total_tests_detected": 63,
+    "runner_type": "pytest"
+  },
+  "ssz-lagrange": {
+    "repo_name": "ssz-lagrange",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-lagrange",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_lagrange_ssz.py",
+        "tests": 0
+      }
+    ],
+    "total_tests_detected": 0,
+    "runner_type": "pytest"
+  },
+  "Unified-Results": {
+    "repo_name": "Unified-Results",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\Unified-Results",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_c1_segments.py",
+        "tests": 0
+      },
+      {
+        "file": "test_c2_curvature_proxy.py",
+        "tests": 0
+      },
+      {
+        "file": "test_c2_segments_strict.py",
+        "tests": 0
+      },
+      {
+        "file": "test_clone_and_verify.py",
+        "tests": 0
+      },
+      {
+        "file": "test_energies_minimal.py",
+        "tests": 0
+      },
+      {
+        "file": "test_energy_1000.py",
+        "tests": 1
+      },
+      {
+        "file": "test_energy_conditions.py",
+        "tests": 0
+      },
+      {
+        "file": "test_grid_convergence.py",
+        "tests": 1
+      },
+      {
+        "file": "test_output_script.py",
+        "tests": 0
+      },
+      {
+        "file": "test_phi_impact.py",
+        "tests": 0
+      },
+      {
+        "file": "test_ppn_exact.py",
+        "tests": 0
+      },
+      {
+        "file": "test_solutions_100_percent.py",
+        "tests": 0
+      },
+      {
+        "file": "test_theory_predictions_cross_platform.py",
+        "tests": 0
+      },
+      {
+        "file": "test_utf8_encoding.py",
+        "tests": 0
+      },
+      {
+        "file": "test_vfall_duality.py",
+        "tests": 0
+      },
+      {
+        "file": "evidenz-ssz\\scripts\\test_pipeline_quick.py",
+        "tests": 0
+      },
+      {
+        "file": "evidenz-ssz\\scripts\\tools\\test_pipeline_quick.py",
+        "tests": 0
+      },
+      {
+        "file": "scripts\\tests\\test_cosmo_fields.py",
+        "tests": 1
+      },
+      {
+        "file": "scripts\\tests\\test_cosmo_multibody.py",
+        "tests": 3
+      },
+      {
+        "file": "scripts\\tests\\test_data_fetch.py",
+        "tests": 3
+      },
+      {
+        "file": "scripts\\tests\\test_data_validation.py",
+        "tests": 11
+      },
+      {
+        "file": "scripts\\tests\\test_gaia_required_columns.py",
+        "tests": 3
+      },
+      {
+        "file": "scripts\\tests\\test_hawking_spectrum_continuum.py",
+        "tests": 1
+      },
+      {
+        "file": "scripts\\tests\\test_horizon_hawking_predictions.py",
+        "tests": 7
+      },
+      {
+        "file": "scripts\\tests\\test_plot_ssz_maps.py",
+        "tests": 2
+      },
+      {
+        "file": "scripts\\tests\\test_segmenter.py",
+        "tests": 2
+      },
+      {
+        "file": "scripts\\tests\\test_ssz_invariants.py",
+        "tests": 6
+      },
+      {
+        "file": "scripts\\tests\\test_ssz_kernel.py",
+        "tests": 4
+      },
+      {
+        "file": "scripts\\tests\\test_utf8_encoding.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_print_all_md.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_ring_datasets.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_segwave_cli.py",
+        "tests": 16
+      },
+      {
+        "file": "tests\\test_segwave_core.py",
+        "tests": 20
+      },
+      {
+        "file": "tests\\test_ssz_real_data_comprehensive.py",
+        "tests": 7
+      },
+      {
+        "file": "tests\\cosmos\\test_multi_body_sigma.py",
+        "tests": 1
+      },
+      {
+        "file": "tests\\cosmos\\lastworking\\test_multi_body_sigma.py",
+        "tests": 1
+      },
+      {
+        "file": "tests\\lastworking\\test_segwave_core.py",
+        "tests": 20
+      }
+    ],
+    "total_tests_detected": 126,
+    "runner_type": "custom+pytest"
+  },
+  "SEGMENTED_SPACETIME": {
+    "repo_name": "SEGMENTED_SPACETIME",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\SEGMENTED_SPACETIME",
+    "status": "ok",
+    "test_files": [],
+    "total_tests_detected": 0,
+    "runner_type": "pytest"
+  },
+  "segmented-calculation-suite": {
+    "repo_name": "segmented-calculation-suite",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\segmented-calculation-suite",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_100_percent_perfection.py",
+        "tests": 0
+      },
+      {
+        "file": "test_176_objects.py",
+        "tests": 0
+      },
+      {
+        "file": "test_batch_ns.py",
+        "tests": 0
+      },
+      {
+        "file": "test_deltaM_fix.py",
+        "tests": 0
+      },
+      {
+        "file": "test_eso_validation.py",
+        "tests": 0
+      },
+      {
+        "file": "test_fixes.py",
+        "tests": 0
+      },
+      {
+        "file": "test_golden_runs.py",
+        "tests": 0
+      },
+      {
+        "file": "test_golden_validation.py",
+        "tests": 4
+      },
+      {
+        "file": "test_physics_validation.py",
+        "tests": 0
+      },
+      {
+        "file": "test_pipeline.py",
+        "tests": 0
+      },
+      {
+        "file": "test_run_artifacts.py",
+        "tests": 0
+      },
+      {
+        "file": "test_tie_regression.py",
+        "tests": 5
+      },
+      {
+        "file": "test_weak_field_contract.py",
+        "tests": 4
+      },
+      {
+        "file": "test_win_rate.py",
+        "tests": 0
+      },
+      {
+        "file": "segcalc\\tests\\test_harness.py",
+        "tests": 0
+      },
+      {
+        "file": "segcalc\\tests\\test_invariants.py",
+        "tests": 16
+      },
+      {
+        "file": "segcalc\\tests\\test_physics.py",
+        "tests": 16
+      },
+      {
+        "file": "segcalc\\tests\\test_ssz_physics.py",
+        "tests": 25
+      },
+      {
+        "file": "tests\\test_experimental_validation.py",
+        "tests": 10
+      },
+      {
+        "file": "tests\\test_geodesics.py",
+        "tests": 15
+      },
+      {
+        "file": "tests\\test_invariants_hard.py",
+        "tests": 15
+      },
+      {
+        "file": "tests\\test_qubit.py",
+        "tests": 29
+      },
+      {
+        "file": "tests\\test_regime_classification.py",
+        "tests": 12
+      },
+      {
+        "file": "tests\\test_ui_canonicalization.py",
+        "tests": 7
+      }
+    ],
+    "total_tests_detected": 158,
+    "runner_type": "pytest"
+  },
+  "segmented-energy": {
+    "repo_name": "segmented-energy",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\segmented-energy",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_on_complete_dataset.py",
+        "tests": 1
+      },
+      {
+        "file": "test_ssz_complete_dataset.py",
+        "tests": 1
+      },
+      {
+        "file": "data\\test_dataset.py",
+        "tests": 0
+      }
+    ],
+    "total_tests_detected": 2,
+    "runner_type": "pytest"
+  },
+  "ssz-complete-documentation": {
+    "repo_name": "ssz-complete-documentation",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-complete-documentation",
+    "status": "ok",
+    "test_files": [],
+    "total_tests_detected": 0,
+    "runner_type": "pytest"
+  },
+  "ssz-metric-final": {
+    "repo_name": "ssz-metric-final",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-metric-final",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "tests\\test_complete_metric.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_energy_conditions.py",
+        "tests": 14
+      },
+      {
+        "file": "tests\\test_geodesics.py",
+        "tests": 13
+      },
+      {
+        "file": "tests\\test_geodesics_minimal.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_intersection.py",
+        "tests": 10
+      },
+      {
+        "file": "tests\\test_isco.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_metric_core.py",
+        "tests": 14
+      },
+      {
+        "file": "tests\\test_observables_complete.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_perihelion.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_photon_sphere.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_ppn.py",
+        "tests": 25
+      },
+      {
+        "file": "tests\\test_qnm.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_scalar_action_theory.py",
+        "tests": 14
+      },
+      {
+        "file": "tests\\test_shadow_radius.py",
+        "tests": 5
+      },
+      {
+        "file": "viz_ssz_metric\\tests\\test_mirror_metric.py",
+        "tests": 10
+      }
+    ],
+    "total_tests_detected": 140,
+    "runner_type": "pytest"
+  },
+  "ssz-full-metric": {
+    "repo_name": "ssz-full-metric",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-full-metric",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_phi_series_integration.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_energy_conditions.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_intersection.py",
+        "tests": 1
+      },
+      {
+        "file": "tests\\test_metric_core.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_metric_properties.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_ppn.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_scalar_action_theory.py",
+        "tests": 14
+      },
+      {
+        "file": "viz_ssz_metric\\tests\\test_mirror_metric.py",
+        "tests": 10
+      }
+    ],
+    "total_tests_detected": 31,
+    "runner_type": "pytest"
+  },
+  "ssz-paper-plots": {
+    "repo_name": "ssz-paper-plots",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\ssz-paper-plots",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_chi_squared_split.py",
+        "tests": 0
+      },
+      {
+        "file": "test_standalone.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_data_loading.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_model_comparison.py",
+        "tests": 2
+      },
+      {
+        "file": "tests\\test_plot_generation.py",
+        "tests": 3
+      },
+      {
+        "file": "tests\\test_sharp_break.py",
+        "tests": 1
+      }
+    ],
+    "total_tests_detected": 16,
+    "runner_type": "pytest"
+  },
+  "Segmented-Spacetime-Starmaps": {
+    "repo_name": "Segmented-Spacetime-Starmaps",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\Segmented-Spacetime-Starmaps",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "test_click.py",
+        "tests": 0
+      },
+      {
+        "file": "test_data_hierarchy.py",
+        "tests": 1
+      },
+      {
+        "file": "test_direct_call.py",
+        "tests": 0
+      },
+      {
+        "file": "test_gradio_image.py",
+        "tests": 1
+      },
+      {
+        "file": "test_gradio_image_type.py",
+        "tests": 2
+      },
+      {
+        "file": "test_gradio_minimal.py",
+        "tests": 0
+      },
+      {
+        "file": "test_gradio_physics.py",
+        "tests": 0
+      },
+      {
+        "file": "test_installation.py",
+        "tests": 0
+      },
+      {
+        "file": "test_in_gradio.py",
+        "tests": 1
+      },
+      {
+        "file": "test_new_g1_g2_plot.py",
+        "tests": 0
+      },
+      {
+        "file": "test_object_specific_g1g2.py",
+        "tests": 0
+      },
+      {
+        "file": "test_physics_type.py",
+        "tests": 0
+      },
+      {
+        "file": "test_plot_direct.py",
+        "tests": 0
+      },
+      {
+        "file": "test_primary_data_access.py",
+        "tests": 1
+      },
+      {
+        "file": "test_primary_data_access_backup.py",
+        "tests": 1
+      },
+      {
+        "file": "test_primary_data_beautiful.py",
+        "tests": 1
+      },
+      {
+        "file": "test_simple_plot.py",
+        "tests": 0
+      },
+      {
+        "file": "test_ssz_vs_minkowski.py",
+        "tests": 0
+      },
+      {
+        "file": "test_time_dilation_crossover.py",
+        "tests": 0
+      },
+      {
+        "file": "test_validation_979.py",
+        "tests": 0
+      },
+      {
+        "file": "test_xi_validated.py",
+        "tests": 4
+      },
+      {
+        "file": "ssz_explorer\\test_actual_data.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_akari_fetch.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_app_real_data.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_cross_matcher.py",
+        "tests": 10
+      },
+      {
+        "file": "ssz_explorer\\test_datamanager_integration.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_exoplanet_fetcher.py",
+        "tests": 8
+      },
+      {
+        "file": "ssz_explorer\\test_gaia_connection.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_gaia_fetcher.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_gradio_buttons.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_gradio_extended.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_gradio_minimal.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_gradio_single_plot.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_habitable_zone.py",
+        "tests": 10
+      },
+      {
+        "file": "ssz_explorer\\test_plots_direct.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_simbad_fetcher.py",
+        "tests": 8
+      },
+      {
+        "file": "ssz_explorer\\test_sky_map_direct.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_ssz_orbits.py",
+        "tests": 10
+      },
+      {
+        "file": "ssz_explorer\\test_twomass_fetcher.py",
+        "tests": 8
+      },
+      {
+        "file": "ssz_explorer\\test_visualizations.py",
+        "tests": 0
+      },
+      {
+        "file": "ssz_explorer\\test_wise_fetcher.py",
+        "tests": 8
+      },
+      {
+        "file": "tests\\test_geometry.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_integration.py",
+        "tests": 16
+      }
+    ],
+    "total_tests_detected": 94,
+    "runner_type": "pytest"
+  },
+  "emergent-spacetime": {
+    "repo_name": "emergent-spacetime",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\emergent-spacetime",
+    "status": "ok",
+    "test_files": [],
+    "total_tests_detected": 0,
+    "runner_type": "pytest"
+  },
+  "frequency-curvature-validation": {
+    "repo_name": "frequency-curvature-validation",
+    "path": "E:\\clone\\ssz-all-tests\\repos\\frequency-curvature-validation",
+    "status": "ok",
+    "test_files": [
+      {
+        "file": "tests\\test_dynamic_loops.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_experimental_validation.py",
+        "tests": 0
+      },
+      {
+        "file": "tests\\test_nsr_ngr_separation.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_section2_constant_frequency.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_section3_first_order_shifts.py",
+        "tests": 5
+      },
+      {
+        "file": "tests\\test_section4_differences_of_differences.py",
+        "tests": 4
+      },
+      {
+        "file": "tests\\test_section5_relation_to_gr.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_section6_ssz_integration.py",
+        "tests": 7
+      },
+      {
+        "file": "tests\\test_section7_conclusion.py",
+        "tests": 6
+      },
+      {
+        "file": "tests\\test_shapiro_delay.py",
+        "tests": 13
+      },
+      {
+        "file": "tests\\test_ssz_physics.py",
+        "tests": 10
+      }
+    ],
+    "total_tests_detected": 64,
+    "runner_type": "pytest"
+  }
+}
