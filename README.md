@@ -66,7 +66,7 @@ python setup_and_run.py --pat ghp_xxx
 
 ## Repository Coverage — Live Test Results
 
-Results from `setup_and_run.py` run on 2026-04-29 (Python 3.12.10, Windows 11):
+Results from `run_all_live.py` — native runners per repo (Python 3.12, Windows 11, 2026-04-29):
 
 | Repository | Type | Tests | Passed | Failed | Status | Physics Domain |
 |-----------|------|-------|--------|--------|--------|----------------|
@@ -81,7 +81,7 @@ Results from `setup_and_run.py` run on 2026-04-29 (Python 3.12.10, Windows 11):
 | [ssz-lagrange](https://github.com/error-wtf/ssz-lagrange) | CANONICAL | 54 | 54 | 0 | ✅ 100% | Lagrange/Hamilton SSZ, Kerr analog |
 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | CANONICAL | 7 | 7 | 0 | ✅ 100% | Stellar energy, 129 astronomical objects |
 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | CANONICAL | 82 | 82 | 0 | ✅ 100% | PPN, Shapiro, Cassini, dynamic loops |
-| [chord-partition (local)](https://github.com/error-wtf/ssz-all-tests) | CANONICAL | 103 | 103 | 0 | ✅ 100% | Eigenmodes, golden ratio φ resonance |
+| chord-partition *(this repo)* | LOCAL | 103 | 103 | 0 | ✅ 100% | Eigenmodes, golden ratio φ resonance |
 | **TOTAL** | | **1296** | **1296** | **0** | **✅ 100%** | |
 
 **Archive repos (no executable tests):** `ssz-complete-documentation`, `SEGMENTED_SPACETIME`, `emergent-spacetime`, `Segmented-Spacetime-Starmaps`
@@ -93,8 +93,7 @@ Results from `setup_and_run.py` run on 2026-04-29 (Python 3.12.10, Windows 11):
 | Type | Meaning | Failures |
 |------|---------|---------|
 | **CANONICAL** | Official SSZ implementation — single source of truth | Real bugs |
-| **CUSTOM** | Own test runner (not pytest) — executed as script | n/a |
-| **VALIDATION** | Cross-validation / paper output verification | Expected |
+| **LOCAL** | Tests living inside this repo (`ssz-all-tests`) | Real bugs |
 | **ARCHIVE** | Historical reference — not actively maintained | Ignored |
 
 ---
