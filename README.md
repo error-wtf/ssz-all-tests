@@ -11,40 +11,33 @@
 This is the **central orchestration repository** for all SSZ (Segmented Spacetime) tests across the entire `error-wtf` organization.
 
 - **Does NOT duplicate test code** — runs all tests directly from their source repositories
-- **Clones on demand** via `setup_and_run.py --skip-clone` after first run
-- **Generates structured output**: per-repo summaries, raw stdout/stderr, JSON index, integrity report
-- **Canonical runner:** `setup_and_run.py` (single command, zero config)
+- **Uses native test runners** per repo: `pytest`, custom scripts, hybrid — whatever the repo actually uses
+- **Generates structured output**: per-repo summaries, raw stdout/stderr, JSON status, integrity report
+- **Canonical runner:** `run_all_live.py` (native runners, zero config)
 
 ---
 
 ## Quick Start
 
 ```bash
-# First run — clones all repos, installs deps, runs all tests
-python setup_and_run.py
+# Run all tests — native runner per repo
+python run_all_live.py
 
-# Subsequent runs (repos already cloned)
-python setup_and_run.py --skip-clone
+# Generate complete verbose output with all test details
+python gen_really_full_output.py
 
-# Skip dependency install too
-python setup_and_run.py --skip-clone --skip-install
-
-# Discovery only — no test execution
-python setup_and_run.py --dry-run
-
-# With GitHub PAT (for private repos)
-python setup_and_run.py --pat ghp_xxx
+# Run chord-partition tests only (local, no deps)
+python -m pytest test_chord_partition_modes.py -v
 ```
 
 **Generated output files:**
 
 | File | Contents |
-|------|----------|
-| `full-output.md` | Per-repo summary: pass/fail counts, timing |
-| `really-full-output.md` | ALL raw output: print(), assert details, tracebacks |
-| `full-output-integrity.md` | Integrity check table with repo classification |
-| `analysis-index.json` | Test→repo mapping, failures, repo metadata |
+|------|-----------|
 | `LIVE_STATUS.json` | Current per-repo pass/fail snapshot |
+| `full-output.md` | Per-repo summary: pass/fail counts |
+| `really-full-output.md` | Complete untruncated verbose output per repo |
+| `integrity-check.json` | Timestamp, verdict, zero-failure check |
 
 ---
 
@@ -187,25 +180,20 @@ python -m pytest test_chord_partition_modes.py -v
 
 ```
 ssz-all-tests/
-├── setup_and_run.py              # CANONICAL RUNNER — clone + install + test + report
+├── run_all_live.py               # CANONICAL RUNNER — native runners per repo
+├── gen_really_full_output.py     # Verbose full output generator
 ├── test_chord_partition_modes.py # 103 chord-partition eigenmode tests (local)
-├── gen_stream_output.py          # Generates really-full-output-stream.md from index
 │
 ├── LIVE_STATUS.json              # Per-repo pass/fail snapshot (auto-generated)
 ├── full-output.md                # Per-repo summary report (auto-generated)
-├── really-full-output.md         # Complete raw stdout/stderr per test (auto-generated)
-├── really-full-output-stream.md  # Single continuous stream version (auto-generated)
-├── full-output-integrity.md      # Repo classification + integrity check (auto-generated)
-├── analysis-index.json           # Test→repo mapping + metadata (auto-generated)
+├── really-full-output.md         # Complete verbose output per repo (auto-generated)
+├── integrity-check.json          # Timestamp, verdict, zero-failure check (auto-generated)
 │
 ├── tests/                        # Additional SSZ physics tests
 ├── aggregated/                   # Aggregated test copies (reference snapshots)
 ├── requirements.txt              # Python dependencies
-└── .gitignore                    # repos/, __pycache__/, *.pyc excluded
+└── .gitignore                    # __pycache__/, *.pyc excluded
 ```
-
-**Legacy runner scripts** (kept for reference, not the primary entry point):
-`run_all_live.py`, `run_all_aggregated.py`, `run_chain.py`, `run_chain_final.py`, etc.
 
 ---
 
@@ -230,25 +218,32 @@ Install: `pip install -r requirements.txt`
 
 ## Running Individual Repos
 
-After `setup_and_run.py` has cloned everything into `repos/`:
+Repos are expected at `E:/clone/<repo-name>` (configurable in `run_all_live.py` via `BASE`):
 
 ```bash
-# ssz-qubits (184 tests, 100%)
-python -m pytest repos/ssz-qubits/tests/ -v
+# ssz-qubits (184 tests)
+python -m pytest E:/clone/ssz-qubits/tests/ -v
 
-# ssz-lensing (279 tests, 100%)
-python -m pytest repos/ssz-lensing/tests/ -v
+# ssz-lensing (279 tests)
+python -m pytest E:/clone/ssz-lensing/tests/ -v
 
-# ssz-trajectories (63 tests, 100%)
-python -m pytest repos/ssz-trajectories/tests/ -v
+# ssz-trajectories (63 tests)
+python -m pytest E:/clone/ssz-trajectories/tests/ -v
 
-# frequency-curvature-validation (56 tests, 100%)
-python -m pytest repos/frequency-curvature-validation/tests/ -v
+# frequency-curvature-validation (82 tests — via wrapper)
+python E:/clone/frequency-curvature-validation/run_all_tests.py
 
-# ssz-lagrange (custom runner)
-python repos/ssz-lagrange/test_lagrange_ssz.py
+# ssz-schumann (178 tests — pytest + custom script)
+python -m pytest E:/clone/ssz-schuhman-experiment/tests/ -v
+python E:/clone/ssz-schuhman-experiment/run_all_ssz_tests.py
 
-# chord-partition (local, no clone needed)
+# ssz-lagrange (54 checks — custom runner)
+python E:/clone/ssz-lagrange/test_lagrange_ssz.py
+
+# g79-cygnus-tests (5 checks — custom runner)
+python E:/clone/g79-cygnus-test/RUN_ALL_VALIDATED_TESTS.py
+
+# chord-partition (103 tests — local, no deps)
 python -m pytest test_chord_partition_modes.py -v
 ```
 
