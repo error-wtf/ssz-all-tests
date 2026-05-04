@@ -8,6 +8,14 @@
 
 ---
 
+Go to the individual repo. I tried to bundle all repos into a pipeline with the help of AI. But over 1296+ test scripts are apparently too complex for today's AI to connect them in series. All the tests all work individually in their own repositories. I have uninstalled Windsurf and am taking a longer break from AI.
+
+https://error.wtf/die-karotte-vor-der-nase/
+
+
+---
+
+
 ## Quick Start (Reproduktion)
 
 ```bash
