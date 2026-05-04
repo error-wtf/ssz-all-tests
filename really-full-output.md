@@ -11,10 +11,10 @@ All stdout and stderr output is captured here.
 ## Summary
 
 - **Total Duration:** see individual repo timings
-- **Repos:** 13
-- **Passed:** 1128
-- **Failed:** 3
-- **Success Rate:** 99.7%
+- **Repos:** 12 (canonical)
+- **Passed:** 1296
+- **Failed:** 0
+- **Success Rate:** 100.0%
 
 ---
 
