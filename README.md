@@ -4,6 +4,8 @@
 **License:** Anti-Capitalist Software License v1.4  
 **Status:** [![CI](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml/badge.svg)](https://github.com/error-wtf/ssz-all-tests/actions/workflows/ci.yml) ![Tests](https://img.shields.io/badge/tests-1296%2F1296-brightgreen) ![Pass Rate](https://img.shields.io/badge/pass_rate-100%25-brightgreen) ![Repos](https://img.shields.io/badge/repos-13-blue)
 
+📊 **[View Complete Test Results → really-full-output.md](really-full-output.md)** (1296/1296 tests passed, 100% verbose output)
+
 ---
 
 ## What This Repository Does
@@ -263,4 +265,4 @@ to use, copy, modify, and distribute it for non-commercial purposes.
 
 ---
 
-*Last updated: 2026-04-29 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0%*
+*Last updated: 2026-05-04 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0%*
