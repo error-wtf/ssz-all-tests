@@ -107,8 +107,46 @@ def collect_repo_output(folder, display, mode, path, env):
 
 
 def count_from_output(txt):
+    """Count pass/fail totals from pytest and custom SSZ runners."""
+    # Pytest summaries are the most reliable where present.
     p = int(m.group(1)) if (m := re.search(r'(\d+) passed', txt)) else 0
     f = int(m.group(1)) if (m := re.search(r'(\d+) failed', txt)) else 0
+    f += int(m.group(1)) if (m := re.search(r'(\d+) error', txt)) else 0
+    if p > 0 or f > 0:
+        return p, f
+
+    # Custom SSZ runner formats.
+    m = re.search(r'ERGEBNIS:\s*(\d+)/(\d+)\s*PASS,\s*(\d+)\s*FAIL', txt, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(3))
+
+    m = re.search(r'OVERALL:\s*(\d+)/(\d+)\s*(?:tests?\s*)?passed', txt, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(2)) - int(m.group(1))
+
+    m = re.search(r'OVERALL:\s*(\d+)/(\d+)\s*test\s*suites?\s*passed', txt, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(2)) - int(m.group(1))
+
+    m = re.search(r'Results:\s*(\d+)/(\d+)\s*passed', txt, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(2)) - int(m.group(1))
+
+    m = re.search(r'Total:\s*(\d+)/(\d+)\s*passed', txt, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(2)) - int(m.group(1))
+
+    m = re.search(r'(\d+)/(\d+)\s*PASS', txt, re.I)
+    if m:
+        return int(m.group(1)), int(m.group(2)) - int(m.group(1))
+
+    # segmented-energy FINAL_PERFECT_TEST.py reports five validation checks.
+    explicit = len(re.findall(r'^\d+\.\s+\S.*PASS', txt, re.MULTILINE | re.I))
+    if explicit:
+        return explicit, 0
+
+    p = len(re.findall(r'\[PASS\]|✅\s*PASS|\bPASSED\b', txt))
+    f = len(re.findall(r'\[FAIL\]|❌\s*FAIL|\bFAILED\b', txt))
     return p, f
 
 
@@ -146,16 +184,23 @@ for folder, display, expected, mode in REPOS:
     except Exception as ex:
         sections = [(f'ERROR: {ex}', '')]
 
-    # Aggregate pass/fail counts
+    # Aggregate pass/fail counts.
+    # ssz-metric-pure runs a validator in addition to pytest; the validator is
+    # qualitative coverage and must not inflate the expected 36-test total.
     repo_p = repo_f = 0
-    for _, txt in sections:
+    for section_name, txt in sections:
         p, f = count_from_output(txt)
+        if mode == 'script_multi' and 'ssz_validator.py' in section_name:
+            repo_f += f
+            if 'Traceback' in txt or re.search(r'\bFAIL(?:ED)?\b', txt):
+                repo_f += 1
+            continue
         repo_p += p
         repo_f += f
 
     grand_passed += repo_p
     grand_failed += repo_f
-    status = 'PASS' if repo_f == 0 and repo_p > 0 else 'FAIL'
+    status = 'PASS' if repo_f == 0 and repo_p == expected else 'FAIL'
     print(f'  -> passed={repo_p}  failed={repo_f}  {status}')
 
     lines.append(f'# {display}\n\n')
@@ -201,15 +246,18 @@ if cp_file.exists():
         print(f'  ERROR: {ex}')
 
 # Summary
-rate = (f'{grand_passed / (grand_passed + grand_failed) * 100:.1f}%'
-        if (grand_passed + grand_failed) > 0 else 'N/A')
+grand_expected = sum(expected for _, _, expected, _ in REPOS) + 103
+rate = (f'{grand_passed / grand_expected * 100:.1f}%'
+        if grand_expected > 0 else 'N/A')
+verdict = '✅ VERIFIED' if grand_failed == 0 and grand_passed == grand_expected else '❌ FAIL'
 
 lines.append('# SUMMARY\n\n')
 lines.append(f'| Metric | Value |\n|--------|-------|\n')
+lines.append(f'| Total Expected | {grand_expected} |\n')
 lines.append(f'| Total Passed | {grand_passed} |\n')
 lines.append(f'| Total Failed | {grand_failed} |\n')
 lines.append(f'| Pass Rate | {rate} |\n')
-lines.append(f'| Verdict | {"✅ VERIFIED" if grand_failed == 0 else "❌ FAIL"} |\n\n')
+lines.append(f'| Verdict | {verdict} |\n\n')
 
 print('\n' + '=' * 65)
 print(f'Grand total: passed={grand_passed}  failed={grand_failed}  rate={rate}')

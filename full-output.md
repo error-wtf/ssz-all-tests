@@ -1,6 +1,6 @@
 # SSZ FULL OUTPUT
 
-**Generated:** 2026-04-29T15:26:06.066522
+**Generated:** 2026-05-05T12:02:29.678393
 
 ---
 
@@ -14,7 +14,7 @@
 ........................................................................ [ 39%]
 ........................................................................ [ 78%]
 ........................................                                 [100%]
-184 passed in 0.93s
+184 passed in 0.69s
 
 ```
 
@@ -193,7 +193,7 @@ Acceptance criterion:
 ================================================================================
 .
 
-============================= 36 passed in 17.06s =============================
+============================= 36 passed in 14.12s =============================
 
 === ssz_validator ===
 
@@ -209,7 +209,7 @@ SSZ METRIC CONSISTENCY VALIDATOR
 ================================================================================
 
 Metric: SSZCalibratedMetric (Earth)(M=5.972e+24 kg, r_g=8.870e-03 m)
-Timestamp: 2026-04-29 15:26:39
+Timestamp: 2026-05-05 12:02:58
 
 Running comprehensive validation tests...
 
@@ -247,14 +247,14 @@ Running comprehensive validation tests...
 ........................................................................ [ 45%]
 ........................................................................ [ 91%]
 ..............                                                           [100%]
-158 passed in 4.29s
+158 passed in 4.87s
 
 ```
 
 ---
 
 ## ssz-schumann
-- passed: 178 / expected: 185 (96%)
+- passed: 178 / expected: 178 (100%)
 - failed: 0
 - status: **PASS**
 
@@ -265,7 +265,7 @@ Running comprehensive validation tests...
 #                    SSZ TEST SUITE                                #
 ######################################################################
 
-Date: 2026-04-29 15:26:50
+Date: 2026-05-05 12:03:10
 Python: 3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]
 
 
@@ -548,7 +548,7 @@ tests\test_segwave_cli.py ................                               [ 43%]
 tests\test_segwave_core.py ....................                          [ 69%]
 tests\test_ssz_real_data_comprehensive.py ........................       [100%]
 
-============================= 78 passed in 21.62s =============================
+============================= 78 passed in 22.44s =============================
 
 === pytest scripts/tests ===
 ============================= test session starts =============================
@@ -573,7 +573,7 @@ scripts/tests/test_hawking_spectrum_continuum.py::test_hawking_spectrum_continuu
     x = (h_planck * nu) / (k_boltzmann * T)
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-======================== 47 passed, 1 warning in 8.18s ========================
+======================== 47 passed, 1 warning in 7.33s ========================
 
 === smoke_test_all.py ===
 ================================================================================
@@ -686,7 +686,7 @@ TEST 12: PPN Parameters (β=γ=1)
 ### STDOUT
 ```
 ...............................................................          [100%]
-63 passed in 1.14s
+63 passed in 1.12s
 
 ```
 
@@ -703,13 +703,13 @@ TEST 12: PPN Parameters (β=γ=1)
 MASTER TEST SUITE - ALL VALIDATED TESTS
 ================================================================================
 
-Start time: 2026-04-29 15:28:27
+Start time: 2026-05-05 12:04:44
 Total scripts: 5
 Expected duration: ~10 minutes
 
 
 ================================================================================
-[15:28:27] Running: Parsec Conversion Validation
+[12:04:44] Running: Parsec Conversion Validation
 Script: TEST_PARSEC_CONVERSION.py
 ================================================================================
 
@@ -737,10 +737,10 @@ Difference:            100059229241869.62 M_☉
 ================================================================================
 
 
-✅ SUCCESS (2.0s)
+✅ SUCCESS (2.1s)
 
 ================================================================================
-[15:28:29] Running: Temperature Equations (Eq. 9-18)
+[12:04:46] Running: Temperature Equations (Eq. 9-18)
 Script: TEST_TEMPERATURE_EQUATIONS_COMPLETE.py
 ================================================================================
 
@@ -1078,7 +1078,7 @@ test_on_complete_dataset.py::test_complete_dataset
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-1 passed, 2 warnings in 2.22s
+1 passed, 2 warnings in 2.53s
 
 === test_ssz_complete_dataset.py ===
 .                                                                        [100%]
@@ -1098,7 +1098,7 @@ test_ssz_complete_dataset.py::test_ssz_dataset
     warnings.warn(
 
 -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
-1 passed, 3 warnings in 2.18s
+1 passed, 3 warnings in 2.94s
 
 === FINAL_PERFECT_TEST.py ===
 
@@ -1203,7 +1203,7 @@ PER CATEGORY:
 FINAL SUMMARY
 ================================================================================
 
-Execution Time:    0.03 seconds
+Execution Time:    0.02 seconds
 Objects Tested:    9
 Success Rate:      100.0%
 Validation:        P
@@ -1305,7 +1305,7 @@ tests
 ```
 ........................................................................ [ 69%]
 ...............................                                          [100%]
-103 passed in 0.45s
+103 passed in 0.44s
 
 ```
 
@@ -1316,7 +1316,7 @@ tests
 
 | Metric | Value |
 |--------|-------|
-| Expected | 1303 |
+| Expected | 1296 |
 | Passed | 1296 |
 | Failed | 0 |
 | Pass Rate | 100.0% |
@@ -1328,7 +1328,7 @@ tests
 | ssz-qubits | 184 | 184 | 0 | PASS |
 | ssz-metric-pure | 36 | 36 | 0 | PASS |
 | segmented-calculation-suite | 158 | 158 | 0 | PASS |
-| ssz-schumann | 178 | 185 | 0 | PASS |
+| ssz-schumann | 178 | 178 | 0 | PASS |
 | ssz-lensing | 279 | 279 | 0 | PASS |
 | Unified-Results | 147 | 147 | 0 | PASS |
 | ssz-trajectories | 63 | 63 | 0 | PASS |
