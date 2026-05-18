@@ -182,3 +182,47 @@ Tabelle bei pos=56356: `r*/r_s | 1,595 / 1,387 | Schnittpunkt (schwacher Proxy /
 ---
 
 *Erstellt: 2026-04-29 | Tool: ssz-all-tests Konsistenz-Analyse*
+
+---
+
+## Update 2026-05-18 — ssz-ligo-tests V0-Proxy Integration
+
+**Source:** `E:\clone\ssz-ligo-tests` (330 tests, 1 xfail)
+
+### New Consistency Items
+
+| Status | Item | Befund |
+|--------|------|--------|
+| ✅ KONSISTENT | Xi_strong = g2_decay branch | Übereinstimmend in formula_compendium, branch_lock, ligo-tests |
+| ✅ KONSISTENT | Regime-Grenzen 1.8/2.2 rs | Durchgehend korrekt |
+| ✅ KONSISTENT | D_min = 0.555 | Pipeline verwendet korrekte Formel |
+| ✅ KONSISTENT | deltaA = D²−1 ∈ (−1, 0] | Physikalisch korrekt, Tests verifiziert |
+| ⚠️ ACHTUNG | epsilon_220: 3 konfligierende Werte | 3%/31%/39% — BLOCKED_BRANCH_CONFLICT |
+| ⚠️ ACHTUNG | deltaPsi: V0-Proxy, kein locked final | Ch.31 RSG-Integral noch offen |
+| ℹ️ INFO | delta_lnL = 6.34e-06 | INDISTINGUISHABLE — kein SSZ-Anspruch |
+
+### epsilon_220 Konsistenz-Problem
+
+Die drei Werte kommen aus verschiedenen physikalischen Kontexten:
+
+| Wert | Kontext | Konsistent mit? |
+|------|---------|----------------|
+| 3% | QNM-Frequenzshift (Ch.30) | Buchversion V51 |
+| 31% | D_min² Amplitudendämpfung | formula_compendium §B.7 |
+| 39% | f_QNM_SSZ/f_QNM_GR − 1 bei r*/rs=1.387 | qnm_spectrum.md |
+
+**Schluss:** Diese drei Werte messen **verschiedene Observablen** — sie widersprechen
+sich nicht zwingend physikalisch, sind aber als einheitliches `epsilon_220` für
+LIGO-Strain nicht verwendbar. Die Darstellung im Buch muss alle drei mit ihren
+jeweiligen Kontexten klar auseinanderhalten.
+
+### ssz-ligo-tests in All-Tests-Snapshot
+
+Die 330 Tests aus ssz-ligo-tests (inkl. 61 neue V0-Tests vom 2026-05-18) sind noch
+nicht im 1296/1296-Snapshot enthalten. Beim nächsten Snapshot-Run wäre der Gesamtstand:
+
+| Repos (bisherig) | 1296 Tests |
+| ssz-ligo-tests   | + 330 Tests |
+| **Erwartetes Total** | **~1626 Tests** |
+
+Snapshot-Update steht aus bis nächster `gen_really_full_output.py` Run.
