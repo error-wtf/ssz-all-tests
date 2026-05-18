@@ -226,3 +226,55 @@ nicht im 1296/1296-Snapshot enthalten. Beim nächsten Snapshot-Run wäre der Ges
 | **Erwartetes Total** | **~1626 Tests** |
 
 Snapshot-Update steht aus bis nächster `gen_really_full_output.py` Run.
+
+---
+
+## Update 2026-05-18 — Phase 2–5: Derivations-Docs & Interpretation Lock
+
+### Neue Derivations-Dokumente (ssz-ligo-tests/docs/)
+
+| Datei | Status | Inhalt |
+|-------|--------|--------|
+| DELTA_PSI_DERIVATION.md | DERIVED_V0_PROXY | Vollständige Ableitung aus rdot_SSZ=rdot_GR*D²/s⁴ |
+| DELTA_A_DERIVATION.md | DERIVED_V0_PROXY | Ableitung aus P_GW_SSZ/P_GW_GR=D²/s² |
+| H_SSZ_V0_DERIVATION.md | DERIVED_V0_PROXY | Kombination: h_SSZ=h_GR*(1+deltaA)*exp(i*deltaPsi) |
+| EPSILON_220_DERIVATION_STATUS.md | BLOCKED | Drei Äste klassifiziert, Author-Entscheidung offen |
+
+### Neue Interpretation-Dokumente (ssz-ligo-tests/reports/)
+
+| Datei | Inhalt |
+|-------|--------|
+| FINAL_INTERPRETATION_LOCK.md | Präzise Trennung technisch/physikalisch; Belege; Gate |
+| NEXT_PHYSICS_DERIVATION_TASKS.md | P1–P9 priorisierte Derivations-Agenda |
+
+### Konsistenz-Check Derivations-Docs
+
+| Formel | Konsistent mit Corpus? | Anmerkung |
+|--------|----------------------|-----------|
+| rdot_SSZ = rdot_GR * D²/s⁴ | JA — Ch.31, ssz_inspiral.py | Kein Widerspruch gefunden |
+| P_GW_SSZ = P_GW_GR * D²/s² | JA — formula_compendium §B.4 | Kein Widerspruch gefunden |
+| deltaA = D²−1 | KONSISTENT mit D=1/s | Schwachfeld: deltaA→0 ✓ |
+| deltaPsi ~ (1+Xi)⁶−1 | ABGELEITET (V0) | s⁶-Faktor aus D²/s⁴ |
+| h_SSZ = h_GR*(1+deltaA)*exp(i*deltaPsi) | KONSISTENT | Multiplikativ, kein Datenfit |
+
+### Kritische Konsistenz-Aussage (delta_lnL ~ 0)
+
+**Technisch grün ≠ physikalisch validiert.**
+
+Der Wert delta_lnL ~ 6e-6 ist kein Beweis für SSZ und keine Falsifikation.
+Drei offene Erklärungen existieren gleichzeitig (alle unentschieden):
+- A: SSZ-Inspiral-Korrektur im Schwachfeld intrinsisch klein (r/rs ~ 100–1000)
+- B: V0-Proxy zu grob / kappa nicht unabhängig deriviert
+- C: Echter RSG-Phasenintegral (Ch.31) fehlt noch
+
+### Konsistenz-Gate
+
+```
+DELTA_PSI_CONSISTENCY:         DERIVED_V0_PROXY — no corpus conflict
+DELTA_A_CONSISTENCY:           DERIVED_V0_PROXY — no corpus conflict
+H_SSZ_CONSISTENCY:             DERIVED_V0_PROXY — no corpus conflict
+EPSILON_220_CONSISTENCY:       BLOCKED_BRANCH_CONFLICT (3/31/39% — different observables)
+INTERPRETATION_LOCK:           ADDED 2026-05-18
+PHYSICS_CLAIM:                 BLOCKED
+READY_FOR_REAL_LIGO_SSZ_CLAIM: NO
+```
