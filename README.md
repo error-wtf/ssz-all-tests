@@ -95,6 +95,7 @@ Results from `run_all_live.py` — native runners per repo (Python 3.12, Windows
 | [segmented-energy](https://github.com/error-wtf/segmented-energy) | CANONICAL | 7 | 7 | 0 | ✅ 100% | Stellar energy, 129 astronomical objects |
 | [frequency-curvature-validation](https://github.com/error-wtf/frequency-curvature-validation) | CANONICAL | 82 | 82 | 0 | ✅ 100% | PPN, Shapiro, Cassini, dynamic loops |
 | [chord-partition](https://github.com/error-wtf/chord-partition) | CANONICAL | 103 | 103 | 0 | ✅ 100% | Eigenmodes, golden ratio φ resonance |
+| [ssz-ligo-tests](https://github.com/error-wtf/ssz-ligo-tests) | EXPLORATORY | — | — | — | ⏳ PIPELINE_PASS (no claim) | LIGO GW240925 forward model — data: [Zenodo 18600070](https://zenodo.org/records/18600070) |
 | **TOTAL** | | **1296** | **1296** | **0** | **✅ 100%** | |
 
 ---
@@ -186,6 +187,7 @@ After running `run_all_live.py`:
 | Cassini Shapiro delay | γ = 1.000021 ± 0.000023 | γ = 1.000021 ± 0.000023 | ✅ exact |
 | S2 star (Sgr A*) redshift | z = 0.00198 | z = 0.00198 | ✅ exact |
 | Cygnus X-1 (G79.29+0.46) | 6/6 predictions | 6/6 confirmed | ✅ all confirmed |
+| LIGO GW240925 (O4b) | delta_lnL = 5.3e-06 (H1, 0PN) | — | ⏳ EXPLORATORY — no claim — [Zenodo 18600070](https://zenodo.org/records/18600070) |
 
 ---
 
@@ -245,4 +247,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 ---
 
-*Last updated: 2026-05-04 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0%*
+*Last updated: 2026-05-18 | Run: Python 3.12 / Windows 11 | 1296/1296 passed / 0 failures / 100.0% | LIGO pipeline: EXPLORATORY*
