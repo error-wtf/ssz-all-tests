@@ -106,7 +106,7 @@
 |-------------|-----------------|--------|
 | φ als Wachstum | p,k können φ sein | ✅ Kompatibel |
 | Segmentierung (N0=4) | p als Unterteilung? | ⚠️ Unklar |
-| Ξ(r) = 1-exp(-φ r/r_s) | Keine direkte Verbindung | ❌ Fehlt |
+| Ξ(r) = 1-exp(-φ r_s / r) | Keine direkte Verbindung | ❌ Fehlt |
 | Logarithmische Spirale | Polare Form ähnlich | ✅ Ähnlich |
 | D(r) = 1/(1+Ξ) | Keine direkte Verbindung | ❌ Fehlt |
 | Maxwell-Wellen | M_{p,k} als Rotation? | ⚠️ Hypothetisch |

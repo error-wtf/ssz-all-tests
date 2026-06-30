@@ -3431,7 +3431,7 @@ TEST 5: Segment Saturation
 
 Xi_max = 1.0
 
-Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))
+Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
 
 Xi(r) at various radii:
 
@@ -11275,7 +11275,7 @@ collecting ... =================================================================
 
   ✅ D(r_s) > 0 (no singularity)
 
-  ✅ Strong field formula: Ξ = 1 - exp(-φr/r_s)
+  ✅ Strong field formula: Ξ = 1 - exp(-φr_s / r)
 
 ## 4. REDSHIFT FORMULA (CRITICAL!)
 

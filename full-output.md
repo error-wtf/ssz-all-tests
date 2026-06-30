@@ -364,7 +364,7 @@ TEST 5: Segment Saturation
 ======================================================================
 
 Xi_max = 1.0
-Xi(r) = Xi_max * (1 - exp(-phi * r / r_s))
+Xi(r) = Xi_max * (1 - exp(-phi * r_s / r))
 
 Xi(r) at various radii:
   r = 0.5*r_s: Xi = 0.5547, D_SSZ = 0.6432, D_GR = 0.0000
