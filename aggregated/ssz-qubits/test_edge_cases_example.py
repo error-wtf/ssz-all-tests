@@ -21,7 +21,7 @@ def test_extreme_radius():
     """Test behavior at very small radius (near r_s)."""
     r_s = 8.87e-3  # Earth Schwarzschild radius in meters
     r = 10 * r_s
-    xi = 1 - np.exp(-1.618 * r / r_s)
+    xi = 1 - np.exp(-1.618 * r_s / r)
     xi_capped = min(xi, 0.809)
     assert xi_capped > 0.5
     assert xi_capped <= 0.809
